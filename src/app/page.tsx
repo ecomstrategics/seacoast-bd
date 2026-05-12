@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -5,6 +6,11 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { TrustBar } from "@/components/TrustBar";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Seacoast Building & Design | Southwest Florida's Full-Service Contractor",
+  description: "Roofing, exterior renovations, storm repair, and enclosures across Southwest Florida. 40+ years of video-documented craftsmanship. Licensed & Insured. (941) 500-5431",
+};
 
 export default function Home() {
   return <>

@@ -58,13 +58,25 @@ const serviceFaqs: Record<string, FAQItem[]> = {
   ],
 };
 
+const slugToServiceTypeKeywords: Record<string, string[]> = {
+  roofing: ["roofing", "roof"],
+  "gutters-fascia-soffits": ["gutters", "fascia", "soffits"],
+  siding: ["siding", "hardie"],
+  "windows-and-doors": ["window", "door"],
+  "exterior-renovations": ["exterior", "renovation"],
+  "pool-enclosures-lanais": ["enclosure", "lanai", "pool"],
+  "room-additions": ["addition", "carport"],
+  "storm-damage-repair": ["storm", "hurricane", "damage", "repair"],
+};
+
 export default function ServiceDetailPage({ params }: Props) {
   const service = getServiceBySlug(params.slug);
   if (!service) notFound();
 
-  const relatedProjects = projects.filter((p) =>
-    p.serviceType.toLowerCase().includes(params.slug.replace(/-/g, " ").split(" ")[0])
-  ).slice(0, 3);
+  const keywords = slugToServiceTypeKeywords[params.slug] ?? [params.slug.split("-")[0]];
+  const relatedProjects = projects
+    .filter((p) => keywords.some((kw) => p.serviceType.toLowerCase().includes(kw)))
+    .slice(0, 4);
 
   const faqs = serviceFaqs[params.slug] ?? [];
 
