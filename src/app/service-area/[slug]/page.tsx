@@ -69,7 +69,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
               href="/contact"
               className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition"
             >
-              Get a Quote in {city.name}
+              Get a Free Quote in {city.name}
             </Link>
             <a
               href="tel:9415005431"

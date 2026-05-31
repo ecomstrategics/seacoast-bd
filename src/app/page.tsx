@@ -46,7 +46,7 @@ export default function Home() {
               Protect. Improve. Expand.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Quote</Link>
+              <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
               <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">View Our Work</Link>
             </div>
           </div>

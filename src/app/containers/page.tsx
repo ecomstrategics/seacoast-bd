@@ -44,7 +44,7 @@ const landingFaqs = [
   {
     question: "What does it cost?",
     answer:
-      "Starting prices vary by product type, size, configuration, and finish level. We publish ranges on each product page. Contact us for a custom quote based on your site and goals.",
+      "Starting prices begin at $5,000 and vary by product type, size, configuration, and finish level. Contact us for a custom quote based on your site and goals.",
   },
 ];
 

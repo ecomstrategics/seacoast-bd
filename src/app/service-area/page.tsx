@@ -24,7 +24,7 @@ export default function ServiceAreaIndexPage() {
             Seacoast Building and Design serves six counties across the SW Florida corridor. Roofing, storm protection, container builds, and exterior services available in every territory we cover.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Quote</Link>
+            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
             <a href="tel:9415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
           </div>
         </div>

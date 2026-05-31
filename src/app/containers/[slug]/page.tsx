@@ -104,10 +104,10 @@ function StorageContent() {
             <SpecTable
               headers={["Size", "Footprint", "Interior Volume", "Best For", "Starting Price"]}
               rows={[
-                ["10 ft", "8 ft x 10 ft", "Approx. 640 cu ft", "Equipment, supplies, overflow storage", "Get pricing"],
-                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Get pricing"],
-                ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Get pricing"],
-                ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Get pricing"],
+                ["10 ft", "8 ft x 10 ft", "Approx. 640 cu ft", "Equipment, supplies, overflow storage", "Starting at $5,000"],
+                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $5,000"],
+                ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Starting at $5,000"],
+                ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Starting at $5,000"],
               ]}
             />
           </div>
@@ -238,7 +238,7 @@ function GuestHouseContent() {
                 <p className="mt-1 text-sm font-semibold text-container-steel uppercase tracking-wide">{config.container}</p>
                 <p className="mt-1 text-sm text-text-secondary">{config.sqft}</p>
                 <p className="mt-3 text-sm text-text-secondary"><span className="font-semibold text-charcoal">Standard includes:</span> {config.includes}</p>
-                <p className="mt-3 text-sm font-semibold text-teal">Get pricing →</p>
+                <p className="mt-3 text-sm font-semibold text-teal">Starting at $5,000 →</p>
               </div>
             ))}
           </div>
@@ -650,7 +650,7 @@ export default function ContainerProductPage({ params }: Props) {
     description: container.shortDescription,
     url: `/containers/${container.slug}`,
     sku: `SWFL-${container.slug.toUpperCase()}`,
-    offers: { priceCurrency: "USD", availability: "https://schema.org/InStock" },
+    offers: { price: "5000", priceCurrency: "USD", availability: "https://schema.org/InStock" },
   });
   const faqData = faqs.length > 0 ? faqSchema(faqs.map((f) => ({ question: f.question, answer: f.answer }))) : null;
 
@@ -673,7 +673,7 @@ export default function ContainerProductPage({ params }: Props) {
           <p className="mt-2 text-lg font-semibold text-teal uppercase tracking-wide">{container.tagline}</p>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{container.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Quote</Link>
+            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
             <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">← All Containers</Link>
           </div>
         </div>
