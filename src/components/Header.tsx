@@ -200,7 +200,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav id="mobile-menu" className="border-t border-navy/10 bg-warm-white px-4 pb-6 lg:hidden" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-navy/10 bg-warm-white px-4 pb-24 lg:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
             <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Protect</p>
             {solutionsMega.protect.map((link) => (
