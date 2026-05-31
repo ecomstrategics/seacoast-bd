@@ -7,7 +7,7 @@ import { getServicesByPillar } from "@/data/services";
 import { solutions } from "@/data/solutions";
 
 export const metadata: Metadata = {
-  title: "Solutions — Protect. Improve. Expand. | Seacoast Building & Design",
+  title: "Solutions: Protect. Improve. Expand. | Seacoast Building & Design",
   description:
     "Every Seacoast service maps to one of three outcomes: protect your property from storms, improve the exterior, or expand with containers and additions. Find the right solution for your project.",
 };
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function SolutionsPage() {
   const pillarBlurbs: Record<string, string> = {
     protect:
-      "Storm preparedness, emergency response, storm damage repair, and impact windows — the full lifecycle of storm protection in one contractor.",
+      "Storm preparedness, emergency response, storm damage repair, and impact windows. The full lifecycle of storm protection in one contractor.",
     improve:
       "Roofing, siding, gutters, windows, and complete exterior renovations. One contractor. One project. No coordinating three separate trades.",
     expand:
@@ -27,19 +27,19 @@ export default function SolutionsPage() {
       <SchemaScript
         schema={[
           serviceSchema({
-            name: "Protect — Storm and Resilience Services",
+            name: "Protect: Storm and Resilience Services",
             description: pillarBlurbs.protect,
             url: "/solutions/protect",
             serviceType: "Hurricane Protection and Storm Services",
           }),
           serviceSchema({
-            name: "Improve — Exterior Renovations",
+            name: "Improve: Exterior Renovations",
             description: pillarBlurbs.improve,
             url: "/solutions/improve",
             serviceType: "Exterior Renovation and Roofing",
           }),
           serviceSchema({
-            name: "Expand — Property Solutions",
+            name: "Expand: Property Solutions",
             description: pillarBlurbs.expand,
             url: "/solutions/expand",
             serviceType: "Container Builds and Property Expansion",
@@ -136,9 +136,9 @@ export default function SolutionsPage() {
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Explore each pillar.</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
-              { slug: "protect", label: "Protect — Storm and Resilience", href: "/solutions/protect", accent: "border-teal", textAccent: "text-teal" },
-              { slug: "improve", label: "Improve — Exteriors and Renovations", href: "/solutions/improve", accent: "border-navy", textAccent: "text-navy" },
-              { slug: "expand", label: "Expand — Property Solutions", href: "/solutions/expand", accent: "border-copper", textAccent: "text-copper" },
+              { slug: "protect", label: "Protect: Storm and Resilience", href: "/solutions/protect", accent: "border-teal", textAccent: "text-teal" },
+              { slug: "improve", label: "Improve: Exteriors and Renovations", href: "/solutions/improve", accent: "border-navy", textAccent: "text-navy" },
+              { slug: "expand", label: "Expand: Property Solutions", href: "/solutions/expand", accent: "border-copper", textAccent: "text-copper" },
             ].map((item) => (
               <Link
                 key={item.slug}

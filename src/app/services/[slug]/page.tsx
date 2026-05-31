@@ -32,9 +32,9 @@ type StormRichContent = {
 
 const stormContent: Record<string, StormRichContent> = {
   "storm-preparedness": {
-    heroH1: "Storm Preparedness — Be Ready Before the Storm Hits.",
+    heroH1: "Storm Preparedness: Be Ready Before the Storm Hits.",
     heroSub:
-      "Don't wait until the cone is on you. Seacoast's storm preparedness program covers boarding, shuttering, supply delivery, and priority emergency response — locked in before hurricane season.",
+      "Don't wait until the cone is on you. Seacoast's storm preparedness program covers boarding, shuttering, supply delivery, and priority emergency response, locked in before hurricane season.",
     heroPrimary: "Get a Preparedness Plan",
     heroSecondary: "See What's Included",
     stormLifecycleStage: "before",
@@ -43,7 +43,7 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Storm Damage Repair",
         href: "/services/storm-damage-repair",
         blurb:
-          "If a storm catches you unprepared, Seacoast handles insurance documentation, adjuster coordination, and full repair — roof to gutters to siding.",
+          "If a storm catches you unprepared, Seacoast handles insurance documentation, adjuster coordination, and full repair: roof to gutters to siding.",
         icon: "🔨",
       },
       {
@@ -57,7 +57,7 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Impact Windows and Doors",
         href: "/services/windows-and-doors",
         blurb:
-          "Impact-rated glazing is the longest-lasting layer of storm protection for any Florida home — and can reduce your wind insurance premium.",
+          "Impact-rated glazing is the longest-lasting layer of storm protection for any Florida home , and it can reduce your wind insurance premium.",
         icon: "🚪",
       },
     ],
@@ -102,7 +102,7 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Storm Damage Repair",
         href: "/services/storm-damage-repair",
         blurb:
-          "Once you're safe, Seacoast handles the insurance claim and the full repair — roof to gutters to siding.",
+          "Once you're safe, Seacoast handles the insurance claim and the full repair: roof to gutters to siding.",
         icon: "🔨",
       },
       {
@@ -124,7 +124,7 @@ const stormContent: Record<string, StormRichContent> = {
   },
 
   "storm-damage-repair": {
-    heroH1: "Storm Damage Repair — We Handle the Claim. You Handle Your Life.",
+    heroH1: "Storm Damage Repair: We Handle the Claim. You Handle Your Life.",
     heroSub:
       "Insurance documentation, adjuster coordination, scope-of-loss reports, and full repair from roof to gutters to siding. Seacoast manages the process from first assessment to final walkthrough.",
     heroPrimary: "Get a Damage Assessment",
@@ -135,7 +135,7 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Roofing",
         href: "/services/roofing",
         blurb:
-          "Once the claim is approved, Seacoast handles the full roof replacement — tile, metal, shingle, or TPO, matched to your original system.",
+          "Once the claim is approved, Seacoast handles the full roof replacement: tile, metal, shingle, or TPO, matched to your original system.",
         icon: "🏠",
       },
       {
@@ -177,7 +177,7 @@ const stormContent: Record<string, StormRichContent> = {
       {
         question: "Do you handle partial damage or just full replacements?",
         answer:
-          "Both. We assess every damaged system — roof, siding, gutters, windows, fascia, soffits — and repair or replace based on what the damage requires and what your claim covers.",
+          "Both. We assess every damaged system: roof, siding, gutters, windows, fascia, soffits. We repair or replace based on what the damage requires and what your claim covers.",
       },
       {
         question: "Do I need multiple contractor bids for my insurance claim?",
@@ -197,7 +197,7 @@ const serviceFaqs: Record<string, FAQItem[]> = {
   ],
   "gutters-fascia-soffits": [
     { question: "What gutter styles do you offer?", answer: "We install seamless K-style and half-round gutters in aluminum and copper, sized for Southwest Florida rainfall." },
-    { question: "Can you replace just the fascia or soffits?", answer: "Yes — we can replace individual components or the full system depending on the scope of damage or renovation." },
+    { question: "Can you replace just the fascia or soffits?", answer: "Yes. We can replace individual components or the full system depending on the scope of damage or renovation." },
   ],
   siding: [
     { question: "Do you install Hardie board siding?", answer: "Yes. James Hardie fiber cement products are a primary option for our Southwest Florida clients due to moisture and impact resistance." },
@@ -208,7 +208,7 @@ const serviceFaqs: Record<string, FAQItem[]> = {
     { question: "How long does window replacement take?", answer: "Most residential window projects are completed within 1 to 2 days. Custom orders may add lead time." },
   ],
   "exterior-renovations": [
-    { question: "What counts as an exterior renovation?", answer: "Anything outside the building envelope — structural repairs, paint, trim, cladding, walkways, lighting, and more." },
+    { question: "What counts as an exterior renovation?", answer: "Anything outside the building envelope: structural repairs, paint, trim, cladding, walkways, lighting, and more." },
     { question: "Do you handle both residential and commercial?", answer: "Yes. Our team works across residential, commercial, and multi-family properties throughout Southwest Florida." },
   ],
   "pool-enclosures-lanais": [
@@ -328,12 +328,12 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       <section className="section bg-cool-gray">
         <div className="container max-w-2xl">
           <p className="eyebrow">Utility content</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">While you wait — five steps to take right now.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">While you wait: five steps to take right now.</h2>
           <ol className="mt-8 space-y-4">
             {[
-              "Move vehicles into the garage or away from trees — falling limbs are the leading source of vehicle damage.",
+              "Move vehicles into the garage or away from trees. Falling limbs are the leading source of vehicle damage.",
               "Bring in loose outdoor furniture, pots, and umbrellas. Anything under 50 lbs becomes a projectile at Cat-1 wind speeds.",
-              "Document your property with a full phone walkthrough — every room, every side of the house. Send the video to yourself.",
+              "Document your property with a full phone walkthrough: every room, every side of the house. Send the video to yourself.",
               "Locate your insurance policy and adjuster contact before the storm. After, those documents can be the most important paper in the house.",
               "Fill bathtubs and containers with fresh water. Utilities can be out for days after a direct hit.",
             ].map((step, i) => (
@@ -354,7 +354,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
             <h2 className="mt-2 font-heading text-3xl font-bold">Once you&apos;re safe, we handle the rest.</h2>
             <p className="mt-4 max-w-2xl text-white/80">
               Seacoast&apos;s storm damage repair team handles insurance documentation, adjuster coordination,
-              and the full repair — from roof to gutters to siding. Hundreds of claims navigated across Southwest Florida.
+              and the full repair: roof to gutters to siding. Hundreds of claims navigated across Southwest Florida.
             </p>
             <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">
               Learn About Storm Damage Repair →
@@ -428,9 +428,9 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       <section className="section bg-cool-gray">
         <div className="container">
           <p className="eyebrow">The urgency</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why prep matters — before the season starts.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why prep matters before the season starts.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Florida sees named storms every year. Most homeowners scramble to prepare when a storm forms —
+            Florida sees named storms every year. Most homeowners scramble to prepare when a storm forms,
             and most boarding contractors are sold out 48 hours before landfall.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -458,7 +458,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
             {[
               { icon: "🔍", heading: "Pre-season inspection", body: "Full property walk-through, vulnerability assessment, and written report covering every exposed system." },
               { icon: "🪵", heading: "Custom shutter and board fitting", body: "Pre-cut, pre-labeled boards or installed shutters ready to deploy. No last-minute sizing, no guesswork." },
-              { icon: "🚚", heading: "Supply delivery", body: "Sandbags, plywood, tie-downs, and generator support delivered when a storm is named — before the stores are empty." },
+              { icon: "🚚", heading: "Supply delivery", body: "Sandbags, plywood, tie-downs, and generator support delivered when a storm is named, before the stores are empty." },
               { icon: "📞", heading: "Priority emergency response", body: "Seacoast preparedness clients move to the front of the line when a storm enters the cone of uncertainty." },
               { icon: "🔧", heading: "Post-storm priority", body: "You're first on our damage assessment list after the storm passes. No waiting behind walk-in requests." },
             ].map((item) => (
@@ -478,12 +478,12 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       <section className="section bg-cool-gray">
         <div className="container">
           <p className="eyebrow">The process</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">How it works — four steps, one season.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">How it works: four steps, one season.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               { step: "1", heading: "Schedule a pre-season inspection", body: "We walk the full property, assess vulnerability, and produce a written report." },
               { step: "2", heading: "Custom-fit and document", body: "We custom-fit boards or shutters for every opening and photograph the property baseline." },
-              { step: "3", heading: "Storm activation", body: "When a storm forms, we execute your prep plan on a priority schedule — before the phone lines fill up." },
+              { step: "3", heading: "Storm activation", body: "When a storm forms, we execute your prep plan on a priority schedule, before the phone lines fill up." },
               { step: "4", heading: "Post-storm priority queue", body: "You're first in line for damage assessment and repair. No competing with walk-in demand." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
@@ -551,7 +551,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="before" />
       <CrossSellBlock heading="What pairs with storm preparedness" items={content.crossSellItems} />
-      <CTASection variant="teal" heading="Hurricane season starts June 1. Get prepped now." subtext="Request a preparedness plan quote from Seacoast — before the season starts and the boarding crews are booked." buttonLabel="Get a Preparedness Plan" />
+      <CTASection variant="teal" heading="Hurricane season starts June 1. Get prepped now." subtext="Request a preparedness plan quote from Seacoast before the season starts and the boarding crews are booked." buttonLabel="Get a Preparedness Plan" />
     </>
   );
 }
@@ -597,7 +597,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 
       {/* Hero image placeholder */}
       <div className="container py-8">
-        <ImagePlaceholder label="Seacoast inspector documenting storm damage on a residential roof — drone and photo documentation in progress" ratio="16/9" tone="navy" />
+        <ImagePlaceholder label="Seacoast inspector documenting storm damage on a residential roof. Drone and photo documentation in progress." ratio="16/9" tone="navy" />
       </div>
 
       {/* Trust bar */}
@@ -605,7 +605,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <div className="container grid gap-8 md:grid-cols-3">
           {[
             { label: "Licensed and Insured", body: "Every repair is performed by licensed contractors with full insurance coverage across Southwest Florida." },
-            { label: "Hundreds of Claims Navigated", body: "Seacoast has supported homeowners through hundreds of insurance claims across Southwest Florida — documentation, adjuster coordination, and repairs." },
+            { label: "Hundreds of Claims Navigated", body: "Seacoast has supported homeowners through hundreds of insurance claims across Southwest Florida: documentation, adjuster coordination, and repairs." },
             { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
@@ -627,10 +627,10 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { step: "1", icon: "📸", heading: "Damage documentation", body: "Full photo log, drone footage, and written scope-of-loss assessment — everything your adjuster needs from day one." },
+              { step: "1", icon: "📸", heading: "Damage documentation", body: "Full photo log, drone footage, and written scope-of-loss assessment. Everything your adjuster needs from day one." },
               { step: "2", icon: "📋", heading: "Adjuster coordination", body: "We communicate directly with your adjuster, provide scope reports, and stay aligned on the approved claim through every revision." },
               { step: "3", icon: "⚖️", heading: "Claim support", body: "If your claim is disputed or denied, we document supplemental evidence and work with licensed public adjusters and attorneys who specialize in Florida storm disputes." },
-              { step: "4", icon: "🔨", heading: "Full repair", body: "Once the claim is approved, Seacoast handles the complete repair — roofing, siding, gutters, windows, and every affected system — to final walkthrough." },
+              { step: "4", icon: "🔨", heading: "Full repair", body: "Once the claim is approved, Seacoast handles the complete repair: roofing, siding, gutters, windows, and every affected system, to final walkthrough." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{item.icon}</div>
@@ -660,7 +660,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
                 Get a Damage Assessment
               </Link>
             </div>
-            <ImagePlaceholder label="Seacoast completed storm repair — new roof installed after hurricane damage, residential property in Southwest Florida" ratio="4/3" tone="steel" />
+            <ImagePlaceholder label="Seacoast completed storm repair. New roof installed after hurricane damage on a residential property in Southwest Florida." ratio="4/3" tone="steel" />
           </div>
         </div>
       </section>

@@ -33,18 +33,18 @@ export function generateMetadata({ params }: Props): Metadata {
 // ─── Per-pillar cross-sell items (strategy §6.2) ───────────────────────────────
 const pillarCrossSell: Record<string, CrossSellItem[]> = {
   protect: [
-    { title: "Container Storm Shelters", href: "/containers/storm-shelters", blurb: "A Cat-5-rated container shelter gives your family a safe structure on-site — no evacuation required.", icon: "🛡️" },
+    { title: "Container Storm Shelters", href: "/containers/storm-shelters", blurb: "A Cat-5-rated container shelter gives your family a safe structure on-site. No evacuation required.", icon: "🛡️" },
     { title: "Roofing", href: "/services/roofing", blurb: "A hurricane-rated roof is the first line of storm defense. Seacoast installs and replaces every roofing system in Southwest Florida.", icon: "🏠" },
     { title: "Siding", href: "/services/siding", blurb: "Impact-resistant siding keeps water and debris out when winds strip lesser cladding off neighboring homes.", icon: "🧱" },
   ],
   improve: [
     { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Every exterior improvement pairs with a storm preparedness plan to protect your investment during hurricane season.", icon: "🛡️" },
     { title: "Room Additions", href: "/services/room-additions", blurb: "Expand the footprint while the crew is already on-site. Seacoast handles additions and exterior work in one project.", icon: "➕" },
-    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Add a finished guest house faster and for less than traditional construction — and match the siding and roofing to your main home.", icon: "🏡" },
+    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Add a finished guest house faster and for less than traditional construction. The siding and roofing match your main home.", icon: "🏡" },
   ],
   expand: [
     { title: "Roofing", href: "/services/roofing", blurb: "Match your container or addition roof to the main house. Seacoast handles the roofing on both structures.", icon: "🏠" },
-    { title: "Siding", href: "/services/siding", blurb: "Hardie board, stucco, or vinyl — match the finish on your expansion to the existing home so it looks built-in.", icon: "🧱" },
+    { title: "Siding", href: "/services/siding", blurb: "Hardie board, stucco, or vinyl: match the finish on your expansion to the existing home so it looks built-in.", icon: "🧱" },
     { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "New structures need to be in the storm plan. Seacoast adds your container or addition to your preparedness coverage.", icon: "🛡️" },
   ],
 };
@@ -57,11 +57,6 @@ const pillarProjectKeywords: Record<string, string[]> = {
 };
 
 // ─── Accent classes per pillar ────────────────────────────────────────────────
-const accentText: Record<string, string> = {
-  protect: "text-teal",
-  improve: "text-navy",
-  expand: "text-copper",
-};
 const accentBg: Record<string, string> = {
   protect: "bg-teal",
   improve: "bg-navy",
@@ -85,7 +80,7 @@ export default function SolutionPillarPage({ params }: Props) {
     <>
       <SchemaScript
         schema={serviceSchema({
-          name: `${pillar.title} — ${pillar.tagline}`,
+          name: `${pillar.title}: ${pillar.tagline}`,
           description: pillar.heroSub,
           url: `/solutions/${slug}`,
           serviceType: pillar.tagline,
@@ -103,7 +98,7 @@ export default function SolutionPillarPage({ params }: Props) {
               { label: pillar.title },
             ]}
           />
-          <p className={`eyebrow mt-4 ${accentText[slug]}/80`}>{pillar.tagline}</p>
+          <p className="eyebrow mt-4 text-teal/80">{pillar.tagline}</p>
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-5xl">{pillar.heroHeading}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{pillar.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -119,9 +114,9 @@ export default function SolutionPillarPage({ params }: Props) {
 
       {/* Hero image placeholder */}
       <div className="container py-8">
-        {slug === "protect" && <ImagePlaceholder label="Seacoast crew preparing a Southwest Florida home for hurricane season — shutters and boarding installed on a coastal property" ratio="16/9" tone="navy" />}
-        {slug === "improve" && <ImagePlaceholder label="Seacoast exterior renovation in progress — new roofing, siding, and gutters on a Southwest Florida residential property" ratio="16/9" tone="navy" />}
-        {slug === "expand" && <ImagePlaceholder label="Finished container guest house with Hardie siding and custom roof — matching the main residence in Southwest Florida" ratio="16/9" tone="warm" />}
+        {slug === "protect" && <ImagePlaceholder label="Seacoast crew preparing a Southwest Florida home for hurricane season. Shutters and boarding installed on a coastal property" ratio="16/9" tone="navy" />}
+        {slug === "improve" && <ImagePlaceholder label="Seacoast exterior renovation in progress. New roofing, siding, and gutters on a Southwest Florida residential property." ratio="16/9" tone="navy" />}
+        {slug === "expand" && <ImagePlaceholder label="Finished container guest house with Hardie siding and custom roof, matching the main residence in Southwest Florida" ratio="16/9" tone="warm" />}
       </div>
 
       {/* Services in this pillar */}
@@ -135,8 +130,8 @@ export default function SolutionPillarPage({ params }: Props) {
           </h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
             {slug === "protect" && "From locking in your prep plan before the season to navigating the insurance claim after, Seacoast handles the full storm lifecycle."}
-            {slug === "improve" && "Roofing, siding, gutters, windows, and exterior renovations scoped and completed together — without three separate contractor relationships."}
-            {slug === "expand" && "Container builds, pool enclosures, and room additions that add real finished space to your property — built by the same crews who do the roofing and siding."}
+            {slug === "improve" && "Roofing, siding, gutters, windows, and exterior renovations scoped and completed together, without three separate contractor relationships."}
+            {slug === "expand" && "Container builds, pool enclosures, and room additions that add real finished space to your property, built by the same crews who do the roofing and siding."}
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {pillarServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
@@ -151,7 +146,7 @@ export default function SolutionPillarPage({ params }: Props) {
             <p className="eyebrow">Container builds</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Custom containers, built for Florida living.</h2>
             <p className="mt-4 max-w-2xl text-text-secondary">
-              Storage, guest houses, offices, and storm shelters — SWFL Containers builds and finishes
+              Storage, guest houses, offices, and storm shelters. SWFL Containers builds and finishes
               shipping containers to match your home, your hurricane plan, and your budget.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -186,18 +181,18 @@ export default function SolutionPillarPage({ params }: Props) {
                 {slug === "protect" &&
                   "Seacoast's protect pillar is built around the reality that hurricane preparedness is a year-round discipline in Southwest Florida. The most protected properties are the ones that locked in their boarding contracts and shutter systems before June 1, not the ones scrambling when the cone appears on the radar."}
                 {slug === "improve" &&
-                  "Most Southwest Florida homeowners end up coordinating a roofer, a siding crew, and a gutter company separately for what is actually one connected project. Seacoast handles every exterior trade in a single scope, single schedule, and single contract — with 40 years of documented Southwest Florida project work behind it."}
+                  "Most Southwest Florida homeowners end up coordinating a roofer, a siding crew, and a gutter company separately for what is actually one connected project. Seacoast handles every exterior trade in a single scope, single schedule, and single contract, backed by 40 years of documented Southwest Florida project work behind it."}
                 {slug === "expand" &&
-                  "Container guest houses and offices deliver finished, permitted, livable space in a fraction of the time and cost of traditional construction. Because they're built on-site by the same licensed crews who do Seacoast's roofing and siding work, the finish quality and code compliance match a traditionally built structure — and the exterior can be sided and roofed to be indistinguishable from one."}
+                  "Container guest houses and offices deliver finished, permitted, livable space in a fraction of the time and cost of traditional construction. Because they're built on-site by the same licensed crews who do Seacoast's roofing and siding work, the finish quality and code compliance match a traditionally built structure. The exterior can be sided and roofed to be indistinguishable from one."}
               </p>
               <Link href="/contact" className={`mt-6 inline-block rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
                 {pillar.ctaLabel}
               </Link>
             </div>
             <div>
-              {slug === "protect" && <ImagePlaceholder label="Southwest Florida property after hurricane — Seacoast storm damage assessment in progress, drone visible overhead" ratio="4/3" tone="navy" />}
-              {slug === "improve" && <ImagePlaceholder label="Before and after exterior renovation — new roofing and Hardie siding on a Southwest Florida home" ratio="4/3" tone="warm" />}
-              {slug === "expand" && <ImagePlaceholder label="Finished container guest house interior — drywall, mini-split, kitchenette, and hardwood floor, matching main residence style" ratio="4/3" tone="warm" />}
+              {slug === "protect" && <ImagePlaceholder label="Southwest Florida property after hurricane. Seacoast storm damage assessment in progress, drone visible overhead." ratio="4/3" tone="navy" />}
+              {slug === "improve" && <ImagePlaceholder label="Before and after exterior renovation. New roofing and Hardie siding on a Southwest Florida home." ratio="4/3" tone="warm" />}
+              {slug === "expand" && <ImagePlaceholder label="Finished container guest house interior. Drywall, mini-split, kitchenette, and hardwood floor matching main residence style." ratio="4/3" tone="warm" />}
             </div>
           </div>
         </div>
@@ -228,8 +223,8 @@ export default function SolutionPillarPage({ params }: Props) {
 
       <CTASection
         variant={slug === "protect" ? "teal" : slug === "improve" ? "navy" : "teal"}
-        heading={pillar.ctaLabel + "?"}
-        subtext={`Seacoast serves ${slug === "protect" ? "six Southwest Florida counties with emergency and preparedness crews" : slug === "improve" ? "residential, commercial, and multi-family properties across Southwest Florida" : "Southwest Florida property owners looking to expand with containers, enclosures, and additions"}.`}
+        heading={slug === "protect" ? "Ready to lock in your storm preparedness plan?" : slug === "improve" ? "Ready to start your exterior project?" : "Ready to add space to your property?"}
+        subtext={slug === "protect" ? "Seacoast serves six Southwest Florida counties with emergency boarding crews and priority response contracts." : slug === "improve" ? "Request a free quote from Seacoast. We scope and complete every exterior trade in a single project cycle." : "Container guest houses, offices, pool enclosures, and room additions. All from one Southwest Florida contractor."}
         buttonLabel={pillar.ctaLabel}
       />
     </>
