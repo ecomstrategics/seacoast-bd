@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What types of projects qualify for financing?",
-    a: "Most project types qualify — roofing, siding, enclosures, additions, and more. Ask us when you request your quote.",
+    a: "Most project types qualify: roofing, siding, enclosures, additions, and more. Ask us when you request your quote.",
   },
   {
     q: "Is financing available for commercial projects?",

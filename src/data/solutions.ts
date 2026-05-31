@@ -32,7 +32,7 @@ export const solutions: SolutionPillar[] = [
     title: "Improve",
     tagline: "Exteriors & Renovations",
     heroHeading: "Renovate the Exterior. Raise the Value.",
-    heroSub: "Roofing, siding, windows, gutters, and full exterior renovations — Seacoast handles the trades so you don't have to coordinate three contractors for one project.",
+    heroSub: "Roofing, siding, windows, gutters, and full exterior renovations. Seacoast handles the trades so you don't have to coordinate three contractors for one project.",
     accent: "navy",
     serviceslugs: [
       "roofing",
@@ -49,7 +49,7 @@ export const solutions: SolutionPillar[] = [
     title: "Expand",
     tagline: "Property Solutions",
     heroHeading: "Add Space Without the Wait.",
-    heroSub: "Container guest houses, offices, workshops, pool enclosures, and room additions. Seacoast builds everything outside the main footprint — faster and with one contractor from start to finish.",
+    heroSub: "Container guest houses, offices, workshops, pool enclosures, and room additions. Seacoast builds everything outside the main footprint, faster and with one contractor from start to finish.",
     accent: "copper",
     serviceslugs: [
       "pool-enclosures-lanais",

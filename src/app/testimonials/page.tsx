@@ -4,7 +4,7 @@ import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
   title: "Testimonials | Seacoast Building & Design",
-  description: "See what homeowners and property owners say about Seacoast Building & Design — Southwest Florida's video-documented contractor.",
+  description: "See what homeowners and property owners say about Seacoast Building & Design, Southwest Florida's video-documented contractor.",
 };
 
 const testimonials = [
@@ -14,7 +14,7 @@ const testimonials = [
     project: "Post-storm roof replacement",
   },
   {
-    quote: "The team managed everything — pulled the permits, coordinated the crew, handled the final inspection. We didn't have to chase anybody.",
+    quote: "The team managed everything: pulled the permits, coordinated the crew, handled the final inspection. We didn't have to chase anybody.",
     name: "Sarasota property manager",
     project: "Multi-family roofing project",
   },
@@ -62,7 +62,7 @@ export default function TestimonialsPage() {
           <p className="eyebrow">Video proof</p>
           <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Don&apos;t just take our word for it</h2>
           <p className="mt-5 text-lg text-text-secondary">
-            Watch 24 documented project videos — real jobs, real results, no stock footage. This is what 40 years of Southwest Florida contracting looks like.
+            Watch 24 documented project videos. Real jobs, real results, no stock footage. This is what 40 years of Southwest Florida contracting looks like.
           </p>
           <div className="mt-8">
             <Link href="/our-work" className="rounded-full bg-teal px-8 py-4 font-bold text-white hover:bg-copper">Browse Project Videos</Link>

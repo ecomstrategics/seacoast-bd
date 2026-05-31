@@ -8,7 +8,7 @@ export function ContainerCard({ container }: { container: Container }) {
       href={`/containers/${container.slug}`}
       className="group overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
     >
-      <ImagePlaceholder label={`${container.name} — photo`} ratio="16/9" tone="steel" />
+      <ImagePlaceholder label={`${container.name} photo`} ratio="16/9" tone="steel" />
       <div className="p-6">
         <div className="text-3xl" aria-hidden>{container.icon}</div>
         <h3 className="mt-3 font-heading text-xl font-bold text-navy group-hover:text-teal">{container.name}</h3>

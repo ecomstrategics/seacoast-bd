@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const articles = [
   { title: "How to Evaluate Storm Damage After a Hurricane", category: "Storm Prep", description: "What to look for on your roof, soffits, gutters, and enclosures after a major storm event in Southwest Florida." },
   { title: "Florida Roofing Code: What Homeowners Need to Know", category: "Building Codes", description: "An overview of Florida Building Code requirements for residential roof replacements and the permit process." },
-  { title: "Metal vs. Tile vs. Shingle: Choosing the Right Roof for SW Florida", category: "Roofing Guide", description: "The tradeoffs between common roofing systems in Florida — durability, cost, insurance impact, and aesthetics." },
+  { title: "Metal vs. Tile vs. Shingle: Choosing the Right Roof for SW Florida", category: "Roofing Guide", description: "The tradeoffs between common roofing systems in Florida: durability, cost, insurance impact, and aesthetics." },
   { title: "What to Expect During a Roof Replacement", category: "Project Guide", description: "A timeline of a typical residential roof replacement from inspection to final walkthrough." },
   { title: "How Seamless Gutters Protect Your Home", category: "Gutters", description: "Why properly sized, correctly pitched gutters matter more in Florida than most markets." },
   { title: "Pool Enclosure Repair After Storm Damage", category: "Enclosures", description: "What options exist after a screen enclosure is damaged by wind, falling debris, or a hurricane." },
@@ -23,7 +23,7 @@ export default function ResourcesPage() {
           <p className="eyebrow">Knowledge base</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Resources for Florida property owners</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
-            Practical guides on roofing, storm prep, building codes, and exterior renovations — written for Southwest Florida homeowners and property managers.
+            Practical guides on roofing, storm prep, building codes, and exterior renovations, written for Southwest Florida homeowners and property managers.
           </p>
         </div>
       </section>

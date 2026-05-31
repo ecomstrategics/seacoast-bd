@@ -18,7 +18,7 @@ export const services: Service[] = [
   {
     slug: "storm-preparedness",
     name: "Storm Preparedness",
-    shortDescription: "Pre-season inspections, custom shutter and board fitting, supply delivery, and priority emergency response — locked in before hurricane season.",
+    shortDescription: "Pre-season inspections, custom shutter and board fitting, supply delivery, and priority emergency response, locked in before hurricane season.",
     icon: "🛡️",
     pillar: "protect",
   },

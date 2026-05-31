@@ -30,10 +30,10 @@ export default function AboutPage() {
             <p className="eyebrow">What we do</p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team. Full exterior scope.</h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              We handle the full exterior envelope — roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, and storm damage repairs. Our team coordinates trades, permitting, materials, and documentation from first inspection to final walkthrough.
+              We handle the full exterior envelope: roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, and storm damage repairs. Our team coordinates trades, permitting, materials, and documentation from first inspection to final walkthrough.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
-              Every project we complete is documented on video — 24 completed project videos and counting. This level of transparency is rare in contracting. We believe it&apos;s the most honest way to show what we can do.
+              Every project we complete is documented on video, with 24 completed project videos and counting. This level of transparency is rare in contracting. We believe it&apos;s the most honest way to show what we can do.
             </p>
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function AboutPage() {
               Salt air, intense UV, hurricane exposure, and Florida building codes are a distinct combination. Our team has spent decades working in these conditions. We know which materials hold up, which methods fail, and how to build for durability in this environment.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
-              We&apos;re licensed and insured in Florida, and we serve six counties across the Southwest coast — Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier.
+              We&apos;re licensed and insured in Florida, and we serve six counties across the Southwest coast: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier.
             </p>
           </div>
         </div>
