@@ -31,8 +31,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="eyebrow">Hours</p>
-                <p className="mt-2 text-text-secondary">Mon–Fri: 8am – 6pm</p>
-                <p className="text-text-secondary">Saturday: 9am – 3pm</p>
+                <p className="mt-2 text-text-secondary">Mon to Fri: 8am to 6pm</p>
+                <p className="text-text-secondary">Saturday: 9am to 3pm</p>
               </div>
               <div>
                 <p className="eyebrow">Service Area</p>

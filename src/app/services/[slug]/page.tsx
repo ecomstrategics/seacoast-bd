@@ -57,7 +57,7 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Impact Windows and Doors",
         href: "/services/windows-and-doors",
         blurb:
-          "Impact-rated glazing is the longest-lasting layer of storm protection for any Florida home , and it can reduce your wind insurance premium.",
+          "Impact-rated glazing is the longest-lasting layer of storm protection for any Florida home, and it can reduce your wind insurance premium.",
         icon: "🚪",
       },
     ],
@@ -715,6 +715,45 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 }
 
 // ─── Generic service layout (all non-storm services) ─────────────────────────
+// Cross-sell pairings for the generic (non-storm) services, per strategy §6.2.
+const genericCrossSell: Record<string, CrossSellItem[]> = {
+  roofing: [
+    { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Finish the roof system with water management built for Southwest Florida rainfall.", icon: "🌧️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Roof damage after a storm? We document it and handle the insurance claim.", icon: "⛈️" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Protect the new roof with a pre-season prep plan locked in before hurricane season.", icon: "🛡️" },
+  ],
+  "gutters-fascia-soffits": [
+    { title: "Roofing", href: "/services/roofing", blurb: "Gutters and roofing work as one system. We handle both with one crew.", icon: "🏠" },
+    { title: "Siding", href: "/services/siding", blurb: "Pair new trim and fascia with durable siding for a complete exterior refresh.", icon: "🧱" },
+    { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Roll trim and water management into a full exterior renovation.", icon: "🛠️" },
+  ],
+  siding: [
+    { title: "Roofing", href: "/services/roofing", blurb: "Match a new roof to new siding for a unified, storm-ready exterior.", icon: "🏠" },
+    { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Combine siding with a broader exterior transformation.", icon: "🛠️" },
+    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "We finish container guest houses with siding that matches your home.", icon: "🏡" },
+  ],
+  "windows-and-doors": [
+    { title: "Roofing", href: "/services/roofing", blurb: "Bundle impact windows with roofing for a complete storm-protection upgrade.", icon: "🏠" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Impact glazing is one layer of a full storm-preparedness plan.", icon: "🛡️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Window or door damage after a storm? We document and repair it.", icon: "⛈️" },
+  ],
+  "exterior-renovations": [
+    { title: "Roofing", href: "/services/roofing", blurb: "A new roof is often the anchor of a full exterior renovation.", icon: "🏠" },
+    { title: "Siding", href: "/services/siding", blurb: "New siding transforms curb appeal alongside other exterior work.", icon: "🧱" },
+    { title: "Room Additions", href: "/services/room-additions", blurb: "Expanding the footprint? We renovate and add space in one project.", icon: "➕" },
+  ],
+  "pool-enclosures-lanais": [
+    { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Tie outdoor living into a broader exterior upgrade.", icon: "🛠️" },
+    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Expand outdoor living with a container guest house finished to match the lanai.", icon: "🏡" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Screen enclosure damaged in a storm? We rebuild to current code.", icon: "⛈️" },
+  ],
+  "room-additions": [
+    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Compare a traditional addition with a faster, lower-cost container build.", icon: "🏡" },
+    { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Match a new addition to the rest of your home's exterior.", icon: "🛠️" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Every addition needs a roof that ties into the existing structure.", icon: "🏠" },
+  ],
+};
+
 function GenericServiceLayout({ params }: Props) {
   const service = getServiceBySlug(params.slug)!;
   const keywords = slugToServiceTypeKeywords[params.slug] ?? [params.slug.split("-")[0]];
@@ -722,6 +761,7 @@ function GenericServiceLayout({ params }: Props) {
     .filter((p) => keywords.some((kw) => p.serviceType.toLowerCase().includes(kw)))
     .slice(0, 4);
   const faqs = serviceFaqs[params.slug] ?? [];
+  const crossSell = genericCrossSell[params.slug] ?? [];
 
   return (
     <>
@@ -779,6 +819,8 @@ function GenericServiceLayout({ params }: Props) {
           </div>
         </section>
       )}
+
+      {crossSell.length > 0 && <CrossSellBlock heading={`What pairs with ${service.name.toLowerCase()}`} items={crossSell} />}
 
       <CTASection variant="teal" heading={`Ready to discuss your ${service.name.toLowerCase()} project?`} />
     </>

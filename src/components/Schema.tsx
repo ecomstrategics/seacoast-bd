@@ -79,10 +79,18 @@ export function productSchema({
     },
     offers: {
       "@type": "Offer",
-      priceCurrency: offers?.priceCurrency ?? "USD",
-      price: offers?.price ?? "Contact for pricing",
       availability: offers?.availability ?? "https://schema.org/InStock",
       seller: localBusinessSchema(),
+      // Numeric price emitted only when known; otherwise expose currency via priceSpecification
+      // to keep the Offer valid for Google Rich Results without inventing a dollar figure.
+      ...(offers?.price
+        ? { price: offers.price, priceCurrency: offers?.priceCurrency ?? "USD" }
+        : {
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              priceCurrency: offers?.priceCurrency ?? "USD",
+            },
+          }),
     },
   };
 }

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ProjectCard } from "@/components/ProjectCard";
-import { RepBanner } from "@/components/RepBanner";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { SolutionsPillar } from "@/components/SolutionsPillar";
 import { TrustBar } from "@/components/TrustBar";
@@ -16,7 +15,7 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
   title: "Seacoast Building & Design | Southwest Florida's Property Solutions Company",
-  description: "Protect, improve, and expand your home or property. All from one trusted contractor. 40+ years, 6 counties, every project on video. Licensed and insured. (941) 500-5431",
+  description: "Protect, improve, and expand your home or property. All from one licensed contractor. 40+ years, 6 counties, every project on video. Licensed and insured. (941) 500-5431",
 };
 
 const pillarBlurbs: Record<string, string> = {
@@ -31,7 +30,6 @@ export default function Home() {
   return (
     <>
       <SchemaScript schema={localBusinessSchema()} />
-      <RepBanner />
 
       {/* Hero */}
       <section className="bg-navy py-24 text-white">
@@ -42,7 +40,7 @@ export default function Home() {
               Southwest Florida&apos;s Property Solutions Company.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-              Protect, improve, and expand your home or property. All from one trusted contractor. 40+ years, 6 counties, every project on video.
+              Protect, improve, and expand your home or property. All from one licensed contractor. 40+ years, 6 counties, every project on video.
             </p>
             <p className="mt-5 font-heading text-xl font-bold tracking-widest text-teal uppercase">
               Protect. Improve. Expand.

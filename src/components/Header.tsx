@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { primaryNav, solutionsMega } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
@@ -11,6 +11,23 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!openDropdown) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpenDropdown(null);
+    }
+    function onClickOutside(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) setOpenDropdown(null);
+    }
+    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("mousedown", onClickOutside);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("mousedown", onClickOutside);
+    };
+  }, [openDropdown]);
 
   function openMenu(key: string) {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -29,7 +46,7 @@ export function Header() {
       <div className="bg-navy text-sm text-white">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
           <span>Call: <a className="font-semibold text-white underline-offset-4 hover:underline" href="tel:+19415005431">(941) 500-5431</a></span>
-          <span>Mon&ndash;Fri 8am&ndash;6pm &bull; Sat 9am&ndash;3pm &bull; Serving Southwest Florida</span>
+          <span>Mon to Fri 8am to 6pm &bull; Sat 9am to 3pm &bull; Serving Southwest Florida</span>
           <span className="hidden gap-3 sm:flex" aria-label="Social links">
             <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
             <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
@@ -45,7 +62,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 text-sm font-medium text-charcoal lg:flex" aria-label="Main navigation">
+        <nav ref={navRef} className="hidden items-center gap-1 text-sm font-medium text-charcoal lg:flex" aria-label="Main navigation">
           {primaryNav.map((item) => {
             if (item.mega === "solutions") {
               return (
@@ -185,11 +202,11 @@ export function Header() {
       {mobileOpen && (
         <nav id="mobile-menu" className="border-t border-navy/10 bg-warm-white px-4 pb-6 lg:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
-            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-copper">Protect</p>
+            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Protect</p>
             {solutionsMega.protect.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
-            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-navy/60">Improve</p>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-navy">Improve</p>
             {solutionsMega.improve.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}

@@ -3,6 +3,7 @@ import { Epilogue, Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
+import { RepBanner } from "@/components/RepBanner";
 import "./globals.css";
 
 const epilogue = Epilogue({ subsets: ["latin"], variable: "--font-epilogue", weight: ["600", "700"] });
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${epilogue.variable} ${inter.variable} font-body antialiased`}><Header /><main>{children}</main><Footer /><MobileBottomBar /></body></html>;
+  return <html lang="en"><body className={`${epilogue.variable} ${inter.variable} font-body antialiased`}><RepBanner /><Header /><main>{children}</main><Footer /><MobileBottomBar /></body></html>;
 }

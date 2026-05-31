@@ -650,7 +650,7 @@ export default function ContainerProductPage({ params }: Props) {
     description: container.shortDescription,
     url: `/containers/${container.slug}`,
     sku: `SWFL-${container.slug.toUpperCase()}`,
-    offers: { price: "Contact for pricing", priceCurrency: "USD", availability: "https://schema.org/InStock" },
+    offers: { priceCurrency: "USD", availability: "https://schema.org/InStock" },
   });
   const faqData = faqs.length > 0 ? faqSchema(faqs.map((f) => ({ question: f.question, answer: f.answer }))) : null;
 

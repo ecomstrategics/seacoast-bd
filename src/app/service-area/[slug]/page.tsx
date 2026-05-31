@@ -6,7 +6,6 @@ import { CTASection } from "@/components/CTASection";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { ProjectCard } from "@/components/ProjectCard";
 import { QuoteForm } from "@/components/QuoteForm";
-import { RepBanner } from "@/components/RepBanner";
 import { SchemaScript, localBusinessSchema, serviceSchema } from "@/components/Schema";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/data/services";
@@ -49,7 +48,6 @@ export default function ServiceAreaCityPage({ params }: Props) {
   return (
     <>
       <SchemaScript schema={schema} />
-      <RepBanner />
 
       {/* Hero */}
       <section className="bg-navy py-20 text-white">
