@@ -20,6 +20,9 @@ const config: Config = {
         "cool-gray": "#E8EAF0",
         charcoal: "#1C1C1E",
         "text-secondary": "#5A5E6B",
+        "storm": "#7A2E2E",
+        "container-steel": "#3D4654",
+        "success": "#2E7D5B",
       },
       boxShadow: {
         soft: "0 4px 24px 0 rgba(11,29,58,0.10)",
