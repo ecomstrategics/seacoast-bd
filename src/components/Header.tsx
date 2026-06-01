@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { primaryNav, solutionsMega } from "@/data/navigation";
 
@@ -57,8 +58,16 @@ export function Header() {
 
       {/* Main nav row */}
       <div className="container flex items-center justify-between gap-6 py-4">
-        <Link href="/" className="font-heading text-xl font-bold tracking-tight text-navy" onClick={() => setMobileOpen(false)}>
-          Seacoast<span className="text-teal"> B&amp;D</span>
+        {/* Logo image: orange wordmark on transparent bg — displayed on a navy pill for contrast */}
+        <Link href="/" className="flex items-center rounded-md bg-navy px-3 py-1.5" onClick={() => setMobileOpen(false)}>
+          <Image
+            src="/logo.png"
+            alt="Seacoast Building & Design"
+            width={166}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
