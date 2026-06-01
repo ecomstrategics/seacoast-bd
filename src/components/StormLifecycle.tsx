@@ -29,7 +29,7 @@ const stages = [
 
 export function StormLifecycle({ activeStage }: { activeStage?: "before" | "during" | "after" }) {
   return (
-    <section className="section bg-navy text-white">
+    <section className="section dark-band bg-navy text-white">
       <div className="container">
         <p className="eyebrow text-teal/80">The Storm Lifecycle</p>
         <h2 className="mt-2 font-heading text-3xl font-bold">Seacoast covers every stage.</h2>

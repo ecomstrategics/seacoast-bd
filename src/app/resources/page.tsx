@@ -28,7 +28,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <div key={article.title} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft">

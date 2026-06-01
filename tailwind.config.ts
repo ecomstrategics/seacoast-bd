@@ -14,11 +14,15 @@ const config: Config = {
       },
       colors: {
         navy: "#00387E",           // brand navy (pixel-extracted from real logo)
+        "navy-deep": "#002A5C",    // deeper band for alternating dark sections
+        "navy-900": "#001E45",     // deepest navy: body background / footers
+        "navy-surface": "#0B2C5C", // slightly lifted navy for dark card/panel surfaces
         // NOTE: 'teal' is the legacy token name — now mapped to brand orange #EE6200.
         // All existing `text-teal`, `bg-teal`, `border-teal` classes become orange automatically.
         teal: "#EE6200",           // brand orange (legacy token, do not rename)
         orange: "#EE6200",         // brand orange alias for new code
         copper: "#1B3358",         // navy-tint; used for eyebrow/accent, complements orange+navy
+        "copper-light": "#9DB4D8", // light steel-blue accent, readable on dark navy
         "warm-white": "#F8F6F2",
         "cool-gray": "#E8EAF0",
         charcoal: "#1C1C1E",

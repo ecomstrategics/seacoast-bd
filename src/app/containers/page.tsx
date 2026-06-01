@@ -76,7 +76,7 @@ export default function ContainersLandingPage() {
       </div>
 
       {/* Why containers */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Why containers</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Built like a fortress. Finished like a home.</h2>
@@ -101,7 +101,7 @@ export default function ContainersLandingPage() {
       </section>
 
       {/* Product grid */}
-      <section id="products" className="section bg-cool-gray">
+      <section id="products" className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Product line</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Four ways to put containers to work</h2>
@@ -115,7 +115,7 @@ export default function ContainersLandingPage() {
       </section>
 
       {/* The Seacoast difference */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <p className="eyebrow">The Seacoast difference</p>
           <h2 className="mt-2 font-heading text-4xl font-bold">We don&apos;t just sell containers. We build them.</h2>
@@ -140,7 +140,7 @@ export default function ContainersLandingPage() {
       </section>
 
       {/* Compare teaser */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <div className="flex flex-col gap-8 md:flex-row md:items-center">
             <div className="flex-1">
@@ -174,7 +174,7 @@ export default function ContainersLandingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">Container FAQ</h2>

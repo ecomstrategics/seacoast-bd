@@ -20,7 +20,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <div>
             <h2 className="font-heading text-2xl font-bold text-navy">Contact information</h2>

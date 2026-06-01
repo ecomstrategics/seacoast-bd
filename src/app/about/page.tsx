@@ -24,7 +24,7 @@ export default function AboutPage() {
 
       <TrustBar />
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow">What we do</p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Service area</p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-navy">We serve six Southwest Florida counties</h2>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl text-center">
           <p className="eyebrow">The work speaks</p>
           <h2 className="mt-3 font-heading text-4xl font-bold text-navy">24 completed projects. All on video.</h2>

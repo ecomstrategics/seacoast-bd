@@ -82,17 +82,17 @@ export default function ServiceAreaCityPage({ params }: Props) {
       </section>
 
       {/* Trust Strip */}
-      <section className="border-y border-navy/10 bg-white py-5">
-        <div className="container grid gap-3 text-center font-heading font-bold text-navy sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-xl bg-warm-white px-4 py-3">Licensed and Insured</div>
-          <div className="rounded-xl bg-warm-white px-4 py-3">40+ Years Experience</div>
-          <div className="rounded-xl bg-warm-white px-4 py-3">{city.county} Coverage</div>
-          <div className="rounded-xl bg-warm-white px-4 py-3">Financing Available</div>
+      <section className="border-y border-white/10 bg-navy-deep py-5">
+        <div className="container grid gap-3 text-center font-heading font-bold text-white sm:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl bg-white/5 px-4 py-3">Licensed and Insured</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">40+ Years Experience</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">{city.county} Coverage</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">Financing Available</div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Available in {city.name}</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Services we offer in {city.county}</h2>
@@ -109,7 +109,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
 
       {/* Featured Local Projects */}
       {featuredProjects.length > 0 && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">Local work</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Projects near {city.name}</h2>
@@ -131,7 +131,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
       )}
 
       {/* Container Callout */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
@@ -153,7 +153,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
       </section>
 
       {/* Local Quote Form */}
-      <section className="section bg-white" id="quote">
+      <section className="section dark-band bg-navy-deep" id="quote">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>

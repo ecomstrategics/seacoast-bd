@@ -2,12 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
+:root { color-scheme: dark; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #F8F6F2; color: #1C1C1E; }
+/* Dark-navy theme: deepest navy body so any gaps read dark, light default text. */
+body { margin: 0; background: #001E45; color: #F4F6FB; }
 a { text-decoration: none; }
 .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
 .section { padding-block: 5rem; }
 .eyebrow { color: #EE6200; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
-.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00387E]; }
+/* Orange focus ring reads clearly on dark navy. */
+.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EE6200]; }
+
+/*
+  Dark-band text contrast layer.
+  Sections that became dark navy carry the `.dark-band` class. Inside them,
+  any heading/body text that was authored as brand-navy or secondary-gray
+  (meant for the old light layout) is flipped to light so it stays readable.
+  Light component surfaces (cards/chips that set their own bg-white /
+  bg-cool-gray / bg-warm-white) are treated as contrast islands: text inside
+  them is restored to the original dark palette so cards keep premium contrast.
+*/
+.dark-band .text-navy { color: #FFFFFF; }
+.dark-band .text-charcoal { color: #FFFFFF; }
+.dark-band .text-text-secondary { color: rgba(244, 246, 251, 0.72); }
+
+/* Contrast islands: restore dark text inside light surfaces on a dark band. */
+.dark-band .bg-white .text-navy,
+.dark-band .bg-warm-white .text-navy,
+.dark-band .bg-cool-gray .text-navy,
+.dark-band .bg-white\/90 .text-navy { color: #00387E; }
+
+.dark-band .bg-white .text-charcoal,
+.dark-band .bg-warm-white .text-charcoal,
+.dark-band .bg-cool-gray .text-charcoal { color: #1C1C1E; }
+
+.dark-band .bg-white .text-text-secondary,
+.dark-band .bg-warm-white .text-text-secondary,
+.dark-band .bg-cool-gray .text-text-secondary { color: #5A5E6B; }

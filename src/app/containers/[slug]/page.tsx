@@ -95,7 +95,7 @@ function StorageContent() {
   return (
     <>
       {/* Sizes & specs */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Sizes and specs</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Pick the right size for the job</h2>
@@ -115,7 +115,7 @@ function StorageContent() {
       </section>
 
       {/* Comparison: storage container vs alternatives */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">How it compares</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Storage container vs. the alternatives</h2>
@@ -139,7 +139,7 @@ function StorageContent() {
       </section>
 
       {/* Upgrade options */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-10 md:grid-cols-2">
           <div>
             <p className="eyebrow">What is included</p>
@@ -186,7 +186,7 @@ function StorageContent() {
       </section>
 
       {/* Delivery */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl">
           <p className="eyebrow">Delivery and placement</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">We handle the hard part</h2>
@@ -205,7 +205,7 @@ function GuestHouseContent() {
   return (
     <>
       {/* Before/after slider */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-4xl">
           <p className="eyebrow">See the transformation</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Raw container to finished guest house</h2>
@@ -220,7 +220,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Configurations */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Configurations</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Choose your build</h2>
@@ -246,7 +246,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Cost story */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <p className="eyebrow">The cost story</p>
           <h2 className="mt-2 font-heading text-4xl font-bold">Faster timeline. More predictable budget.</h2>
@@ -259,7 +259,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Standard includes vs upgrades */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-10 md:grid-cols-2">
           <div>
             <p className="eyebrow">Standard build includes</p>
@@ -311,7 +311,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Gallery */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Built to match your home</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Finish styles</h2>
@@ -328,7 +328,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Permitting */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Permitting and code</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">We handle the permit process</h2>
@@ -337,7 +337,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Use cases */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Use cases</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Who builds container guest houses</h2>
@@ -361,7 +361,7 @@ function GuestHouseContent() {
       </section>
 
       {/* Process */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">How it works</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">From concept to move-in</h2>
@@ -393,7 +393,7 @@ function OfficesWorkshopsContent() {
   return (
     <>
       {/* Hero visual */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
             <ImagePlaceholder label="Finished container office exterior: glass entry door, painted metal siding, small sign, parking area, Florida suburban setting" ratio="4/3" tone="steel" />
@@ -403,7 +403,7 @@ function OfficesWorkshopsContent() {
       </section>
 
       {/* Use cases */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Use cases</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Who builds container offices and workshops</h2>
@@ -427,7 +427,7 @@ function OfficesWorkshopsContent() {
       </section>
 
       {/* Standard includes vs upgrades */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-10 md:grid-cols-2">
           <div>
             <p className="eyebrow">Standard build includes</p>
@@ -478,7 +478,7 @@ function OfficesWorkshopsContent() {
       </section>
 
       {/* Business advantages */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <p className="eyebrow">Business advantages</p>
           <h2 className="mt-2 font-heading text-4xl font-bold">Three reasons business owners choose containers</h2>
@@ -499,7 +499,7 @@ function OfficesWorkshopsContent() {
       </section>
 
       {/* Gallery */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Finished builds</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Container offices and workshops</h2>
@@ -518,7 +518,7 @@ function StormSheltersContent() {
   return (
     <>
       {/* Urgency statement */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">When evacuation is not an option</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A structure that can take a direct hit</h2>
@@ -530,7 +530,7 @@ function StormSheltersContent() {
       </section>
 
       {/* Key features */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Built for the worst</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">What makes these shelters different</h2>
@@ -556,7 +556,7 @@ function StormSheltersContent() {
       </section>
 
       {/* Standard includes vs upgrades */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-10 md:grid-cols-2">
           <div>
             <p className="eyebrow">Standard build includes</p>
@@ -608,7 +608,7 @@ function StormSheltersContent() {
       </section>
 
       {/* Storm Lifecycle cross-link */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Full storm plan</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A shelter is one part of the picture</h2>
@@ -621,7 +621,7 @@ function StormSheltersContent() {
       </section>
 
       {/* Gallery */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Shelter builds</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">What they look like installed</h2>
@@ -680,7 +680,7 @@ export default function ContainerProductPage({ params }: Props) {
       </section>
 
       {/* Trust strip */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl bg-white p-6 shadow-soft">
             <p className="eyebrow">Licensed and Insured</p>
@@ -705,7 +705,7 @@ export default function ContainerProductPage({ params }: Props) {
 
       {/* FAQ */}
       {faqs.length > 0 && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container max-w-3xl">
             <p className="eyebrow">Common questions</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">{container.name} FAQ</h2>

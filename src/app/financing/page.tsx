@@ -42,7 +42,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           <div className="rounded-2xl bg-white p-6 shadow-soft">
             <p className="eyebrow">Low monthly payments</p>
@@ -62,7 +62,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">Financing FAQ</h2>

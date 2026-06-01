@@ -10,7 +10,7 @@ export function CrossSellBlock({
   items: CrossSellItem[];
 }) {
   return (
-    <section className="section bg-cool-gray">
+    <section className="section dark-band bg-navy-deep">
       <div className="container">
         <p className="eyebrow">Related services</p>
         <h2 className="mt-2 font-heading text-3xl font-bold text-navy">{heading}</h2>

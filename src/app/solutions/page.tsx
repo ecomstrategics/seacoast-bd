@@ -67,7 +67,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Three-pillar cards */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">What we build</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Three outcomes. Dozens of services.</h2>
@@ -97,7 +97,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* How it fits together */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">One contractor</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why one company for all three.</h2>
@@ -130,7 +130,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Quick links to each pillar */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Go deeper</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Explore each pillar.</h2>

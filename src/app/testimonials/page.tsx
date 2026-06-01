@@ -43,7 +43,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-6 md:grid-cols-2">
           {testimonials.map((item, i) => (
             <div key={i} className="rounded-2xl border border-navy/10 bg-white p-8 shadow-soft">
@@ -57,7 +57,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl text-center">
           <p className="eyebrow">Video proof</p>
           <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Don&apos;t just take our word for it</h2>

@@ -31,7 +31,7 @@ export default function ServiceAreaIndexPage() {
       </section>
 
       {/* Counties */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Coverage area</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Six counties, one contractor</h2>
@@ -51,7 +51,7 @@ export default function ServiceAreaIndexPage() {
       </section>
 
       {/* City Pages */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">City service pages</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Find your city</h2>
@@ -76,7 +76,7 @@ export default function ServiceAreaIndexPage() {
       </section>
 
       {/* Why local presence matters */}
-      <section className="section bg-white">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>

@@ -75,7 +75,7 @@ export default function ContainerComparePage() {
       </section>
 
       {/* Main comparison table */}
-      <section id="comparison-table" className="section bg-warm-white">
+      <section id="comparison-table" className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Side by side</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Storage Container vs. the alternatives</h2>
@@ -151,7 +151,7 @@ export default function ContainerComparePage() {
       </section>
 
       {/* Guest house specific comparison */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">For guest houses specifically</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Container Guest House vs. Traditional Addition</h2>
@@ -177,7 +177,7 @@ export default function ContainerComparePage() {
       </section>
 
       {/* When containers ARE right */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-10 md:grid-cols-2">
           <div>
             <div className="inline-block rounded-full bg-success/10 px-4 py-1.5 text-sm font-bold text-success">When a container is the right answer</div>
@@ -228,7 +228,7 @@ export default function ContainerComparePage() {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">Container comparison FAQ</h2>
@@ -247,7 +247,7 @@ export default function ContainerComparePage() {
       </section>
 
       {/* Quick-link to products */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Ready to dig deeper?</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Explore each product line</h2>

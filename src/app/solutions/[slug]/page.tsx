@@ -120,7 +120,7 @@ export default function SolutionPillarPage({ params }: Props) {
       </div>
 
       {/* Services in this pillar */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Services included</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">
@@ -141,7 +141,7 @@ export default function SolutionPillarPage({ params }: Props) {
 
       {/* Expand pillar: container products */}
       {slug === "expand" && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">Container builds</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Custom containers, built for Florida living.</h2>
@@ -163,7 +163,7 @@ export default function SolutionPillarPage({ params }: Props) {
       {slug === "protect" && <StormLifecycle />}
 
       {/* Pillar narrative / why section */}
-      <section className={`section ${slug === "protect" ? "bg-warm-white" : slug === "expand" ? "bg-warm-white" : "bg-cool-gray"}`}>
+      <section className={`section dark-band ${slug === "protect" ? "bg-navy" : slug === "expand" ? "bg-navy" : "bg-navy-deep"}`}>
         <div className="container">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
@@ -200,7 +200,7 @@ export default function SolutionPillarPage({ params }: Props) {
 
       {/* Related projects */}
       {relatedProjects.length > 0 && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">In the field</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">

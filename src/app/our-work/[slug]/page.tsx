@@ -25,7 +25,7 @@ export default function ProjectDetailPage({ params }: Props) {
 
   return (
     <>
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <div className="mb-6">
             <a href="/our-work" className="text-sm font-semibold text-teal hover:underline">← Back to all projects</a>
@@ -45,7 +45,7 @@ export default function ProjectDetailPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="section bg-white">
+      <section className="section dark-band bg-navy-deep">
         <div className="container grid gap-10 md:grid-cols-3">
           <div className="rounded-2xl border border-navy/10 bg-warm-white p-6">
             <p className="eyebrow">Service Type</p>

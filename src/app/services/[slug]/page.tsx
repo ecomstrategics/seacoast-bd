@@ -287,7 +287,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* What we can do right now */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Right now</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">What Seacoast can do today.</h2>
@@ -325,7 +325,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* What to do right now — utility checklist */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-2xl">
           <p className="eyebrow">Utility content</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">While you wait: five steps to take right now.</h2>
@@ -347,7 +347,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* After the storm */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <div className="rounded-2xl bg-navy p-8 text-white md:p-12">
             <p className="eyebrow text-teal/80">After the storm</p>
@@ -409,7 +409,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </div>
 
       {/* Trust bar */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
             { label: "Licensed and Insured", body: "Every project is performed by licensed contractors with full insurance coverage across Southwest Florida." },
@@ -425,7 +425,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* Why prep matters */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">The urgency</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why prep matters before the season starts.</h2>
@@ -450,7 +450,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* What's included */}
-      <section id="whats-included" className="section bg-warm-white">
+      <section id="whats-included" className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">The offer</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">What&apos;s included in a Seacoast preparedness plan.</h2>
@@ -475,7 +475,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* How it works */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">The process</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">How it works: four steps, one season.</h2>
@@ -497,7 +497,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* Plan tiers */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Plan options</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Choose the right level of coverage.</h2>
@@ -541,7 +541,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Storm Preparedness FAQ</h2>
@@ -601,7 +601,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       </div>
 
       {/* Trust bar */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
             { label: "Licensed and Insured", body: "Every repair is performed by licensed contractors with full insurance coverage across Southwest Florida." },
@@ -617,7 +617,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* We Handle the Claim */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">The process</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">We handle the claim. You handle your life.</h2>
@@ -643,7 +643,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* Track record callout */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
@@ -666,7 +666,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       </section>
 
       {/* What if claim is denied */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-soft">
             <p className="eyebrow">Claims support</p>
@@ -684,7 +684,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 
       {/* Related projects */}
       {relatedProjects.length > 0 && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">In the field</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent repair and roofing projects</h2>
@@ -699,7 +699,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       )}
 
       {/* FAQ */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Storm Damage Repair FAQ</h2>
@@ -778,7 +778,7 @@ function GenericServiceLayout({ params }: Props) {
         </div>
       </section>
 
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           <div className="rounded-2xl bg-white p-6 shadow-soft">
             <p className="eyebrow">Licensed and Insured</p>
@@ -796,7 +796,7 @@ function GenericServiceLayout({ params }: Props) {
       </section>
 
       {relatedProjects.length > 0 && (
-        <section className="section">
+        <section className="section dark-band bg-navy">
           <div className="container">
             <p className="eyebrow">In the field</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Recent {service.name} projects</h2>
@@ -811,7 +811,7 @@ function GenericServiceLayout({ params }: Props) {
       )}
 
       {faqs.length > 0 && (
-        <section className="section bg-cool-gray">
+        <section className="section dark-band bg-navy-deep">
           <div className="container max-w-3xl">
             <p className="eyebrow">Common questions</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">{service.name} FAQ</h2>

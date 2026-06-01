@@ -74,7 +74,7 @@ export default function Home() {
       <TrustBar />
 
       {/* Three-Pillar Section */}
-      <section className="section bg-warm-white">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">How we can help</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Everything your property needs, under one roof</h2>
@@ -101,7 +101,7 @@ export default function Home() {
       </section>
 
       {/* Featured Container Section */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section className="section bg-white">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Why Seacoast */}
-      <section className="section bg-navy text-white">
+      <section className="section dark-band bg-navy text-white">
         <div className="container">
           <p className="eyebrow text-teal">Why Seacoast</p>
           <h2 className="mt-2 font-heading text-4xl font-bold">40 years of receipts. Not just promises.</h2>
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Service Area Band */}
-      <section className="section bg-cool-gray">
+      <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Where we work</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Southwest Florida, county by county</h2>

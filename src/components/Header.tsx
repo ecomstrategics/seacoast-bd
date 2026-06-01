@@ -42,9 +42,9 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy/10 bg-warm-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
       {/* Top bar */}
-      <div className="bg-navy text-sm text-white">
+      <div className="bg-navy-900 text-sm text-white">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
           <span>Call: <a className="font-semibold text-white underline-offset-4 hover:underline" href="tel:+19415005431">(941) 500-5431</a></span>
           <span>Mon to Fri 8am to 6pm &bull; Sat 9am to 3pm &bull; Serving Southwest Florida</span>
@@ -56,22 +56,22 @@ export function Header() {
         </div>
       </div>
 
-      {/* Main nav row */}
-      <div className="container flex items-center justify-between gap-6 py-4">
-        {/* Logo image: orange wordmark on transparent bg — displayed on a navy pill for contrast */}
-        <Link href="/" className="flex items-center rounded-md bg-navy px-3 py-1.5" onClick={() => setMobileOpen(false)}>
+      {/* Main nav row: navy bar so the orange-on-transparent logo integrates seamlessly (no pill) */}
+      <div className="container flex items-center justify-between gap-6 py-3">
+        {/* Logo image: orange wordmark on transparent bg, sitting directly on the navy bar */}
+        <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
           <Image
             src="/logo.png"
             alt="Seacoast Building & Design"
-            width={166}
-            height={40}
-            className="h-10 w-auto"
+            width={199}
+            height={48}
+            className="h-12 w-auto"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav ref={navRef} className="hidden items-center gap-1 text-sm font-medium text-charcoal lg:flex" aria-label="Main navigation">
+        <nav ref={navRef} className="hidden items-center gap-1 text-sm font-medium text-white lg:flex" aria-label="Main navigation">
           {primaryNav.map((item) => {
             if (item.mega === "solutions") {
               return (
@@ -82,7 +82,7 @@ export function Header() {
                   onMouseLeave={scheduleClose}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-cool-gray focus-ring"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === "solutions"}
                     onFocus={() => openMenu("solutions")}
@@ -143,7 +143,7 @@ export function Header() {
                   onMouseLeave={scheduleClose}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-cool-gray focus-ring"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === key}
                     onFocus={() => openMenu(key)}
@@ -182,7 +182,7 @@ export function Header() {
             }
 
             return (
-              <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 hover:bg-cool-gray hover:text-teal focus-ring">
+              <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring">
                 {item.label}
               </Link>
             );
@@ -191,13 +191,13 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:+19415005431" className="font-semibold text-navy">(941) 500-5431</a>
+          <a href="tel:+19415005431" className="font-semibold text-white hover:text-teal transition">(941) 500-5431</a>
           <Link href="/contact" className="rounded-full bg-teal px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="rounded-lg border border-navy/20 px-3 py-2 text-navy lg:hidden focus-ring"
+          className="rounded-lg border border-white/25 px-3 py-2 text-white lg:hidden focus-ring"
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -209,29 +209,29 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-navy/10 bg-warm-white px-4 pb-24 lg:hidden" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white lg:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
             <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Protect</p>
             {solutionsMega.protect.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
-            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-navy">Improve</p>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Improve</p>
             {solutionsMega.improve.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
-            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-copper">Expand</p>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-copper-light">Expand</p>
             {solutionsMega.expand.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
-            <div className="my-3 border-t border-navy/10" />
-            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-container-steel hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>Containers</Link>
-            <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>Our Work</Link>
-            <Link href="/testimonials" className="block rounded-lg px-3 py-2.5 font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>Testimonials</Link>
-            <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium hover:bg-cool-gray" onClick={() => setMobileOpen(false)}>Resources</Link>
-            <div className="my-3 border-t border-navy/10" />
+            <div className="my-3 border-t border-white/10" />
+            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Containers</Link>
+            <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Our Work</Link>
+            <Link href="/testimonials" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Testimonials</Link>
+            <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Resources</Link>
+            <div className="my-3 border-t border-white/10" />
             <Link href="/contact" className="block rounded-full bg-teal px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
-            <a href="tel:+19415005431" className="block rounded-full border border-navy/20 px-5 py-3 text-center font-semibold text-navy" onClick={() => setMobileOpen(false)}>(941) 500-5431</a>
+            <a href="tel:+19415005431" className="block rounded-full border border-white/25 px-5 py-3 text-center font-semibold text-white" onClick={() => setMobileOpen(false)}>(941) 500-5431</a>
           </div>
         </nav>
       )}
