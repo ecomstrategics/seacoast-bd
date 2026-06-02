@@ -77,14 +77,14 @@ export function Footer() {
 
         {/* Expand + Containers */}
         <div>
-          <h3 className="font-heading font-bold text-copper">Expand</h3>
+          <h3 className="font-heading font-bold text-white/90">Expand</h3>
           <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">Property Solutions</p>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             {pillarLinks.expand.map((link) => (
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
             ))}
           </ul>
-          <h3 className="mt-6 font-heading font-bold text-container-steel/90">Containers</h3>
+          <h3 className="mt-6 font-heading font-bold text-white/90">Containers</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
             {containers.map((c) => (
               <li key={c.slug}><Link href={`/containers/${c.slug}`} className="hover:text-white">{c.name}</Link></li>
