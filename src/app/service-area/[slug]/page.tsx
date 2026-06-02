@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { ProjectCard } from "@/components/ProjectCard";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SchemaScript, localBusinessSchema, serviceSchema } from "@/components/Schema";
@@ -146,7 +146,9 @@ export default function ServiceAreaCityPage({ params }: Props) {
               </div>
             </div>
             <div>
-              <ImagePlaceholder label={`Finished container guest house in ${city.name}, ${city.county}`} ratio="4/3" tone="steel" />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image src="/images/service-area/generic-guest-house.webp" alt={`Finished container guest house built by Seacoast in ${city.name}, ${city.county}`} fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+              </div>
             </div>
           </div>
         </div>
@@ -177,7 +179,9 @@ export default function ServiceAreaCityPage({ params }: Props) {
                 </div>
               </div>
               <div className="mt-8">
-                <ImagePlaceholder label={`${city.name} neighborhood aerial or landmark photo`} ratio="4/3" tone="navy" />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image src="/images/service-area/generic-neighborhood.webp" alt={`Southwest Florida neighborhood in ${city.name}, ${city.county} — Seacoast service area`} fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                </div>
               </div>
             </div>
             <div>

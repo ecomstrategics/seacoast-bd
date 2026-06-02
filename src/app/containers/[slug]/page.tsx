@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SpecTable } from "@/components/SpecTable";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { SchemaScript, productSchema, faqSchema } from "@/components/Schema";
 import { containers, getContainerBySlug } from "@/data/containers";
 
@@ -192,8 +192,12 @@ function StorageContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">We handle the hard part</h2>
           <p className="mt-4 text-text-secondary">Storage container delivery is more than dropping a box in your yard. Seacoast coordinates delivery logistics, crane or tilt-bed offload, pad preparation, and site leveling so the container lands level and stays level. We also advise on county permit requirements for your specific parcel so you are not surprised after the fact.</p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            <ImagePlaceholder label="Crane placing a 40-foot shipping container on a residential concrete pad, operator directing from ground" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Finished 20-foot storage container with roll-up door and custom paint, parked next to residential garage" ratio="4/3" tone="steel" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/process-crane-placement.webp" alt="Crane placing a 40-foot shipping container on a residential concrete pad, operator directing from the ground" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/process-finished-storage.webp" alt="Finished 20-foot storage container with roll-up door and custom paint parked next to a residential garage" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -212,8 +216,8 @@ function GuestHouseContent() {
           <p className="mt-4 text-text-secondary">Drag the slider to see the transformation from a standard shipping container to a finished, sided, roofed guest cottage.</p>
           <div className="mt-8">
             <BeforeAfterSlider
-              before={{ type: "placeholder", label: "Raw unpainted 40-foot shipping container on bare ground, cargo doors open", tone: "steel" }}
-              after={{ type: "placeholder", label: "Finished container guest house with Hardie board siding, gabled roof, front porch, mini-split outdoor unit, tropical landscaping", tone: "warm" }}
+              before={{ type: "image", src: "/images/containers/before-after-before.webp", alt: "Raw unpainted 40-foot shipping container on bare ground with cargo doors open — before Seacoast finish work" }}
+              after={{ type: "image", src: "/images/containers/before-after-after.webp", alt: "Finished container guest house with Hardie board siding, gabled roof, front porch, and mini-split outdoor unit surrounded by tropical landscaping" }}
             />
           </div>
         </div>
@@ -317,12 +321,24 @@ function GuestHouseContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Finish styles</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">Every finish below is available on our guest house builds. The goal is always the same: when you are done, it should look like it belongs there.</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <ImagePlaceholder label="Container guest house with white Hardie board lap siding, covered front porch, and standing-seam metal roof matching main house" ratio="4/3" tone="warm" />
-            <ImagePlaceholder label="Container guest house finished with stucco exterior and terra cotta roof tiles to match Spanish-style Florida home" ratio="4/3" tone="warm" />
-            <ImagePlaceholder label="Container guest house with board-and-batten cedar siding, large picture window, and tropical garden surround" ratio="4/3" tone="warm" />
-            <ImagePlaceholder label="Interior of finished container studio: open living and sleeping area, kitchenette, plank flooring, high-contrast trim" ratio="4/3" tone="warm" />
-            <ImagePlaceholder label="Interior bathroom of finished container guest house: walk-in tile shower, floating vanity, natural light from frosted window" ratio="4/3" tone="warm" />
-            <ImagePlaceholder label="Aerial view of container guest house installed behind main house with connected patio and pool area, SW Florida suburban neighborhood" ratio="4/3" tone="steel" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-hardie-metal.webp" alt="Container guest house with white Hardie board lap siding, covered front porch, and standing-seam metal roof matching the main house" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-stucco-tile.webp" alt="Container guest house finished with stucco exterior and terra cotta roof tiles matching a Spanish-style Florida home" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-cedar-batten.webp" alt="Container guest house with board-and-batten cedar siding, large picture window, and tropical garden surround" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-studio-interior.webp" alt="Interior of finished container studio with open living and sleeping area, kitchenette, plank flooring, and high-contrast trim" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-bathroom.webp" alt="Interior bathroom of finished container guest house with walk-in tile shower, floating vanity, and natural light from frosted window" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/guest-house-aerial.webp" alt="Aerial view of container guest house installed behind main house with connected patio and pool area in a Southwest Florida suburban neighborhood" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -396,8 +412,12 @@ function OfficesWorkshopsContent() {
       <section className="section dark-band bg-navy">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2">
-            <ImagePlaceholder label="Finished container office exterior: glass entry door, painted metal siding, small sign, parking area, Florida suburban setting" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Interior of finished container office: desk, monitor, shelving, mini-split, plank flooring, recessed lighting" ratio="4/3" tone="warm" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/office-exterior-suburban.webp" alt="Finished container office exterior with glass entry door, painted metal siding, small sign, and parking area in a Florida suburban setting" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/office-interior.webp" alt="Interior of finished container office with desk, monitor, shelving, mini-split, plank flooring, and recessed lighting" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -504,9 +524,15 @@ function OfficesWorkshopsContent() {
           <p className="eyebrow">Finished builds</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Container offices and workshops</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <ImagePlaceholder label="Exterior of converted 40-foot container into a professional office with glass entry and commercial signage" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Container workshop interior with roll-up door open, tool storage wall, and epoxy floor" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Container podcast studio interior: acoustic panels, microphone setup, LED strip lighting" ratio="4/3" tone="warm" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/office-40ft-commercial.webp" alt="Exterior of a converted 40-foot container professional office with glass entry door and commercial signage" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/workshop-interior.webp" alt="Container workshop interior with roll-up door open, tool storage wall, and epoxy floor" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/podcast-studio-interior.webp" alt="Container podcast studio interior with acoustic panels, microphone setup, and LED strip lighting" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -524,7 +550,9 @@ function StormSheltersContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A structure that can take a direct hit</h2>
           <p className="mt-4 text-text-secondary">Coastal Florida families who have ridden out storms know what standard construction does under Cat-4 or Cat-5 conditions. A steel shipping container, properly anchored and configured, is one of the most resilient residential shelter options available. These are not bunkers; they are practical, finished structures that function as guest rooms, storage, or offices until the storm comes and then become your fallback.</p>
           <div className="mt-6">
-            <ImagePlaceholder label="Anchored container storm shelter with reinforced entry door, ventilation grilles, and exterior signage on residential property" ratio="16/9" tone="steel" />
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <Image src="/images/containers/storm-shelter-hero.webp" alt="Anchored container storm shelter with reinforced entry door, ventilation grilles, and exterior signage on a residential property in Southwest Florida" fill className="object-cover" sizes="100vw" />
+            </div>
           </div>
         </div>
       </section>
@@ -626,9 +654,15 @@ function StormSheltersContent() {
           <p className="eyebrow">Shelter builds</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">What they look like installed</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <ImagePlaceholder label="20-foot container storm shelter anchored to concrete pad with reinforced door and ventilation grilles, residential backyard" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Interior of finished storm shelter with emergency lighting, storage shelving, sleeping bench, and ventilation unit" ratio="4/3" tone="steel" />
-            <ImagePlaceholder label="Container storm shelter with exterior painted to match adjacent residential exterior, landscaped to blend with yard" ratio="4/3" tone="warm" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/storm-shelter-backyard.webp" alt="20-foot container storm shelter anchored to a concrete pad with reinforced door and ventilation grilles in a residential backyard" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/storm-shelter-interior.webp" alt="Interior of finished storm shelter with emergency lighting, storage shelving, sleeping bench, and ventilation unit" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/containers/storm-shelter-blended.webp" alt="Container storm shelter with exterior painted and landscaped to blend seamlessly with the adjacent residential yard" fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+            </div>
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ import { CrossSellBlock, type CrossSellItem } from "@/components/CrossSellBlock"
 import { StormLifecycle } from "@/components/StormLifecycle";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, serviceSchema } from "@/components/Schema";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ContainerCard } from "@/components/ContainerCard";
 import { getSolutionBySlug, solutions } from "@/data/solutions";
@@ -112,11 +112,23 @@ export default function SolutionPillarPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Hero image placeholder */}
+      {/* Hero image */}
       <div className="container py-8">
-        {slug === "protect" && <ImagePlaceholder label="Seacoast crew preparing a Southwest Florida home for hurricane season. Shutters and boarding installed on a coastal property" ratio="16/9" tone="navy" />}
-        {slug === "improve" && <ImagePlaceholder label="Seacoast exterior renovation in progress. New roofing, siding, and gutters on a Southwest Florida residential property." ratio="16/9" tone="navy" />}
-        {slug === "expand" && <ImagePlaceholder label="Finished container guest house with Hardie siding and custom roof, matching the main residence in Southwest Florida" ratio="16/9" tone="warm" />}
+        {slug === "protect" && (
+          <div className="relative aspect-video overflow-hidden rounded-2xl">
+            <Image src="/images/solutions/protect-hero.webp" alt="Seacoast crew preparing a Southwest Florida home for hurricane season — shutters and boarding installed on a coastal property" fill className="object-cover" sizes="100vw" />
+          </div>
+        )}
+        {slug === "improve" && (
+          <div className="relative aspect-video overflow-hidden rounded-2xl">
+            <Image src="/images/solutions/improve-hero.webp" alt="Seacoast exterior renovation in progress — new roofing, siding, and gutters on a Southwest Florida residential property" fill className="object-cover" sizes="100vw" />
+          </div>
+        )}
+        {slug === "expand" && (
+          <div className="relative aspect-video overflow-hidden rounded-2xl">
+            <Image src="/images/solutions/expand-hero.webp" alt="Finished container guest house with Hardie siding and custom roof matching the main residence in Southwest Florida" fill className="object-cover" sizes="100vw" />
+          </div>
+        )}
       </div>
 
       {/* Services in this pillar */}
@@ -190,9 +202,21 @@ export default function SolutionPillarPage({ params }: Props) {
               </Link>
             </div>
             <div>
-              {slug === "protect" && <ImagePlaceholder label="Southwest Florida property after hurricane. Seacoast storm damage assessment in progress, drone visible overhead." ratio="4/3" tone="navy" />}
-              {slug === "improve" && <ImagePlaceholder label="Before and after exterior renovation. New roofing and Hardie siding on a Southwest Florida home." ratio="4/3" tone="warm" />}
-              {slug === "expand" && <ImagePlaceholder label="Finished container guest house interior. Drywall, mini-split, kitchenette, and hardwood floor matching main residence style." ratio="4/3" tone="warm" />}
+              {slug === "protect" && (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image src="/images/solutions/protect-secondary.webp" alt="Southwest Florida property after hurricane — Seacoast storm damage assessment in progress with drone visible overhead" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                </div>
+              )}
+              {slug === "improve" && (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image src="/images/solutions/improve-secondary.webp" alt="Before and after exterior renovation — new roofing and Hardie siding transforming a Southwest Florida home" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                </div>
+              )}
+              {slug === "expand" && (
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image src="/images/solutions/expand-secondary.webp" alt="Finished container guest house interior with drywall, mini-split, kitchenette, and hardwood floor matching the main residence" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                </div>
+              )}
             </div>
           </div>
         </div>

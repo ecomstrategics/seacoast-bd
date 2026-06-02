@@ -6,7 +6,7 @@ import { CrossSellBlock } from "@/components/CrossSellBlock";
 import { CTASection } from "@/components/CTASection";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, localBusinessSchema, faqSchema } from "@/components/Schema";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { containers } from "@/data/containers";
 
 export const metadata: Metadata = {
@@ -71,7 +71,9 @@ export default function ContainersLandingPage() {
       {/* Hero visual */}
       <div className="bg-navy pb-16">
         <div className="container">
-          <ImagePlaceholder label="Finished container guest house with Hardie siding and stucco matching adjacent home exterior, palm trees, coastal SW Florida" ratio="16/9" tone="steel" />
+          <div className="relative aspect-video overflow-hidden rounded-2xl">
+            <Image src="/images/containers/containers-hero.webp" alt="Finished container guest house with Hardie siding and stucco matching the adjacent home exterior, palm trees, coastal Southwest Florida" fill className="object-cover" sizes="100vw" />
+          </div>
         </div>
       </div>
 

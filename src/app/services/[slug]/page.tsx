@@ -8,7 +8,7 @@ import { StormLifecycle } from "@/components/StormLifecycle";
 import { CrossSellBlock, type CrossSellItem } from "@/components/CrossSellBlock";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, serviceSchema, faqSchema } from "@/components/Schema";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import Image from "next/image";
 import { getServiceBySlug, services } from "@/data/services";
 import { projects } from "@/data/projects";
 
@@ -403,9 +403,11 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
         </div>
       </section>
 
-      {/* Hero image placeholder */}
+      {/* Hero image */}
       <div className="container py-8">
-        <ImagePlaceholder label="Seacoast crew installing storm shutters on a coastal Southwest Florida home, stormy sky overhead" ratio="16/9" tone="navy" />
+        <div className="relative aspect-video overflow-hidden rounded-2xl">
+          <Image src="/images/services/storm-preparedness-hero.webp" alt="Seacoast crew installing storm shutters on a coastal Southwest Florida home with a stormy sky overhead" fill className="object-cover" sizes="100vw" />
+        </div>
       </div>
 
       {/* Trust bar */}
@@ -595,9 +597,11 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         </div>
       </section>
 
-      {/* Hero image placeholder */}
+      {/* Hero image */}
       <div className="container py-8">
-        <ImagePlaceholder label="Seacoast inspector documenting storm damage on a residential roof. Drone and photo documentation in progress." ratio="16/9" tone="navy" />
+        <div className="relative aspect-video overflow-hidden rounded-2xl">
+          <Image src="/images/services/storm-damage-repair-hero.webp" alt="Seacoast inspector documenting storm damage on a residential roof with drone and photo documentation in progress" fill className="object-cover" sizes="100vw" />
+        </div>
       </div>
 
       {/* Trust bar */}
@@ -660,7 +664,9 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
                 Get a Damage Assessment
               </Link>
             </div>
-            <ImagePlaceholder label="Seacoast completed storm repair. New roof installed after hurricane damage on a residential property in Southwest Florida." ratio="4/3" tone="steel" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image src="/images/services/storm-damage-repair-completed.webp" alt="Seacoast completed storm repair — new roof installed after hurricane damage on a residential property in Southwest Florida" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            </div>
           </div>
         </div>
       </section>

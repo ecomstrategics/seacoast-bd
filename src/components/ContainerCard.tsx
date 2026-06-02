@@ -1,6 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Container } from "@/data/containers";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+
+const cardImages: Record<string, string> = {
+  storage: "/images/containers/card-storage.webp",
+  "guest-houses": "/images/containers/card-guest-houses.webp",
+  "offices-workshops": "/images/containers/card-offices-workshops.webp",
+  "storm-shelters": "/images/containers/card-storm-shelters.webp",
+};
 
 export function ContainerCard({ container }: { container: Container }) {
   return (
@@ -8,7 +15,15 @@ export function ContainerCard({ container }: { container: Container }) {
       href={`/containers/${container.slug}`}
       className="group overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
     >
-      <ImagePlaceholder label={`${container.name} photo`} ratio="16/9" tone="steel" />
+      <div className="relative aspect-video overflow-hidden">
+        <Image
+          src={cardImages[container.slug] ?? "/images/containers/card-storage.webp"}
+          alt={`${container.name} — custom container build by Seacoast Building & Design`}
+          fill
+          className="object-cover transition group-hover:scale-105"
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+        />
+      </div>
       <div className="p-6">
         <div className="text-3xl" aria-hidden>{container.icon}</div>
         <h3 className="mt-3 font-heading text-xl font-bold text-navy group-hover:text-teal">{container.name}</h3>
