@@ -7,6 +7,17 @@ export type Project = {
   description: string;
 };
 
+// Top-level filter buckets derived from the granular serviceType.
+export function getCategory(serviceType: string): string {
+  if (/solar/i.test(serviceType)) return "Solar";
+  if (/enclosure/i.test(serviceType)) return "Enclosures";
+  if (/siding/i.test(serviceType)) return "Siding";
+  if (/gutter|fascia|soffit/i.test(serviceType)) return "Gutters & Trim";
+  if (/exterior structure|carport/i.test(serviceType)) return "Exterior Structures";
+  if (/roof/i.test(serviceType)) return "Roofing";
+  return "Other";
+}
+
 const defaultDescription = "A completed Seacoast Building & Design project showcasing practical craftsmanship, durable exterior systems, and jobsite coordination across Southwest Florida.";
 
 export const projects: Project[] = [
@@ -40,3 +51,11 @@ export function getProjectBySlug(slug: string) {
 }
 
 export const serviceTypes = Array.from(new Set(projects.map((project) => project.serviceType))).sort();
+
+// Categories ordered with the most common first; "All" is handled in the UI.
+export const categories = Array.from(
+  new Set(projects.map((project) => getCategory(project.serviceType)))
+).sort((a, b) => {
+  const order = ["Roofing", "Siding", "Exterior Structures", "Gutters & Trim", "Enclosures", "Solar", "Other"];
+  return order.indexOf(a) - order.indexOf(b);
+});
