@@ -48,7 +48,7 @@ export function SolutionsPillar({
           </li>
         ))}
       </ul>
-      <Link href={href} className={`mt-6 inline-block rounded-full border-2 px-5 py-2.5 text-sm font-bold transition ${pillar === "protect" ? "border-teal text-teal hover:bg-teal hover:text-white" : pillar === "improve" ? "border-navy text-navy hover:bg-navy hover:text-white" : "border-copper text-copper hover:bg-copper hover:text-white"}`}>
+      <Link href={href} className="mt-6 inline-block rounded-full border-2 border-orange px-5 py-2.5 text-sm font-bold text-orange transition hover:bg-orange hover:text-white">
         See all {title} services
       </Link>
     </div>
