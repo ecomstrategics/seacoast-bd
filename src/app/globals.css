@@ -40,3 +40,20 @@ a { text-decoration: none; }
 .dark-band .bg-white .text-text-secondary,
 .dark-band .bg-warm-white .text-text-secondary,
 .dark-band .bg-cool-gray .text-text-secondary { color: #5A5E6B; }
+
+/*
+  Same-element light surfaces (e.g. pill/chips that set bg-white AND a dark
+  text color on the same node). The descendant island rules above only match
+  when text is nested inside a separate light wrapper, so a same-element chip
+  would otherwise fall through to the dark-band light-text flip and become
+  unreadable (white/grey text on a white pill). Restore the dark palette.
+*/
+.dark-band .bg-white.text-navy,
+.dark-band .bg-warm-white.text-navy,
+.dark-band .bg-cool-gray.text-navy { color: #00387E; }
+.dark-band .bg-white.text-charcoal,
+.dark-band .bg-warm-white.text-charcoal,
+.dark-band .bg-cool-gray.text-charcoal { color: #1C1C1E; }
+.dark-band .bg-white.text-text-secondary,
+.dark-band .bg-warm-white.text-text-secondary,
+.dark-band .bg-cool-gray.text-text-secondary { color: #5A5E6B; }
