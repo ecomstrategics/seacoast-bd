@@ -2,18 +2,6 @@ import Link from "next/link";
 
 type PillarType = "protect" | "improve" | "expand";
 
-const accentBorderClasses: Record<PillarType, string> = {
-  protect: "border-t-teal",
-  improve: "border-t-navy",
-  expand: "border-t-copper",
-};
-
-const accentTextClasses: Record<PillarType, string> = {
-  protect: "text-teal",
-  improve: "text-navy",
-  expand: "text-copper",
-};
-
 const eyebrowLabels: Record<PillarType, string> = {
   protect: "Storm & Resilience",
   improve: "Exteriors & Renovations",
@@ -34,8 +22,8 @@ export function SolutionsPillar({
   href: string;
 }) {
   return (
-    <div className={`rounded-2xl border border-navy/10 border-t-4 ${accentBorderClasses[pillar]} bg-white p-6 shadow-sm`}>
-      <p className={`text-xs font-bold uppercase tracking-widest ${accentTextClasses[pillar]}`}>{eyebrowLabels[pillar]}</p>
+    <div className="rounded-2xl border border-navy/10 border-t-4 border-t-orange bg-white p-6 shadow-sm">
+      <p className="text-xs font-bold uppercase tracking-widest text-orange">{eyebrowLabels[pillar]}</p>
       <h3 className="mt-3 font-heading text-2xl font-bold text-navy">{title}</h3>
       <p className="mt-3 text-sm leading-6 text-text-secondary">{blurb}</p>
       <ul className="mt-5 space-y-2">
