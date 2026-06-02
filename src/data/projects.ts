@@ -18,6 +18,17 @@ export function getCategory(serviceType: string): string {
   return "Other";
 }
 
+// Sub-buckets within Roofing for finer browsing. Returns null for non-roofing.
+export function getRoofingSubcategory(serviceType: string): string | null {
+  if (getCategory(serviceType) !== "Roofing") return null;
+  if (/commercial/i.test(serviceType)) return "Commercial";
+  if (/multi-family/i.test(serviceType)) return "Multi-Family";
+  if (/metal/i.test(serviceType)) return "Metal";
+  if (/tile/i.test(serviceType)) return "Tile";
+  if (/slate/i.test(serviceType)) return "Slate";
+  return "Standard";
+}
+
 const defaultDescription = "A completed Seacoast Building & Design project showcasing practical craftsmanship, durable exterior systems, and jobsite coordination across Southwest Florida.";
 
 export const projects: Project[] = [
@@ -57,5 +68,17 @@ export const categories = Array.from(
   new Set(projects.map((project) => getCategory(project.serviceType)))
 ).sort((a, b) => {
   const order = ["Roofing", "Siding", "Exterior Structures", "Gutters & Trim", "Enclosures", "Solar", "Other"];
+  return order.indexOf(a) - order.indexOf(b);
+});
+
+// Roofing sub-buckets present in the data, ordered for the secondary filter row.
+export const roofingSubcategories = Array.from(
+  new Set(
+    projects
+      .map((project) => getRoofingSubcategory(project.serviceType))
+      .filter((sub): sub is string => sub !== null)
+  )
+).sort((a, b) => {
+  const order = ["Commercial", "Metal", "Tile", "Slate", "Multi-Family", "Standard"];
   return order.indexOf(a) - order.indexOf(b);
 });
