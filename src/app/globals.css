@@ -6,13 +6,13 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 /* Dark-navy theme: deepest navy body so any gaps read dark, light default text. */
-body { margin: 0; background: #001E45; color: #F4F6FB; }
+body { margin: 0; background: #00115C; color: #F4F6FB; }
 a { text-decoration: none; }
 .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
 .section { padding-block: 5rem; }
-.eyebrow { color: #EE6200; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
-/* Orange focus ring reads clearly on dark navy. */
-.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#EE6200]; }
+.eyebrow { color: #FA4616; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+/* Orange focus ring reads clearly on dark blue. */
+.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FA4616]; }
 
 /*
   Dark-band text contrast layer.
@@ -31,7 +31,7 @@ a { text-decoration: none; }
 .dark-band .bg-white .text-navy,
 .dark-band .bg-warm-white .text-navy,
 .dark-band .bg-cool-gray .text-navy,
-.dark-band .bg-white\/90 .text-navy { color: #00387E; }
+.dark-band .bg-white\/90 .text-navy { color: #0021A5; }
 
 .dark-band .bg-white .text-charcoal,
 .dark-band .bg-warm-white .text-charcoal,
@@ -50,7 +50,7 @@ a { text-decoration: none; }
 */
 .dark-band .bg-white.text-navy,
 .dark-band .bg-warm-white.text-navy,
-.dark-band .bg-cool-gray.text-navy { color: #00387E; }
+.dark-band .bg-cool-gray.text-navy { color: #0021A5; }
 .dark-band .bg-white.text-charcoal,
 .dark-band .bg-warm-white.text-charcoal,
 .dark-band .bg-cool-gray.text-charcoal { color: #1C1C1E; }

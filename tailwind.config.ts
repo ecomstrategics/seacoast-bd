@@ -13,16 +13,16 @@ const config: Config = {
         body: ["var(--font-inter)", "sans-serif"],
       },
       colors: {
-        navy: "#00387E",           // brand navy (pixel-extracted from real logo)
-        "navy-deep": "#002A5C",    // deeper band for alternating dark sections
-        "navy-900": "#001E45",     // deepest navy: body background / footers
-        "navy-surface": "#0B2C5C", // slightly lifted navy for dark card/panel surfaces
-        // NOTE: 'teal' is the legacy token name — now mapped to brand orange #EE6200.
+        navy: "#0021A5",           // brand bright blue
+        "navy-deep": "#001B85",    // deeper band for alternating dark sections
+        "navy-900": "#00115C",     // deepest blue: body background / footers
+        "navy-surface": "#0A2A8A", // slightly lifted blue for dark card/panel surfaces
+        // NOTE: 'teal' is the legacy token name — now mapped to brand orange #FA4616.
         // All existing `text-teal`, `bg-teal`, `border-teal` classes become orange automatically.
-        teal: "#EE6200",           // brand orange (legacy token, do not rename)
-        orange: "#EE6200",         // brand orange alias for new code
-        copper: "#1B3358",         // navy-tint; used for eyebrow/accent, complements orange+navy
-        "copper-light": "#9DB4D8", // light steel-blue accent, readable on dark navy
+        teal: "#FA4616",           // brand orange (legacy token, do not rename)
+        orange: "#FA4616",         // brand orange alias for new code
+        copper: "#12307A",         // blue-tint; used for hover states, complements orange+bright blue
+        "copper-light": "#AFC1F4", // light blue accent, readable on dark blue
         "warm-white": "#F8F6F2",
         "cool-gray": "#E8EAF0",
         charcoal: "#1C1C1E",
@@ -32,7 +32,7 @@ const config: Config = {
         "success": "#2E7D5B",
       },
       boxShadow: {
-        soft: "0 4px 24px 0 rgba(11,29,58,0.10)",
+        soft: "0 4px 24px 0 rgba(0,33,165,0.10)",
       },
     },
   },
