@@ -88,6 +88,27 @@ const slugCrossSell: Record<string, CrossSellItem[]> = {
   ],
 };
 
+function PrebuiltOptionsCallout() {
+  return (
+    <section className="section dark-band bg-navy">
+      <div className="container">
+        <div className="grid gap-8 rounded-2xl border border-container-steel/20 bg-white p-8 shadow-sm md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="eyebrow">Prebuilt options</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Looking for a ready-built mini-home?</h2>
+            <p className="mt-4 max-w-2xl text-text-secondary">
+              Our first prebuilt mini-home on wheels is coming soon. We&apos;ll add real photos, specs, pricing, and availability as soon as it is ready to show.
+            </p>
+          </div>
+          <Link href="/containers/prebuilt" className="rounded-full bg-teal px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
+            View Prebuilt Options
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────────────────────────────────
    PER-SLUG BODY CONTENT
 ───────────────────────────────────────── */
@@ -104,10 +125,10 @@ function StorageContent() {
             <SpecTable
               headers={["Size", "Footprint", "Interior Volume", "Best For", "Starting Price"]}
               rows={[
-                ["10 ft", "8 ft x 10 ft", "Approx. 640 cu ft", "Equipment, supplies, overflow storage", "Starting at $5,000"],
-                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $5,000"],
-                ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Starting at $5,000"],
-                ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Starting at $5,000"],
+                ["10 ft", "8 ft x 10 ft", "Approx. 640 cu ft", "Equipment, supplies, overflow storage", "Starting at $7,500"],
+                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $9,500"],
+                ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Starting at $13,500"],
+                ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Starting at $15,500"],
               ]}
             />
           </div>
@@ -231,10 +252,10 @@ function GuestHouseContent() {
           <p className="mt-4 max-w-2xl text-text-secondary">Every configuration below can be customized. Siding, roofline, interior finish, and appliances are all variables. We scope and price based on your exact spec.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { label: "Studio", container: "20 ft container", sqft: "Approx. 160 sq ft", includes: "Kitchenette, full bathroom, sleeping area, mini-split", icon: "🏠" },
-              { label: "One-Bedroom", container: "40 ft container", sqft: "Approx. 320 sq ft", includes: "Separate bedroom, full bathroom, living area, kitchenette", icon: "🛏️" },
-              { label: "Two-Bedroom", container: "40 ft + 20 ft joined", sqft: "Approx. 480 sq ft", includes: "Two bedrooms, full bathroom, living and dining area, full kitchen", icon: "🏘️" },
-              { label: "Custom Multi-Container", container: "Paired, stacked, or joined", sqft: "Scoped to your site", includes: "Any configuration. Includes structural engineering for joined or stacked builds.", icon: "🔧" },
+              { label: "Studio", container: "20 ft container", sqft: "Approx. 160 sq ft", includes: "Kitchenette, full bathroom, sleeping area, mini-split", icon: "🏠", price: "Starting at $32,000" },
+              { label: "One-Bedroom", container: "40 ft container", sqft: "Approx. 320 sq ft", includes: "Separate bedroom, full bathroom, living area, kitchenette", icon: "🛏️", price: "Starting at $50,000" },
+              { label: "Two-Bedroom", container: "40 ft + 20 ft joined", sqft: "Approx. 480 sq ft", includes: "Two bedrooms, full bathroom, living and dining area, full kitchen", icon: "🏘️", price: "Starting at $78,000" },
+              { label: "Custom Multi-Container", container: "Paired, stacked, or joined", sqft: "Scoped to your site", includes: "Any configuration. Includes structural engineering for joined or stacked builds.", icon: "🔧", price: "Starting at $90,000" },
             ].map((config) => (
               <div key={config.label} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
                 <div className="text-3xl" aria-hidden>{config.icon}</div>
@@ -242,7 +263,7 @@ function GuestHouseContent() {
                 <p className="mt-1 text-sm font-semibold text-container-steel uppercase tracking-wide">{config.container}</p>
                 <p className="mt-1 text-sm text-text-secondary">{config.sqft}</p>
                 <p className="mt-3 text-sm text-text-secondary"><span className="font-semibold text-charcoal">Standard includes:</span> {config.includes}</p>
-                <p className="mt-3 text-sm font-semibold text-teal">Starting at $5,000 →</p>
+                <p className="mt-3 text-sm font-semibold text-teal">{config.price} →</p>
               </div>
             ))}
           </div>
@@ -684,7 +705,7 @@ export default function ContainerProductPage({ params }: Props) {
     description: container.shortDescription,
     url: `/containers/${container.slug}`,
     sku: `SWFL-${container.slug.toUpperCase()}`,
-    offers: { price: "5000", priceCurrency: "USD", availability: "https://schema.org/InStock" },
+    offers: { price: container.startingPriceValue ?? "9500", priceCurrency: "USD", availability: "https://schema.org/InStock" },
   });
   const faqData = faqs.length > 0 ? faqSchema(faqs.map((f) => ({ question: f.question, answer: f.answer }))) : null;
 
@@ -736,6 +757,8 @@ export default function ContainerProductPage({ params }: Props) {
       {params.slug === "guest-houses" && <GuestHouseContent />}
       {params.slug === "offices-workshops" && <OfficesWorkshopsContent />}
       {params.slug === "storm-shelters" && <StormSheltersContent />}
+
+      <PrebuiltOptionsCallout />
 
       {/* FAQ */}
       {faqs.length > 0 && (

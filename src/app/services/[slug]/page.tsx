@@ -190,6 +190,12 @@ const stormContent: Record<string, StormRichContent> = {
 
 // ─── Generic per-service FAQ data (existing services) ─────────────────────────
 const serviceFaqs: Record<string, FAQItem[]> = {
+  "roof-certification-inspection": [
+    { question: "Who needs a roof certification inspection?", answer: "Homeowners buying, selling, renewing insurance, or responding to a carrier request often need documentation of roof age, condition, and estimated remaining useful life." },
+    { question: "What does the roof certification report include?", answer: "Typical reports include property details, inspection date, roof photos, observed damage or repair issues, estimated remaining life, inspected components, notes, and licensed inspector signatures." },
+    { question: "How quickly can I get the report?", answer: "Most roof certification reports can be turned around in 24 to 48 hours after inspection, depending on scheduling and property access." },
+    { question: "What happens if damage is found?", answer: "The inspection is a condition report, not a simple pass/fail. If repairs are needed, Seacoast can scope the work and complete repairs before final certification documentation is submitted." },
+  ],
   roofing: [
     { question: "What roofing materials do you work with?", answer: "We install and repair tile, metal (standing seam, R-panel, stone-coated steel), TPO/flat, shingle, and slate-profile systems." },
     { question: "Do you handle storm damage claims?", answer: "Yes. We document damage, coordinate with your insurance adjuster, and manage repairs from inspection to final walkthrough." },
@@ -211,6 +217,16 @@ const serviceFaqs: Record<string, FAQItem[]> = {
     { question: "What counts as an exterior renovation?", answer: "Anything outside the building envelope: structural repairs, paint, trim, cladding, walkways, lighting, and more." },
     { question: "Do you handle both residential and commercial?", answer: "Yes. Our team works across residential, commercial, and multi-family properties throughout Southwest Florida." },
   ],
+  "exterior-cleaning-services": [
+    { question: "What exterior cleaning services do you offer?", answer: "Seacoast handles soft washing, pressure washing, surface cleaning, siding cleaning, roof cleaning, concrete and driveway cleaning, gutter cleaning, patio cleaning, fence cleaning, and solar panel cleaning." },
+    { question: "Do you clean both homes and commercial buildings?", answer: "Yes. We clean residential and commercial properties throughout Southwest Florida using the right pressure, cleaning agents, and equipment for each surface." },
+    { question: "Why not pressure wash everything at high pressure?", answer: "Some surfaces need low-pressure soft washing to avoid damage. We choose the method based on the material: roofing, siding, brick, concrete, gutters, solar panels, patios, and fencing all require different handling." },
+  ],
+  "solar-services": [
+    { question: "What solar services does Seacoast offer?", answer: "Seacoast's solar team supports solar panel systems, inverters, battery storage, EV charging stations, and solar system maintenance." },
+    { question: "Can solar help lower electric bills?", answer: "Solar can reduce utility costs when the system is properly designed for your usage, roof, and sun exposure. We review your property and energy goals before recommending a system." },
+    { question: "Do you handle EV charging?", answer: "Yes. EV charging can be scoped with solar panels, storage, or a standalone electrical upgrade depending on your vehicle and charging needs." },
+  ],
   "pool-enclosures-lanais": [
     { question: "Do you build new enclosures or just repair existing ones?", answer: "Both. We design and build new pool enclosures and lanais, and repair or re-screen existing structures." },
     { question: "What happens if a screen enclosure is damaged in a storm?", answer: "We assess structural damage, document it for insurance, and rebuild or repair to current Florida building code." },
@@ -222,11 +238,14 @@ const serviceFaqs: Record<string, FAQItem[]> = {
 };
 
 const slugToServiceTypeKeywords: Record<string, string[]> = {
+  "roof-certification-inspection": ["roofing", "roof"],
   roofing: ["roofing", "roof"],
   "gutters-fascia-soffits": ["gutters", "fascia", "soffits"],
   siding: ["siding", "hardie"],
   "windows-and-doors": ["window", "door"],
   "exterior-renovations": ["exterior", "renovation"],
+  "exterior-cleaning-services": ["exterior", "cleaning", "pressure", "wash"],
+  "solar-services": ["solar", "energy"],
   "pool-enclosures-lanais": ["enclosure", "lanai", "pool"],
   "room-additions": ["addition", "carport"],
   "storm-damage-repair": ["storm", "hurricane", "damage", "repair"],
@@ -723,6 +742,11 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 // ─── Generic service layout (all non-storm services) ─────────────────────────
 // Cross-sell pairings for the generic (non-storm) services, per strategy §6.2.
 const genericCrossSell: Record<string, CrossSellItem[]> = {
+  "roof-certification-inspection": [
+    { title: "Roofing", href: "/services/roofing", blurb: "If the inspection finds repairs or replacement needs, Seacoast can scope and complete the roof work.", icon: "🏠" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Storm-related roof condition issues need strong documentation for insurance conversations.", icon: "⛈️" },
+    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Roof and gutter cleaning can help preserve roof condition between inspections.", icon: "💦" },
+  ],
   roofing: [
     { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Finish the roof system with water management built for Southwest Florida rainfall.", icon: "🌧️" },
     { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Roof damage after a storm? We document it and handle the insurance claim.", icon: "⛈️" },
@@ -747,6 +771,16 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
     { title: "Roofing", href: "/services/roofing", blurb: "A new roof is often the anchor of a full exterior renovation.", icon: "🏠" },
     { title: "Siding", href: "/services/siding", blurb: "New siding transforms curb appeal alongside other exterior work.", icon: "🧱" },
     { title: "Room Additions", href: "/services/room-additions", blurb: "Expanding the footprint? We renovate and add space in one project.", icon: "➕" },
+  ],
+  "exterior-cleaning-services": [
+    { title: "Siding", href: "/services/siding", blurb: "Cleaning can restore curb appeal, while damaged or aging siding may need replacement.", icon: "🧱" },
+    { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Pair gutter cleaning with repairs or replacement when the water-management system is failing.", icon: "🌧️" },
+    { title: "Solar Services", href: "/services/solar-services", blurb: "Clean solar panels work more efficiently and protect the investment in your system.", icon: "☀️" },
+  ],
+  "solar-services": [
+    { title: "Roofing", href: "/services/roofing", blurb: "A solar project starts with a roof that is ready to support the system long term.", icon: "🏠" },
+    { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm roof condition before mounting panels or making a solar investment.", icon: "📋" },
+    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Keep panels producing with scheduled solar panel cleaning.", icon: "💦" },
   ],
   "pool-enclosures-lanais": [
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Tie outdoor living into a broader exterior upgrade.", icon: "🛠️" },

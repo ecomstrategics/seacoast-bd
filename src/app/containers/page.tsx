@@ -44,7 +44,7 @@ const landingFaqs = [
   {
     question: "What does it cost?",
     answer:
-      "Starting prices begin at $5,000 and vary by product type, size, configuration, and finish level. Contact us for a custom quote based on your site and goals.",
+      "Storage containers start around $9,500. Finished container offices and workshops start around $28,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $34,000. Final pricing varies by site, permitting, configuration, utilities, and finish level.",
   },
 ];
 
@@ -112,6 +112,24 @@ export default function ContainersLandingPage() {
             {containers.map((container) => (
               <ContainerCard key={container.slug} container={container} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Prebuilt options */}
+      <section className="section dark-band bg-navy">
+        <div className="container">
+          <div className="grid gap-8 rounded-2xl border border-container-steel/20 bg-white p-8 shadow-soft md:grid-cols-[1fr_auto] md:items-center">
+            <div>
+              <p className="eyebrow">Prebuilt options</p>
+              <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Mini-home on wheels coming soon</h2>
+              <p className="mt-4 max-w-2xl text-text-secondary">
+                We&apos;re preparing the first prebuilt container mini-home listing. Real photos, specs, pricing, and availability will be added once the unit is ready to show.
+              </p>
+            </div>
+            <Link href="/containers/prebuilt" className="rounded-full bg-teal px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
+              View Prebuilt Options
+            </Link>
           </div>
         </div>
       </section>

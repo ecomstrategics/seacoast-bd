@@ -5,6 +5,7 @@ import { containers } from "@/data/containers";
 
 const pillarLinks = {
   protect: [
+    { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
     { label: "Storm Preparedness", href: "/services/storm-preparedness" },
     { label: "Emergency Response", href: "/services/emergency-response" },
     { label: "Storm Damage Repair", href: "/services/storm-damage-repair" },
@@ -16,10 +17,13 @@ const pillarLinks = {
     { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
     { label: "Windows & Doors", href: "/services/windows-and-doors" },
     { label: "Exterior Renovations", href: "/services/exterior-renovations" },
+    { label: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services" },
+    { label: "Solar Services", href: "/services/solar-services" },
   ],
   expand: [
     { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
     { label: "Room Additions", href: "/services/room-additions" },
+    { label: "Prebuilt Container Options", href: "/containers/prebuilt" },
     { label: "Container Guest Houses", href: "/containers/guest-houses" },
     { label: "Container Offices", href: "/containers/offices-workshops" },
   ],
@@ -42,7 +46,7 @@ export function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
           <p className="mt-3 text-sm text-white/75 leading-6">Southwest Florida&rsquo;s full-service property solutions company. Protect it. Improve it. Expand it.</p>
-          <p className="mt-3 text-sm text-white/70">License #: CBC0000000</p>
+          <p className="mt-3 text-sm text-white/70">License #: FRO14426</p>
           <p className="mt-1 text-sm text-white/70">
             <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
           </p>
@@ -86,6 +90,7 @@ export function Footer() {
           </ul>
           <h3 className="mt-6 font-heading font-bold text-white/90">Containers</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
+            <li><Link href="/containers/prebuilt" className="hover:text-white">Prebuilt Options</Link></li>
             {containers.map((c) => (
               <li key={c.slug}><Link href={`/containers/${c.slug}`} className="hover:text-white">{c.name}</Link></li>
             ))}

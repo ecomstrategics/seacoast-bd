@@ -13,11 +13,14 @@ export const primaryNav: NavItem[] = [
     label: "Services",
     href: "/services",
     dropdown: [
+      { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
       { label: "Roofing", href: "/services/roofing" },
       { label: "Siding", href: "/services/siding" },
       { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
       { label: "Windows & Doors", href: "/services/windows-and-doors" },
       { label: "Exterior Renovations", href: "/services/exterior-renovations" },
+      { label: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services" },
+      { label: "Solar Services", href: "/services/solar-services" },
       { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
       { label: "Room Additions", href: "/services/room-additions" },
       { label: "Storm Damage Repair", href: "/services/storm-damage-repair" },
@@ -25,7 +28,20 @@ export const primaryNav: NavItem[] = [
       { label: "Emergency Response", href: "/services/emergency-response" },
     ],
   },
-  { label: "Containers", href: "/containers" },
+  {
+    label: "Containers",
+    href: "/containers",
+    dropdown: [
+      { label: "All Container Builds", href: "/containers" },
+      { label: "Prebuilt Options", href: "/containers/prebuilt" },
+      { label: "Guest Houses", href: "/containers/guest-houses" },
+      { label: "Offices & Workshops", href: "/containers/offices-workshops" },
+      { label: "Storage Containers", href: "/containers/storage" },
+      { label: "Storm Shelters", href: "/containers/storm-shelters" },
+      { label: "Compare Options", href: "/containers/compare" },
+    ],
+  },
+  { label: "Financing", href: "/financing" },
   {
     label: "Our Work",
     href: "/our-work",
@@ -42,6 +58,7 @@ export type SolutionsMegaItem = { label: string; href: string };
 
 export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMegaItem[]; expand: SolutionsMegaItem[] } = {
   protect: [
+    { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
     { label: "Storm Preparedness", href: "/services/storm-preparedness" },
     { label: "Emergency Response", href: "/services/emergency-response" },
     { label: "Storm Damage Repair", href: "/services/storm-damage-repair" },
@@ -53,8 +70,11 @@ export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMe
     { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
     { label: "Windows & Doors", href: "/services/windows-and-doors" },
     { label: "Exterior Renovations", href: "/services/exterior-renovations" },
+    { label: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services" },
+    { label: "Solar Services", href: "/services/solar-services" },
   ],
   expand: [
+    { label: "Prebuilt Container Options", href: "/containers/prebuilt" },
     { label: "Container Guest Houses", href: "/containers/guest-houses" },
     { label: "Container Offices & Workshops", href: "/containers/offices-workshops" },
     { label: "Storage Containers", href: "/containers/storage" },

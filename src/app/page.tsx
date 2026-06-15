@@ -78,7 +78,7 @@ export default function Home() {
         <div className="container">
           <p className="eyebrow">How we can help</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Everything your property needs, under one roof</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">Three pillars. Ten services. One contractor who handles them all across Southwest Florida.</p>
+          <p className="mt-4 max-w-2xl text-text-secondary">Three pillars. Thirteen services. One contractor who handles them all across Southwest Florida.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {solutions.map((sol) => {
               const svcList = getServicesByPillar(sol.slug).map((s) => ({
@@ -118,6 +118,36 @@ export default function Home() {
           </div>
           <div className="mt-8 text-center sm:hidden">
             <Link href="/containers" className="font-bold text-teal">Browse all container builds &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Financing */}
+      <section className="section dark-band bg-navy">
+        <div className="container grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Project financing</p>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Renovation financing through Hearth</h2>
+            <p className="mt-4 text-text-secondary">
+              See personalized monthly payment options within minutes without affecting your credit score. Hearth financing can help move urgent repairs, roofing, exterior renovations, additions, and container projects forward without waiting on home-equity underwriting.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <Link href="/financing" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Explore Financing</Link>
+              <Link href="/contact" className="rounded-full border border-navy/15 px-6 py-3 font-bold text-navy transition hover:border-teal hover:text-teal">Ask With Your Quote</Link>
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              "Loan amounts up to $250,000",
+              "Funding as fast as 1 to 3 days",
+              "No home equity required",
+              "No prepayment penalties",
+            ].map((item) => (
+              <div key={item} className="rounded-2xl border border-navy/10 bg-white p-5 shadow-sm">
+                <span className="text-xl text-success" aria-hidden>✓</span>
+                <p className="mt-3 font-heading font-bold text-navy">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

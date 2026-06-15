@@ -225,6 +225,8 @@ export function Header() {
             ))}
             <div className="my-3 border-t border-white/10" />
             <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Containers</Link>
+            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Prebuilt Options</Link>
+            <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Financing</Link>
             <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Our Work</Link>
             <Link href="/testimonials" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Testimonials</Link>
             <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>About</Link>
