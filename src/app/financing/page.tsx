@@ -116,9 +116,9 @@ export default function FinancingPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {benefits.map((benefit) => (
-              <div key={benefit} className="rounded-2xl border border-navy/10 bg-white p-5 shadow-sm">
-                <span className="text-xl text-success" aria-hidden>✓</span>
-                <p className="mt-3 font-heading font-bold text-navy">{benefit}</p>
+              <div key={benefit} className="flex items-start gap-3 rounded-2xl border border-navy/10 bg-white p-5 shadow-sm">
+                <span className="text-xl leading-7 text-success" aria-hidden>✓</span>
+                <p className="font-heading font-bold text-navy">{benefit}</p>
               </div>
             ))}
           </div>
