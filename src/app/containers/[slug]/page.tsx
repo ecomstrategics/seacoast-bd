@@ -22,7 +22,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const container = getContainerBySlug(params.slug);
   if (!container) return {};
   return {
-    title: `${container.name} | Seacoast Building & Design`,
+    title: container.name,
     description: container.shortDescription,
   };
 }

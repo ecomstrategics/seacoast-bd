@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Prebuilt Container Options | Seacoast Building & Design",
+  title: "Prebuilt Container Options",
   description:
     "Prebuilt container mini-home and container building options from Seacoast Building & Design. First mini-home on wheels coming soon.",
 };

@@ -263,7 +263,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!service) return {};
   const rich = stormContent[params.slug];
   return {
-    title: `${service.name} | Seacoast Building & Design`,
+    title: service.name,
     description: rich ? rich.heroSub : service.shortDescription,
   };
 }
@@ -803,8 +803,19 @@ function GenericServiceLayout({ params }: Props) {
   const faqs = serviceFaqs[params.slug] ?? [];
   const crossSell = genericCrossSell[params.slug] ?? [];
 
+  const schemas = [
+    serviceSchema({
+      name: service.name,
+      description: service.shortDescription,
+      url: `/services/${params.slug}`,
+      serviceType: service.name,
+    }),
+    ...(faqs.length > 0 ? [faqSchema(faqs)] : []),
+  ];
+
   return (
     <>
+      <SchemaScript schema={schemas} />
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: service.name }]} />

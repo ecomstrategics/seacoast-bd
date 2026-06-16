@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Resources | Seacoast Building & Design",
+  title: "Resources",
   description: "Guides, articles, and resources about roofing, storm prep, exterior renovations, and building codes for Southwest Florida property owners.",
 };
 

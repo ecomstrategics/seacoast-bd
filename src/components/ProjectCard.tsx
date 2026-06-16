@@ -11,7 +11,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="relative aspect-video overflow-hidden bg-navy">
         <Image
           src={`https://i.ytimg.com/vi/${project.videoId}/hqdefault.jpg`}
-          alt=""
+          alt={`${project.title} - ${project.serviceType} in ${project.location}`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover opacity-85 transition group-hover:scale-105"

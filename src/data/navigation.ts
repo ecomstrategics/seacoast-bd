@@ -33,7 +33,6 @@ export const primaryNav: NavItem[] = [
     href: "/containers",
     dropdown: [
       { label: "All Container Builds", href: "/containers" },
-      { label: "Prebuilt Options", href: "/containers/prebuilt" },
       { label: "Guest Houses", href: "/containers/guest-houses" },
       { label: "Offices & Workshops", href: "/containers/offices-workshops" },
       { label: "Storage Containers", href: "/containers/storage" },
@@ -51,7 +50,6 @@ export const primaryNav: NavItem[] = [
     ],
   },
   { label: "About", href: "/about" },
-  { label: "Resources", href: "/resources" },
 ];
 
 export type SolutionsMegaItem = { label: string; href: string };
@@ -74,7 +72,6 @@ export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMe
     { label: "Solar Services", href: "/services/solar-services" },
   ],
   expand: [
-    { label: "Prebuilt Container Options", href: "/containers/prebuilt" },
     { label: "Container Guest Houses", href: "/containers/guest-houses" },
     { label: "Container Offices & Workshops", href: "/containers/offices-workshops" },
     { label: "Storage Containers", href: "/containers/storage" },

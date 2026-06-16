@@ -25,7 +25,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const pillar = getSolutionBySlug(params.slug as "protect" | "improve" | "expand");
   if (!pillar) return {};
   return {
-    title: `${pillar.heroHeading} | Seacoast Building & Design`,
+    title: pillar.heroHeading,
     description: pillar.heroSub,
   };
 }
@@ -158,7 +158,7 @@ export default function SolutionPillarPage({ params }: Props) {
             <p className="eyebrow">Container builds</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Custom containers, built for Florida living.</h2>
             <p className="mt-4 max-w-2xl text-text-secondary">
-              Storage, guest houses, offices, and storm shelters. SWFL Containers builds and finishes
+              Storage, guest houses, offices, and storm shelters. Seacoast builds and finishes
               shipping containers to match your home, your hurricane plan, and your budget.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -23,7 +23,6 @@ const pillarLinks = {
   expand: [
     { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
     { label: "Room Additions", href: "/services/room-additions" },
-    { label: "Prebuilt Container Options", href: "/containers/prebuilt" },
     { label: "Container Guest Houses", href: "/containers/guest-houses" },
     { label: "Container Offices", href: "/containers/offices-workshops" },
   ],
@@ -32,7 +31,6 @@ const pillarLinks = {
 const quickLinks = [
   { label: "Our Work", href: "/our-work" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Resources", href: "/resources" },
   { label: "Financing", href: "/financing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -90,7 +88,6 @@ export function Footer() {
           </ul>
           <h3 className="mt-6 font-heading font-bold text-white/90">Containers</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
-            <li><Link href="/containers/prebuilt" className="hover:text-white">Prebuilt Options</Link></li>
             {containers.map((c) => (
               <li key={c.slug}><Link href={`/containers/${c.slug}`} className="hover:text-white">{c.name}</Link></li>
             ))}

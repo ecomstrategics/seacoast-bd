@@ -7,6 +7,7 @@ export function localBusinessSchema(): SchemaObject {
   return {
     "@context": "https://schema.org",
     "@type": "GeneralContractor",
+    "@id": "https://seacoastbd.com/#organization",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
     telephone: "+1-941-500-5431",
@@ -22,9 +23,60 @@ export function localBusinessSchema(): SchemaObject {
     ],
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Fort Myers",
       addressRegion: "FL",
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 26.6406,
+      longitude: -81.8723,
+    },
+    sameAs: [
+      "https://www.facebook.com/seacoastbd",
+      "https://www.instagram.com/seacoastbd",
+      "https://www.youtube.com/@seacoastbd",
+    ],
+    priceRange: "$$",
+  };
+}
+
+export function webSiteSchema(): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Seacoast Building & Design",
+    url: "https://seacoastbd.com",
+    publisher: { "@id": "https://seacoastbd.com/#organization" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://seacoastbd.com/our-work?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+export function videoObjectSchema({
+  name,
+  description,
+  videoId,
+  uploadDate,
+}: {
+  name: string;
+  description: string;
+  videoId: string;
+  uploadDate?: string;
+}): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+    embedUrl: `https://www.youtube.com/embed/${videoId}`,
+    uploadDate: uploadDate ?? "2024-01-01",
+    publisher: { "@id": "https://seacoastbd.com/#organization" },
   };
 }
 
@@ -75,7 +127,7 @@ export function productSchema({
     ...(sku ? { sku } : {}),
     brand: {
       "@type": "Brand",
-      name: "SWFL Containers",
+      name: "Seacoast Building & Design",
     },
     offers: {
       "@type": "Offer",

@@ -7,7 +7,7 @@ import { getServicesByPillar } from "@/data/services";
 import { solutions } from "@/data/solutions";
 
 export const metadata: Metadata = {
-  title: "Solutions: Protect. Improve. Expand. | Seacoast Building & Design",
+  title: "Solutions: Protect. Improve. Expand.",
   description:
     "Every Seacoast service maps to one of three outcomes: protect your property from storms, improve the exterior, or expand with containers and additions. Find the right solution for your project.",
 };

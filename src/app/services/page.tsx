@@ -3,7 +3,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Services | Seacoast Building & Design",
+  title: "Services",
   description: "Roofing, siding, gutters, windows, doors, storm repair, pool enclosures, and exterior renovations. Full contractor services for Southwest Florida.",
 };
 

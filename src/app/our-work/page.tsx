@@ -3,7 +3,7 @@ import { WorkFilter } from "@/components/WorkFilter";
 import { projects, categories, roofingSubcategories } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Our Work | Seacoast Building & Design",
+  title: "Our Work",
   description: "Browse completed roofing, siding, enclosure, and exterior project videos by Seacoast Building & Design across Southwest Florida.",
 };
 

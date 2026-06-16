@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Project Financing | Seacoast Building & Design",
+  title: "Project Financing",
   description:
     "Renovation financing through Hearth for roofing, exterior renovations, storm repairs, additions, containers, and home improvement projects across Southwest Florida.",
 };

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Testimonials | Seacoast Building & Design",
+  title: "Testimonials",
   description: "See what homeowners and property owners say about Seacoast Building & Design, Southwest Florida's video-documented contractor.",
 };
 

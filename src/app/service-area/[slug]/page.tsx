@@ -72,7 +72,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
               Get a Free Quote in {city.name}
             </Link>
             <a
-              href="tel:9415005431"
+              href="tel:+19415005431"
               className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition"
             >
               (941) 500-5431
@@ -167,7 +167,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="font-bold text-teal">Phone:</span>
-                  <a href="tel:9415005431" className="font-semibold text-charcoal hover:text-teal transition">(941) 500-5431</a>
+                  <a href="tel:+19415005431" className="font-semibold text-charcoal hover:text-teal transition">(941) 500-5431</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="font-bold text-teal">Service area:</span>

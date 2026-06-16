@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTASection } from "@/components/CTASection";
+import { SchemaScript, videoObjectSchema } from "@/components/Schema";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
 import { getProjectBySlug, projects } from "@/data/projects";
 
@@ -14,7 +16,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const project = getProjectBySlug(params.slug);
   if (!project) return {};
   return {
-    title: `${project.title} | Seacoast Building & Design`,
+    title: project.title,
     description: project.description,
   };
 }
@@ -25,10 +27,11 @@ export default function ProjectDetailPage({ params }: Props) {
 
   return (
     <>
+      <SchemaScript schema={videoObjectSchema({ name: project.title, description: project.description, videoId: project.videoId })} />
       <section className="section dark-band bg-navy">
         <div className="container">
           <div className="mb-6">
-            <a href="/our-work" className="text-sm font-semibold text-teal hover:underline">← Back to all projects</a>
+            <Link href="/our-work" className="text-sm font-semibold text-teal hover:underline">&larr; Back to all projects</Link>
           </div>
           <div className="flex flex-wrap gap-2 text-xs font-bold mb-4">
             <span className="rounded-full bg-teal/10 px-3 py-1 text-teal">{project.serviceType}</span>

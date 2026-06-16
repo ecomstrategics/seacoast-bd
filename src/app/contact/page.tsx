@@ -3,7 +3,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
-  title: "Contact | Seacoast Building & Design",
+  title: "Contact",
   description: "Request a free quote or get in touch with Seacoast Building & Design. Serving Southwest Florida: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier Counties.",
 };
 

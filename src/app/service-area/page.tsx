@@ -6,7 +6,7 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Seacoast Building & Design",
+  title: "Service Areas",
   description: "Seacoast Building & Design serves six counties and eight cities across Southwest Florida. Roofing, storm protection, containers, and exterior services. (941) 500-5431",
 };
 
@@ -25,7 +25,7 @@ export default function ServiceAreaIndexPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
-            <a href="tel:9415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
+            <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
           </div>
         </div>
       </section>

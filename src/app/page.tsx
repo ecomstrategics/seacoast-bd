@@ -14,7 +14,7 @@ import { serviceArea } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
-  title: "Seacoast Building & Design | Southwest Florida's Property Solutions Company",
+  title: { absolute: "Seacoast Building & Design | Southwest Florida's Property Solutions Company" },
   description: "Protect, improve, and expand your home or property. All from one licensed contractor. 40+ years, 6 counties, every project on video. Licensed and insured. (941) 500-5431",
 };
 
@@ -32,11 +32,11 @@ export default function Home() {
       <SchemaScript schema={localBusinessSchema()} />
 
       {/* Hero */}
-      <section className="bg-navy py-24 text-white">
+      <section className="bg-navy py-14 md:py-24 text-white">
         <div className="container grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="eyebrow">Southwest Florida contractor</p>
-            <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">
+            <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-6xl">
               Southwest Florida&apos;s Property Solutions Company.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
@@ -133,7 +133,7 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link href="/financing" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Explore Financing</Link>
-              <Link href="/contact" className="rounded-full border border-navy/15 px-6 py-3 font-bold text-navy transition hover:border-teal hover:text-teal">Ask With Your Quote</Link>
+              <Link href="/contact" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">Ask With Your Quote</Link>
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">

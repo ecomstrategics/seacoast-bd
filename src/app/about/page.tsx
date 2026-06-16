@@ -5,7 +5,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
-  title: "About | Seacoast Building & Design",
+  title: "About",
   description: "40+ years of Southwest Florida contracting. Licensed, insured, and video-documented. Learn more about Seacoast Building & Design.",
 };
 

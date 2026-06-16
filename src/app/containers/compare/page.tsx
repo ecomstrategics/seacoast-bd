@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, productSchema, faqSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Container vs. Everything: Storage, Shed, RV, and Traditional Addition | Seacoast Building & Design",
+  title: "Container vs. Everything: Storage, Shed, RV, and Traditional Addition",
   description:
     "Not sure if a container is right for you? We compare shipping containers head-to-head against self-storage units, garden sheds, RVs, and traditional additions. Including when NOT to buy a container.",
 };
@@ -42,7 +42,7 @@ const compareFaqs = [
 export default function ContainerComparePage() {
   const schemas = [
     productSchema({
-      name: "Shipping Container Builds by SWFL Containers",
+      name: "Shipping Container Builds by Seacoast Building & Design",
       description:
         "Custom container guest houses, offices, workshops, storage, and storm shelters built and finished by Seacoast Building and Design in Southwest Florida.",
       url: "/containers/compare",

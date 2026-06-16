@@ -10,9 +10,9 @@ import Image from "next/image";
 import { containers } from "@/data/containers";
 
 export const metadata: Metadata = {
-  title: "Custom Containers, Built for Florida Living | Seacoast Building & Design",
+  title: "Custom Containers, Built for Florida Living",
   description:
-    "Cat-5-rated storage containers, custom guest houses, offices, workshops, and storm shelters. SWFL Containers builds and finishes shipping containers to match your home and your hurricane plan.",
+    "Cat-5-rated storage containers, custom guest houses, offices, workshops, and storm shelters. Seacoast builds and finishes shipping containers to match your home and your hurricane plan.",
 };
 
 const landingFaqs = [
@@ -58,7 +58,7 @@ export default function ContainersLandingPage() {
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Containers" }]} />
-          <p className="eyebrow mt-4">SWFL Containers</p>
+          <p className="eyebrow mt-4">Seacoast Container Builds</p>
           <h1 className="mt-2 font-heading text-5xl font-bold leading-tight">Custom Containers,<br className="hidden md:block" /> Built for Florida Living.</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">Cat-5-rated storage. Custom guest houses. Mobile offices. Storm shelters. We build and finish shipping containers to match your home and your hurricane plan.</p>
           <div className="mt-8 flex flex-wrap gap-4">
