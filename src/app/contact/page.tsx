@@ -30,6 +30,10 @@ export default function ContactPage() {
                 <a href="tel:+19415005431" className="mt-2 block font-heading text-2xl font-bold text-navy hover:text-orange">(941) 500-5431</a>
               </div>
               <div>
+                <p className="eyebrow">Email</p>
+                <a href="mailto:sales@seacoastbd.com" className="mt-2 block font-heading text-2xl font-bold text-navy hover:text-orange">sales@seacoastbd.com</a>
+              </div>
+              <div>
                 <p className="eyebrow">Hours</p>
                 <p className="mt-2 text-text-secondary">Mon to Fri: 8am to 6pm</p>
                 <p className="text-text-secondary">Saturday: 9am to 3pm</p>
