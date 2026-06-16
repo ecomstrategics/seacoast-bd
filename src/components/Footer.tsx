@@ -115,7 +115,12 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-5 text-center text-sm text-white/65">
-        &copy; {new Date().getFullYear()} Seacoast Building &amp; Design. All rights reserved.
+        <p>&copy; {new Date().getFullYear()} Seacoast Building &amp; Design. All rights reserved.</p>
+        <nav aria-label="Legal" className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1">
+          <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+          <Link href="/accessibility" className="hover:text-white">Accessibility</Link>
+        </nav>
       </div>
     </footer>
   );

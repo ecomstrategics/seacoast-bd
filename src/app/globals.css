@@ -11,7 +11,11 @@ a { text-decoration: none; }
 .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
 .section { padding-block: 3.5rem; }
 @media (min-width: 768px) { .section { padding-block: 5rem; } }
-.eyebrow { color: #FA4616; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+/* Eyebrow + orange text default to the lighter coral-orange so they clear WCAG AA
+   on every dark blue band (>=4.5:1 even on the brightest #0021A5). On light surfaces
+   the contrast-island layer below overrides this to deep orange #B83410. */
+.eyebrow { color: #FF7A3D; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+.text-orange { color: #FF7A3D; }
 /* Orange focus ring reads clearly on dark blue. */
 .focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FA4616]; }
 

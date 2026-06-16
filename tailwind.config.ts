@@ -17,7 +17,8 @@ const config: Config = {
         "navy-deep": "#001B85",    // deeper band for alternating dark sections
         "navy-900": "#00115C",     // deepest blue: body background / footers
         "navy-surface": "#0A2A8A", // slightly lifted blue for dark card/panel surfaces
-        orange: "#FA4616",         // brand orange — use as text/icon/border on DARK navy (4.8:1 on body bg) and for large text
+        orange: "#FA4616",         // brand vivid orange — borders, icons, tint fills (bg-orange/10), large text
+        "orange-light": "#FF7A3D", // coral-orange — small TEXT/eyebrows on dark blue bands (>=4.5:1 on the brightest #0021A5); applied as the text-orange/eyebrow default in globals.css
         "orange-deep": "#B83410",  // accessible deep orange — fills carrying white text (5.9:1) and orange text on LIGHT surfaces (>=4.9:1)
         copper: "#12307A",         // blue-tint; used for hover states, complements orange+bright blue
         "copper-light": "#AFC1F4", // light blue accent, readable on dark blue
