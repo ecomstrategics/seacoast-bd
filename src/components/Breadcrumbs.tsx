@@ -23,7 +23,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
             <li key={item.label} className="flex items-center gap-1.5">
               {index > 0 && <span aria-hidden>/</span>}
               {item.href && index < items.length - 1 ? (
-                <Link href={item.href} className="font-medium text-teal hover:underline">{item.label}</Link>
+                <Link href={item.href} className="font-medium text-orange hover:underline">{item.label}</Link>
               ) : (
                 <span className="font-medium text-white/90" aria-current={index === items.length - 1 ? "page" : undefined}>{item.label}</span>
               )}

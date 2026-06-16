@@ -31,7 +31,7 @@ export function StormLifecycle({ activeStage }: { activeStage?: "before" | "duri
   return (
     <section className="section dark-band bg-navy text-white">
       <div className="container">
-        <p className="eyebrow text-teal/80">The Storm Lifecycle</p>
+        <p className="eyebrow text-orange/80">The Storm Lifecycle</p>
         <h2 className="mt-2 font-heading text-3xl font-bold">Seacoast covers every stage.</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {stages.map((stage, index) => {
@@ -43,16 +43,16 @@ export function StormLifecycle({ activeStage }: { activeStage?: "before" | "duri
                 )}
                 <Link
                   href={stage.href}
-                  className={`group block rounded-2xl border p-6 transition hover:-translate-y-1 ${isActive ? "border-teal bg-teal/10" : "border-white/15 hover:border-teal/40 hover:bg-white/5"}`}
+                  className={`group block rounded-2xl border p-6 transition hover:-translate-y-1 ${isActive ? "border-orange bg-orange/10" : "border-white/15 hover:border-orange/40 hover:bg-white/5"}`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   <div className="flex items-center gap-3">
                     <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white/60">{stage.label}</span>
                   </div>
                   <div className="mt-3 text-3xl" aria-hidden>{stage.icon}</div>
-                  <h3 className="mt-3 font-heading text-xl font-bold group-hover:text-teal">{stage.heading}</h3>
+                  <h3 className="mt-3 font-heading text-xl font-bold group-hover:text-orange">{stage.heading}</h3>
                   <p className="mt-2 text-sm leading-6 text-white/70">{stage.blurb}</p>
-                  <span className="mt-4 inline-flex text-sm font-semibold text-teal">Learn more →</span>
+                  <span className="mt-4 inline-flex text-sm font-semibold text-orange">Learn more →</span>
                 </Link>
               </div>
             );

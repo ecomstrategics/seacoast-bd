@@ -100,7 +100,7 @@ function PrebuiltOptionsCallout() {
               Our first prebuilt mini-home on wheels is coming soon. We&apos;ll add real photos, specs, pricing, and availability as soon as it is ready to show.
             </p>
           </div>
-          <Link href="/containers/prebuilt" className="rounded-full bg-teal px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
+          <Link href="/containers/prebuilt" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
             View Prebuilt Options
           </Link>
         </div>
@@ -197,7 +197,7 @@ function StorageContent() {
                 "Lock boxes and security hardware",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 text-teal font-bold">+</span>
+                  <span className="mt-0.5 shrink-0 text-orange font-bold">+</span>
                   <span className="text-text-secondary">{item}</span>
                 </li>
               ))}
@@ -263,7 +263,7 @@ function GuestHouseContent() {
                 <p className="mt-1 text-sm font-semibold text-container-steel uppercase tracking-wide">{config.container}</p>
                 <p className="mt-1 text-sm text-text-secondary">{config.sqft}</p>
                 <p className="mt-3 text-sm text-text-secondary"><span className="font-semibold text-charcoal">Standard includes:</span> {config.includes}</p>
-                <p className="mt-3 text-sm font-semibold text-teal">{config.price} →</p>
+                <p className="mt-3 text-sm font-semibold text-orange">{config.price} →</p>
               </div>
             ))}
           </div>
@@ -277,7 +277,7 @@ function GuestHouseContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold">Faster timeline. More predictable budget.</h2>
           <p className="mt-4 max-w-2xl text-white/75">Traditional additions in Southwest Florida run $250 to $400 per square foot, take 6 to 12 months, and require full permitting with every trade coordinated separately. Container guest houses come in below that range for most configurations and are delivered in 12 to 20 weeks, not 12 to 18 months. We quote a fixed scope so you know the full number before we start. Contact us for current project pricing based on your specific site and finish goals.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact?service=containers-guest-houses" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Guest House Quote</Link>
+            <Link href="/contact?service=containers-guest-houses" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Guest House Quote</Link>
             <Link href="/financing" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">See Financing Options</Link>
           </div>
         </div>
@@ -326,7 +326,7 @@ function GuestHouseContent() {
                 "Exterior landscaping coordination",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 text-teal font-bold">+</span>
+                  <span className="mt-0.5 shrink-0 text-orange font-bold">+</span>
                   <span className="text-text-secondary">{item}</span>
                 </li>
               ))}
@@ -412,7 +412,7 @@ function GuestHouseContent() {
               { step: "6", title: "Inspection and move-in", body: "Final county inspection, certificate of occupancy, and your walkthrough. We do not consider a job done until everything is right." },
             ].map((step) => (
               <li key={step.step} className="flex gap-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal font-heading text-lg font-bold text-white">{step.step}</div>
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-deep font-heading text-lg font-bold text-white">{step.step}</div>
                 <div>
                   <h3 className="font-heading text-lg font-bold text-navy">{step.title}</h3>
                   <p className="mt-1 text-text-secondary">{step.body}</p>
@@ -509,7 +509,7 @@ function OfficesWorkshopsContent() {
                 "Generator hookup and transfer switch",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 text-teal font-bold">+</span>
+                  <span className="mt-0.5 shrink-0 text-orange font-bold">+</span>
                   <span className="text-text-secondary">{item}</span>
                 </li>
               ))}
@@ -647,7 +647,7 @@ function StormSheltersContent() {
                 "Connection to existing home via covered walkway",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 text-teal font-bold">+</span>
+                  <span className="mt-0.5 shrink-0 text-orange font-bold">+</span>
                   <span className="text-text-secondary">{item}</span>
                 </li>
               ))}
@@ -663,7 +663,7 @@ function StormSheltersContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A shelter is one part of the picture</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">The most prepared homeowners pair a storm shelter with a complete storm preparedness plan: custom boards, priority service contracts, and first-in-line emergency response when a named storm forms.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/services/storm-preparedness" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">See Storm Preparedness Services</Link>
+            <Link href="/services/storm-preparedness" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See Storm Preparedness Services</Link>
             <Link href="/services/storm-damage-repair" className="rounded-full border border-navy/25 px-6 py-3 font-bold text-navy hover:bg-navy hover:text-white">Storm Damage Repair</Link>
           </div>
         </div>
@@ -725,10 +725,10 @@ export default function ContainerProductPage({ params }: Props) {
           />
           <div className="mt-4 text-4xl" aria-hidden>{container.icon}</div>
           <h1 className="mt-4 font-heading text-5xl font-bold">{container.name}</h1>
-          <p className="mt-2 text-lg font-semibold text-teal uppercase tracking-wide">{container.tagline}</p>
+          <p className="mt-2 text-lg font-semibold text-orange uppercase tracking-wide">{container.tagline}</p>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{container.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
             <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">← All Containers</Link>
           </div>
         </div>
@@ -777,7 +777,7 @@ export default function ContainerProductPage({ params }: Props) {
       )}
 
       <CTASection
-        variant="teal"
+        variant="orange"
         heading={`Ready to discuss your ${container.name.toLowerCase()} project?`}
         subtext="Request a no-pressure quote from a team that understands Southwest Florida properties."
         buttonLabel="Get a Free Quote"

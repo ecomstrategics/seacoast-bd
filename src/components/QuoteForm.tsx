@@ -96,11 +96,11 @@ export function QuoteForm({
         </select>
       </label>
 
-      {status === "success" && <p className="rounded-xl bg-teal/10 px-4 py-3 text-sm font-semibold text-teal">Thanks -- your quote request was sent. We will follow up shortly.</p>}
+      {status === "success" && <p className="rounded-xl bg-orange/10 px-4 py-3 text-sm font-semibold text-orange">Thanks -- your quote request was sent. We will follow up shortly.</p>}
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button
-        className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
+        className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
         type="submit"
         disabled={isSubmitting}
       >

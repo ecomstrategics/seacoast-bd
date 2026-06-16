@@ -71,7 +71,7 @@ export default function AboutPage() {
             We don&apos;t just tell you we do good work. We show you every project, documented on video, with real results you can evaluate before you sign anything.
           </p>
           <div className="mt-8">
-            <Link href="/our-work" className="rounded-full bg-teal px-8 py-4 font-bold text-white hover:bg-copper">Browse Project Videos</Link>
+            <Link href="/our-work" className="rounded-full bg-orange-deep px-8 py-4 font-bold text-white hover:bg-copper">Browse Project Videos</Link>
           </div>
         </div>
       </section>

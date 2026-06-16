@@ -68,7 +68,7 @@ export default function ContainerComparePage() {
           <h1 className="mt-2 font-heading text-5xl font-bold">Is a container right for you?</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">We put containers head-to-head against the four most common alternatives. We also tell you honestly when a container is not the right answer, because trust closes more deals than hype.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#comparison-table" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">See the Comparison</Link>
+            <Link href="#comparison-table" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See the Comparison</Link>
             <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">Browse Container Builds</Link>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function ContainerComparePage() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-text-secondary">We would rather tell you the truth up front than sell you the wrong product. If a traditional addition is right for your situation, we build those too.</p>
-            <Link href="/services/room-additions" className="mt-4 inline-block font-semibold text-teal hover:underline">See Room Additions →</Link>
+            <Link href="/services/room-additions" className="mt-4 inline-block font-semibold text-orange hover:underline">See Room Additions →</Link>
           </div>
         </div>
       </section>
@@ -264,9 +264,9 @@ export default function ContainerComparePage() {
                 className="group rounded-2xl border border-navy/10 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
               >
                 <div className="text-3xl" aria-hidden>{item.icon}</div>
-                <h3 className="mt-4 font-heading text-lg font-bold text-navy group-hover:text-teal">{item.label}</h3>
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy group-hover:text-orange">{item.label}</h3>
                 <p className="mt-1 text-sm text-text-secondary">{item.sub}</p>
-                <span className="mt-3 inline-flex font-semibold text-teal">Explore →</span>
+                <span className="mt-3 inline-flex font-semibold text-orange">Explore →</span>
               </Link>
             ))}
           </div>
@@ -274,7 +274,7 @@ export default function ContainerComparePage() {
       </section>
 
       <CTASection
-        variant="teal"
+        variant="orange"
         heading="Not sure which product fits your situation?"
         subtext="Tell us what you are trying to solve. We will give you an honest recommendation, not just a pitch."
         buttonLabel="Talk to a Specialist"

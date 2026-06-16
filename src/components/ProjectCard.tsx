@@ -17,12 +17,12 @@ export function ProjectCard({ project }: { project: Project }) {
           className="object-cover opacity-85 transition group-hover:scale-105"
         />
         <div className="absolute inset-0 grid place-items-center">
-          <span className="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-xl text-teal shadow-soft">▶</span>
+          <span className="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-xl text-orange shadow-soft">▶</span>
         </div>
       </div>
       <div className="p-5">
         <div className="flex flex-wrap gap-2 text-xs font-bold">
-          <span className="rounded-full bg-teal/10 px-3 py-1 text-teal">{project.serviceType}</span>
+          <span className="rounded-full bg-orange/10 px-3 py-1 text-orange">{project.serviceType}</span>
           <span className="rounded-full bg-cool-gray px-3 py-1 text-text-secondary">{project.location}</span>
         </div>
         <h3 className="mt-4 font-heading text-lg font-bold text-navy">{project.title}</h3>

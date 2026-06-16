@@ -32,10 +32,10 @@ export default function ResourcesPage() {
         <div className="container grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
             <div key={article.title} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft">
-              <span className="rounded-full bg-teal/10 px-3 py-1 text-xs font-bold text-teal">{article.category}</span>
+              <span className="rounded-full bg-orange/10 px-3 py-1 text-xs font-bold text-orange">{article.category}</span>
               <h2 className="mt-4 font-heading text-xl font-bold text-navy leading-snug">{article.title}</h2>
               <p className="mt-3 text-sm leading-6 text-text-secondary">{article.description}</p>
-              <p className="mt-5 text-sm font-semibold text-teal">Coming soon →</p>
+              <p className="mt-5 text-sm font-semibold text-orange">Coming soon →</p>
             </div>
           ))}
         </div>

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { primaryNav, solutionsMega } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
-const pillarAccents = { protect: "text-teal", improve: "text-navy", expand: "text-copper" } as const;
+const pillarAccents = { protect: "text-orange", improve: "text-navy", expand: "text-copper" } as const;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -82,7 +82,7 @@ export function Header() {
                   onMouseLeave={scheduleClose}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === "solutions"}
                     onFocus={() => openMenu("solutions")}
@@ -109,7 +109,7 @@ export function Header() {
                                 <li key={link.href}>
                                   <Link
                                     href={link.href}
-                                    className="block rounded-lg px-2.5 py-1.5 text-sm text-charcoal hover:bg-cool-gray hover:text-teal focus-ring"
+                                    className="block rounded-lg px-2.5 py-1.5 text-sm text-charcoal hover:bg-cool-gray hover:text-orange focus-ring"
                                     onClick={() => setOpenDropdown(null)}
                                   >
                                     {link.label}
@@ -143,7 +143,7 @@ export function Header() {
                   onMouseLeave={scheduleClose}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === key}
                     onFocus={() => openMenu(key)}
@@ -165,14 +165,14 @@ export function Header() {
                         <Link
                           key={sub.href}
                           href={sub.href}
-                          className="block px-5 py-2.5 text-sm text-charcoal hover:bg-cool-gray hover:text-teal focus-ring"
+                          className="block px-5 py-2.5 text-sm text-charcoal hover:bg-cool-gray hover:text-orange focus-ring"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {sub.label}
                         </Link>
                       ))}
                       <div className="mx-5 my-2 border-t border-navy/10" />
-                      <Link href={item.href} className="block px-5 py-2.5 text-sm font-bold text-teal hover:bg-cool-gray focus-ring" onClick={() => setOpenDropdown(null)}>
+                      <Link href={item.href} className="block px-5 py-2.5 text-sm font-bold text-orange hover:bg-cool-gray focus-ring" onClick={() => setOpenDropdown(null)}>
                         All {item.label} &rarr;
                       </Link>
                     </div>
@@ -182,7 +182,7 @@ export function Header() {
             }
 
             return (
-              <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 hover:bg-white/10 hover:text-teal focus-ring">
+              <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring">
                 {item.label}
               </Link>
             );
@@ -191,8 +191,8 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:+19415005431" className="font-semibold text-white hover:text-teal transition">(941) 500-5431</a>
-          <Link href="/contact" className="rounded-full bg-teal px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
+          <a href="tel:+19415005431" className="font-semibold text-white hover:text-orange transition">(941) 500-5431</a>
+          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -211,28 +211,28 @@ export function Header() {
       {mobileOpen && (
         <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white lg:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
-            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Protect</p>
+            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-orange">Protect</p>
             {solutionsMega.protect.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
             <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Improve</p>
             {solutionsMega.improve.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
             <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-copper-light">Expand</p>
             {solutionsMega.expand.map((link) => (
-              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>{link.label}</Link>
+              <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
             <div className="my-3 border-t border-white/10" />
-            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Containers</Link>
-            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Prebuilt Options</Link>
-            <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Financing</Link>
-            <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Our Work</Link>
-            <Link href="/testimonials" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Testimonials</Link>
-            <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-teal" onClick={() => setMobileOpen(false)}>Resources</Link>
+            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Containers</Link>
+            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Prebuilt Options</Link>
+            <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Financing</Link>
+            <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Our Work</Link>
+            <Link href="/testimonials" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Testimonials</Link>
+            <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Resources</Link>
             <div className="my-3 border-t border-white/10" />
-            <Link href="/contact" className="block rounded-full bg-teal px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
+            <Link href="/contact" className="block rounded-full bg-orange-deep px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
             <a href="tel:+19415005431" className="block rounded-full border border-white/25 px-5 py-3 text-center font-semibold text-white" onClick={() => setMobileOpen(false)}>(941) 500-5431</a>
           </div>
         </nav>

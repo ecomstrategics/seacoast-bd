@@ -17,10 +17,8 @@ const config: Config = {
         "navy-deep": "#001B85",    // deeper band for alternating dark sections
         "navy-900": "#00115C",     // deepest blue: body background / footers
         "navy-surface": "#0A2A8A", // slightly lifted blue for dark card/panel surfaces
-        // NOTE: 'teal' is the legacy token name — now mapped to brand orange #FA4616.
-        // All existing `text-teal`, `bg-teal`, `border-teal` classes become orange automatically.
-        teal: "#FA4616",           // brand orange (legacy token, do not rename)
-        orange: "#FA4616",         // brand orange alias for new code
+        orange: "#FA4616",         // brand orange — use as text/icon/border on DARK navy (4.8:1 on body bg) and for large text
+        "orange-deep": "#B83410",  // accessible deep orange — fills carrying white text (5.9:1) and orange text on LIGHT surfaces (>=4.9:1)
         copper: "#12307A",         // blue-tint; used for hover states, complements orange+bright blue
         "copper-light": "#AFC1F4", // light blue accent, readable on dark blue
         "warm-white": "#F8F6F2",

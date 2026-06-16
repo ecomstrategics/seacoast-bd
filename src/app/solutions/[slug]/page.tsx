@@ -58,7 +58,7 @@ const pillarProjectKeywords: Record<string, string[]> = {
 
 // ─── Accent classes per pillar ────────────────────────────────────────────────
 const accentBg: Record<string, string> = {
-  protect: "bg-teal",
+  protect: "bg-orange-deep",
   improve: "bg-navy",
   expand: "bg-copper",
 };
@@ -98,7 +98,7 @@ export default function SolutionPillarPage({ params }: Props) {
               { label: pillar.title },
             ]}
           />
-          <p className="eyebrow mt-4 text-teal/80">{pillar.tagline}</p>
+          <p className="eyebrow mt-4 text-orange/80">{pillar.tagline}</p>
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-5xl">{pillar.heroHeading}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{pillar.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -234,7 +234,7 @@ export default function SolutionPillarPage({ params }: Props) {
               {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
             </div>
             <div className="mt-8">
-              <Link href="/our-work" className="font-bold text-teal hover:underline">View all project videos →</Link>
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
             </div>
           </div>
         </section>
@@ -246,7 +246,7 @@ export default function SolutionPillarPage({ params }: Props) {
       />
 
       <CTASection
-        variant={slug === "protect" ? "teal" : slug === "improve" ? "navy" : "teal"}
+        variant={slug === "protect" ? "orange" : slug === "improve" ? "navy" : "orange"}
         heading={slug === "protect" ? "Ready to lock in your storm preparedness plan?" : slug === "improve" ? "Ready to start your exterior project?" : "Ready to add space to your property?"}
         subtext={slug === "protect" ? "Seacoast serves six Southwest Florida counties with emergency boarding crews and priority response contracts." : slug === "improve" ? "Request a free quote from Seacoast. We scope and complete every exterior trade in a single project cycle." : "Container guest houses, offices, pool enclosures, and room additions. All from one Southwest Florida contractor."}
         buttonLabel={pillar.ctaLabel}

@@ -22,9 +22,9 @@ export function CrossSellBlock({
               className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
             >
               {item.icon && <div className="text-3xl" aria-hidden>{item.icon}</div>}
-              <h3 className="mt-4 font-heading text-lg font-bold text-navy group-hover:text-teal">{item.title}</h3>
+              <h3 className="mt-4 font-heading text-lg font-bold text-navy group-hover:text-orange">{item.title}</h3>
               <p className="mt-2 text-sm leading-6 text-text-secondary">{item.blurb}</p>
-              <span className="mt-4 inline-flex font-semibold text-teal">Explore →</span>
+              <span className="mt-4 inline-flex font-semibold text-orange">Explore →</span>
             </Link>
           ))}
         </div>

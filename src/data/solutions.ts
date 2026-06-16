@@ -4,7 +4,7 @@ export type SolutionPillar = {
   tagline: string;
   heroHeading: string;
   heroSub: string;
-  accent: "teal" | "navy" | "copper";
+  accent: "orange" | "navy" | "copper";
   serviceslugs: string[];
   ctaLabel: string;
   ctaHref: string;
@@ -17,7 +17,7 @@ export const solutions: SolutionPillar[] = [
     tagline: "Storm & Resilience",
     heroHeading: "Storm-Proof Your Property Before the Season Starts.",
     heroSub: "From proactive preparedness to emergency response to insurance-backed repair, Seacoast handles every stage of the storm lifecycle across Southwest Florida.",
-    accent: "teal",
+    accent: "orange",
     serviceslugs: [
       "storm-preparedness",
       "emergency-response",

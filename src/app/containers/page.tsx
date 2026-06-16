@@ -62,7 +62,7 @@ export default function ContainersLandingPage() {
           <h1 className="mt-2 font-heading text-5xl font-bold leading-tight">Custom Containers,<br className="hidden md:block" /> Built for Florida Living.</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">Cat-5-rated storage. Custom guest houses. Mobile offices. Storm shelters. We build and finish shipping containers to match your home and your hurricane plan.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#products" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Browse Container Builds</Link>
+            <Link href="#products" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Browse Container Builds</Link>
             <Link href="/contact?service=containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">Configure Your Container</Link>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function ContainersLandingPage() {
                 We&apos;re preparing the first prebuilt container mini-home listing. Real photos, specs, pricing, and availability will be added once the unit is ready to show.
               </p>
             </div>
-            <Link href="/containers/prebuilt" className="rounded-full bg-teal px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
+            <Link href="/containers/prebuilt" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
               View Prebuilt Options
             </Link>
           </div>
@@ -168,7 +168,7 @@ export default function ContainersLandingPage() {
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Not sure if a container is right for you?</h2>
               <p className="mt-4 text-text-secondary">We put containers head-to-head against self-storage units, garden sheds, RVs, and traditional additions across every factor that matters: hurricane rating, 10-year cost, build time, mobility, and more. We also tell you honestly when a container is not the right answer.</p>
               <div className="mt-6">
-                <Link href="/containers/compare" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">See the Full Comparison</Link>
+                <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See the Full Comparison</Link>
               </div>
             </div>
             <div className="flex-1 md:max-w-xs">
@@ -186,7 +186,7 @@ export default function ContainersLandingPage() {
                     </div>
                   </div>
                 ))}
-                <Link href="/containers/compare" className="mt-4 block text-center text-sm font-semibold text-teal hover:underline">Full comparison table →</Link>
+                <Link href="/containers/compare" className="mt-4 block text-center text-sm font-semibold text-orange hover:underline">Full comparison table →</Link>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function ContainersLandingPage() {
       />
 
       <CTASection
-        variant="teal"
+        variant="orange"
         heading="Ready to get a container quote?"
         subtext="Tell us what you have in mind. We scope it, price it, and build it start to finish."
         buttonLabel="Get a Container Quote"

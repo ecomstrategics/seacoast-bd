@@ -29,14 +29,14 @@ export function SolutionsPillar({
       <ul className="mt-5 space-y-2">
         {services.map((svc) => (
           <li key={svc.href}>
-            <Link href={svc.href} className="flex items-center gap-2 text-sm font-medium text-charcoal hover:text-teal">
-              <span aria-hidden className="text-teal">→</span>
+            <Link href={svc.href} className="flex items-center gap-2 text-sm font-medium text-charcoal hover:text-orange">
+              <span aria-hidden className="text-orange">→</span>
               {svc.name}
             </Link>
           </li>
         ))}
       </ul>
-      <Link href={href} className="mt-6 inline-block rounded-full border-2 border-orange px-5 py-2.5 text-sm font-bold text-orange transition hover:bg-orange hover:text-white">
+      <Link href={href} className="mt-6 inline-block rounded-full border-2 border-orange px-5 py-2.5 text-sm font-bold text-orange transition hover:bg-orange-deep hover:text-white">
         See all {title} services
       </Link>
     </div>

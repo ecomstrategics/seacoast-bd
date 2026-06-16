@@ -57,7 +57,7 @@ export function Footer() {
 
         {/* Protect */}
         <div>
-          <h3 className="font-heading font-bold text-teal">Protect</h3>
+          <h3 className="font-heading font-bold text-orange">Protect</h3>
           <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">Storm &amp; Resilience</p>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             {pillarLinks.protect.map((link) => (

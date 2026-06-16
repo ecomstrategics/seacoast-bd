@@ -24,7 +24,7 @@ export default function ServiceAreaIndexPage() {
             Seacoast Building and Design serves six counties across the SW Florida corridor. Roofing, storm protection, container builds, and exterior services available in every territory we cover.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
             <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
           </div>
         </div>
@@ -65,10 +65,10 @@ export default function ServiceAreaIndexPage() {
                 href={`/service-area/${city.slug}`}
                 className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
               >
-                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-teal">{city.name}</h3>
-                <p className="mt-1 text-sm text-teal font-semibold">{city.county}</p>
+                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-orange">{city.name}</h3>
+                <p className="mt-1 text-sm text-orange font-semibold">{city.county}</p>
                 <p className="mt-3 text-sm leading-6 text-text-secondary line-clamp-3">{city.intro}</p>
-                <span className="mt-4 inline-flex font-semibold text-teal">View local work &rarr;</span>
+                <span className="mt-4 inline-flex font-semibold text-orange">View local work &rarr;</span>
               </Link>
             ))}
           </div>
@@ -89,7 +89,7 @@ export default function ServiceAreaIndexPage() {
                 Our Fort Myers and Sarasota teams include local reps who can meet at your property. Ask for a local rep when you submit your quote request.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Request a Local Quote</Link>
+                <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Request a Local Quote</Link>
                 <Link href="/our-work" className="rounded-full border border-navy/20 px-6 py-3 font-bold text-navy hover:bg-navy hover:text-white transition">See Local Projects</Link>
               </div>
             </div>

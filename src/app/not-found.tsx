@@ -10,7 +10,7 @@ export default function NotFound() {
           The page you are looking for does not exist or has been moved.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Link href="/" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Back to Home</Link>
+          <Link href="/" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Back to Home</Link>
           <Link href="/contact" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">Contact Us</Link>
           <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">(941) 500-5431</a>
         </div>

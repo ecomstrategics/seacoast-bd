@@ -27,7 +27,7 @@ export default function ContactPage() {
             <div className="mt-6 space-y-5">
               <div>
                 <p className="eyebrow">Phone</p>
-                <a href="tel:+19415005431" className="mt-2 block font-heading text-2xl font-bold text-navy hover:text-teal">(941) 500-5431</a>
+                <a href="tel:+19415005431" className="mt-2 block font-heading text-2xl font-bold text-navy hover:text-orange">(941) 500-5431</a>
               </div>
               <div>
                 <p className="eyebrow">Hours</p>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 <ul className="mt-2 space-y-1">
                   {serviceArea.map((area) => (
                     <li key={area} className="flex items-center gap-2 text-text-secondary">
-                      <span className="h-1.5 w-1.5 rounded-full bg-teal" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-orange" />
                       {area}
                     </li>
                   ))}
@@ -48,9 +48,9 @@ export default function ContactPage() {
               <div>
                 <p className="eyebrow">Social</p>
                 <div className="mt-2 flex gap-4">
-                  <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-teal">Facebook</a>
-                  <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-teal">Instagram</a>
-                  <a href="https://www.youtube.com/@seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-teal">YouTube</a>
+                  <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Facebook</a>
+                  <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Instagram</a>
+                  <a href="https://www.youtube.com/@seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">YouTube</a>
                 </div>
               </div>
             </div>

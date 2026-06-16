@@ -31,7 +31,7 @@ export function YouTubeFacade({ videoId, title }: { videoId: string; title: stri
             className="object-cover opacity-80 transition group-hover:scale-105"
           />
           <span className="absolute inset-0 grid place-items-center">
-            <span className="grid h-20 w-20 place-items-center rounded-full bg-white text-3xl text-teal shadow-soft">▶</span>
+            <span className="grid h-20 w-20 place-items-center rounded-full bg-white text-3xl text-orange shadow-soft">▶</span>
           </span>
         </button>
       )}

@@ -65,7 +65,7 @@ export default function TestimonialsPage() {
             Watch 24 documented project videos. Real jobs, real results, no stock footage. This is what 40 years of Southwest Florida contracting looks like.
           </p>
           <div className="mt-8">
-            <Link href="/our-work" className="rounded-full bg-teal px-8 py-4 font-bold text-white hover:bg-copper">Browse Project Videos</Link>
+            <Link href="/our-work" className="rounded-full bg-orange-deep px-8 py-4 font-bold text-white hover:bg-copper">Browse Project Videos</Link>
           </div>
         </div>
       </section>

@@ -25,7 +25,7 @@ function RepBannerInner() {
 
   return (
     <aside
-      className="bg-teal text-white"
+      className="bg-orange-deep text-white"
       role="complementary"
       aria-label={`Assigned representative: ${rep.name}`}
     >

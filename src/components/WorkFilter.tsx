@@ -67,7 +67,7 @@ export function WorkFilter({
               aria-pressed={isActive}
               className={
                 isActive
-                  ? "rounded-full bg-orange px-4 py-2 text-sm font-bold text-white transition"
+                  ? "rounded-full bg-orange-deep px-4 py-2 text-sm font-bold text-white transition"
                   : "rounded-full bg-white px-4 py-2 text-sm font-bold text-navy ring-1 ring-navy/10 transition hover:ring-orange/40"
               }
             >

@@ -58,3 +58,23 @@ a { text-decoration: none; }
 .dark-band .bg-white.text-text-secondary,
 .dark-band .bg-warm-white.text-text-secondary,
 .dark-band .bg-cool-gray.text-text-secondary { color: #5A5E6B; }
+
+/*
+  Orange accessibility layer.
+  Brand bright orange (#FA4616) is the default for `.text-orange`/`.eyebrow`; it
+  clears WCAG AA on the dark navy body (4.8:1). On LIGHT surfaces that same orange
+  drops to ~3.3:1 (fail), so inside any light contrast island we swap orange text
+  to the accessible deep orange #B83410 (>=4.9:1 on white/warm-white/cool-gray).
+  Covers descendant text, same-element chips, the /80 opacity eyebrow variant, and
+  the .eyebrow class. Fill colors (buttons/banners) use bg-orange-deep directly.
+*/
+.bg-white .text-orange,        .bg-white.text-orange,
+.bg-warm-white .text-orange,   .bg-warm-white.text-orange,
+.bg-cool-gray .text-orange,    .bg-cool-gray.text-orange,
+.bg-white\/90 .text-orange,
+.bg-white .text-orange\/80,    .bg-white.text-orange\/80,
+.bg-warm-white .text-orange\/80,.bg-warm-white.text-orange\/80,
+.bg-cool-gray .text-orange\/80, .bg-cool-gray.text-orange\/80,
+.bg-white .eyebrow,            .bg-warm-white .eyebrow,            .bg-cool-gray .eyebrow {
+  color: #B83410;
+}

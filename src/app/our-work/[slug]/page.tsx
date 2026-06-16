@@ -31,10 +31,10 @@ export default function ProjectDetailPage({ params }: Props) {
       <section className="section dark-band bg-navy">
         <div className="container">
           <div className="mb-6">
-            <Link href="/our-work" className="text-sm font-semibold text-teal hover:underline">&larr; Back to all projects</Link>
+            <Link href="/our-work" className="text-sm font-semibold text-orange hover:underline">&larr; Back to all projects</Link>
           </div>
           <div className="flex flex-wrap gap-2 text-xs font-bold mb-4">
-            <span className="rounded-full bg-teal/10 px-3 py-1 text-teal">{project.serviceType}</span>
+            <span className="rounded-full bg-orange/10 px-3 py-1 text-orange">{project.serviceType}</span>
             <span className="rounded-full bg-cool-gray px-3 py-1 text-text-secondary">{project.location}</span>
           </div>
           <h1 className="font-heading text-4xl font-bold text-navy md:text-5xl">{project.title}</h1>

@@ -99,7 +99,7 @@ export default function FinancingPage() {
             Home improvement projects do not always line up neatly with cash on hand. Seacoast Building &amp; Design offers Hearth as a financing option so qualified homeowners can review monthly payment options quickly and move forward with repairs, renovations, and upgrades.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Ask About Financing</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Ask About Financing</Link>
             <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">(941) 500-5431</a>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function FinancingPage() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <div key={step.label} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal font-heading text-lg font-bold text-white">{index + 1}</div>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-deep font-heading text-lg font-bold text-white">{index + 1}</div>
                 <p className="mt-5 text-xs font-bold uppercase tracking-widest text-container-steel">{step.label}</p>
                 <h3 className="mt-2 font-heading text-xl font-bold text-navy">{step.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-text-secondary">{step.body}</p>
@@ -191,7 +191,7 @@ export default function FinancingPage() {
       <section className="section bg-navy text-white">
         <div className="container">
           <div className="max-w-3xl">
-            <p className="eyebrow text-teal/80">Important note</p>
+            <p className="eyebrow text-orange/80">Important note</p>
             <h2 className="mt-2 font-heading text-3xl font-bold">Hearth is a financing marketplace, not Seacoast&apos;s lender.</h2>
             <p className="mt-4 text-white/75">
               Hearth works with lending partners to show available financing options. Loans are subject to credit approval, and lending partners determine final rates and terms.
@@ -200,7 +200,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <CTASection variant="teal" heading="Want monthly payment options with your quote?" subtext="Tell us what project you are considering and ask about Hearth financing when you request your estimate." buttonLabel="Request a Quote" />
+      <CTASection variant="orange" heading="Want monthly payment options with your quote?" subtext="Tell us what project you are considering and ask about Hearth financing when you request your estimate." buttonLabel="Request a Quote" />
     </>
   );
 }

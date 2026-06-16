@@ -26,13 +26,13 @@ export function ContainerCard({ container }: { container: Container }) {
       </div>
       <div className="p-6">
         <div className="text-3xl" aria-hidden>{container.icon}</div>
-        <h3 className="mt-3 font-heading text-xl font-bold text-navy group-hover:text-teal">{container.name}</h3>
+        <h3 className="mt-3 font-heading text-xl font-bold text-navy group-hover:text-orange">{container.name}</h3>
         <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-container-steel">{container.tagline}</p>
         <p className="mt-3 text-sm leading-6 text-text-secondary">{container.shortDescription}</p>
         {container.startingPrice && (
-          <p className="mt-3 text-sm font-semibold text-teal">{container.startingPrice}</p>
+          <p className="mt-3 text-sm font-semibold text-orange">{container.startingPrice}</p>
         )}
-        <span className="mt-4 inline-flex font-semibold text-teal">Explore →</span>
+        <span className="mt-4 inline-flex font-semibold text-orange">Explore →</span>
       </div>
     </Link>
   );

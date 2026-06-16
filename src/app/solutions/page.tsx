@@ -50,7 +50,7 @@ export default function SolutionsPage() {
       {/* Hero */}
       <section className="bg-navy py-20 text-white md:py-28">
         <div className="container">
-          <p className="eyebrow text-teal/80">Solutions</p>
+          <p className="eyebrow text-orange/80">Solutions</p>
           <h1 className="mt-3 font-heading text-5xl font-bold leading-tight md:text-6xl">
             Protect. Improve. Expand.
           </h1>
@@ -60,7 +60,7 @@ export default function SolutionsPage() {
             Find the pillar that matches your project.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
             <Link href="/services" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">Browse All Services</Link>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function SolutionsPage() {
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Explore each pillar.</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
-              { slug: "protect", label: "Protect: Storm and Resilience", href: "/solutions/protect", accent: "border-teal", textAccent: "text-teal" },
+              { slug: "protect", label: "Protect: Storm and Resilience", href: "/solutions/protect", accent: "border-orange", textAccent: "text-orange" },
               { slug: "improve", label: "Improve: Exteriors and Renovations", href: "/solutions/improve", accent: "border-navy", textAccent: "text-navy" },
               { slug: "expand", label: "Expand: Property Solutions", href: "/solutions/expand", accent: "border-copper", textAccent: "text-copper" },
             ].map((item) => (

@@ -42,11 +42,11 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
               Protect, improve, and expand your home or property. All from one licensed contractor. 40+ years, 6 counties, every project on video.
             </p>
-            <p className="mt-5 font-heading text-xl font-bold tracking-widest text-teal uppercase">
+            <p className="mt-5 font-heading text-xl font-bold tracking-widest text-orange uppercase">
               Protect. Improve. Expand.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
+              <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
               <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">View Our Work</Link>
             </div>
           </div>
@@ -55,15 +55,15 @@ export default function Home() {
             <p className="mt-4 text-white/75">From hurricane-rated roofs to custom container guest houses, Seacoast handles roofing, exteriors, storm protection, and property expansion across Southwest Florida.</p>
             <div className="mt-6 grid grid-cols-3 gap-4 text-center">
               <div>
-                <p className="font-heading text-3xl font-bold text-teal">40+</p>
+                <p className="font-heading text-3xl font-bold text-orange">40+</p>
                 <p className="mt-1 text-sm text-white/65">Years in Business</p>
               </div>
               <div>
-                <p className="font-heading text-3xl font-bold text-teal">6</p>
+                <p className="font-heading text-3xl font-bold text-orange">6</p>
                 <p className="mt-1 text-sm text-white/65">Counties Served</p>
               </div>
               <div>
-                <p className="font-heading text-3xl font-bold text-teal">100%</p>
+                <p className="font-heading text-3xl font-bold text-orange">100%</p>
                 <p className="mt-1 text-sm text-white/65">Video Documented</p>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function Home() {
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Custom containers, built for Florida living</h2>
               <p className="mt-3 max-w-2xl text-text-secondary">Cat-5-rated storage, custom guest houses, offices, and storm shelters. Finished to match your home.</p>
             </div>
-            <Link href="/containers" className="hidden font-bold text-teal sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
+            <Link href="/containers" className="hidden font-bold text-orange sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {containers.map((container) => (
@@ -117,7 +117,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 text-center sm:hidden">
-            <Link href="/containers" className="font-bold text-teal">Browse all container builds &rarr;</Link>
+            <Link href="/containers" className="font-bold text-orange">Browse all container builds &rarr;</Link>
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function Home() {
               See personalized monthly payment options within minutes without affecting your credit score. Hearth financing can help move urgent repairs, roofing, exterior renovations, additions, and container projects forward without waiting on home-equity underwriting.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
-              <Link href="/financing" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Explore Financing</Link>
+              <Link href="/financing" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Explore Financing</Link>
               <Link href="/contact" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">Ask With Your Quote</Link>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Every project on video</h2>
               <p className="mt-3 max-w-2xl text-text-secondary">We document every job from start to finish. See the work, not just the pitch.</p>
             </div>
-            <Link href="/our-work" className="hidden font-bold text-teal sm:block whitespace-nowrap">See all projects &rarr;</Link>
+            <Link href="/our-work" className="hidden font-bold text-orange sm:block whitespace-nowrap">See all projects &rarr;</Link>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {featuredProjects.map((project) => (
@@ -169,7 +169,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8 text-center sm:hidden">
-            <Link href="/our-work" className="font-bold text-teal">See all projects &rarr;</Link>
+            <Link href="/our-work" className="font-bold text-orange">See all projects &rarr;</Link>
           </div>
         </div>
       </section>
@@ -177,32 +177,32 @@ export default function Home() {
       {/* Why Seacoast */}
       <section className="section dark-band bg-navy text-white">
         <div className="container">
-          <p className="eyebrow text-teal">Why Seacoast</p>
+          <p className="eyebrow text-orange">Why Seacoast</p>
           <h2 className="mt-2 font-heading text-4xl font-bold">40 years of receipts. Not just promises.</h2>
           <p className="mt-4 max-w-2xl text-white/70">We don&apos;t just claim quality. We show it on video, document it with photos, and back it with four decades of SW Florida project history.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Video-Documented Work</p>
+              <p className="font-heading text-xl font-bold text-orange">Video-Documented Work</p>
               <p className="mt-3 text-sm leading-6 text-white/70">Every project filmed from setup to completion. See exactly how we work before you commit to anything.</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Full Storm Lifecycle</p>
+              <p className="font-heading text-xl font-bold text-orange">Full Storm Lifecycle</p>
               <p className="mt-3 text-sm leading-6 text-white/70">Storm prep, emergency response, and post-storm repair under one license. No hand-offs, no gaps in coverage.</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Container-Capable</p>
+              <p className="font-heading text-xl font-bold text-orange">Container-Capable</p>
               <p className="mt-3 text-sm leading-6 text-white/70">No other SW Florida contractor builds, delivers, finishes, and integrates container guest houses and shelters into your property.</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Licensed and Insured</p>
+              <p className="font-heading text-xl font-bold text-orange">Licensed and Insured</p>
               <p className="mt-3 text-sm leading-6 text-white/70">Florida-licensed general contractor. Full insurance coverage on every job in every county we serve.</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Insurance-Savvy</p>
+              <p className="font-heading text-xl font-bold text-orange">Insurance-Savvy</p>
               <p className="mt-3 text-sm leading-6 text-white/70">We have navigated hundreds of storm insurance claims. We know how to document damage and support your claim.</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-teal">Financing Available</p>
+              <p className="font-heading text-xl font-bold text-orange">Financing Available</p>
               <p className="mt-3 text-sm leading-6 text-white/70">Hearth financing for qualified projects. No reason to put off a roof or container build that pays for itself in storm protection.</p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function Home() {
                 <Link
                   key={city.slug}
                   href={`/service-area/${city.slug}`}
-                  className="rounded-full border border-navy/10 bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm transition hover:border-teal hover:bg-teal hover:text-white"
+                  className="rounded-full border border-navy/10 bg-white px-4 py-2 text-sm font-medium text-navy shadow-sm transition hover:border-orange hover:bg-orange-deep hover:text-white"
                 >
                   {city.name}
                 </Link>
@@ -237,13 +237,13 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8">
-            <Link href="/service-area" className="inline-block rounded-full bg-navy px-6 py-3 font-bold text-white transition hover:bg-teal">View All Service Areas</Link>
+            <Link href="/service-area" className="inline-block rounded-full bg-navy px-6 py-3 font-bold text-white transition hover:bg-orange-deep">View All Service Areas</Link>
           </div>
         </div>
       </section>
 
       <CTASection
-        variant="teal"
+        variant="orange"
         heading="Ready to protect, improve, or expand your property?"
         subtext="Get a no-pressure quote from Southwest Florida's full-service property solutions contractor."
         buttonLabel="Get a Free Quote"

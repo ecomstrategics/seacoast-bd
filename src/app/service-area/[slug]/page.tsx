@@ -67,7 +67,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition"
+              className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition"
             >
               Get a Free Quote in {city.name}
             </Link>
@@ -122,7 +122,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
               ))}
             </div>
             <div className="mt-8">
-              <Link href="/our-work" className="font-bold text-teal hover:underline">
+              <Link href="/our-work" className="font-bold text-orange hover:underline">
                 See all projects &rarr;
               </Link>
             </div>
@@ -135,13 +135,13 @@ export default function ServiceAreaCityPage({ params }: Props) {
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="eyebrow text-teal">Container builds in {city.name}</p>
+              <p className="eyebrow text-orange">Container builds in {city.name}</p>
               <h2 className="mt-2 font-heading text-4xl font-bold">Guest houses, offices, and storm shelters for {city.county} properties</h2>
               <p className="mt-4 text-white/75 leading-7">
                 Seacoast builds and finishes shipping containers to match your home. Cat-5-rated construction for Southwest Florida conditions. We handle delivery, site prep, utilities, and all finish work in {city.county}.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link href="/containers/guest-houses" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
+                <Link href="/containers/guest-houses" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
                 <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">Browse All Builds</Link>
               </div>
             </div>
@@ -166,15 +166,15 @@ export default function ServiceAreaCityPage({ params }: Props) {
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-teal">Phone:</span>
-                  <a href="tel:+19415005431" className="font-semibold text-charcoal hover:text-teal transition">(941) 500-5431</a>
+                  <span className="font-bold text-orange">Phone:</span>
+                  <a href="tel:+19415005431" className="font-semibold text-charcoal hover:text-orange transition">(941) 500-5431</a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-teal">Service area:</span>
+                  <span className="font-bold text-orange">Service area:</span>
                   <span className="text-text-secondary">{city.county} and surrounding areas</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="font-bold text-teal">Local rep:</span>
+                  <span className="font-bold text-orange">Local rep:</span>
                   <span className="text-text-secondary">Ask about our {city.name}-area representative when you submit</span>
                 </div>
               </div>

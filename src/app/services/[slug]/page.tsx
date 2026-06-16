@@ -329,7 +329,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       {/* Service area band */}
       <section className="bg-navy py-10 text-white">
         <div className="container">
-          <p className="eyebrow text-teal/80">Coverage</p>
+          <p className="eyebrow text-orange/80">Coverage</p>
           <h2 className="mt-2 font-heading text-2xl font-bold">Six counties. One call.</h2>
           <p className="mt-3 max-w-2xl text-white/70">
             Seacoast emergency crews serve Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties.
@@ -337,7 +337,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {["Hillsborough", "Manatee", "Sarasota", "Charlotte", "Lee", "Collier"].map((county) => (
-              <span key={county} className="rounded-full border border-teal/40 px-4 py-2 text-sm font-semibold text-teal">{county} County</span>
+              <span key={county} className="rounded-full border border-orange/40 px-4 py-2 text-sm font-semibold text-orange">{county} County</span>
             ))}
           </div>
         </div>
@@ -369,13 +369,13 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       <section className="section dark-band bg-navy">
         <div className="container">
           <div className="rounded-2xl bg-navy p-8 text-white md:p-12">
-            <p className="eyebrow text-teal/80">After the storm</p>
+            <p className="eyebrow text-orange/80">After the storm</p>
             <h2 className="mt-2 font-heading text-3xl font-bold">Once you&apos;re safe, we handle the rest.</h2>
             <p className="mt-4 max-w-2xl text-white/80">
               Seacoast&apos;s storm damage repair team handles insurance documentation, adjuster coordination,
               and the full repair: roof to gutters to siding. Hundreds of claims navigated across Southwest Florida.
             </p>
-            <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">
+            <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">
               Learn About Storm Damage Repair →
             </Link>
           </div>
@@ -384,7 +384,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="during" />
       <CrossSellBlock heading="Before the next storm" items={content.crossSellItems} />
-      <CTASection variant="teal" heading="Need emergency help right now?" subtext="Call (941) 500-5431 or use the form below. We'll get back to you as fast as possible." buttonLabel="Request Emergency Quote" />
+      <CTASection variant="orange" heading="Need emergency help right now?" subtext="Call (941) 500-5431 or use the form below. We'll get back to you as fast as possible." buttonLabel="Request Emergency Quote" />
     </>
   );
 }
@@ -414,7 +414,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
               <a href="#whats-included" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">{content.heroSecondary}</a>
             )}
@@ -508,7 +508,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
               { step: "4", heading: "Post-storm priority queue", body: "You're first in line for damage assessment and repair. No competing with walk-in demand." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal font-heading text-lg font-bold text-white">{item.step}</div>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-deep font-heading text-lg font-bold text-white">{item.step}</div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-navy">{item.heading}</h3>
                 <p className="mt-2 text-sm text-text-secondary">{item.body}</p>
               </div>
@@ -541,8 +541,8 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
                 includes: ["Custom scope for common areas and units", "Community-wide boarding plan", "Dedicated response coordinator", "Volume pricing available"],
               },
             ].map((plan) => (
-              <div key={plan.tier} className={`rounded-2xl border p-6 ${plan.featured ? "border-teal bg-teal/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
-                {plan.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-teal">Most popular</p>}
+              <div key={plan.tier} className={`rounded-2xl border p-6 ${plan.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
+                {plan.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
                 <h3 className="font-heading text-xl font-bold text-navy">{plan.tier}</h3>
                 <ul className="mt-5 space-y-2">
                   {plan.includes.map((item) => (
@@ -552,7 +552,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="mt-6 inline-block rounded-full bg-teal px-5 py-2.5 text-sm font-bold text-white hover:bg-copper">
+                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-sm font-bold text-white hover:bg-copper">
                   Get a Plan Quote
                 </Link>
               </div>
@@ -572,7 +572,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="before" />
       <CrossSellBlock heading="What pairs with storm preparedness" items={content.crossSellItems} />
-      <CTASection variant="teal" heading="Hurricane season starts June 1. Get prepped now." subtext="Request a preparedness plan quote from Seacoast before the season starts and the boarding crews are booked." buttonLabel="Get a Preparedness Plan" />
+      <CTASection variant="orange" heading="Hurricane season starts June 1. Get prepped now." subtext="Request a preparedness plan quote from Seacoast before the season starts and the boarding crews are booked." buttonLabel="Get a Preparedness Plan" />
     </>
   );
 }
@@ -606,7 +606,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
               <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">
                 {content.heroSecondary}
@@ -670,7 +670,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <div className="container">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
-              <p className="eyebrow text-teal/80">Track record</p>
+              <p className="eyebrow text-orange/80">Track record</p>
               <h2 className="mt-2 font-heading text-3xl font-bold">
                 Hundreds of insurance claims navigated across Southwest Florida.
               </h2>
@@ -679,7 +679,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
                 initial assessment, adjuster review, scope negotiation, and final sign-off.
                 We know what adjusters need, what documentation holds up, and what language gets claims approved.
               </p>
-              <Link href="/contact" className="mt-6 inline-block rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">
+              <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">
                 Get a Damage Assessment
               </Link>
             </div>
@@ -702,7 +702,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
               licensed public adjusters and attorneys who specialize in Florida storm claim appeals.
               We&apos;ve been through this process many times and know how to build the evidentiary record needed to reopen and win a disputed claim.
             </p>
-            <Link href="/contact" className="mt-6 inline-block font-bold text-teal hover:underline">Talk to us about your claim →</Link>
+            <Link href="/contact" className="mt-6 inline-block font-bold text-orange hover:underline">Talk to us about your claim →</Link>
           </div>
         </div>
       </section>
@@ -717,7 +717,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
               {relatedProjects.slice(0, 3).map((project) => <ProjectCard key={project.slug} project={project} />)}
             </div>
             <div className="mt-8">
-              <Link href="/our-work" className="font-bold text-teal hover:underline">View all project videos →</Link>
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
             </div>
           </div>
         </section>
@@ -823,7 +823,7 @@ function GenericServiceLayout({ params }: Props) {
           <h1 className="mt-4 font-heading text-5xl font-bold">{service.name}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{service.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-teal px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
             <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
           </div>
         </div>
@@ -855,7 +855,7 @@ function GenericServiceLayout({ params }: Props) {
               {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
             </div>
             <div className="mt-8">
-              <Link href="/our-work" className="font-bold text-teal hover:underline">View all project videos →</Link>
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
             </div>
           </div>
         </section>
@@ -873,7 +873,7 @@ function GenericServiceLayout({ params }: Props) {
 
       {crossSell.length > 0 && <CrossSellBlock heading={`What pairs with ${service.name.toLowerCase()}`} items={crossSell} />}
 
-      <CTASection variant="teal" heading={`Ready to discuss your ${service.name.toLowerCase()} project?`} />
+      <CTASection variant="orange" heading={`Ready to discuss your ${service.name.toLowerCase()} project?`} />
     </>
   );
 }

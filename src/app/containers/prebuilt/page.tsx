@@ -21,7 +21,7 @@ export default function PrebuiltContainersPage() {
             We&apos;re preparing the first prebuilt container mini-home option. Real photos, dimensions, finish details, and availability will be added here once the unit is ready to show.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact?service=prebuilt-containers" className="rounded-full bg-teal px-6 py-3 font-bold text-white transition hover:bg-copper">Ask About Prebuilt Options</Link>
+            <Link href="/contact?service=prebuilt-containers" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Ask About Prebuilt Options</Link>
             <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">View Custom Container Builds</Link>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function PrebuiltContainersPage() {
             <ul className="mt-6 space-y-3 text-sm text-charcoal">
               {["Real unit photos", "Exterior and interior finish details", "Dimensions and transport notes", "Availability and pricing"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-0.5 text-teal" aria-hidden>•</span>
+                  <span className="mt-0.5 text-orange" aria-hidden>•</span>
                   {item}
                 </li>
               ))}
@@ -53,7 +53,7 @@ export default function PrebuiltContainersPage() {
       </section>
 
       <CTASection
-        variant="teal"
+        variant="orange"
         heading="Want to be notified when the first prebuilt unit is ready?"
         subtext="Ask about the upcoming mini-home on wheels and we can walk you through timing, photos, and availability."
         buttonLabel="Contact Seacoast"
