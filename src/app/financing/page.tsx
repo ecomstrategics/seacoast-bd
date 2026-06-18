@@ -99,8 +99,8 @@ export default function FinancingPage() {
             Home improvement projects do not always line up neatly with cash on hand. Seacoast Building &amp; Design offers Hearth as a financing option so qualified homeowners can review monthly payment options quickly and move forward with repairs, renovations, and upgrades.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Ask About Financing</Link>
-            <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">(941) 500-5431</a>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Ask About Financing</Link>
+            <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-navy">(941) 500-5431</a>
           </div>
         </div>
       </section>

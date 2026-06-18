@@ -52,9 +52,9 @@ export default function ContactPage() {
               <div>
                 <p className="eyebrow">Social</p>
                 <div className="mt-2 flex gap-4">
-                  <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Facebook</a>
-                  <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Instagram</a>
-                  <a href="https://www.youtube.com/@seacoastbd" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">YouTube</a>
+                  <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Facebook</a>
+                  <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">Instagram</a>
+                  <a href="https://www.youtube.com/@SeacoastBuildingDesign" target="_blank" rel="noopener noreferrer" className="font-semibold text-navy hover:text-orange">YouTube</a>
                 </div>
               </div>
             </div>

@@ -68,8 +68,8 @@ export default function ContainerComparePage() {
           <h1 className="mt-2 font-heading text-5xl font-bold">Is a container right for you?</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">We put containers head-to-head against the four most common alternatives. We also tell you honestly when a container is not the right answer, because trust closes more deals than hype.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#comparison-table" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See the Comparison</Link>
-            <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">Browse Container Builds</Link>
+            <Link href="#comparison-table" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">See the Comparison</Link>
+            <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">Browse Container Builds</Link>
           </div>
         </div>
       </section>

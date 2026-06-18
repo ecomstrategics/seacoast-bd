@@ -3,8 +3,7 @@
 import { type FormEvent, useState, useEffect } from "react";
 import { services } from "@/data/services";
 
-// TODO: Replace with real Formspree form ID before launch
-const formspreeUrl = "https://formspree.io/f/placeholder";
+const formspreeUrl = "https://formspree.io/f/xykaaarv";
 
 export function QuoteForm({
   defaultService,
@@ -100,7 +99,7 @@ export function QuoteForm({
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button
-        className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
+        className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
         type="submit"
         disabled={isSubmitting}
       >

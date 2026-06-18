@@ -49,9 +49,9 @@ export function Header() {
           <span>Call: <a className="font-semibold text-white underline-offset-4 hover:underline" href="tel:+19415005431">(941) 500-5431</a></span>
           <span>Mon to Fri 8am to 6pm &bull; Sat 9am to 3pm &bull; Serving Southwest Florida</span>
           <span className="hidden gap-3 sm:flex" aria-label="Social links">
-            <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
-            <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
-            <a href="https://www.youtube.com/@seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:underline">YouTube</a>
+            <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
+            <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+            <a href="https://www.youtube.com/@SeacoastBuildingDesign" target="_blank" rel="noopener noreferrer" className="hover:underline">YouTube</a>
           </span>
         </div>
       </div>
@@ -59,7 +59,7 @@ export function Header() {
       {/* Main nav row: navy bar so the orange-on-transparent logo integrates seamlessly (no pill) */}
       <div className="container flex items-center justify-between gap-6 py-3">
         {/* Logo image: orange wordmark on transparent bg, sitting directly on the navy bar */}
-        <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
+        <Link href="/" className="flex shrink-0 items-center" onClick={() => setMobileOpen(false)}>
           <Image
             src="/logo.png"
             alt="Seacoast Building & Design"
@@ -191,8 +191,7 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="tel:+19415005431" className="font-semibold text-white hover:text-orange transition">(941) 500-5431</a>
-          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
+          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
         </div>
 
         {/* Mobile hamburger */}

@@ -33,9 +33,9 @@ export function localBusinessSchema(): SchemaObject {
       longitude: -81.8723,
     },
     sameAs: [
-      "https://www.facebook.com/seacoastbd",
-      "https://www.instagram.com/seacoastbd",
-      "https://www.youtube.com/@seacoastbd",
+      "https://www.facebook.com/seacoastbuilding/",
+      "https://www.instagram.com/seacoastband/",
+      "https://www.youtube.com/@SeacoastBuildingDesign",
     ],
     priceRange: "$$",
   };

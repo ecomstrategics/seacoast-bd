@@ -67,13 +67,13 @@ export default function ServiceAreaCityPage({ params }: Props) {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition"
+              className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition"
             >
               Get a Free Quote in {city.name}
             </Link>
             <a
               href="tel:+19415005431"
-              className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition"
+              className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition"
             >
               (941) 500-5431
             </a>
@@ -141,8 +141,8 @@ export default function ServiceAreaCityPage({ params }: Props) {
                 Seacoast builds and finishes shipping containers to match your home. Cat-5-rated construction for Southwest Florida conditions. We handle delivery, site prep, utilities, and all finish work in {city.county}.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link href="/containers/guest-houses" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
-                <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">Browse All Builds</Link>
+                <Link href="/containers/guest-houses" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
+                <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition">Browse All Builds</Link>
               </div>
             </div>
             <div>

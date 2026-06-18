@@ -24,8 +24,8 @@ export default function ServiceAreaIndexPage() {
             Seacoast Building and Design serves six counties across the SW Florida corridor. Roofing, storm protection, container builds, and exterior services available in every territory we cover.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
-            <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
+            <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition">(941) 500-5431</a>
           </div>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function ServiceAreaIndexPage() {
                 Our Fort Myers and Sarasota teams include local reps who can meet at your property. Ask for a local rep when you submit your quote request.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Request a Local Quote</Link>
+                <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Request a Local Quote</Link>
                 <Link href="/our-work" className="rounded-full border border-navy/20 px-6 py-3 font-bold text-navy hover:bg-navy hover:text-white transition">See Local Projects</Link>
               </div>
             </div>

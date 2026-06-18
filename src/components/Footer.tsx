@@ -49,9 +49,9 @@ export function Footer() {
             <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
           </p>
           <div className="mt-4 flex gap-3 text-sm">
-            <a href="https://www.facebook.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a>
-            <a href="https://www.instagram.com/seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
-            <a href="https://www.youtube.com/@seacoastbd" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a>
+            <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a>
+            <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
+            <a href="https://www.youtube.com/@SeacoastBuildingDesign" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a>
           </div>
         </div>
 

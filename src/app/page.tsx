@@ -46,8 +46,8 @@ export default function Home() {
               Protect. Improve. Expand.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
-              <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy transition">View Our Work</Link>
+              <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Get a Free Quote</Link>
+              <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition">View Our Work</Link>
             </div>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/10 p-8 shadow-soft">
@@ -132,8 +132,8 @@ export default function Home() {
               See personalized monthly payment options within minutes without affecting your credit score. Hearth financing can help move urgent repairs, roofing, exterior renovations, additions, and container projects forward without waiting on home-equity underwriting.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
-              <Link href="/financing" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Explore Financing</Link>
-              <Link href="/contact" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-navy">Ask With Your Quote</Link>
+              <Link href="/financing" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Explore Financing</Link>
+              <Link href="/contact" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-navy">Ask With Your Quote</Link>
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -237,7 +237,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8">
-            <Link href="/service-area" className="inline-block rounded-full bg-navy px-6 py-3 font-bold text-white transition hover:bg-orange-deep">View All Service Areas</Link>
+            <Link href="/service-area" className="inline-block rounded-full bg-navy px-6 py-3 text-center font-bold text-white transition hover:bg-orange-deep">View All Service Areas</Link>
           </div>
         </div>
       </section>

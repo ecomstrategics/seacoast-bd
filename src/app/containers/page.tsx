@@ -67,8 +67,8 @@ export default function ContainersLandingPage() {
           <h1 className="mt-2 font-heading text-5xl font-bold leading-tight">Custom Containers,<br className="hidden md:block" /> Built for Florida Living.</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">Cat-5-rated storage. Custom guest houses. Mobile offices. Storm shelters. We build and finish shipping containers to match your home and your hurricane plan.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#products" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Browse Container Builds</Link>
-            <Link href="/contact?service=containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">Configure Your Container</Link>
+            <Link href="#products" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Browse Container Builds</Link>
+            <Link href="/contact?service=containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">Configure Your Container</Link>
           </div>
         </div>
       </section>
@@ -177,7 +177,7 @@ export default function ContainersLandingPage() {
               Do not purchase or place anything on your property until we have discussed the project and consulted with your local building and zoning officials. We walk you through this first, so you never sink money into a build your county will not approve.
             </p>
             <div className="mt-6">
-              <Link href="/contact?service=containers" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Start With a Consultation</Link>
+              <Link href="/contact?service=containers" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Start With a Consultation</Link>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export default function ContainersLandingPage() {
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Not sure if a container is right for you?</h2>
               <p className="mt-4 text-text-secondary">We put containers head-to-head against self-storage units, garden sheds, RVs, and traditional additions across every factor that matters: hurricane rating, 10-year cost, build time, mobility, and more. We also tell you honestly when a container is not the right answer.</p>
               <div className="mt-6">
-                <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See the Full Comparison</Link>
+                <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">See the Full Comparison</Link>
               </div>
             </div>
             <div className="flex-1 md:max-w-xs">

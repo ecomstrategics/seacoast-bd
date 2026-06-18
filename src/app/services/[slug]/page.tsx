@@ -299,8 +299,8 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
           <p className="mt-5 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="tel:+19415005431" className="rounded-full bg-white px-6 py-3 font-bold text-storm hover:bg-white/90">Call Now</a>
-            <a href="sms:+19415005431" className="rounded-full border border-white/30 px-6 py-3 font-bold text-white hover:bg-white hover:text-storm">Text Us</a>
-            <Link href="/contact" className="rounded-full border border-white/30 px-6 py-3 font-bold text-white hover:bg-white hover:text-storm">Request Emergency Quote</Link>
+            <a href="sms:+19415005431" className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-storm">Text Us</a>
+            <Link href="/contact" className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-storm">Request Emergency Quote</Link>
           </div>
         </div>
       </section>
@@ -375,7 +375,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
               Seacoast&apos;s storm damage repair team handles insurance documentation, adjuster coordination,
               and the full repair: roof to gutters to siding. Hundreds of claims navigated across Southwest Florida.
             </p>
-            <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">
+            <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
               Learn About Storm Damage Repair →
             </Link>
           </div>
@@ -414,9 +414,9 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
-              <a href="#whats-included" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">{content.heroSecondary}</a>
+              <a href="#whats-included" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">{content.heroSecondary}</a>
             )}
           </div>
         </div>
@@ -552,7 +552,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-sm font-bold text-white hover:bg-copper">
+                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
                   Get a Plan Quote
                 </Link>
               </div>
@@ -606,9 +606,9 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
-              <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">
+              <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">
                 {content.heroSecondary}
               </a>
             )}
@@ -679,7 +679,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
                 initial assessment, adjuster review, scope negotiation, and final sign-off.
                 We know what adjusters need, what documentation holds up, and what language gets claims approved.
               </p>
-              <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">
+              <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
                 Get a Damage Assessment
               </Link>
             </div>
@@ -823,8 +823,8 @@ function GenericServiceLayout({ params }: Props) {
           <h1 className="mt-4 font-heading text-5xl font-bold">{service.name}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{service.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
-            <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
           </div>
         </div>
       </section>

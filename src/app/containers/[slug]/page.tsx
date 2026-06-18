@@ -276,8 +276,8 @@ function GuestHouseContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold">Faster timeline. More predictable budget.</h2>
           <p className="mt-4 max-w-2xl text-white/75">Traditional additions in Southwest Florida run $250 to $400 per square foot, take 6 to 12 months, and require full permitting with every trade coordinated separately. Container guest houses come in below that range for most configurations and are delivered in 12 to 20 weeks, not 12 to 18 months. We quote a fixed scope so you know the full number before we start. Contact us for current project pricing based on your specific site and finish goals.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact?service=containers-guest-houses" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Guest House Quote</Link>
-            <Link href="/financing" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">See Financing Options</Link>
+            <Link href="/contact?service=containers-guest-houses" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Guest House Quote</Link>
+            <Link href="/financing" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Financing Options</Link>
           </div>
         </div>
       </section>
@@ -662,7 +662,7 @@ function StormSheltersContent() {
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A shelter is one part of the picture</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">The most prepared homeowners pair a storm shelter with a complete storm preparedness plan: custom boards, priority service contracts, and first-in-line emergency response when a named storm forms.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/services/storm-preparedness" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">See Storm Preparedness Services</Link>
+            <Link href="/services/storm-preparedness" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">See Storm Preparedness Services</Link>
             <Link href="/services/storm-damage-repair" className="rounded-full border border-navy/25 px-6 py-3 font-bold text-navy hover:bg-navy hover:text-white">Storm Damage Repair</Link>
           </div>
         </div>
@@ -727,8 +727,8 @@ export default function ContainerProductPage({ params }: Props) {
           <p className="mt-2 text-lg font-semibold text-orange uppercase tracking-wide">{container.tagline}</p>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{container.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper">Get a Free Quote</Link>
-            <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">← All Containers</Link>
+            <Link href={`/contact?service=containers-${container.slug}`} className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">← All Containers</Link>
           </div>
         </div>
       </section>
