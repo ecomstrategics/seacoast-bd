@@ -27,6 +27,11 @@ const landingFaqs = [
       "It depends on your county and how the container will be used. For storage only, many SW Florida counties require no permit. For habitable structures like guest houses, permits are required. Seacoast handles the permit process for you.",
   },
   {
+    question: "What about zoning for a container home?",
+    answer:
+      "Zoning and permitting is the most crucial step. Container homes are legal in Florida, but they are not automatically permitted everywhere. You must verify whether your local municipality's building department allows Accessory Dwelling Units (ADUs) and upcycled shipping containers on your parcel. Do not purchase or place anything on your property until we have discussed the project and consulted with your local building and zoning officials.",
+  },
+  {
     question: "How long does a container last?",
     answer:
       "A properly maintained and finished container can last 50 or more years. The corten steel shell is designed to resist rust and corrosion, and our Florida-appropriate finishes (siding, stucco, sealed coatings) extend that lifespan further.",
@@ -44,7 +49,7 @@ const landingFaqs = [
   {
     question: "What does it cost?",
     answer:
-      "Storage containers start around $9,500. Finished container offices and workshops start around $28,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $34,000. Final pricing varies by site, permitting, configuration, utilities, and finish level.",
+      "Storage containers start around $4,000 delivered, with add-ons available. Finished container offices and workshops start around $28,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $9,000 (they require a foundation). Final pricing varies by site, permitting, configuration, utilities, and finish level.",
   },
 ];
 
@@ -122,9 +127,9 @@ export default function ContainersLandingPage() {
           <div className="grid gap-8 rounded-2xl border border-container-steel/20 bg-white p-8 shadow-soft md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <p className="eyebrow">Prebuilt options</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Mini-home on wheels coming soon</h2>
+              <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Mobile mini-home available now</h2>
               <p className="mt-4 max-w-2xl text-text-secondary">
-                We&apos;re preparing the first prebuilt container mini-home listing. Real photos, specs, pricing, and availability will be added once the unit is ready to show.
+                A finished container mini-home on a road-ready trailer is ready to view. Move-in finished interior, kitchenette, and bathroom. Base price $35,000 with deck, solar, siding, and foundation add-ons available.
               </p>
             </div>
             <Link href="/containers/prebuilt" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
@@ -155,6 +160,25 @@ export default function ContainersLandingPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zoning & permitting */}
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <div className="rounded-2xl border-2 border-orange bg-white p-8 shadow-soft">
+            <p className="eyebrow text-orange-deep">Before you buy</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Zoning and permitting is the most crucial step</h2>
+            <p className="mt-4 max-w-3xl text-text-secondary">
+              Container homes are legal in Florida, but they are not automatically permitted everywhere. You must verify whether your local municipality&apos;s building department allows Accessory Dwelling Units (ADUs) and upcycled shipping containers on your parcel.
+            </p>
+            <p className="mt-4 max-w-3xl font-semibold text-navy">
+              Do not purchase or place anything on your property until we have discussed the project and consulted with your local building and zoning officials. We walk you through this first, so you never sink money into a build your county will not approve.
+            </p>
+            <div className="mt-6">
+              <Link href="/contact?service=containers" className="rounded-full bg-orange-deep px-6 py-3 font-bold text-white transition hover:bg-copper">Start With a Consultation</Link>
+            </div>
           </div>
         </div>
       </section>

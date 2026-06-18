@@ -100,24 +100,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Container Section */}
+      {/* Featured Projects */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="eyebrow">Container builds</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Custom containers, built for Florida living</h2>
-              <p className="mt-3 max-w-2xl text-text-secondary">Cat-5-rated storage, custom guest houses, offices, and storm shelters. Finished to match your home.</p>
+              <p className="eyebrow">Featured projects</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Every project on video</h2>
+              <p className="mt-3 max-w-2xl text-text-secondary">We document every job from start to finish. See the work, not just the pitch.</p>
             </div>
-            <Link href="/containers" className="hidden font-bold text-orange sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
+            <Link href="/our-work" className="hidden font-bold text-orange sm:block whitespace-nowrap">See all projects &rarr;</Link>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {containers.map((container) => (
-              <ContainerCard key={container.slug} container={container} />
+          <div className="grid gap-6 md:grid-cols-3">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
           <div className="mt-8 text-center sm:hidden">
-            <Link href="/containers" className="font-bold text-orange">Browse all container builds &rarr;</Link>
+            <Link href="/our-work" className="font-bold text-orange">See all projects &rarr;</Link>
           </div>
         </div>
       </section>
@@ -152,24 +152,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects */}
+      {/* Featured Container Section */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="eyebrow">Featured projects</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Every project on video</h2>
-              <p className="mt-3 max-w-2xl text-text-secondary">We document every job from start to finish. See the work, not just the pitch.</p>
+              <p className="eyebrow">Container builds</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Custom containers, built for Florida living</h2>
+              <p className="mt-3 max-w-2xl text-text-secondary">Cat-5-rated storage, custom guest houses, offices, and storm shelters. Finished to match your home.</p>
             </div>
-            <Link href="/our-work" className="hidden font-bold text-orange sm:block whitespace-nowrap">See all projects &rarr;</Link>
+            <Link href="/containers" className="hidden font-bold text-orange sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {containers.map((container) => (
+              <ContainerCard key={container.slug} container={container} />
             ))}
           </div>
           <div className="mt-8 text-center sm:hidden">
-            <Link href="/our-work" className="font-bold text-orange">See all projects &rarr;</Link>
+            <Link href="/containers" className="font-bold text-orange">Browse all container builds &rarr;</Link>
           </div>
         </div>
       </section>

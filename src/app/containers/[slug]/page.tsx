@@ -32,7 +32,7 @@ export function generateMetadata({ params }: Props): Metadata {
 ───────────────────────────────────────── */
 const slugFaqs: Record<string, FAQItem[]> = {
   storage: [
-    { question: "What sizes are available?", answer: "We offer 10 ft, 20 ft, 40 ft standard, and 40 ft high-cube containers. We source new (one-trip) and quality-inspected used units depending on your budget and intended use." },
+    { question: "What sizes are available?", answer: "We offer 20 ft, 40 ft standard, and 40 ft high-cube containers. We source new (one-trip) and quality-inspected used units depending on your budget and intended use." },
     { question: "Do I need a permit for a storage container?", answer: "For most SW Florida counties, a storage-only container on private residential property does not require a permit. Rules vary by county and HOA. We provide permit guidance as part of every delivery quote." },
     { question: "Can I get a roll-up door instead of cargo doors?", answer: "Yes. Roll-up doors, side man-doors, and combination configurations are all available as upgrades. Great for easy daily access without swinging the full cargo doors." },
     { question: "How is delivery handled?", answer: "We coordinate delivery, crane or tilt-bed offload, site leveling, and pad prep if needed. You do not need a forklift or special equipment on your end." },
@@ -97,7 +97,7 @@ function PrebuiltOptionsCallout() {
             <p className="eyebrow">Prebuilt options</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Looking for a ready-built mini-home?</h2>
             <p className="mt-4 max-w-2xl text-text-secondary">
-              Our first prebuilt mini-home on wheels is coming soon. We&apos;ll add real photos, specs, pricing, and availability as soon as it is ready to show.
+              We have a finished mobile container mini-home available now. Move-in finished interior, kitchenette, and bathroom on a road-ready trailer. Base price $35,000 with add-ons available.
             </p>
           </div>
           <Link href="/containers/prebuilt" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
@@ -125,8 +125,7 @@ function StorageContent() {
             <SpecTable
               headers={["Size", "Footprint", "Interior Volume", "Best For", "Starting Price"]}
               rows={[
-                ["10 ft", "8 ft x 10 ft", "Approx. 640 cu ft", "Equipment, supplies, overflow storage", "Starting at $7,500"],
-                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $9,500"],
+                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $4,000 delivered"],
                 ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Starting at $13,500"],
                 ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Starting at $15,500"],
               ]}
