@@ -42,8 +42,11 @@ export function QuoteForm({
 
   const isSubmitting = status === "submitting";
 
+  const fieldClass =
+    "rounded-xl border border-navy/20 bg-white px-4 py-3 text-charcoal placeholder:text-text-secondary transition focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/30";
+
   return (
-    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} className="grid gap-4 rounded-3xl bg-white p-6 shadow-soft">
+    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} className="grid gap-5 rounded-3xl bg-white p-6 shadow-soft md:p-8 [color-scheme:light]">
       {/* Hidden tracking fields */}
       {defaultCity && <input type="hidden" name="city" value={defaultCity} />}
       <input type="hidden" name="rep" value={repKey} />
@@ -51,30 +54,31 @@ export function QuoteForm({
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Name
-          <input name="name" autoComplete="name" placeholder="Your full name" required className="rounded-xl border border-navy/15 px-4 py-3" />
+          <input name="name" autoComplete="name" placeholder="Your full name" required className={fieldClass} />
         </label>
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Phone
-          <input name="phone" type="tel" autoComplete="tel" placeholder="(941) 555-1234" required className="rounded-xl border border-navy/15 px-4 py-3" />
+          <input name="phone" type="tel" autoComplete="tel" placeholder="(941) 555-1234" required className={fieldClass} />
         </label>
       </div>
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
         Email
-        <input name="email" type="email" autoComplete="email" placeholder="you@example.com" required className="rounded-xl border border-navy/15 px-4 py-3" />
+        <input name="email" type="email" autoComplete="email" placeholder="you@example.com" required className={fieldClass} />
       </label>
 
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Service Needed
-          <select name="service" defaultValue={defaultService ?? "Not sure yet"} className="rounded-xl border border-navy/15 px-4 py-3">
+          <select name="service" defaultValue={defaultService ?? "Not sure yet"} className={fieldClass}>
             <option>Not sure yet</option>
             {services.map((service) => <option key={service.slug}>{service.name}</option>)}
+            <option>Storage Containers</option>
           </select>
         </label>
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Property Type
-          <select name="propertyType" className="rounded-xl border border-navy/15 px-4 py-3">
+          <select name="propertyType" className={fieldClass}>
             <option>Residential</option>
             <option>Commercial</option>
           </select>
@@ -83,23 +87,23 @@ export function QuoteForm({
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
         Description
-        <textarea name="description" rows={5} placeholder="Tell us about the project, location, timeline, or damage you need help with." className="rounded-xl border border-navy/15 px-4 py-3" />
+        <textarea name="description" rows={5} placeholder="Tell us about the project, location, timeline, or damage you need help with." className={fieldClass} />
       </label>
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
         Preferred Contact Method
-        <select name="contactMethod" className="rounded-xl border border-navy/15 px-4 py-3">
+        <select name="contactMethod" className={fieldClass}>
           <option>Phone</option>
           <option>Email</option>
           <option>Text</option>
         </select>
       </label>
 
-      {status === "success" && <p className="rounded-xl bg-orange/10 px-4 py-3 text-sm font-semibold text-orange">Thanks -- your quote request was sent. We will follow up shortly.</p>}
+      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks -- your quote request was sent. We will follow up shortly.</p>}
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button
-        className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-orange-deep px-6 py-3.5 text-center font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"
         type="submit"
         disabled={isSubmitting}
       >

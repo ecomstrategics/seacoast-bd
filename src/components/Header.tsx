@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { primaryNav, solutionsMega } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
-const pillarAccents = { protect: "text-orange", improve: "text-navy", expand: "text-copper" } as const;
+const pillarAccents = { protect: "text-navy", improve: "text-navy", expand: "text-navy" } as const;
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -210,7 +210,7 @@ export function Header() {
       {mobileOpen && (
         <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white lg:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
-            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-orange">Protect</p>
+            <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Protect</p>
             {solutionsMega.protect.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
@@ -218,7 +218,7 @@ export function Header() {
             {solutionsMega.improve.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
-            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-copper-light">Expand</p>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Expand</p>
             {solutionsMega.expand.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
