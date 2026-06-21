@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
 import { serviceArea } from "@/data/navigation";
@@ -45,6 +46,30 @@ export default function AboutPage() {
             <p className="mt-5 leading-8 text-text-secondary">
               We&apos;re licensed and insured in Florida, and we serve six counties across the Southwest coast: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">On the ground in Southwest Florida</p>
+          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Real crews. Real jobsites.</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            Commercial, residential, and public works across the SW Florida corridor. Here is a look at our team and our signs in the field.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
+              <div className="relative aspect-[3/2]">
+                <Image src="/images/about/seacoast-jobsite-sign.webp" alt="Seacoast Building & Design jobsite sign on a Southwest Florida golf course listing roofing, gutters, solar, and renovation services with the company license numbers" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
+              </div>
+              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our jobsite signs go up across the region, from residential roofs to commercial and public works projects.</figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
+              <div className="relative aspect-[3/2]">
+                <Image src="/images/about/seacoast-crew-vinyl-fence.webp" alt="Seacoast crew installing a new white vinyl privacy fence to replace a storm-damaged wood fence in Southwest Florida" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
+              </div>
+              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our crew replacing a storm-damaged fence. The same team handles the full exterior envelope on every job.</figcaption>
+            </figure>
           </div>
         </div>
       </section>

@@ -794,8 +794,34 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
   ],
 };
 
+// Real Seacoast jobsite photos used as the hero background for matching services.
+// Services without an entry keep the solid-navy hero.
+const serviceHeroImages: Record<string, { src: string; alt: string }> = {
+  roofing: {
+    src: "/images/services/roofing-metal-clubhouse-aerial.webp",
+    alt: "Aerial view of a Southwest Florida golf clubhouse with a new dark standing-seam metal roof installed by Seacoast Building & Design",
+  },
+  "roof-certification-inspection": {
+    src: "/images/services/roof-certification-commercial-aerial.webp",
+    alt: "Aerial inspection view of a commercial building with a new white reflective flat roof in Southwest Florida",
+  },
+  "gutters-fascia-soffits": {
+    src: "/images/services/gutters-fascia-tile-roof.webp",
+    alt: "New dark aluminum gutters, fascia, and soffits installed along the edge of a tile-roof Florida home by Seacoast",
+  },
+  "exterior-renovations": {
+    src: "/images/services/exterior-renovation-condo-carports.webp",
+    alt: "Aerial of a Southwest Florida condo community with new tile roofing and white carport covers completed by Seacoast",
+  },
+  "pool-enclosures-lanais": {
+    src: "/images/services/pool-enclosure-lanai.webp",
+    alt: "Screened pool enclosure and lanai built by Seacoast over a Southwest Florida pool with a lake and golf course view",
+  },
+};
+
 function GenericServiceLayout({ params }: Props) {
   const service = getServiceBySlug(params.slug)!;
+  const heroImage = serviceHeroImages[params.slug];
   const keywords = slugToServiceTypeKeywords[params.slug] ?? [params.slug.split("-")[0]];
   const relatedProjects = projects
     .filter((p) => keywords.some((kw) => p.serviceType.toLowerCase().includes(kw)))
@@ -816,8 +842,14 @@ function GenericServiceLayout({ params }: Props) {
   return (
     <>
       <SchemaScript schema={schemas} />
-      <section className="bg-navy py-20 text-white">
-        <div className="container">
+      <section className="relative isolate overflow-hidden bg-navy py-20 text-white">
+        {heroImage && (
+          <>
+            <Image src={heroImage.src} alt={heroImage.alt} fill priority className="object-cover" sizes="100vw" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/55" aria-hidden />
+          </>
+        )}
+        <div className="container relative">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: service.name }]} />
           <div className="mt-4 text-4xl" aria-hidden>{service.icon}</div>
           <h1 className="mt-4 font-heading text-5xl font-bold">{service.name}</h1>

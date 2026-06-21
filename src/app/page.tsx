@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { ContainerCard } from "@/components/ContainerCard";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -32,8 +33,17 @@ export default function Home() {
       <SchemaScript schema={localBusinessSchema()} />
 
       {/* Hero */}
-      <section className="bg-navy py-14 md:py-24 text-white">
-        <div className="container grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+      <section className="relative isolate overflow-hidden bg-navy py-14 md:py-24 text-white">
+        <Image
+          src="/images/home-hero-waterfront-condo-roof.webp"
+          alt="Aerial view of a large waterfront Southwest Florida condo building with a new white reflective roof installed by Seacoast Building & Design"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/95" aria-hidden />
+        <div className="container relative grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
             <p className="eyebrow">Southwest Florida contractor</p>
             <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-6xl">

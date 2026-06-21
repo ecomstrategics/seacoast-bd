@@ -56,6 +56,17 @@ export function Header() {
         </div>
       </div>
 
+      {/* License bar: Florida state-certified license numbers */}
+      <div className="border-t border-white/10 bg-navy-900 text-xs text-white/75">
+        <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 py-1.5 text-center">
+          <span className="font-semibold uppercase tracking-wide text-white/55">Florida State Certified</span>
+          <span aria-hidden className="text-white/25">&bull;</span>
+          <span>General Contractor <span className="font-semibold text-white">CGC1509237</span></span>
+          <span aria-hidden className="text-white/25">&bull;</span>
+          <span>Roofing Contractor <span className="font-semibold text-white">CCC1332648</span></span>
+        </div>
+      </div>
+
       {/* Main nav row: navy bar so the orange-on-transparent logo integrates seamlessly (no pill) */}
       <div className="container flex items-center justify-between gap-6 py-3">
         {/* Logo image: orange wordmark on transparent bg, sitting directly on the navy bar */}

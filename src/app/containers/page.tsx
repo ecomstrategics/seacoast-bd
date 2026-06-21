@@ -164,6 +164,33 @@ export default function ContainersLandingPage() {
         </div>
       </section>
 
+      {/* How we build it — real jobsite process */}
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">How we build it</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">From delivery to finished build</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">Real photos from Seacoast container projects. Our crew handles every stage, from the day the container lands on site to the final interior finish.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              { step: "1", src: "/images/containers/process/real-delivery.webp", title: "Delivered to your site", body: "We procure the container and deliver it to your pad. A forklift sets a finished office unit into place at a SW Florida jobsite.", alt: "Seacoast crew delivering a finished container office to a Southwest Florida jobsite, a forklift lifting the unit off a flatbed truck under a blue sky" },
+              { step: "2", src: "/images/containers/process/real-insulation.webp", title: "Insulated and sealed", body: "Walls and ceiling get rigid foam insulation and an epoxy floor, sealing the steel shell against Florida heat and humidity.", alt: "Interior of a Seacoast container build lined floor to ceiling with rigid foam insulation panels and a sealed epoxy floor" },
+              { step: "3", src: "/images/containers/process/real-buildout.webp", title: "Finished out", body: "Our crew frames, panels, wires, and trims the interior to your spec, turning the shell into a finished, livable space.", alt: "Seacoast crew member finishing the plywood-paneled interior of a container build, working from a step ladder during the build-out" },
+            ].map((item) => (
+              <figure key={item.step} className="overflow-hidden rounded-2xl border border-container-steel/20 bg-white shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image src={item.src} alt={item.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />
+                  <span className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-orange-deep font-heading font-bold text-white shadow-soft" aria-hidden>{item.step}</span>
+                </div>
+                <figcaption className="p-6">
+                  <h3 className="font-heading text-lg font-bold text-navy">{item.title}</h3>
+                  <p className="mt-2 text-sm text-text-secondary">{item.body}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Zoning & permitting */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">

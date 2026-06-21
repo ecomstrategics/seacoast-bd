@@ -44,7 +44,7 @@ export function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
           <p className="mt-3 text-sm text-white/75 leading-6">Southwest Florida&rsquo;s full-service property solutions company. Protect it. Improve it. Expand it.</p>
-          <p className="mt-3 text-sm text-white/70">License #: FRO14426</p>
+          <p className="mt-3 text-sm text-white/70">FL Certified GC #CGC1509237 &bull; Roofing #CCC1332648</p>
           <p className="mt-1 text-sm text-white/70">
             <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
           </p>
