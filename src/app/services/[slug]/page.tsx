@@ -817,6 +817,26 @@ const serviceHeroImages: Record<string, { src: string; alt: string }> = {
     src: "/images/services/pool-enclosure-lanai.webp",
     alt: "Screened pool enclosure and lanai built by Seacoast over a Southwest Florida pool with a lake and golf course view",
   },
+  siding: {
+    src: "/images/services/siding-hardie-board-batten.webp",
+    alt: "New board-and-batten Hardie fiber-cement siding with a shake-style gable installed by Seacoast on a Southwest Florida waterfront home",
+  },
+  "solar-services": {
+    src: "/images/services/solar-ave-maria-tile-roof.webp",
+    alt: "Aerial view of black solar panels installed on a barrel-tile roof of a Southwest Florida home by Seacoast Building & Design",
+  },
+  "windows-and-doors": {
+    src: "/images/services/windows-and-doors-impact-install.webp",
+    alt: "Seacoast installer setting a large impact-rated sliding glass door into a stucco Southwest Florida home with palm trees and a barrel-tile roof",
+  },
+  "exterior-cleaning-services": {
+    src: "/images/services/exterior-cleaning-soft-wash.webp",
+    alt: "Worker soft-washing the stucco exterior and paver driveway of a Southwest Florida home, with a clean line showing the cleaned surface",
+  },
+  "room-additions": {
+    src: "/images/services/room-additions-sunroom-lanai.webp",
+    alt: "Finished sunroom and lanai room addition with impact windows matched to a barrel-tile Southwest Florida home at golden hour",
+  },
 };
 
 function GenericServiceLayout({ params }: Props) {
