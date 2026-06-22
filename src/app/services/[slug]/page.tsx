@@ -1000,13 +1000,13 @@ function SolarPanelCleaningLayout() {
   const planTiers = [
     {
       tier: "One-Time Clean",
-      price: "Starting at $179",
+      price: "Starting at $699",
       cadence: "Single visit",
       includes: ["Soft-wash clean with purified water", "Panel-safe, no harsh chemicals", "Visual inspection of array", "Before-and-after photos"],
     },
     {
       tier: "Maintenance Contract",
-      price: "Starting at $299/year",
+      price: "Starting at $1,199/year",
       cadence: "Two cleanings per year",
       includes: ["Everything in One-Time Clean", "Auto-scheduled biannual cleanings", "Priority scheduling for contract clients", "Output-loss check and written report"],
       featured: true,
