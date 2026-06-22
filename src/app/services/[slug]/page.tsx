@@ -778,7 +778,7 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
     { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Set up a recurring solar panel cleaning service contract to protect output year-round.", icon: "🧼" },
   ],
   "solar-services": [
-    { title: "Roofing", href: "/services/roofing", blurb: "A solar project starts with a roof that is ready to support the system long term.", icon: "🏠" },
+    { title: "Whole-House Battery Systems", href: "/services/whole-house-battery-systems", blurb: "Add whole-house battery backup so your home keeps power through storms and grid outages.", icon: "🔋" },
     { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm roof condition before mounting panels or making a solar investment.", icon: "📋" },
     { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Keep panels producing with scheduled solar panel cleaning service contracts.", icon: "🧼" },
   ],
@@ -948,6 +948,9 @@ export default function ServiceDetailPage({ params }: Props) {
 
   // Solar panel cleaning: contract-focused rich layout (recurring-revenue offering)
   if (params.slug === "solar-panel-cleaning") return <SolarPanelCleaningLayout />;
+
+  // Whole-house battery systems: storm-readiness rich layout
+  if (params.slug === "whole-house-battery-systems") return <WholeHouseBatteryLayout />;
 
   // All other services: generic template
   return <GenericServiceLayout params={params} />;
@@ -1172,6 +1175,203 @@ function SolarPanelCleaningLayout() {
 
       <CrossSellBlock heading="What pairs with solar panel cleaning" items={crossSell} />
       <CTASection variant="orange" heading="Keep your panels producing at peak." subtext="Request a solar panel cleaning quote or set up a maintenance contract with Seacoast." buttonLabel="Get a Cleaning Quote" />
+    </>
+  );
+}
+
+// ─── Whole-House Battery Systems rich layout (storm-readiness offering) ──────────
+function WholeHouseBatteryLayout() {
+  const faqs: FAQItem[] = [
+    {
+      question: "What is a whole-house battery backup system?",
+      answer:
+        "A whole-house battery stores energy so your home keeps running when the grid goes down. When power is lost in a storm or outage, the battery takes over automatically, keeping essentials like your refrigerator, lights, internet, medical equipment, and AC running. It can be charged from the grid, from solar, or both.",
+    },
+    {
+      question: "Do I need solar panels to install a home battery?",
+      answer:
+        "No. A battery can be installed on its own and charged from the grid, then discharge during an outage. Pairing it with solar adds the most resilience, because the battery can recharge from the sun even during a multi-day outage, but solar is not required to get storm-ready backup power.",
+    },
+    {
+      question: "How long will a home battery power my house during an outage?",
+      answer:
+        "It depends on the battery capacity and how much you run. A single battery can typically carry essential circuits (fridge, lights, internet, a few outlets) for a day or more, while multiple batteries or a solar-paired system can power most of a home for several days. We size the system to your priorities during the on-site assessment.",
+    },
+    {
+      question: "Why is battery backup a good idea in Southwest Florida?",
+      answer:
+        "Hurricane season brings extended power outages, and a battery means you do not lose your food, your AC, or your ability to stay connected when the grid is down. It is one of the most practical storm-readiness upgrades you can make, and it keeps working long after the storm passes.",
+    },
+    {
+      question: "What areas do you serve for battery installation?",
+      answer:
+        "Seacoast installs whole-house battery systems across six Southwest Florida counties: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier, including Fort Myers, Cape Coral, Naples, Bonita Springs, Punta Gorda, Sarasota, Bradenton, and Venice.",
+    },
+  ];
+
+  const schemas = [
+    serviceSchema({
+      name: "Whole-House Battery Systems",
+      description:
+        "Whole-house battery backup installation that keeps your home powered through storms and grid outages across Southwest Florida. Standalone or paired with solar.",
+      url: "/services/whole-house-battery-systems",
+      serviceType: "Home Battery Backup Installation",
+      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+    }),
+    faqSchema(faqs),
+  ];
+
+  const systemOptions = [
+    {
+      tier: "Essential Backup",
+      price: "Single battery",
+      cadence: "Critical circuits",
+      includes: ["Powers fridge, lights, internet, and key outlets", "Automatic switchover during outages", "Compact wall-mount installation", "Grid-charged, solar-ready"],
+    },
+    {
+      tier: "Whole-Home Backup",
+      price: "Multi-battery",
+      cadence: "Most of the home",
+      includes: ["Powers most of the home including AC", "Scales with added battery modules", "Seamless automatic backup", "Monitoring app for charge and usage"],
+      featured: true,
+    },
+    {
+      tier: "Solar + Battery",
+      price: "Custom quote",
+      cadence: "Multi-day resilience",
+      includes: ["Recharges from the sun during outages", "Lower power bills day to day", "Maximum storm-season resilience", "Integrated with new or existing solar"],
+    },
+  ];
+
+  const relatedProjects = projects
+    .filter((p) => ["solar", "energy"].some((kw) => p.serviceType.toLowerCase().includes(kw)))
+    .slice(0, 3);
+
+  const crossSell: CrossSellItem[] = [
+    { title: "Solar Services", href: "/services/solar-services", blurb: "Pair your battery with a solar install so it recharges from the sun during long outages.", icon: "☀️" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Lock in your storm-readiness plan before hurricane season, backup power included.", icon: "🛡️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Responsive inspection, documentation, and repairs after wind and hurricane damage.", icon: "⛈️" },
+  ];
+
+  return (
+    <>
+      <SchemaScript schema={schemas} />
+
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden bg-navy py-20 text-white">
+        <div className="container relative">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Whole-House Battery Systems" }]} />
+          <div className="mt-4 text-4xl" aria-hidden>🔋</div>
+          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Whole-House Battery Backup Installation in Southwest Florida</h1>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">
+            When the grid goes down, your home stays on. Seacoast installs whole-house battery backup systems that keep your power running through storms and outages, on their own or paired with solar.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Battery Quote</Link>
+            <a href="#options" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See System Options</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="section dark-band bg-navy">
+        <div className="container grid gap-8 md:grid-cols-3">
+          {[
+            { label: "Automatic Backup", body: "When the grid fails, the battery takes over in an instant. No generators to start, no fuel to store." },
+            { label: "Licensed and Insured", body: "Installed to code by licensed, insured Seacoast crews who handle the permitting and inspection." },
+            { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
+          ].map((card) => (
+            <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
+              <p className="eyebrow">{card.label}</p>
+              <p className="mt-3 text-text-secondary">{card.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why battery backup */}
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Why it matters</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Storm season means outages. A battery means you keep going.</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            In Southwest Florida, a single storm can knock out power for hours or days. A whole-house battery keeps the lights on, the food cold, and your family comfortable and connected, automatically, the moment the grid drops.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              { icon: "⚡", heading: "Power through outages", body: "Keep essentials running during storms and grid failures without the noise, fumes, or fuel of a generator." },
+              { icon: "🌀", heading: "Storm readiness", body: "Backup power is one of the most practical hurricane-season upgrades, and it keeps working after the storm." },
+              { icon: "💰", heading: "Everyday value", body: "Paired with solar, a battery can lower your day-to-day power bills, not just protect you in an emergency." },
+            ].map((card) => (
+              <div key={card.heading} className="rounded-2xl bg-white p-6 shadow-soft">
+                <div className="text-3xl" aria-hidden>{card.icon}</div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy">{card.heading}</h3>
+                <p className="mt-2 text-sm text-text-secondary">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* System options */}
+      <section id="options" className="section dark-band bg-navy">
+        <div className="container">
+          <p className="eyebrow">System options</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Backup sized to your home and your priorities.</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            We size your system during an on-site assessment based on what you want to keep running and how long. Start with essential circuits or back up the whole home. Final pricing is confirmed with a quote.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {systemOptions.map((option) => (
+              <div key={option.tier} className={`rounded-2xl border p-6 ${option.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
+                {option.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
+                <h3 className="font-heading text-xl font-bold text-navy">{option.tier}</h3>
+                <p className="mt-2 font-heading text-2xl font-bold text-navy">{option.price}</p>
+                <p className="text-sm text-text-secondary">{option.cadence}</p>
+                <ul className="mt-5 space-y-2">
+                  {option.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-charcoal">
+                      <span className="mt-0.5 text-success" aria-hidden>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+                  Get a Quote
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related projects */}
+      {relatedProjects.length > 0 && (
+        <section className="section dark-band bg-navy-deep">
+          <div className="container">
+            <p className="eyebrow">In the field</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent solar &amp; energy projects</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+            </div>
+            <div className="mt-8">
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      <section className="section dark-band bg-navy">
+        <div className="container max-w-3xl">
+          <p className="eyebrow">Common questions</p>
+          <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Whole-House Battery FAQ</h2>
+          <FAQAccordion items={faqs} />
+        </div>
+      </section>
+
+      <CrossSellBlock heading="What pairs with battery backup" items={crossSell} />
+      <CTASection variant="orange" heading="Keep your home powered through the next storm." subtext="Request a whole-house battery backup quote from Seacoast and get storm-ready." buttonLabel="Get a Battery Quote" />
     </>
   );
 }
