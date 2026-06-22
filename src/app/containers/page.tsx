@@ -49,7 +49,7 @@ const landingFaqs = [
   {
     question: "What does it cost?",
     answer:
-      "Storage containers start around $4,000 delivered, with add-ons available. Finished container offices and workshops start around $28,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $9,000 (they require a foundation). Final pricing varies by site, permitting, configuration, utilities, and finish level.",
+      "Storage containers start around $4,000 delivered, with add-ons available. Finished container offices and workshops start around $13,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $3,500 (they require a foundation). Final pricing varies by site, permitting, configuration, utilities, and finish level.",
   },
 ];
 

@@ -33,8 +33,8 @@ export const containers: Container[] = [
     tagline: "Your workspace. Delivered and ready.",
     shortDescription: "Climate-controlled, wired container offices and workshops for business owners, contractors, and remote professionals. Tax-depreciable, mobile, and finished to your spec.",
     icon: "🏗️",
-    startingPrice: "Starting at $28,000",
-    startingPriceValue: "28000",
+    startingPrice: "Starting at $13,000",
+    startingPriceValue: "13000",
   },
   {
     slug: "storm-shelters",
@@ -42,8 +42,8 @@ export const containers: Container[] = [
     tagline: "Cat-5-rated. Built for the worst.",
     shortDescription: "When you can't evacuate, you need a structure that can take a direct hit. Our storm-rated container shelters are anchored, ventilated, and built to FEMA-aligned specs for coastal Southwest Florida.",
     icon: "🛡️",
-    startingPrice: "Starting at $9,000",
-    startingPriceValue: "9000",
+    startingPrice: "Starting at $3,500",
+    startingPriceValue: "3500",
   },
 ];
 
