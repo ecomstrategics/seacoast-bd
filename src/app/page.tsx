@@ -15,8 +15,8 @@ import { serviceArea } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
-  title: { absolute: "Seacoast Building & Design | Southwest Florida's Property Solutions Company" },
-  description: "Protect, improve, and expand your home or property. All from one licensed contractor. 40+ years, 6 counties, every project on video. Licensed and insured. (941) 500-5431",
+  title: { absolute: "Seacoast Building & Design | SW Florida Contractor" },
+  description: "Protect, improve, and expand your property with one licensed SW Florida contractor. 40+ years, 6 counties, every project on video. (941) 500-5431",
 };
 
 const pillarBlurbs: Record<string, string> = {

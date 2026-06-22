@@ -10,6 +10,8 @@ export function localBusinessSchema(): SchemaObject {
     "@id": "https://seacoastbd.com/#organization",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
+    logo: "https://seacoastbd.com/logo.png",
+    image: "https://seacoastbd.com/images/og-default.jpg",
     telephone: "+1-941-500-5431",
     description:
       "Full-service property solutions contractor serving Southwest Florida. Roofing, siding, storm damage repair, storm preparedness, container guest houses, and more.",
@@ -47,6 +49,7 @@ export function webSiteSchema(): SchemaObject {
     "@type": "WebSite",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
+    dateModified: new Date().toISOString().slice(0, 10),
     publisher: { "@id": "https://seacoastbd.com/#organization" },
     potentialAction: {
       "@type": "SearchAction",
@@ -76,6 +79,7 @@ export function videoObjectSchema({
     contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
     uploadDate: uploadDate ?? "2024-01-01",
+    dateModified: new Date().toISOString().slice(0, 10),
     publisher: { "@id": "https://seacoastbd.com/#organization" },
   };
 }
