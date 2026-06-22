@@ -775,12 +775,12 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
   "exterior-cleaning-services": [
     { title: "Siding", href: "/services/siding", blurb: "Cleaning can restore curb appeal, while damaged or aging siding may need replacement.", icon: "🧱" },
     { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Pair gutter cleaning with repairs or replacement when the water-management system is failing.", icon: "🌧️" },
-    { title: "Solar Services", href: "/services/solar-services", blurb: "Clean solar panels work more efficiently and protect the investment in your system.", icon: "☀️" },
+    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Set up a recurring solar panel cleaning service contract to protect output year-round.", icon: "🧼" },
   ],
   "solar-services": [
     { title: "Roofing", href: "/services/roofing", blurb: "A solar project starts with a roof that is ready to support the system long term.", icon: "🏠" },
     { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm roof condition before mounting panels or making a solar investment.", icon: "📋" },
-    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Keep panels producing with scheduled solar panel cleaning.", icon: "💦" },
+    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Keep panels producing with scheduled solar panel cleaning service contracts.", icon: "🧼" },
   ],
   "pool-enclosures-lanais": [
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Tie outdoor living into a broader exterior upgrade.", icon: "🛠️" },
@@ -946,6 +946,232 @@ export default function ServiceDetailPage({ params }: Props) {
   // Storm damage repair: insurance-focused rich layout per strategy §3.3
   if (params.slug === "storm-damage-repair" && rich) return <StormDamageRepairLayout content={rich} />;
 
+  // Solar panel cleaning: contract-focused rich layout (recurring-revenue offering)
+  if (params.slug === "solar-panel-cleaning") return <SolarPanelCleaningLayout />;
+
   // All other services: generic template
   return <GenericServiceLayout params={params} />;
+}
+
+// ─── Solar Panel Cleaning rich layout (contract / recurring-revenue offering) ──
+// PROPOSED pricing below is pending Clear's approval. Update the planTiers
+// "price" values once final pricing is confirmed.
+function SolarPanelCleaningLayout() {
+  const faqs: FAQItem[] = [
+    {
+      question: "How often should solar panels be cleaned in Southwest Florida?",
+      answer:
+        "Most Southwest Florida systems benefit from professional cleaning two to four times a year. Our coastal climate adds salt spray, pollen, dust, and bird droppings faster than inland areas, and that buildup blocks sunlight and lowers output. Twice-a-year cleaning is the baseline for residential roofs, and quarterly cleaning is common for larger or commercial systems.",
+    },
+    {
+      question: "Does cleaning my solar panels actually increase output?",
+      answer:
+        "Yes. Dirt, pollen, and grime can reduce a panel's energy production noticeably, and in Florida's growing season that loss adds up month over month. Regular cleaning restores panels to near-peak efficiency, which means more of the power you already paid to generate.",
+    },
+    {
+      question: "Do you offer solar panel cleaning service contracts?",
+      answer:
+        "Yes. Our maintenance contracts schedule your cleanings automatically (biannual or quarterly) so you never have to remember to book. Each visit includes a visual inspection and before-and-after photos, and contract clients get priority scheduling. You can also book a one-time cleaning any time.",
+    },
+    {
+      question: "How do you clean the panels without damaging them?",
+      answer:
+        "We use a soft-wash method with purified, deionized water and panel-safe equipment, never harsh chemicals or abrasive pads that can scratch the glass or void manufacturer warranties. Our crews are trained to work safely on Southwest Florida roof types, from tile to metal to flat commercial roofs.",
+    },
+    {
+      question: "What areas do you serve for solar panel cleaning?",
+      answer:
+        "Seacoast cleans solar panels across six Southwest Florida counties: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier, including Fort Myers, Cape Coral, Naples, Bonita Springs, Punta Gorda, Sarasota, Bradenton, and Venice.",
+    },
+  ];
+
+  const schemas = [
+    serviceSchema({
+      name: "Solar Panel Cleaning",
+      description:
+        "Professional solar panel cleaning and recurring maintenance contracts that keep your system producing at peak output across Southwest Florida.",
+      url: "/services/solar-panel-cleaning",
+      serviceType: "Solar Panel Cleaning Service",
+      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+    }),
+    faqSchema(faqs),
+  ];
+
+  const planTiers = [
+    {
+      tier: "One-Time Clean",
+      price: "Starting at $179",
+      cadence: "Single visit",
+      includes: ["Soft-wash clean with purified water", "Panel-safe, no harsh chemicals", "Visual inspection of array", "Before-and-after photos"],
+    },
+    {
+      tier: "Maintenance Contract",
+      price: "Starting at $299/year",
+      cadence: "Two cleanings per year",
+      includes: ["Everything in One-Time Clean", "Auto-scheduled biannual cleanings", "Priority scheduling for contract clients", "Output-loss check and written report"],
+      featured: true,
+    },
+    {
+      tier: "Commercial & Solar Farm",
+      price: "Custom quote",
+      cadence: "Quarterly or monthly",
+      includes: ["Per-panel pricing for large arrays", "Quarterly or monthly cleaning schedule", "Production and condition reporting", "Dedicated account contact"],
+    },
+  ];
+
+  const relatedProjects = projects
+    .filter((p) => ["solar", "energy"].some((kw) => p.serviceType.toLowerCase().includes(kw)))
+    .slice(0, 3);
+
+  const crossSell: CrossSellItem[] = [
+    { title: "Solar Services", href: "/services/solar-services", blurb: "Full solar installs, inverters, storage, and EV charging from Seacoast's solar team.", icon: "☀️" },
+    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Soft washing, roof, concrete, and gutter cleaning to match your panel cleaning visit.", icon: "💦" },
+    { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm the roof beneath your array is sound with an insurance-ready inspection report.", icon: "📋" },
+  ];
+
+  return (
+    <>
+      <SchemaScript schema={schemas} />
+
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden bg-navy py-20 text-white">
+        <Image src="/images/services/solar-ave-maria-tile-roof.webp" alt="Aerial view of clean black solar panels on a barrel-tile roof of a Southwest Florida home maintained by Seacoast Building & Design" fill priority className="object-cover" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/55" aria-hidden />
+        <div className="container relative">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Solar Panel Cleaning" }]} />
+          <div className="mt-4 text-4xl" aria-hidden>🧼</div>
+          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Solar Panel Cleaning Service &amp; Maintenance Contracts in Southwest Florida</h1>
+          <p className="mt-6 max-w-2xl text-lg text-white/80">
+            Dirty panels lose power. Seacoast keeps your solar array producing at peak output with professional soft-wash cleaning and easy recurring service contracts across Southwest Florida.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Cleaning Quote</Link>
+            <a href="#plans" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Service Plans</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust bar */}
+      <section className="section dark-band bg-navy">
+        <div className="container grid gap-8 md:grid-cols-3">
+          {[
+            { label: "Panel-Safe Soft Wash", body: "Purified, deionized water and panel-safe equipment. No harsh chemicals, no abrasives, no warranty risk." },
+            { label: "Licensed and Insured", body: "Every visit is performed by licensed, insured crews trained to work safely on Southwest Florida roofs." },
+            { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
+          ].map((card) => (
+            <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
+              <p className="eyebrow">{card.label}</p>
+              <p className="mt-3 text-text-secondary">{card.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why cleaning matters */}
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Why it matters</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Dirty panels quietly cost you money.</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            Southwest Florida is hard on solar. Salt air, pollen, dust, and bird droppings build up fast and block the sunlight your panels need. The loss is gradual and easy to miss, but it shows up on every power bill.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              { icon: "📉", heading: "Lost production", body: "Grime and buildup reduce how much energy your panels generate, so you pay for power you already invested to make." },
+              { icon: "🌴", heading: "Florida buildup", body: "Pollen seasons, coastal salt spray, and bird activity coat panels faster here than almost anywhere else." },
+              { icon: "🛡️", heading: "Protect the investment", body: "Regular cleaning and inspection catch shading, debris, and wear early, protecting the value of your solar system." },
+            ].map((card) => (
+              <div key={card.heading} className="rounded-2xl bg-white p-6 shadow-soft">
+                <div className="text-3xl" aria-hidden>{card.icon}</div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy">{card.heading}</h3>
+                <p className="mt-2 text-sm text-text-secondary">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What's included */}
+      <section className="section dark-band bg-navy">
+        <div className="container">
+          <p className="eyebrow">What&apos;s included</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Every solar panel cleaning visit.</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: "💧", heading: "Soft-wash clean", body: "Purified, deionized water and gentle equipment remove dirt, pollen, and salt without scratching the glass." },
+              { icon: "🔍", heading: "Visual inspection", body: "We check the array for shading, debris, loose mounting, and visible wear while we're up there." },
+              { icon: "📸", heading: "Before-and-after photos", body: "You get clear documentation of the work and the condition of your system after every visit." },
+              { icon: "📅", heading: "Easy scheduling", body: "One-time or recurring. Contract clients are auto-scheduled and get priority on the calendar." },
+            ].map((item) => (
+              <div key={item.heading} className="rounded-2xl bg-white p-6 shadow-soft">
+                <div className="text-3xl" aria-hidden>{item.icon}</div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy">{item.heading}</h3>
+                <p className="mt-2 text-sm text-text-secondary">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Plan tiers */}
+      <section id="plans" className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Service plans</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Choose a one-time clean or a maintenance contract.</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            Final pricing depends on your system size and roof access. We confirm it with a quick on-site quote. A recurring contract is the easiest way to keep panels producing year-round.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {planTiers.map((plan) => (
+              <div key={plan.tier} className={`rounded-2xl border p-6 ${plan.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
+                {plan.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
+                <h3 className="font-heading text-xl font-bold text-navy">{plan.tier}</h3>
+                <p className="mt-2 font-heading text-2xl font-bold text-navy">{plan.price}</p>
+                <p className="text-sm text-text-secondary">{plan.cadence}</p>
+                <ul className="mt-5 space-y-2">
+                  {plan.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-charcoal">
+                      <span className="mt-0.5 text-success" aria-hidden>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+                  Get a Quote
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related projects */}
+      {relatedProjects.length > 0 && (
+        <section className="section dark-band bg-navy">
+          <div className="container">
+            <p className="eyebrow">In the field</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent solar projects</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+            </div>
+            <div className="mt-8">
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      <section className="section dark-band bg-navy-deep">
+        <div className="container max-w-3xl">
+          <p className="eyebrow">Common questions</p>
+          <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Solar Panel Cleaning FAQ</h2>
+          <FAQAccordion items={faqs} />
+        </div>
+      </section>
+
+      <CrossSellBlock heading="What pairs with solar panel cleaning" items={crossSell} />
+      <CTASection variant="orange" heading="Keep your panels producing at peak." subtext="Request a solar panel cleaning quote or set up a maintenance contract with Seacoast." buttonLabel="Get a Cleaning Quote" />
+    </>
+  );
 }
