@@ -6,18 +6,18 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 /* Dark-navy theme: deepest navy body so any gaps read dark, light default text. */
-body { margin: 0; background: #00115C; color: #F4F6FB; }
+body { margin: 0; background: #0E2150; color: #F4F6FB; }
 a { text-decoration: none; }
 .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
 .section { padding-block: 3.5rem; }
 @media (min-width: 768px) { .section { padding-block: 5rem; } }
-/* Eyebrow + orange text default to the lighter coral-orange so they clear WCAG AA
-   on every dark blue band (>=4.5:1 even on the brightest #0021A5). On light surfaces
+/* Eyebrow + orange text default to the lighter soft coral so they clear WCAG AA
+   on every dark blue band (>=4.5:1 even on the brightest band #24407F). On light surfaces
    the contrast-island layer below overrides this to deep orange #B83410. */
-.eyebrow { color: #FF7A3D; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
-.text-orange { color: #FF7A3D; }
+.eyebrow { color: #FF9468; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+.text-orange { color: #FF9468; }
 /* Orange focus ring reads clearly on dark blue. */
-.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FA4616]; }
+.focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E15A2B]; }
 
 /*
   Dark-band text contrast layer.
@@ -36,7 +36,7 @@ a { text-decoration: none; }
 .dark-band .bg-white .text-navy,
 .dark-band .bg-warm-white .text-navy,
 .dark-band .bg-cool-gray .text-navy,
-.dark-band .bg-white\/90 .text-navy { color: #0021A5; }
+.dark-band .bg-white\/90 .text-navy { color: #1E3A7A; }
 
 .dark-band .bg-white .text-charcoal,
 .dark-band .bg-warm-white .text-charcoal,
@@ -55,7 +55,7 @@ a { text-decoration: none; }
 */
 .dark-band .bg-white.text-navy,
 .dark-band .bg-warm-white.text-navy,
-.dark-band .bg-cool-gray.text-navy { color: #0021A5; }
+.dark-band .bg-cool-gray.text-navy { color: #1E3A7A; }
 .dark-band .bg-white.text-charcoal,
 .dark-band .bg-warm-white.text-charcoal,
 .dark-band .bg-cool-gray.text-charcoal { color: #1C1C1E; }
@@ -65,12 +65,12 @@ a { text-decoration: none; }
 
 /*
   Orange accessibility layer.
-  Brand bright orange (#FA4616) is the default for `.text-orange`/`.eyebrow`; it
-  clears WCAG AA on the dark navy body (4.8:1). On LIGHT surfaces that same orange
-  drops to ~3.3:1 (fail), so inside any light contrast island we swap orange text
-  to the accessible deep orange #B83410 (>=4.9:1 on white/warm-white/cool-gray).
-  Covers descendant text, same-element chips, the /80 opacity eyebrow variant, and
-  the .eyebrow class. Fill colors (buttons/banners) use bg-orange-deep directly.
+  Soft coral (#FF9468) is the default for `.text-orange`/`.eyebrow`; it clears
+  WCAG AA on the dark navy bands (>=4.6:1). On LIGHT surfaces that coral fails,
+  so inside any light contrast island we swap orange text to the accessible deep
+  orange #B83410 (>=4.9:1 on white/warm-white/cool-gray). Covers descendant text,
+  same-element chips, the /80 opacity eyebrow variant, and the .eyebrow class.
+  Fill colors (buttons/banners) use bg-orange-deep directly.
 */
 .bg-white .text-orange,        .bg-white.text-orange,
 .bg-warm-white .text-orange,   .bg-warm-white.text-orange,

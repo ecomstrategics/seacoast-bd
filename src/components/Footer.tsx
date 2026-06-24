@@ -59,7 +59,7 @@ export function Footer() {
         {/* Protect */}
         <div>
           <h3 className="font-heading font-bold text-orange">Protect</h3>
-          <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">Storm &amp; Resilience</p>
+          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Storm &amp; Resilience</p>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             {pillarLinks.protect.map((link) => (
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
@@ -70,7 +70,7 @@ export function Footer() {
         {/* Improve */}
         <div>
           <h3 className="font-heading font-bold text-white/90">Improve</h3>
-          <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">Exteriors &amp; Renovations</p>
+          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Exteriors &amp; Renovations</p>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             {pillarLinks.improve.map((link) => (
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
@@ -81,7 +81,7 @@ export function Footer() {
         {/* Expand + Containers */}
         <div>
           <h3 className="font-heading font-bold text-white/90">Expand</h3>
-          <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">Property Solutions</p>
+          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Property Solutions</p>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
             {pillarLinks.expand.map((link) => (
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
@@ -99,7 +99,7 @@ export function Footer() {
         {/* Service Area + Quick Links */}
         <div>
           <h3 className="font-heading font-bold">Service Area</h3>
-          <p className="mt-0.5 text-xs text-white/50 uppercase tracking-widest">6 Counties</p>
+          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">6 Counties</p>
           <ul className="mt-4 space-y-1.5 text-sm text-white/75">
             {serviceAreaCities.map((city) => (
               <li key={city.slug}><Link href={`/service-area/${city.slug}`} className="hover:text-white">{city.name}</Link></li>
@@ -111,7 +111,7 @@ export function Footer() {
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
             ))}
           </ul>
-          <p className="mt-4 text-xs text-white/40">Serving: {serviceArea.join(", ")}</p>
+          <p className="mt-4 text-xs text-white/65">Serving: {serviceArea.join(", ")}</p>
         </div>
       </div>
 
