@@ -42,8 +42,8 @@ export function Header() {
   }
 
   return (
-    <header className="z-50">
-      {/* Top bar */}
+    <>
+      {/* Top bar (scrolls away; sits above the sticky nav) */}
       <div className="bg-navy-900 text-sm text-white">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
           <span>Call: <a className="font-semibold text-white underline-offset-4 hover:underline" href="tel:+19415005431">(941) 500-5431</a></span>
@@ -56,20 +56,21 @@ export function Header() {
         </div>
       </div>
 
-      {/* License bar: Florida state-certified license numbers. Hidden on mobile to free up
-          fixed-header space; the same license numbers appear in the footer. */}
-      <div className="hidden border-t border-white/10 bg-navy-900 text-xs text-white/75 sm:block">
+      {/* License bar: Florida state-certified license numbers. Scrolls away with the top bar.
+          Separators are hidden on mobile so the wrapped items don't show dangling bullets. */}
+      <div className="border-t border-white/10 bg-navy-900 text-xs text-white/75">
         <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 py-1.5 text-center">
           <span className="font-semibold uppercase tracking-wide text-white/55">Florida State Certified</span>
-          <span aria-hidden className="text-white/25">&bull;</span>
+          <span aria-hidden className="hidden text-white/25 sm:inline">&bull;</span>
           <span>General Contractor <span className="font-semibold text-white">CGC1509237</span></span>
-          <span aria-hidden className="text-white/25">&bull;</span>
+          <span aria-hidden className="hidden text-white/25 sm:inline">&bull;</span>
           <span>Roofing Contractor <span className="font-semibold text-white">CCC1332648</span></span>
         </div>
       </div>
 
-      {/* Sticky region: only the logo + nav freeze on scroll. The top bar and license bar above it scroll away. */}
-      <div className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
+      {/* Sticky region: only the logo + nav freeze. As a direct child of <body> it stays pinned
+          for the whole page, while the top bar and license bar above it scroll away. */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
       {/* Main nav row: navy bar so the orange-on-transparent logo integrates seamlessly (no pill) */}
       <div className="container flex items-center justify-between gap-6 py-3">
         {/* Logo image: orange wordmark on transparent bg, sitting directly on the navy bar */}
@@ -250,7 +251,7 @@ export function Header() {
           </div>
         </nav>
       )}
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
