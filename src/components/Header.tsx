@@ -42,7 +42,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
+    <header className="z-50">
       {/* Top bar */}
       <div className="bg-navy-900 text-sm text-white">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
@@ -68,6 +68,8 @@ export function Header() {
         </div>
       </div>
 
+      {/* Sticky region: only the logo + nav freeze on scroll. The top bar and license bar above it scroll away. */}
+      <div className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur">
       {/* Main nav row: navy bar so the orange-on-transparent logo integrates seamlessly (no pill) */}
       <div className="container flex items-center justify-between gap-6 py-3">
         {/* Logo image: orange wordmark on transparent bg, sitting directly on the navy bar */}
@@ -248,6 +250,7 @@ export function Header() {
           </div>
         </nav>
       )}
+      </div>
     </header>
   );
 }
