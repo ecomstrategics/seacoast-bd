@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { SchemaScript, personSchema } from "@/components/Schema";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <SchemaScript schema={personSchema()} />
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <p className="eyebrow">Our story</p>
@@ -70,6 +73,59 @@ export default function AboutPage() {
               </div>
               <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our crew replacing a storm-damaged fence. The same team handles the full exterior envelope on every job.</figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
+        <div className="container">
+          <p className="eyebrow">Leadership</p>
+          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Meet Clear Dayland, owner of Seacoast Building &amp; Design</h2>
+          <div className="mt-8 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
+            <div>
+              <ImagePlaceholder label="Clear Dayland, owner of Seacoast Building & Design" ratio="4/3" tone="navy" />
+              <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
+                <p className="font-heading font-bold text-navy">Credentials</p>
+                <ul className="mt-3 space-y-2 text-sm text-text-secondary">
+                  <li>Florida Certified General Contractor</li>
+                  <li>Florida Certified Roofing Contractor</li>
+                  <li>OSHA-certified jobsite safety</li>
+                  <li>A+ rated with the Better Business Bureau</li>
+                  <li>5-star Google review rating</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p className="leading-8 text-text-secondary">
+                Clear Dayland is the owner of Seacoast Building &amp; Design and a Florida Certified General Contractor and Certified Roofing Contractor with more than 30 years of hands-on experience. He has spent three decades building and improving high-value residential and commercial properties across the State of Florida.
+              </p>
+              <p className="mt-5 leading-8 text-text-secondary">
+                Clear has worked every tier of the trade, from apprentice and builder to roofer, sales and production manager, insurance adjuster, and finally owner of his own company. That full-stack experience is why he stays personally involved at every level of a project, from the first inspection to the final result.
+              </p>
+              <p className="mt-5 leading-8 text-text-secondary">
+                His commitment to homeowners and businesses shows in the standards he holds the company to: OSHA-certified safety practices, an A+ rating with the Better Business Bureau, and 5-star Google reviews that reflect the quality and value clients see in his work.
+              </p>
+              <div className="mt-6">
+                <p className="font-heading font-bold text-navy">What Clear specializes in</p>
+                <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
+                  <li>Storm readiness programs for homeowners and communities</li>
+                  <li>Shipping and Connex container build-outs for homes, offices, and micro-green gardens</li>
+                  <li>Residential and commercial roofing</li>
+                  <li>Radiant barrier roof underlayment</li>
+                  <li>Land and property investment</li>
+                  <li>General contracting across all trades: doors, drywall, gutters, lanais, painting, remodeling, siding, and windows</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 rounded-2xl border border-navy/10 bg-white px-8 py-7">
+            <p className="eyebrow">A family business</p>
+            <p className="mt-3 leading-8 text-text-secondary">
+              Clear and his wife Chandra are the visionary owners behind Seacoast Building &amp; Design, serving as the operational anchors for the company in the State of Florida. Together they have built a stellar reputation as a trusted Certified General Contractor and Roofing Contractor team.
+            </p>
+            <p className="mt-4 leading-8 text-text-secondary">
+              Mentoring the next generation is a priority for Clear, and both of his sons are following in his footsteps. Donovan is a Journeyman Electrician, and Cazwyn works as a Storm Restoration Consultant, helping homeowners and business owners recover after a storm.
+            </p>
           </div>
         </div>
       </section>

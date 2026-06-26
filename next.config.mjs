@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/testimonials",
+        destination: "/customer-reviews",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

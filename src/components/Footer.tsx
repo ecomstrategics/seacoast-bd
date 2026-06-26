@@ -30,7 +30,7 @@ const pillarLinks = {
 
 const quickLinks = [
   { label: "Our Work", href: "/our-work" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Customer Reviews", href: "/customer-reviews" },
   { label: "Financing", href: "/financing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

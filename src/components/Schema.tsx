@@ -43,6 +43,42 @@ export function localBusinessSchema(): SchemaObject {
   };
 }
 
+export function personSchema(): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://seacoastbd.com/about#clear-dayland",
+    name: "Clear Dayland",
+    jobTitle: "Owner",
+    worksFor: { "@id": "https://seacoastbd.com/#organization" },
+    description:
+      "Owner of Seacoast Building & Design and a Florida Certified General Contractor and Certified Roofing Contractor with more than 30 years of hands-on experience in residential and commercial construction.",
+    // image: add "https://seacoastbd.com/images/about/clear-dayland.webp" once the owner photo is delivered.
+    knowsAbout: [
+      "Residential roofing",
+      "Commercial roofing",
+      "Storm damage restoration",
+      "Storm preparedness programs",
+      "Radiant barrier roof underlayment",
+      "Shipping container build-outs",
+      "General contracting",
+      "Real estate investment",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        name: "Florida Certified General Contractor",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "license",
+        name: "Florida Certified Roofing Contractor",
+      },
+    ],
+  };
+}
+
 export function webSiteSchema(): SchemaObject {
   return {
     "@context": "https://schema.org",

@@ -41,15 +41,15 @@ export const primaryNav: NavItem[] = [
     ],
   },
   { label: "Financing", href: "/financing" },
+  { label: "Our Work", href: "/our-work" },
   {
-    label: "Our Work",
-    href: "/our-work",
+    label: "About",
+    href: "/about",
     dropdown: [
-      { label: "Project Portfolio", href: "/our-work" },
-      { label: "Testimonials", href: "/testimonials" },
+      { label: "About Seacoast", href: "/about" },
+      { label: "Customer Reviews", href: "/customer-reviews" },
     ],
   },
-  { label: "About", href: "/about" },
 ];
 
 export type SolutionsMegaItem = { label: string; href: string };
