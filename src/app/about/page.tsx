@@ -37,7 +37,7 @@ export default function AboutPage() {
               We handle the full exterior envelope: roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, and storm damage repairs. Our team coordinates trades, permitting, materials, and documentation from first inspection to final walkthrough.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
-              Every project we complete is documented on video, with 24 completed project videos and counting. This level of transparency is rare in contracting. We believe it&apos;s the most honest way to show what we can do.
+              Every project we complete is documented on video, and our library of project videos keeps growing. This level of transparency is rare in contracting. We believe it&apos;s the most honest way to show what we can do.
             </p>
           </div>
           <div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
       <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl text-center">
           <p className="eyebrow">The work speaks</p>
-          <h2 className="mt-3 font-heading text-4xl font-bold text-navy">24 completed projects. All on video.</h2>
+          <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Decades of completed work, documented on video.</h2>
           <p className="mt-5 text-lg text-text-secondary">
             We don&apos;t just tell you we do good work. We show you every project, documented on video, with real results you can evaluate before you sign anything.
           </p>

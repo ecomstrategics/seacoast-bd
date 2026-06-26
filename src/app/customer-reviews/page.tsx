@@ -124,7 +124,7 @@ export default function CustomerReviewsPage() {
           <p className="eyebrow">Video proof</p>
           <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Don&apos;t just take our word for it</h2>
           <p className="mt-5 text-lg text-text-secondary">
-            Watch 24 documented project videos. Real jobs, real results, no stock footage. This is what 40 years of Southwest Florida contracting looks like.
+            Watch our documented project videos. Real jobs, real results, no stock footage. This is what 40 years of Southwest Florida contracting looks like.
           </p>
           <div className="mt-8">
             <Link href="/our-work" className="rounded-full bg-orange-deep px-8 py-4 text-center font-bold text-white hover:bg-copper">Browse Project Videos</Link>
