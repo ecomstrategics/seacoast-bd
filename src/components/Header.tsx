@@ -56,8 +56,9 @@ export function Header() {
         </div>
       </div>
 
-      {/* License bar: Florida state-certified license numbers */}
-      <div className="border-t border-white/10 bg-navy-900 text-xs text-white/75">
+      {/* License bar: Florida state-certified license numbers. Hidden on mobile to free up
+          fixed-header space; the same license numbers appear in the footer. */}
+      <div className="hidden border-t border-white/10 bg-navy-900 text-xs text-white/75 sm:block">
         <div className="container flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 py-1.5 text-center">
           <span className="font-semibold uppercase tracking-wide text-white/55">Florida State Certified</span>
           <span aria-hidden className="text-white/25">&bull;</span>
