@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { SchemaScript, personSchema } from "@/components/Schema";
 import { serviceArea } from "@/data/navigation";
 
@@ -83,7 +82,11 @@ export default function AboutPage() {
           <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Meet Clear Dayland, owner of Seacoast Building &amp; Design</h2>
           <div className="mt-8 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
             <div>
-              <ImagePlaceholder label="Clear Dayland, owner of Seacoast Building & Design" ratio="4/3" tone="navy" />
+              <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
+                <div className="relative aspect-[4/5]">
+                  <Image src="/images/about/clear-dayland.webp" alt="Clear Dayland, owner of Seacoast Building & Design, a Florida Certified General Contractor and Certified Roofing Contractor, wearing a Seacoast Building & Design shirt" fill className="object-cover" sizes="(min-width: 768px) 40vw, 100vw" priority />
+                </div>
+              </figure>
               <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
                 <p className="font-heading font-bold text-navy">Credentials</p>
                 <ul className="mt-3 space-y-2 text-sm text-text-secondary">

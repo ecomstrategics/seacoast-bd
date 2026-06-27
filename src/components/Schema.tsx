@@ -53,7 +53,7 @@ export function personSchema(): SchemaObject {
     worksFor: { "@id": "https://seacoastbd.com/#organization" },
     description:
       "Owner of Seacoast Building & Design and a Florida Certified General Contractor and Certified Roofing Contractor with more than 30 years of hands-on experience in residential and commercial construction.",
-    // image: add "https://seacoastbd.com/images/about/clear-dayland.webp" once the owner photo is delivered.
+    image: "https://seacoastbd.com/images/about/clear-dayland.webp",
     knowsAbout: [
       "Residential roofing",
       "Commercial roofing",
