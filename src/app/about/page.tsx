@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <p className="font-heading font-bold text-navy">What Clear specializes in</p>
                 <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
                   <li>Storm readiness programs for homeowners and communities</li>
-                  <li>Shipping and Connex container build-outs for homes, offices, and micro-green gardens</li>
+                  <li>Shipping and Connex container build-outs for homes, offices, and micro-green gardens, including buying, moving, and renting</li>
                   <li>Residential and commercial roofing</li>
                   <li>Radiant barrier roof underlayment</li>
                   <li>Land and property investment</li>
