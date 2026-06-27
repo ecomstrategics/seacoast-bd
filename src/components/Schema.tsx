@@ -6,7 +6,7 @@ export type SchemaObject = Record<string, unknown>;
 export function localBusinessSchema(): SchemaObject {
   return {
     "@context": "https://schema.org",
-    "@type": "GeneralContractor",
+    "@type": ["GeneralContractor", "Organization"],
     "@id": "https://seacoastbd.com/#organization",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
