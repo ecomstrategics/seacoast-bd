@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
 import { SchemaScript, personSchema } from "@/components/Schema";
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <SchemaScript schema={personSchema()} />
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
           <p className="eyebrow">Our story</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Built on 40+ years of Southwest Florida work</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">

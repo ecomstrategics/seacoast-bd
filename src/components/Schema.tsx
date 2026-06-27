@@ -39,6 +39,11 @@ export function localBusinessSchema(): SchemaObject {
       "https://www.instagram.com/seacoastband/",
       "https://www.youtube.com/@SeacoastBuildingDesign",
     ],
+    brand: {
+      "@type": "Brand",
+      name: "Seacoast Building & Design",
+    },
+    founder: { "@id": "https://seacoastbd.com/about#clear-dayland" },
     priceRange: "$$",
   };
 }

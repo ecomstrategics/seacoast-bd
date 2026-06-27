@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { serviceAreaCities } from "@/data/serviceAreas";
@@ -18,6 +19,7 @@ export default function ServiceAreaIndexPage() {
       {/* Hero */}
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Areas" }]} />
           <p className="eyebrow">Where we work</p>
           <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Southwest Florida Service Areas</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">

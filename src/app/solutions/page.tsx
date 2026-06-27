@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SolutionsPillar } from "@/components/SolutionsPillar";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, serviceSchema } from "@/components/Schema";
@@ -50,6 +51,7 @@ export default function SolutionsPage() {
       {/* Hero */}
       <section className="bg-navy py-20 text-white md:py-28">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Solutions" }]} />
           <p className="eyebrow text-orange/80">Solutions</p>
           <h1 className="mt-3 font-heading text-5xl font-bold leading-tight md:text-6xl">
             Protect. Improve. Expand.

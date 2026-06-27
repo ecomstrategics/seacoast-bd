@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function ResourcesPage() {
     <>
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Resources" }]} />
           <p className="eyebrow">Knowledge base</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Resources for Florida property owners</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">

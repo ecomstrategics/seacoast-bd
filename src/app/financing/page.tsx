@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
+import { SchemaScript, faqSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Project Financing",
@@ -91,8 +93,10 @@ const faqs = [
 export default function FinancingPage() {
   return (
     <>
+      <SchemaScript schema={faqSchema(faqs.map((item) => ({ question: item.q, answer: item.a })))} />
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Financing" }]} />
           <p className="eyebrow">Financing options through Hearth</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Renovation financing</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">

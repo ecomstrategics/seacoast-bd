@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { ReviewForm } from "@/components/ReviewForm";
 
@@ -53,6 +54,7 @@ export default function CustomerReviewsPage() {
     <>
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Customer Reviews" }]} />
           <p className="eyebrow">Customer reviews</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Customer reviews</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">

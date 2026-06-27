@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteForm } from "@/components/QuoteForm";
 import { serviceArea } from "@/data/navigation";
 
@@ -12,6 +13,7 @@ export default function ContactPage() {
     <>
       <section className="bg-navy py-20 text-white">
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
           <p className="eyebrow">Get in touch</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Request a Free Quote</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
