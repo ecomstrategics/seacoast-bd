@@ -7,7 +7,7 @@ import { SchemaScript, serviceSchema, faqSchema } from "@/components/Schema";
 export const metadata: Metadata = {
   title: "Capital Partners & Build-to-Rent | Seacoast Building & Design",
   description:
-    "New housing legislation is pointing institutional capital toward new construction. Seacoast is Florida's build-to-rent and new-construction partner, from land to delivery.",
+    "The 21st Century ROAD to Housing Act is pointing institutional capital toward new construction. Seacoast is Florida's build-to-rent and new-construction partner, from land to delivery.",
 };
 
 const offerings = [
@@ -64,9 +64,9 @@ const whySeacoast = [
 
 const faqs = [
   {
-    question: "What is changing in the single-family housing market?",
+    question: "What is the 21st Century ROAD to Housing Act?",
     answer:
-      "Pending federal legislation would bar large institutional investors from buying existing single-family homes, while keeping new construction, build-to-rent new construction, and new or converted 55+ senior housing as permitted paths. The practical effect is that institutional housing capital is being pointed toward building rather than buying. The legislation is still moving through Congress, so this is a positioning window, not a settled rule.",
+      "The 21st Century ROAD to Housing Act is federal legislation that would bar large institutional investors from buying existing single-family homes, while keeping new construction, build-to-rent new construction, and new or converted 55+ senior housing as permitted paths. The practical effect is that institutional housing capital is being pointed toward building rather than buying. The Act is still moving through Congress, so this is a positioning window, not a settled rule.",
   },
   {
     question: "Why partner with Seacoast specifically?",
@@ -105,7 +105,7 @@ export default function CapitalPartnersPage() {
             New housing law is pointing capital at new construction.
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-white/80">
-            Pending federal legislation would push institutional housing capital off buying existing homes and onto
+            The 21st Century ROAD to Housing Act would push institutional housing capital off buying existing homes and onto
             new construction, build-to-rent, and 55+ senior housing. That is exactly what Seacoast builds. We are
             Florida&apos;s new-construction and build-to-rent partner, from land to delivery, anchored in the Southwest Florida growth corridor.
           </p>
@@ -120,12 +120,13 @@ export default function CapitalPartnersPage() {
       <section className="section dark-band bg-navy">
         <div className="container grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-start">
           <div>
-            <p className="eyebrow">Why now</p>
+            <p className="eyebrow">Why now: the 21st Century ROAD to Housing Act</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy">The only legal door is build and renovate.</h2>
             <p className="mt-4 text-text-secondary">
-              The legislation moving through Congress would bar large institutional investors from acquiring existing
-              single-family homes, with steep penalties for violations. It deliberately keeps the door open for newly
-              constructed homes for sale, build-to-rent new construction, and new, renovated, or converted 55+ senior housing.
+              The 21st Century ROAD to Housing Act, the legislation moving through Congress, would bar large institutional
+              investors from acquiring existing single-family homes, with steep penalties for violations. It deliberately
+              keeps the door open for newly constructed homes for sale, build-to-rent new construction, and new, renovated,
+              or converted 55+ senior housing.
             </p>
             <p className="mt-4 text-text-secondary">
               The net effect is that billions in institutional housing capital is being redirected from buying existing
