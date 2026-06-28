@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/solutions`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/capital-partners`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/containers`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/containers/compare`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/our-work`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },

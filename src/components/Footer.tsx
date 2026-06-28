@@ -32,6 +32,7 @@ const quickLinks = [
   { label: "Our Work", href: "/our-work" },
   { label: "Customer Reviews", href: "/customer-reviews" },
   { label: "Financing", href: "/financing" },
+  { label: "Capital Partners", href: "/capital-partners" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
