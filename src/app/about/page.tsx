@@ -4,7 +4,8 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
-import { SchemaScript, personSchema } from "@/components/Schema";
+import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { SchemaScript, personSchema, chandraSchema } from "@/components/Schema";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <SchemaScript schema={personSchema()} />
+      <SchemaScript schema={chandraSchema()} />
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
@@ -81,8 +83,9 @@ export default function AboutPage() {
       <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Leadership</p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Meet Clear Dayland, owner of Seacoast Building &amp; Design</h2>
-          <div className="mt-8 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
+          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Meet the owners of Seacoast Building &amp; Design</h2>
+          <h3 className="mt-10 font-heading text-2xl font-bold text-navy">Clear Dayland, Owner</h3>
+          <div className="mt-6 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
             <div>
               <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
                 <div className="relative aspect-[4/5]">
@@ -119,6 +122,44 @@ export default function AboutPage() {
                   <li>Radiant barrier roof underlayment</li>
                   <li>Land and property investment</li>
                   <li>General contracting across all trades: doors, drywall, gutters, lanais, painting, remodeling, siding, and windows</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h3 className="mt-16 font-heading text-2xl font-bold text-navy">Chandra Dayland, Co-Owner</h3>
+          <div className="mt-6 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
+            <div>
+              <ImagePlaceholder label="Chandra Dayland, co-owner of Seacoast Building & Design" ratio="4/3" tone="navy" />
+              <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
+                <p className="font-heading font-bold text-navy">Background</p>
+                <ul className="mt-3 space-y-2 text-sm text-text-secondary">
+                  <li>20+ years immersed in construction operations</li>
+                  <li>Former aviation professional</li>
+                  <li>Operations, finance, and analytics lead</li>
+                  <li>Co-owner, Seacoast Building &amp; Design</li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p className="leading-8 text-text-secondary">
+                Chandra Dayland is co-owner of Seacoast Building &amp; Design and the operational backbone of the company. Her career began in aviation, spanning piloting, ground control, and aircraft dispatching, where uncompromising attention to detail, strict safety standards, and complex logistics were part of the job every day.
+              </p>
+              <p className="mt-5 leading-8 text-text-secondary">
+                Over the past two decades, Chandra immersed herself in the construction industry alongside her husband, Clear, learning the trade through hands-on observation and direct experience. She carried the same analytical, safety-first discipline from aviation into residential and commercial building, holding every project to exact specifications and top-tier quality standards.
+              </p>
+              <p className="mt-5 leading-8 text-text-secondary">
+                Today she leads the operational side of the business: communications, employee training, accounting, analytics, management, and sales. Her all-in-one approach helped expand Seacoast Building &amp; Design into multiple divisions, giving homeowners and businesses a true full-service experience under one roof. A dedicated wife and mother of two, Chandra knows firsthand how much a home means to a family, and she brings that perspective to every client&apos;s project and long-term investment.
+              </p>
+              <div className="mt-6">
+                <p className="font-heading font-bold text-navy">What Chandra leads</p>
+                <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
+                  <li>Operations, accounting, and analytics</li>
+                  <li>Employee training and team management</li>
+                  <li>Client communications and sales</li>
+                  <li>Restoration and structural upgrades and repairs</li>
+                  <li>Shipping container homes, offices, and material storage rentals</li>
+                  <li>Micro-green growing systems for families, businesses, and restaurants</li>
+                  <li>Land and property sourcing for investment and living</li>
                 </ul>
               </div>
             </div>

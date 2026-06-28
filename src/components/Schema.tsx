@@ -43,7 +43,10 @@ export function localBusinessSchema(): SchemaObject {
       "@type": "Brand",
       name: "Seacoast Building & Design",
     },
-    founder: { "@id": "https://seacoastbd.com/about#clear-dayland" },
+    founder: [
+      { "@id": "https://seacoastbd.com/about#clear-dayland" },
+      { "@id": "https://seacoastbd.com/about#chandra-dayland" },
+    ],
     priceRange: "$$",
   };
 }
@@ -80,6 +83,30 @@ export function personSchema(): SchemaObject {
         credentialCategory: "license",
         name: "Florida Certified Roofing Contractor",
       },
+    ],
+  };
+}
+
+export function chandraSchema(): SchemaObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://seacoastbd.com/about#chandra-dayland",
+    name: "Chandra Dayland",
+    jobTitle: "Co-Owner",
+    worksFor: { "@id": "https://seacoastbd.com/#organization" },
+    description:
+      "Co-owner and operations lead of Seacoast Building & Design. A former aviation professional, Chandra brings precision, safety-focused discipline, and analytical rigor to residential and commercial construction across Southwest Florida, and oversees operations, training, accounting, analytics, management, and sales.",
+    // TODO: add `image` once Chandra's headshot is provided.
+    knowsAbout: [
+      "Construction operations management",
+      "Employee training and team management",
+      "Accounting and analytics",
+      "Client communications and sales",
+      "Storm and structural restoration",
+      "Shipping container build-outs",
+      "Micro-green growing systems",
+      "Land and property investment",
     ],
   };
 }
