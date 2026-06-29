@@ -125,7 +125,7 @@ function StorageContent() {
             <SpecTable
               headers={["Size", "Footprint", "Interior Volume", "Best For", "Starting Price"]}
               rows={[
-                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $4,000 delivered"],
+                ["20 ft", "8 ft x 20 ft", "Approx. 1,170 cu ft", "Vehicles, boats, business inventory", "Starting at $3,200 delivered"],
                 ["40 ft standard", "8 ft x 40 ft", "Approx. 2,390 cu ft", "Large equipment, multi-use, future conversion", "Starting at $13,500"],
                 ["40 ft high-cube", "8 ft x 40 ft x 9'6\"", "Approx. 2,700 cu ft", "Tall equipment, walk-in clearance, HVAC add-ons", "Starting at $15,500"],
               ]}

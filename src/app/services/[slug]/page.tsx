@@ -839,6 +839,24 @@ const serviceHeroImages: Record<string, { src: string; alt: string }> = {
   },
 };
 
+// Specific options/types listed under each service, per Clear's Services Tab notes.
+const serviceTypeLists: Record<string, { heading: string; items: string[] }[]> = {
+  siding: [
+    { heading: "Siding types we install", items: ["Metal siding", "Vinyl siding", "Hardboard siding", "Wood siding", "Synthetic siding"] },
+  ],
+  "windows-and-doors": [
+    { heading: "Window materials", items: ["Aluminum and aluminum-clad", "Vinyl"] },
+    { heading: "Window styles", items: ["Picture", "Casement", "Double-hung", "Single-hung", "Sliders"] },
+    { heading: "Doors", items: ["French doors", "Entry doors with sidelights", "Exterior doors"] },
+  ],
+  "gutters-fascia-soffits": [
+    { heading: "Fascia and soffit materials", items: ["Aluminum", "Plastic", "Stucco"] },
+  ],
+  "exterior-renovations": [
+    { heading: "Exterior renovation services", items: ["Stucco", "Painting", "Pavers", "Concrete work", "Home additions", "Structural work", "Roof and structural framing"] },
+  ],
+};
+
 function GenericServiceLayout({ params }: Props) {
   const service = getServiceBySlug(params.slug)!;
   const heroImage = serviceHeroImages[params.slug];
@@ -897,6 +915,27 @@ function GenericServiceLayout({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {(serviceTypeLists[params.slug]?.length ?? 0) > 0 && (
+        <section className="section dark-band bg-navy-deep">
+          <div className="container">
+            <p className="eyebrow">What we offer</p>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">{service.name} options</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {serviceTypeLists[params.slug].map((group) => (
+                <div key={group.heading} className="rounded-2xl bg-white p-6 shadow-soft">
+                  <p className="font-heading text-lg font-bold text-navy">{group.heading}</p>
+                  <ul className="mt-4 space-y-2 text-sm text-text-secondary">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy">

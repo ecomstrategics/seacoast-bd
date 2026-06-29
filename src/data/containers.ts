@@ -15,8 +15,8 @@ export const containers: Container[] = [
     tagline: "Storm-rated. Built to last 50 years.",
     shortDescription: "Cat-5-rated steel storage that beats standard sheds and self-storage units for hurricane survival, security, and longevity. Custom delivery, placement, and finish options available.",
     icon: "📦",
-    startingPrice: "Starting at $4,000 delivered, add-ons available",
-    startingPriceValue: "4000",
+    startingPrice: "Starting at $3,200 delivered, add-ons available",
+    startingPriceValue: "3200",
   },
   {
     slug: "guest-houses",
@@ -42,8 +42,8 @@ export const containers: Container[] = [
     tagline: "Cat-5-rated. Built for the worst.",
     shortDescription: "When you can't evacuate, you need a structure that can take a direct hit. Our storm-rated container shelters are anchored, ventilated, and built to FEMA-aligned specs for coastal Southwest Florida.",
     icon: "🛡️",
-    startingPrice: "Starting at $3,500",
-    startingPriceValue: "3500",
+    startingPrice: "Starting at $3,200",
+    startingPriceValue: "3200",
   },
 ];
 
