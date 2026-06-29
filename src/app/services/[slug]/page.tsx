@@ -855,6 +855,18 @@ const serviceTypeLists: Record<string, { heading: string; items: string[] }[]> =
   "exterior-renovations": [
     { heading: "Exterior renovation services", items: ["Stucco", "Painting", "Pavers", "Concrete work", "Home additions", "Structural work", "Roof and structural framing"] },
   ],
+  "metal-buildings": [
+    { heading: "Building types", items: ["Pole barns", "Barndominiums", "Steel and metal structures"] },
+    { heading: "Options", items: ["Insulated panels", "Metal panel roofs", "Residential", "Commercial"] },
+  ],
+  carports: [
+    { heading: "What we build", items: ["New carport structures", "Carport repairs"] },
+    { heading: "Options", items: ["Insulated panels", "Metal panel roofs", "Residential", "Commercial"] },
+  ],
+  "thermal-drone-inspections": [
+    { heading: "What we inspect", items: ["Roof moisture and trapped water", "Hidden leaks and water intrusion", "Energy loss and insulation gaps", "Storm and structural damage"] },
+    { heading: "Property types", items: ["Residential", "Commercial"] },
+  ],
 };
 
 function GenericServiceLayout({ params }: Props) {

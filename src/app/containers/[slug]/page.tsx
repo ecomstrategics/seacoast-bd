@@ -193,6 +193,10 @@ function StorageContent() {
                 "Lighting and electrical hookup",
                 "Custom exterior paint or siding",
                 "Pad and foundation installation",
+                "Mounting to piers, slab-on-grade, or existing foundation",
+                "Attached deck",
+                "Temperature-controlled climate package",
+                "Workshop conversion",
                 "Lock boxes and security hardware",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">

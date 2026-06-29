@@ -5,10 +5,12 @@ import { containers } from "@/data/containers";
 
 const pillarLinks = {
   protect: [
+    { label: "Storm Ready Programs", href: "/storm-ready" },
     { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
     { label: "Storm Preparedness", href: "/services/storm-preparedness" },
     { label: "Emergency Response", href: "/services/emergency-response" },
     { label: "Storm Damage Repair", href: "/services/storm-damage-repair" },
+    { label: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections" },
     { label: "Impact Windows & Doors", href: "/services/windows-and-doors" },
   ],
   improve: [
@@ -23,6 +25,8 @@ const pillarLinks = {
   expand: [
     { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
     { label: "Room Additions", href: "/services/room-additions" },
+    { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },
+    { label: "Carports & Metal Roofs", href: "/services/carports" },
     { label: "Container Guest Houses", href: "/containers/guest-houses" },
     { label: "Container Offices", href: "/containers/offices-workshops" },
   ],

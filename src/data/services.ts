@@ -34,6 +34,27 @@ export const services: Service[] = [
     icon: "🚨",
     pillar: "protect",
   },
+  {
+    slug: "metal-buildings",
+    name: "Metal Buildings & Pole Barns",
+    shortDescription: "Pole barns, barndominiums, and steel buildings for residential and commercial property across Southwest Florida, with insulated and metal panel options.",
+    icon: "🏭",
+    pillar: "expand",
+  },
+  {
+    slug: "carports",
+    name: "Carports & Metal Roofs",
+    shortDescription: "New carport structures and repairs with insulated panels and metal panel roofs, for residential and commercial property across Southwest Florida.",
+    icon: "🚗",
+    pillar: "expand",
+  },
+  {
+    slug: "thermal-drone-inspections",
+    name: "Thermal Drone Inspections",
+    shortDescription: "Aerial thermal and infrared drone inspections that find roof moisture, hidden leaks, and energy loss across residential and commercial property.",
+    icon: "🚁",
+    pillar: "protect",
+  },
 ];
 
 export function getServiceBySlug(slug: string) {
