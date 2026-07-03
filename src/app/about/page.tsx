@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { SchemaScript, personSchema, chandraSchema } from "@/components/Schema";
 import { serviceArea } from "@/data/navigation";
 
@@ -129,7 +128,11 @@ export default function AboutPage() {
           <h3 className="mt-16 font-heading text-2xl font-bold text-navy">Chandra Dayland, Co-Owner</h3>
           <div className="mt-6 grid gap-12 md:grid-cols-[2fr_3fr] md:items-start">
             <div>
-              <ImagePlaceholder label="Chandra Dayland, co-owner of Seacoast Building & Design" ratio="4/3" tone="navy" />
+              <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
+                <div className="relative aspect-[4/5]">
+                  <Image src="/images/about/chandra-dayland.webp" alt="Chandra Dayland, co-owner of Seacoast Building & Design, wearing a Seacoast Building & Design polo shirt" fill className="object-cover" sizes="(min-width: 768px) 40vw, 100vw" />
+                </div>
+              </figure>
               <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
                 <p className="font-heading font-bold text-navy">Background</p>
                 <ul className="mt-3 space-y-2 text-sm text-text-secondary">

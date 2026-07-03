@@ -97,7 +97,7 @@ export function chandraSchema(): SchemaObject {
     worksFor: { "@id": "https://seacoastbd.com/#organization" },
     description:
       "Co-owner and operations lead of Seacoast Building & Design. A former aviation professional, Chandra brings precision, safety-focused discipline, and analytical rigor to residential and commercial construction across Southwest Florida, and oversees operations, training, accounting, analytics, management, and sales.",
-    // TODO: add `image` once Chandra's headshot is provided.
+    image: "https://seacoastbd.com/images/about/chandra-dayland.webp",
     knowsAbout: [
       "Construction operations management",
       "Employee training and team management",
