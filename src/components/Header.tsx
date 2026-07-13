@@ -3,10 +3,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { primaryNav, solutionsMega } from "@/data/navigation";
+import { primaryNav, solutionsMega, type NavItem } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
 const pillarAccents = { protect: "text-navy", improve: "text-navy", expand: "text-navy" } as const;
+const headerNav: NavItem[] = [
+  ...primaryNav,
+  {
+    label: "Resources",
+    href: "/resources",
+    dropdown: [
+      { label: "H.R. 6644 & ROAD Act", href: "/road-to-housing-act" },
+      { label: "Capital Partners", href: "/capital-partners" },
+    ],
+  },
+];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -39,6 +50,7 @@ export function Header() {
   }
   function cancelClose() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = null;
   }
 
   return (
@@ -86,8 +98,8 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav ref={navRef} className="hidden items-center gap-1 text-sm font-medium text-white lg:flex" aria-label="Main navigation">
-          {primaryNav.map((item) => {
+        <nav ref={navRef} className="hidden items-center gap-1 text-sm font-medium text-white xl:flex" aria-label="Main navigation">
+          {headerNav.map((item) => {
             if (item.mega === "solutions") {
               return (
                 <div
@@ -95,13 +107,17 @@ export function Header() {
                   className="relative"
                   onMouseEnter={() => openMenu("solutions")}
                   onMouseLeave={scheduleClose}
+                  onFocusCapture={cancelClose}
+                  onBlurCapture={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) scheduleClose();
+                  }}
                 >
                   <button
                     className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === "solutions"}
                     onFocus={() => openMenu("solutions")}
-                    onBlur={scheduleClose}
+                    onClick={() => openMenu("solutions")}
                   >
                     {item.label}
                     <svg className="h-3.5 w-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -156,13 +172,17 @@ export function Header() {
                   className="relative"
                   onMouseEnter={() => openMenu(key)}
                   onMouseLeave={scheduleClose}
+                  onFocusCapture={cancelClose}
+                  onBlurCapture={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) scheduleClose();
+                  }}
                 >
                   <button
                     className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === key}
                     onFocus={() => openMenu(key)}
-                    onBlur={scheduleClose}
+                    onClick={() => openMenu(key)}
                   >
                     {item.label}
                     <svg className="h-3.5 w-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -205,13 +225,13 @@ export function Header() {
         </nav>
 
         {/* Desktop CTAs */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Request a Quote</Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="rounded-lg border border-white/25 px-3 py-2 text-white lg:hidden focus-ring"
+          className="rounded-lg border border-white/25 px-3 py-2 text-white xl:hidden focus-ring"
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -223,7 +243,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white lg:hidden" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white xl:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
             <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Protect</p>
             {solutionsMega.protect.map((link) => (
@@ -244,7 +264,10 @@ export function Header() {
             <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Our Work</Link>
             <Link href="/customer-reviews" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Customer Reviews</Link>
             <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Resources</Link>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Resources</p>
+            <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Resources Hub</Link>
+            <Link href="/road-to-housing-act" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>H.R. 6644 &amp; ROAD Act</Link>
+            <Link href="/capital-partners" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Capital Partners</Link>
             <div className="my-3 border-t border-white/10" />
             <Link href="/contact" className="block rounded-full bg-orange-deep px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Request a Quote</Link>
             <a href="tel:+19415005431" className="block rounded-full border border-white/25 px-5 py-3 text-center font-semibold text-white" onClick={() => setMobileOpen(false)}>(941) 500-5431</a>
