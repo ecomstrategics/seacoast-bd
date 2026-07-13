@@ -33,9 +33,9 @@ type StormRichContent = {
 
 const stormContent: Record<string, StormRichContent> = {
   "storm-preparedness": {
-    heroH1: "Storm Preparedness: Be Ready Before the Storm Hits.",
+    heroH1: "Storm Preparation for Southwest Florida Properties",
     heroSub:
-      "Don't wait until the cone is on you. Seacoast's storm preparedness program covers boarding, shuttering, supply delivery, and priority emergency response, locked in before hurricane season.",
+      "Plan before a storm approaches. Seacoast can inspect openings, review shutters or boards, and document activation terms for your property.",
     heroPrimary: "Get a Preparedness Plan",
     heroSecondary: "See What's Included",
     stormLifecycleStage: "before",
@@ -44,21 +44,21 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Storm Damage Repair",
         href: "/services/storm-damage-repair",
         blurb:
-          "If a storm catches you unprepared, Seacoast handles insurance documentation, adjuster coordination, and full repair: roof to gutters to siding.",
+          "Seacoast can document visible damage, prepare a repair estimate, and complete the agreed roof and exterior repairs.",
         icon: "🔨",
       },
       {
-        title: "Container Storm Shelters",
+        title: "Engineered Container Structures",
         href: "/containers/storm-shelters",
         blurb:
-          "A Cat-5-rated container shelter is the permanent answer for families who need to ride out storms on their property.",
+          "Explore a container-based structure with site-specific engineering, permitting, anchoring, and opening requirements.",
         icon: "🛡️",
       },
       {
         title: "Impact Windows and Doors",
         href: "/services/windows-and-doors",
         blurb:
-          "Impact-rated glazing is the longest-lasting layer of storm protection for any Florida home, and it can reduce your wind insurance premium.",
+          "Review impact-rated window and door options for your property. Ask your insurer separately about any policy credits.",
         icon: "🚪",
       },
     ],
@@ -66,7 +66,7 @@ const stormContent: Record<string, StormRichContent> = {
       {
         question: "When should I sign up for storm preparedness?",
         answer:
-          "Now. Once a storm is named, boarding contractors are typically booked within 24 to 48 hours. Signing up in the off-season or early spring secures your spot and locks in priority service before demand spikes.",
+          "Plan before hurricane season or well before a specific storm approaches. Lead times and storm-response capacity depend on the property, materials, weather, and crew availability.",
       },
       {
         question: "Do you offer this for commercial properties and HOAs?",
@@ -76,17 +76,17 @@ const stormContent: Record<string, StormRichContent> = {
       {
         question: "What if I already have shutters?",
         answer:
-          "We inspect and catalog your existing shutters, confirm they still meet current Florida Building Code requirements, and include them in your preparedness plan. We fill gaps where coverage is missing.",
+          "We can inventory the shutters, inspect their visible condition and fit, and identify missing or damaged components. Any code or engineering review is confirmed in the written scope.",
       },
       {
         question: "Does my insurance discount a storm preparedness plan?",
         answer:
-          "A wind mitigation inspection, which is part of our pre-season assessment, can qualify your home for Florida wind mitigation credits that reduce your insurance premium. Ask us for details when you schedule.",
+          "Discounts and documentation requirements are set by your insurer. Ask the carrier whether it needs a separate wind-mitigation inspection and what improvements may qualify for credits.",
       },
       {
         question: "What happens if no storm hits that season?",
         answer:
-          "Off-season inspections routinely uncover repair issues: damaged fascia, degraded caulking, weak shutter hardware. You still get a full property assessment and peace of mind for the whole season.",
+          "The pre-season review still gives you an inventory of openings, visible shutter or board conditions, and any preparation items included in your written scope.",
       },
     ],
   },
@@ -95,7 +95,7 @@ const stormContent: Record<string, StormRichContent> = {
     variant: "emergency",
     heroH1: "Storm Emergency? Call Now.",
     heroSub:
-      "Seacoast emergency crews respond across Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. Boarding, shuttering, supply delivery, and immediate damage stabilization.",
+      "Call to confirm current storm-response availability for boarding, shuttering, temporary protection, and damage stabilization in Southwest Florida.",
     heroPrimary: "Call Now",
     stormLifecycleStage: "during",
     crossSellItems: [
@@ -103,21 +103,21 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Storm Damage Repair",
         href: "/services/storm-damage-repair",
         blurb:
-          "Once you're safe, Seacoast handles the insurance claim and the full repair: roof to gutters to siding.",
+          "Once conditions are safe, Seacoast can document visible damage, prepare a repair estimate, and complete agreed repairs.",
         icon: "🔨",
       },
       {
         title: "Storm Preparedness",
         href: "/services/storm-preparedness",
         blurb:
-          "Lock in priority boarding and shuttering before the next season so you're never scrambling again.",
+          "Review openings, materials, and activation terms before the next hurricane season.",
         icon: "🛡️",
       },
       {
-        title: "Container Storm Shelters",
+        title: "Engineered Container Structures",
         href: "/containers/storm-shelters",
         blurb:
-          "A permanent Cat-5-rated container shelter means you never have to make the evacuation decision under pressure.",
+          "Explore a container-based structure subject to site-specific engineering, permitting, anchoring, and opening requirements.",
         icon: "🏗️",
       },
     ],
@@ -125,9 +125,9 @@ const stormContent: Record<string, StormRichContent> = {
   },
 
   "storm-damage-repair": {
-    heroH1: "Storm Damage Repair: We Handle the Claim. You Handle Your Life.",
+    heroH1: "Storm Damage Repair With a Clear Plan From the Start",
     heroSub:
-      "Insurance documentation, adjuster coordination, scope-of-loss reports, and full repair from roof to gutters to siding. Seacoast manages the process from first assessment to final walkthrough.",
+      "Seacoast photographs visible damage, explains what needs repair, prepares a written estimate, and carries the agreed roof and exterior work through the final walkthrough.",
     heroPrimary: "Get a Damage Assessment",
     heroSecondary: "Call (941) 500-5431",
     stormLifecycleStage: "after",
@@ -136,21 +136,21 @@ const stormContent: Record<string, StormRichContent> = {
         title: "Roofing",
         href: "/services/roofing",
         blurb:
-          "Once the claim is approved, Seacoast handles the full roof replacement: tile, metal, shingle, or TPO, matched to your original system.",
+          "Seacoast can scope roof repair or replacement using tile, metal, shingle, or low-slope roofing options appropriate to the property.",
         icon: "🏠",
       },
       {
         title: "Storm Preparedness",
         href: "/services/storm-preparedness",
         blurb:
-          "Don't wait for the next storm. Lock in boarding, shuttering, and priority response before the next hurricane season.",
+          "Review boarding, shuttering, materials, and activation terms before the next hurricane season.",
         icon: "🛡️",
       },
       {
         title: "Emergency Response",
         href: "/services/emergency-response",
         blurb:
-          "If a storm is still active, call our emergency line for same-day boarding and immediate damage stabilization.",
+          "Call to confirm current availability for temporary protection or damage stabilization when conditions are safe.",
         icon: "🚨",
       },
     ],
@@ -158,32 +158,32 @@ const stormContent: Record<string, StormRichContent> = {
       {
         question: "How quickly can you respond after a storm?",
         answer:
-          "We prioritize storm response. Contact us right away to get on our assessment schedule. Our teams work across all six Southwest Florida counties and triage by severity.",
+          "Contact us as soon as it is safe. Scheduling depends on road access, weather, property conditions, crew availability, and the severity of active requests.",
       },
       {
         question: "Do you help with insurance documentation?",
         answer:
-          "Yes. We provide written assessments, photo documentation, drone footage, and scope-of-loss reports that coordinate directly with your adjuster. Seacoast has navigated hundreds of insurance claims across Southwest Florida.",
+          "Yes. Within the contracted scope, we can provide photos, observed-condition notes, and a construction repair estimate. Your insurer decides coverage and claim payment.",
       },
       {
         question: "What if my insurance claim is denied?",
         answer:
-          "We help document a supplement or appeal with additional evidence. We also work alongside licensed public adjusters and attorneys who specialize in Florida storm claim disputes.",
+          "Seacoast can provide construction documentation and an estimate for the work it proposes. A licensed public adjuster or attorney should advise you on coverage disputes, settlement, supplements, or appeals.",
       },
       {
         question: "Will you work directly with my insurance company?",
         answer:
-          "Yes. We communicate with adjusters on your behalf, provide required documentation, and keep the repair scope aligned with the approved claim all the way to final sign-off.",
+          "We can explain our construction scope and provide requested repair documentation. The property owner, a licensed public adjuster, or an attorney must handle claim negotiation, coverage, and settlement decisions.",
       },
       {
         question: "Do you handle partial damage or just full replacements?",
         answer:
-          "Both. We assess every damaged system: roof, siding, gutters, windows, fascia, soffits. We repair or replace based on what the damage requires and what your claim covers.",
+          "Both. The repair recommendation depends on the observed condition, applicable requirements, and the written scope you approve.",
       },
       {
         question: "Do I need multiple contractor bids for my insurance claim?",
         answer:
-          "Your policy may require it. We provide a detailed scope and cost estimate that meets your insurer's documentation requirements. Ask us when you schedule your assessment.",
+          "Requirements vary by policy and insurer. Seacoast can provide its construction scope and estimate; confirm any bidding or claim-submission requirements directly with your insurer.",
       },
     ],
   },
@@ -193,26 +193,26 @@ const stormContent: Record<string, StormRichContent> = {
 const serviceFaqs: Record<string, FAQItem[]> = {
   "roof-certification-inspection": [
     { question: "Who needs a roof certification inspection?", answer: "Homeowners buying, selling, renewing insurance, or responding to a carrier request often need documentation of roof age, condition, and estimated remaining useful life." },
-    { question: "What does the roof certification report include?", answer: "Typical reports include property details, inspection date, roof photos, observed damage or repair issues, estimated remaining life, inspected components, notes, and licensed inspector signatures." },
-    { question: "How quickly can I get the report?", answer: "Most roof certification reports can be turned around in 24 to 48 hours after inspection, depending on scheduling and property access." },
-    { question: "What happens if damage is found?", answer: "The inspection is a condition report, not a simple pass/fail. If repairs are needed, Seacoast can scope the work and complete repairs before final certification documentation is submitted." },
+    { question: "What does the roof certification report include?", answer: "The requested report can include property details, inspection date, roof photos, visible damage or repair issues, estimated remaining service life, inspected components, notes, and provider information." },
+    { question: "How quickly can I get the report?", answer: "Turnaround depends on scheduling, property access, roof conditions, and the documentation requested. We confirm timing when the inspection is booked." },
+    { question: "What happens if damage is found?", answer: "The inspection documents roof condition rather than giving a simple pass or fail. If repairs are recommended, Seacoast can provide a separate construction scope and quote." },
   ],
   roofing: [
     { question: "What roofing materials do you work with?", answer: "We install and repair tile, metal (standing seam, R-panel, stone-coated steel), TPO/flat, shingle, and slate-profile systems." },
-    { question: "Do you handle storm damage claims?", answer: "Yes. We document damage, coordinate with your insurance adjuster, and manage repairs from inspection to final walkthrough." },
-    { question: "How long does a roof replacement take?", answer: "Most residential replacements take 1 to 3 days. Commercial and multi-family projects are scoped individually." },
+    { question: "Do you handle storm damage claims?", answer: "We document visible damage, prepare a construction repair estimate, and complete agreed repairs. The property owner, a licensed public adjuster, or an attorney handles claim negotiation and coverage questions." },
+    { question: "How long does a roof replacement take?", answer: "Timing depends on roof size and material, permitting, product availability, weather, and site conditions. We provide a project-specific schedule with the written scope." },
   ],
   "gutters-fascia-soffits": [
     { question: "What gutter styles do you offer?", answer: "We install seamless K-style and half-round gutters in aluminum and copper, sized for Southwest Florida rainfall." },
     { question: "Can you replace just the fascia or soffits?", answer: "Yes. We can replace individual components or the full system depending on the scope of damage or renovation." },
   ],
   siding: [
-    { question: "Do you install Hardie board siding?", answer: "Yes. James Hardie fiber cement products are a primary option for our Southwest Florida clients due to moisture and impact resistance." },
-    { question: "Can siding improve energy efficiency?", answer: "New siding combined with proper insulation and moisture barriers can meaningfully reduce energy costs." },
+    { question: "Do you install Hardie board siding?", answer: "James Hardie fiber-cement siding is one option. Product selection depends on approved specifications, exposure, and the finish you want for the property." },
+    { question: "Can siding improve energy efficiency?", answer: "Siding work can be coordinated with insulation and water-management improvements. Actual energy performance depends on the full wall assembly and building conditions." },
   ],
   "windows-and-doors": [
-    { question: "Do you install impact-resistant windows?", answer: "Yes. We install impact-rated windows and doors designed to meet Florida building codes for wind and hurricane protection." },
-    { question: "How long does window replacement take?", answer: "Most residential window projects are completed within 1 to 2 days. Custom orders may add lead time." },
+    { question: "Do you install impact-resistant windows?", answer: "We can quote impact-rated window and door products. Applicable approvals, design pressures, installation details, and permits are confirmed for the property." },
+    { question: "How long does window replacement take?", answer: "Timing depends on the number and type of openings, product lead times, permitting, and site conditions. We provide a project-specific schedule with the quote." },
   ],
   "exterior-renovations": [
     { question: "What counts as an exterior renovation?", answer: "Anything outside the building envelope: structural repairs, paint, trim, cladding, walkways, lighting, and more." },
@@ -225,15 +225,15 @@ const serviceFaqs: Record<string, FAQItem[]> = {
   ],
   "solar-services": [
     { question: "What solar services does Seacoast offer?", answer: "Seacoast's solar team supports solar panel systems, inverters, battery storage, EV charging stations, and solar system maintenance." },
-    { question: "Can solar help lower electric bills?", answer: "Solar can reduce utility costs when the system is properly designed for your usage, roof, and sun exposure. We review your property and energy goals before recommending a system." },
+    { question: "Can solar help lower electric bills?", answer: "Solar may offset some grid electricity use. Output and savings depend on system design, utility rules, rates, usage, shading, weather, and equipment performance." },
     { question: "Do you handle EV charging?", answer: "Yes. EV charging can be scoped with solar panels, storage, or a standalone electrical upgrade depending on your vehicle and charging needs." },
   ],
   "pool-enclosures-lanais": [
     { question: "Do you build new enclosures or just repair existing ones?", answer: "Both. We design and build new pool enclosures and lanais, and repair or re-screen existing structures." },
-    { question: "What happens if a screen enclosure is damaged in a storm?", answer: "We assess structural damage, document it for insurance, and rebuild or repair to current Florida building code." },
+    { question: "What happens if a screen enclosure is damaged in a storm?", answer: "We can assess visible damage, prepare a construction repair estimate, and scope repair or rebuilding subject to permitting and applicable requirements." },
   ],
   "room-additions": [
-    { question: "Do you handle the full permit process?", answer: "Yes. We manage permitting, inspections, and coordination with local building departments from start to finish." },
+    { question: "Do you help with permits and inspections?", answer: "Permitting responsibilities depend on the project and jurisdiction. The written proposal identifies the permits and inspections Seacoast will coordinate and anything the owner or design team must provide." },
     { question: "What types of additions do you build?", answer: "Sunrooms, enclosed patios, garage conversions, carports, and traditional room additions for residential and commercial properties." },
   ],
 };
@@ -288,7 +288,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       <section className="bg-storm py-16 text-white md:py-24">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Emergency Response" }]} />
-          <p className="eyebrow mt-2 text-white/70">24 / 7 Emergency Line</p>
+          <p className="eyebrow mt-2 text-white/70">Storm-response availability</p>
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <a
             href="tel:+19415005431"
@@ -309,13 +309,13 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       {/* What we can do right now */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Right now</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">What Seacoast can do today.</h2>
+          <p className="eyebrow">How we can help</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Call us to see what storm help is available now.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { icon: "🪵", heading: "Board and Shutter", body: "Same-day boarding and shutter deployment when capacity allows. Pre-cut, labeled, and ready." },
-              { icon: "🪣", heading: "Supply Delivery", body: "Sandbags, tarps, plywood, and generator support delivered directly to your property." },
-              { icon: "🔒", heading: "Damage Stabilization", body: "Emergency tarping, water mitigation, and board-up service immediately after the storm passes." },
+              { icon: "🪵", heading: "Board and Shutter", body: "Boarding or shutter deployment based on safe access, available materials, and crew capacity." },
+              { icon: "🪣", heading: "Temporary Protection", body: "Available tarps, plywood, and related materials can be scoped for the property when access is safe." },
+              { icon: "🔒", heading: "Damage Stabilization", body: "Temporary roof covering or board-up work may be available after conditions are safe enough to inspect the property." },
             ].map((block) => (
               <div key={block.heading} className="rounded-2xl border border-storm/20 bg-white p-6 shadow-soft">
                 <div className="text-4xl" aria-hidden>{block.icon}</div>
@@ -330,11 +330,11 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       {/* Service area band */}
       <section className="bg-navy py-10 text-white">
         <div className="container">
-          <p className="eyebrow text-orange/80">Coverage</p>
-          <h2 className="mt-2 font-heading text-2xl font-bold">Six counties. One call.</h2>
+          <p className="eyebrow text-orange/80">Where we can respond</p>
+          <h2 className="mt-2 font-heading text-2xl font-bold">Tell us where the property is, and we will confirm whether we can help.</h2>
           <p className="mt-3 max-w-2xl text-white/70">
-            Seacoast emergency crews serve Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties.
-            If you&apos;re in Southwest Florida, we can get to you.
+            Seacoast serves properties across Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties.
+            Storm-response availability varies with weather, road access, demand, and crew capacity.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {["Hillsborough", "Manatee", "Sarasota", "Charlotte", "Lee", "Collier"].map((county) => (
@@ -347,15 +347,15 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
       {/* What to do right now — utility checklist */}
       <section className="section dark-band bg-navy-deep">
         <div className="container max-w-2xl">
-          <p className="eyebrow">Utility content</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">While you wait: five steps to take right now.</h2>
+          <p className="eyebrow">Before the storm</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Five practical safety steps.</h2>
           <ol className="mt-8 space-y-4">
             {[
-              "Move vehicles into the garage or away from trees. Falling limbs are the leading source of vehicle damage.",
-              "Bring in loose outdoor furniture, pots, and umbrellas. Anything under 50 lbs becomes a projectile at Cat-1 wind speeds.",
-              "Document your property with a full phone walkthrough: every room, every side of the house. Send the video to yourself.",
-              "Locate your insurance policy and adjuster contact before the storm. After, those documents can be the most important paper in the house.",
-              "Fill bathtubs and containers with fresh water. Utilities can be out for days after a direct hit.",
+              "Follow instructions from local emergency officials and evacuate when ordered. Contractor services are not a substitute for an evacuation plan.",
+              "If it is safe and time allows, bring loose outdoor furniture, pots, and umbrellas inside.",
+              "Charge phones and backup batteries, use flashlights instead of candles, and check carbon-monoxide alarms.",
+              "Keep identification, insurance information, medications, and other essential documents together in a dry, accessible place.",
+              "Store drinking water in clean containers. Water collected in a bathtub should be reserved for washing or flushing, not drinking.",
             ].map((step, i) => (
               <li key={i} className="flex gap-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-storm text-sm font-bold text-white">{i + 1}</span>
@@ -371,10 +371,10 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
         <div className="container">
           <div className="rounded-2xl bg-navy p-8 text-white md:p-12">
             <p className="eyebrow text-orange/80">After the storm</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold">Once you&apos;re safe, we handle the rest.</h2>
+            <h2 className="mt-2 font-heading text-3xl font-bold">Once conditions are safe, start with documentation.</h2>
             <p className="mt-4 max-w-2xl text-white/80">
-              Seacoast&apos;s storm damage repair team handles insurance documentation, adjuster coordination,
-              and the full repair: roof to gutters to siding. Hundreds of claims navigated across Southwest Florida.
+              Seacoast can document visible damage, prepare a construction repair estimate, and complete the
+              agreed roof and exterior work. Your insurer decides coverage and payment.
             </p>
             <Link href="/services/storm-damage-repair" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
               Learn About Storm Damage Repair →
@@ -385,7 +385,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="during" />
       <CrossSellBlock heading="Before the next storm" items={content.crossSellItems} />
-      <CTASection variant="orange" heading="Need emergency help right now?" subtext="Call (941) 500-5431 or use the form below. We'll get back to you as fast as possible." buttonLabel="Request Emergency Quote" />
+      <CTASection variant="orange" heading="Need storm-response help?" subtext="Call (941) 500-5431 or use the form to confirm current availability and safe-access conditions." buttonLabel="Request Storm-Response Help" />
     </>
   );
 }
@@ -426,17 +426,18 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       {/* Hero image */}
       <div className="container py-8">
         <div className="relative aspect-video overflow-hidden rounded-2xl">
-          <Image src="/images/services/storm-preparedness-hero.webp" alt="Seacoast crew installing storm shutters on a coastal Southwest Florida home with a stormy sky overhead" fill className="object-cover" sizes="100vw" />
+          <Image src="/images/services/storm-preparedness-hero.webp" alt="Representative view of storm shutters being installed on a Southwest Florida home" fill className="object-cover" sizes="100vw" />
         </div>
+        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Trust bar */}
       <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
-            { label: "Licensed and Insured", body: "Every project is performed by licensed contractors with full insurance coverage across Southwest Florida." },
-            { label: "40+ Years Experience", body: "Four decades of storm preparedness, damage repair, and exterior projects across six counties." },
-            { label: "Financing Available", body: "Flexible financing options available. Ask about payment plans when you request your quote." },
+            { label: "Florida Certified Contractor", body: "Seacoast Building & Design is a Florida certified general and roofing contractor." },
+            { label: "Residential and Commercial", body: "Preparedness scopes can be reviewed for homes, businesses, associations, and managed properties." },
+            { label: "Written Scope", body: "Materials, activation terms, access needs, and response limitations are documented before work begins." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
               <p className="eyebrow">{card.label}</p>
@@ -449,17 +450,17 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       {/* Why prep matters */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
-          <p className="eyebrow">The urgency</p>
+          <p className="eyebrow">Plan ahead</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why prep matters before the season starts.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Florida sees named storms every year. Most homeowners scramble to prepare when a storm forms,
-            and most boarding contractors are sold out 48 hours before landfall.
+            Preparing early creates time to measure openings, inspect existing protection, identify missing materials,
+            and agree on what Seacoast will do if a storm approaches.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { icon: "📋", heading: "Boards run out", body: "Plywood and pre-cut boards disappear from every home improvement store within hours of a storm watch. If you don't have them staged, you won't get them." },
-              { icon: "📅", heading: "Contractors get booked", body: "Professional boarding crews book up fast. Clients with prior contracts jump the queue. Walk-in requests during a watch rarely get filled." },
-              { icon: "📄", heading: "Insurance gaps compound", body: "Prep failures become claim complications. Damage that could have been mitigated with shutters or tarping often results in reduced or disputed payouts." },
+              { icon: "📋", heading: "Measure the openings", body: "Document each opening and the protection already on site before time and access become limited." },
+              { icon: "📅", heading: "Inventory materials", body: "Identify missing boards, shutters, fasteners, labels, and storage needs before a storm is nearby." },
+              { icon: "📄", heading: "Confirm activation terms", body: "Put the requested work, response limitations, access requirements, and material responsibilities in writing." },
             ].map((card) => (
               <div key={card.heading} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{card.icon}</div>
@@ -474,15 +475,15 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       {/* What's included */}
       <section id="whats-included" className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">The offer</p>
+          <p className="eyebrow">Plan details</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">What&apos;s included in a Seacoast preparedness plan.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: "🔍", heading: "Pre-season inspection", body: "Full property walk-through, vulnerability assessment, and written report covering every exposed system." },
-              { icon: "🪵", heading: "Custom shutter and board fitting", body: "Pre-cut, pre-labeled boards or installed shutters ready to deploy. No last-minute sizing, no guesswork." },
-              { icon: "🚚", heading: "Supply delivery", body: "Sandbags, plywood, tie-downs, and generator support delivered when a storm is named, before the stores are empty." },
-              { icon: "📞", heading: "Priority emergency response", body: "Seacoast preparedness clients move to the front of the line when a storm enters the cone of uncertainty." },
-              { icon: "🔧", heading: "Post-storm priority", body: "You're first on our damage assessment list after the storm passes. No waiting behind walk-in requests." },
+              { icon: "🔍", heading: "Property review", body: "Walk the property, inventory openings, and note visible conditions relevant to the requested preparation work." },
+              { icon: "🪵", heading: "Board or shutter scope", body: "Measure and label the openings included in the written scope and identify the materials required." },
+              { icon: "🚚", heading: "Material planning", body: "Confirm which materials are stored on site, supplied by the owner, or included by Seacoast." },
+              { icon: "📞", heading: "Activation terms", body: "Document how activation is requested and the weather, access, material, and capacity limits that apply." },
+              { icon: "🔧", heading: "Post-storm assessment", body: "If included and conditions are safe, schedule an assessment based on current access and crew availability." },
             ].map((item) => (
               <div key={item.heading} className="flex gap-4 rounded-2xl border border-navy/10 bg-white p-6 shadow-soft">
                 <span className="text-2xl" aria-hidden>{item.icon}</span>
@@ -503,10 +504,10 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">How it works: four steps, one season.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { step: "1", heading: "Schedule a pre-season inspection", body: "We walk the full property, assess vulnerability, and produce a written report." },
-              { step: "2", heading: "Custom-fit and document", body: "We custom-fit boards or shutters for every opening and photograph the property baseline." },
-              { step: "3", heading: "Storm activation", body: "When a storm forms, we execute your prep plan on a priority schedule, before the phone lines fill up." },
-              { step: "4", heading: "Post-storm priority queue", body: "You're first in line for damage assessment and repair. No competing with walk-in demand." },
+              { step: "1", heading: "Review the property", body: "We inventory the openings and visible conditions included in the requested scope." },
+              { step: "2", heading: "Define materials", body: "We identify the boards, shutters, labels, fasteners, and storage responsibilities for the plan." },
+              { step: "3", heading: "Confirm activation", body: "The agreement documents how to request service and the conditions that can limit response." },
+              { step: "4", heading: "Reassess after the storm", body: "When access is safe, Seacoast can document visible damage and prepare a repair scope." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-deep font-heading text-lg font-bold text-white">{item.step}</div>
@@ -518,47 +519,32 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
         </div>
       </section>
 
-      {/* Plan tiers */}
+      {/* Plan scope */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Plan options</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Choose the right level of coverage.</h2>
+          <p className="eyebrow">Your property, your plan</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">A plan built around the property and the work requested.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Pricing is customized to your property. Request a quote and we&apos;ll walk through the right plan for your home or portfolio.
+            Seacoast prepares a written quote after reviewing the openings, existing protection, material needs,
+            storage and access conditions, and requested activation work. Your quote will spell out what is included,
+            what you provide, and what Seacoast can do when a storm is approaching.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              {
-                tier: "Basic Preparedness",
-                includes: ["Pre-season inspection", "Custom-fit boards for all openings", "Written vulnerability report", "Post-storm priority queue"],
-              },
-              {
-                tier: "Full Preparedness",
-                includes: ["Everything in Basic", "Permanent shutter installation", "Supply delivery on storm activation", "Priority emergency response contract"],
-                featured: true,
-              },
-              {
-                tier: "HOA and Multi-Property",
-                includes: ["Custom scope for common areas and units", "Community-wide boarding plan", "Dedicated response coordinator", "Volume pricing available"],
-              },
-            ].map((plan) => (
-              <div key={plan.tier} className={`rounded-2xl border p-6 ${plan.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
-                {plan.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
-                <h3 className="font-heading text-xl font-bold text-navy">{plan.tier}</h3>
-                <ul className="mt-5 space-y-2">
-                  {plan.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-charcoal">
-                      <span className="mt-0.5 text-success" aria-hidden>✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
-                  Get a Plan Quote
-                </Link>
+              { heading: "Opening inventory", body: "Windows, doors, shutters, boards, and visible gaps included in the review." },
+              { heading: "Material responsibilities", body: "Who supplies, stores, transports, installs, and removes each item." },
+              { heading: "Activation process", body: "How service is requested and when access, weather, or capacity may prevent work." },
+              { heading: "Property-specific price", body: "A quote based on measured quantities, materials, access, and the agreed scope." },
+            ].map((item) => (
+              <div key={item.heading} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+                <h3 className="font-heading text-xl font-bold text-navy">{item.heading}</h3>
+                <p className="mt-3 text-sm text-text-secondary">{item.body}</p>
               </div>
             ))}
           </div>
+          <Link href="/contact" className="mt-8 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+            Get a Plan Quote
+          </Link>
         </div>
       </section>
 
@@ -572,8 +558,8 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       </section>
 
       <StormLifecycle activeStage="before" />
-      <CrossSellBlock heading="What pairs with storm preparedness" items={content.crossSellItems} />
-      <CTASection variant="orange" heading="Hurricane season starts June 1. Get prepped now." subtext="Request a preparedness plan quote from Seacoast before the season starts and the boarding crews are booked." buttonLabel="Get a Preparedness Plan" />
+      <CrossSellBlock heading="Related services" items={content.crossSellItems} />
+      <CTASection variant="orange" heading="Plan your property preparation before a storm approaches." subtext="Request a property review and a written preparedness scope from Seacoast." buttonLabel="Get a Preparedness Plan" />
     </>
   );
 }
@@ -620,17 +606,18 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       {/* Hero image */}
       <div className="container py-8">
         <div className="relative aspect-video overflow-hidden rounded-2xl">
-          <Image src="/images/services/storm-damage-repair-hero.webp" alt="Seacoast inspector documenting storm damage on a residential roof with drone and photo documentation in progress" fill className="object-cover" sizes="100vw" />
+          <Image src="/images/services/storm-damage-repair-hero.webp" alt="Representative view of a roof inspection and storm-damage documentation" fill className="object-cover" sizes="100vw" />
         </div>
+        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Trust bar */}
       <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
-            { label: "Licensed and Insured", body: "Every repair is performed by licensed contractors with full insurance coverage across Southwest Florida." },
-            { label: "Hundreds of Claims Navigated", body: "Seacoast has supported homeowners through hundreds of insurance claims across Southwest Florida: documentation, adjuster coordination, and repairs." },
-            { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
+            { label: "Florida Certified Contractor", body: "Seacoast Building & Design is a Florida certified general and roofing contractor." },
+            { label: "Residential and Commercial", body: "Repair scopes are available for homes, businesses, associations, and managed properties." },
+            { label: "A Clear Repair Plan", body: "You receive a written explanation of the conditions we saw, the work we recommend, and the proposed price." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
               <p className="eyebrow">{card.label}</p>
@@ -640,21 +627,21 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         </div>
       </section>
 
-      {/* We Handle the Claim */}
+      {/* Damage assessment and repair process */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">The process</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">We handle the claim. You handle your life.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">See what happened, understand the options, and move into repairs.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            After a storm, most homeowners face two hard jobs at once: managing displacement and managing an insurance claim.
-            Seacoast takes the second job off your plate entirely.
+            Seacoast records the visible damage, prepares a construction estimate, explains the proposed work,
+            and completes the repairs you authorize.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { step: "1", icon: "📸", heading: "Damage documentation", body: "Full photo log, drone footage, and written scope-of-loss assessment. Everything your adjuster needs from day one." },
-              { step: "2", icon: "📋", heading: "Adjuster coordination", body: "We communicate directly with your adjuster, provide scope reports, and stay aligned on the approved claim through every revision." },
-              { step: "3", icon: "⚖️", heading: "Claim support", body: "If your claim is disputed or denied, we document supplemental evidence and work with licensed public adjusters and attorneys who specialize in Florida storm disputes." },
-              { step: "4", icon: "🔨", heading: "Full repair", body: "Once the claim is approved, Seacoast handles the complete repair: roofing, siding, gutters, windows, and every affected system, to final walkthrough." },
+              { step: "1", icon: "📸", heading: "Photograph the damage", body: "Photos and written notes create a clear record of what we can see during the assessment." },
+              { step: "2", icon: "📋", heading: "Build the repair estimate", body: "We outline the recommended work and price based on the conditions we observed." },
+              { step: "3", icon: "🧾", heading: "Talk through the scope", body: "We explain our construction methods and estimate to you or your insurer while coverage decisions stay with the appropriate claim professionals." },
+              { step: "4", icon: "🔨", heading: "Complete the agreed work", body: "Seacoast carries out the authorized roof and exterior repairs, subject to permits, materials, weather, and site conditions." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{item.icon}</div>
@@ -671,21 +658,23 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <div className="container">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
-              <p className="eyebrow text-orange/80">Track record</p>
+              <p className="eyebrow text-orange/80">A clear repair record</p>
               <h2 className="mt-2 font-heading text-3xl font-bold">
-                Hundreds of insurance claims navigated across Southwest Florida.
+                Photos and a written estimate for the conversations ahead.
               </h2>
               <p className="mt-4 text-white/80">
-                Seacoast has guided homeowners and property managers through the full insurance repair cycle:
-                initial assessment, adjuster review, scope negotiation, and final sign-off.
-                We know what adjusters need, what documentation holds up, and what language gets claims approved.
+                Seacoast can provide photos, observed-condition notes, and its construction estimate for the proposed work.
+                Your insurer decides coverage and payment; a licensed public adjuster or attorney can advise you on claim negotiation or disputes.
               </p>
               <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
                 Get a Damage Assessment
               </Link>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-              <Image src="/images/services/storm-damage-repair-completed.webp" alt="Seacoast completed storm repair — new roof installed after hurricane damage on a residential property in Southwest Florida" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            <div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image src="/images/services/storm-damage-repair-completed.webp" alt="Representative view of a completed residential roof repair in Southwest Florida" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+              </div>
+              <p className="mt-3 text-xs text-white/60">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>
@@ -695,15 +684,14 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <div className="rounded-2xl border border-navy/10 bg-white p-8 shadow-soft">
-            <p className="eyebrow">Claims support</p>
+            <p className="eyebrow">Coverage questions</p>
             <h2 className="mt-2 font-heading text-2xl font-bold text-navy">What if my claim is denied?</h2>
             <p className="mt-4 text-text-secondary">
-              Florida storm claims are frequently disputed or underpaid. If your claim is denied or the payout doesn&apos;t
-              cover the full scope of damage, Seacoast can provide additional documentation and work alongside
-              licensed public adjusters and attorneys who specialize in Florida storm claim appeals.
-              We&apos;ve been through this process many times and know how to build the evidentiary record needed to reopen and win a disputed claim.
+              Seacoast can provide construction documentation and an estimate for the work it proposes. We do not negotiate
+              insurance coverage or settlement on behalf of the property owner. If you need claim representation or advice about
+              a denial, supplement, or appeal, speak with your insurer, a Florida-licensed public adjuster, or an attorney.
             </p>
-            <Link href="/contact" className="mt-6 inline-block font-bold text-orange hover:underline">Talk to us about your claim →</Link>
+            <Link href="/contact" className="mt-6 inline-block font-bold text-orange hover:underline">Request a construction assessment →</Link>
           </div>
         </div>
       </section>
@@ -712,7 +700,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy-deep">
           <div className="container">
-            <p className="eyebrow">In the field</p>
+            <p className="eyebrow">Project examples</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent repair and roofing projects</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {relatedProjects.slice(0, 3).map((project) => <ProjectCard key={project.slug} project={project} />)}
@@ -734,8 +722,8 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       </section>
 
       <StormLifecycle activeStage="after" />
-      <CrossSellBlock heading="What pairs with storm damage repair" items={content.crossSellItems} />
-      <CTASection variant="navy" heading="Storm damage? Don't wait on the assessment." subtext="The sooner damage is documented, the stronger your insurance claim. Call or request an assessment now." buttonLabel="Get a Damage Assessment" />
+      <CrossSellBlock heading="Related services" items={content.crossSellItems} />
+      <CTASection variant="navy" heading="Need a storm-damage construction assessment?" subtext="Start with a clear record of the visible damage and the repairs Seacoast recommends." buttonLabel="Get a Damage Assessment" />
     </>
   );
 }
@@ -745,98 +733,98 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 const genericCrossSell: Record<string, CrossSellItem[]> = {
   "roof-certification-inspection": [
     { title: "Roofing", href: "/services/roofing", blurb: "If the inspection finds repairs or replacement needs, Seacoast can scope and complete the roof work.", icon: "🏠" },
-    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Storm-related roof condition issues need strong documentation for insurance conversations.", icon: "⛈️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible storm-related roof conditions and get a construction repair estimate.", icon: "⛈️" },
     { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Roof and gutter cleaning can help preserve roof condition between inspections.", icon: "💦" },
   ],
   roofing: [
     { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Finish the roof system with water management built for Southwest Florida rainfall.", icon: "🌧️" },
-    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Roof damage after a storm? We document it and handle the insurance claim.", icon: "⛈️" },
-    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Protect the new roof with a pre-season prep plan locked in before hurricane season.", icon: "🛡️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible roof damage and get a construction repair estimate after a storm.", icon: "⛈️" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Review openings, materials, and activation terms before hurricane season.", icon: "🛡️" },
   ],
   "gutters-fascia-soffits": [
-    { title: "Roofing", href: "/services/roofing", blurb: "Gutters and roofing work as one system. We handle both with one crew.", icon: "🏠" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Coordinate roof-edge and water-management work in one construction scope.", icon: "🏠" },
     { title: "Siding", href: "/services/siding", blurb: "Pair new trim and fascia with durable siding for a complete exterior refresh.", icon: "🧱" },
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Roll trim and water management into a full exterior renovation.", icon: "🛠️" },
   ],
   siding: [
-    { title: "Roofing", href: "/services/roofing", blurb: "Match a new roof to new siding for a unified, storm-ready exterior.", icon: "🏠" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Coordinate roofing and siding selections for a unified exterior scope.", icon: "🏠" },
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Combine siding with a broader exterior transformation.", icon: "🛠️" },
     { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "We finish container guest houses with siding that matches your home.", icon: "🏡" },
   ],
   "windows-and-doors": [
-    { title: "Roofing", href: "/services/roofing", blurb: "Bundle impact windows with roofing for a complete storm-protection upgrade.", icon: "🏠" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Coordinate window, door, and roofing work under a project-specific scope.", icon: "🏠" },
     { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Impact glazing is one layer of a full storm-preparedness plan.", icon: "🛡️" },
     { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Window or door damage after a storm? We document and repair it.", icon: "⛈️" },
   ],
   "exterior-renovations": [
     { title: "Roofing", href: "/services/roofing", blurb: "A new roof is often the anchor of a full exterior renovation.", icon: "🏠" },
     { title: "Siding", href: "/services/siding", blurb: "New siding transforms curb appeal alongside other exterior work.", icon: "🧱" },
-    { title: "Room Additions", href: "/services/room-additions", blurb: "Expanding the footprint? We renovate and add space in one project.", icon: "➕" },
+    { title: "Room Additions", href: "/services/room-additions", blurb: "Review an addition and the related exterior updates as one coordinated project.", icon: "➕" },
   ],
   "exterior-cleaning-services": [
     { title: "Siding", href: "/services/siding", blurb: "Cleaning can restore curb appeal, while damaged or aging siding may need replacement.", icon: "🧱" },
     { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Pair gutter cleaning with repairs or replacement when the water-management system is failing.", icon: "🌧️" },
-    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Set up a recurring solar panel cleaning service contract to protect output year-round.", icon: "🧼" },
+    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Request a one-time or recurring cleaning scope based on array size and roof access.", icon: "🧼" },
   ],
   "solar-services": [
-    { title: "Whole-House Battery Systems", href: "/services/whole-house-battery-systems", blurb: "Add whole-house battery backup so your home keeps power through storms and grid outages.", icon: "🔋" },
+    { title: "Home Battery Backup", href: "/services/whole-house-battery-systems", blurb: "Evaluate battery capacity and the circuits you want available during a grid outage.", icon: "🔋" },
     { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm roof condition before mounting panels or making a solar investment.", icon: "📋" },
-    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Keep panels producing with scheduled solar panel cleaning service contracts.", icon: "🧼" },
+    { title: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning", blurb: "Request a one-time or recurring cleaning scope for the installed array.", icon: "🧼" },
   ],
   "pool-enclosures-lanais": [
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Tie outdoor living into a broader exterior upgrade.", icon: "🛠️" },
     { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Expand outdoor living with a container guest house finished to match the lanai.", icon: "🏡" },
-    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Screen enclosure damaged in a storm? We rebuild to current code.", icon: "⛈️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible enclosure damage and get a construction repair estimate.", icon: "⛈️" },
   ],
   "room-additions": [
-    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Compare a traditional addition with a faster, lower-cost container build.", icon: "🏡" },
+    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Compare a traditional addition with a site- and permit-dependent container option.", icon: "🏡" },
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Match a new addition to the rest of your home's exterior.", icon: "🛠️" },
     { title: "Roofing", href: "/services/roofing", blurb: "Every addition needs a roof that ties into the existing structure.", icon: "🏠" },
   ],
 };
 
-// Real Seacoast jobsite photos used as the hero background for matching services.
+// Service-specific hero images used as the hero background for matching services.
 // Services without an entry keep the solid-navy hero.
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
   roofing: {
     src: "/images/services/roofing-metal-clubhouse-aerial.webp",
-    alt: "Aerial view of a Southwest Florida golf clubhouse with a new dark standing-seam metal roof installed by Seacoast Building & Design",
+    alt: "Representative aerial view of a Southwest Florida golf clubhouse with a dark standing-seam metal roof",
   },
   "roof-certification-inspection": {
     src: "/images/services/roof-certification-commercial-aerial.webp",
-    alt: "Aerial inspection view of a commercial building with a new white reflective flat roof in Southwest Florida",
+    alt: "Representative aerial inspection view of a commercial building with a white reflective flat roof in Southwest Florida",
   },
   "gutters-fascia-soffits": {
     src: "/images/services/gutters-fascia-tile-roof.webp",
-    alt: "New dark aluminum gutters, fascia, and soffits installed along the edge of a tile-roof Florida home by Seacoast",
+    alt: "Representative view of dark aluminum gutters, fascia, and soffits on a tile-roof Florida home",
   },
   "exterior-renovations": {
     src: "/images/services/exterior-renovation-condo-carports.webp",
-    alt: "Aerial of a Southwest Florida condo community with new tile roofing and white carport covers completed by Seacoast",
+    alt: "Representative aerial view of a Southwest Florida condo community with tile roofing and white carport covers",
   },
   "pool-enclosures-lanais": {
     src: "/images/services/pool-enclosure-lanai.webp",
-    alt: "Screened pool enclosure and lanai built by Seacoast over a Southwest Florida pool with a lake and golf course view",
+    alt: "Representative screened pool enclosure and lanai at a Southwest Florida home",
   },
   siding: {
     src: "/images/services/siding-hardie-board-batten.webp",
-    alt: "New board-and-batten Hardie fiber-cement siding with a shake-style gable installed by Seacoast on a Southwest Florida waterfront home",
+    alt: "Representative board-and-batten fiber-cement siding with a shake-style gable on a Southwest Florida waterfront home",
   },
   "solar-services": {
     src: "/images/services/solar-ave-maria-tile-roof.webp",
-    alt: "Aerial view of black solar panels installed on a barrel-tile roof of a Southwest Florida home by Seacoast Building & Design",
+    alt: "Representative aerial view of black solar panels on a barrel-tile roof in Southwest Florida",
   },
   "windows-and-doors": {
     src: "/images/services/windows-and-doors-impact-install.webp",
-    alt: "Seacoast installer setting a large impact-rated sliding glass door into a stucco Southwest Florida home with palm trees and a barrel-tile roof",
+    alt: "Representative installation of a large impact-rated sliding glass door at a stucco Southwest Florida home",
   },
   "exterior-cleaning-services": {
     src: "/images/services/exterior-cleaning-soft-wash.webp",
-    alt: "Worker soft-washing the stucco exterior and paver driveway of a Southwest Florida home, with a clean line showing the cleaned surface",
+    alt: "Representative view of a worker soft-washing a stucco exterior and paver driveway in Southwest Florida",
   },
   "room-additions": {
     src: "/images/services/room-additions-sunroom-lanai.webp",
-    alt: "Finished sunroom and lanai room addition with impact windows matched to a barrel-tile Southwest Florida home at golden hour",
+    alt: "Representative finished sunroom and lanai addition matched to a barrel-tile Southwest Florida home",
   },
 };
 
@@ -865,7 +853,7 @@ const serviceTypeLists: Record<string, { heading: string; items: string[] }[]> =
     { heading: "Options", items: ["Insulated panels", "Metal panel roofs", "Residential", "Commercial"] },
   ],
   "thermal-drone-inspections": [
-    { heading: "What we inspect", items: ["Roof moisture and trapped water", "Hidden leaks and water intrusion", "Energy loss and insulation gaps", "Storm and structural damage"] },
+    { heading: "What we inspect", items: ["Roof temperature patterns", "Areas that may warrant further moisture investigation", "Possible insulation or energy-loss patterns", "Visible storm-related conditions"] },
     { heading: "Property types", items: ["Residential", "Commercial"] },
   ],
 };
@@ -906,25 +894,26 @@ function GenericServiceLayout({ params }: Props) {
           <h1 className="mt-4 font-heading text-5xl font-bold">{service.name}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{service.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Quote</Link>
             <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
           </div>
+          {heroImage && <p className="mt-5 text-xs text-white/60">Illustrative service image — not a Seacoast project photo. See Our Work for completed projects.</p>}
         </div>
       </section>
 
       <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           <div className="rounded-2xl bg-white p-6 shadow-soft">
-            <p className="eyebrow">Licensed and Insured</p>
-            <p className="mt-3 text-text-secondary">Every project is performed by licensed contractors with full insurance coverage.</p>
+            <p className="eyebrow">One licensed team</p>
+            <p className="mt-3 text-text-secondary">Seacoast Building &amp; Design is a Florida certified general and roofing contractor.</p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-soft">
-            <p className="eyebrow">40+ Years Experience</p>
-            <p className="mt-3 text-text-secondary">Four decades of Southwest Florida project work across residential, commercial, and multi-family.</p>
+            <p className="eyebrow">Homes to communities</p>
+            <p className="mt-3 text-text-secondary">We work with homeowners, businesses, associations, and multi-family properties.</p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-soft">
-            <p className="eyebrow">Financing Available</p>
-            <p className="mt-3 text-text-secondary">Flexible financing options available. Ask us about payment plans when you request your quote.</p>
+            <p className="eyebrow">Know what is included</p>
+            <p className="mt-3 text-text-secondary">Your written proposal explains the materials, work, assumptions, and price before the project begins.</p>
           </div>
         </div>
       </section>
@@ -953,7 +942,7 @@ function GenericServiceLayout({ params }: Props) {
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy">
           <div className="container">
-            <p className="eyebrow">In the field</p>
+            <p className="eyebrow">Project examples</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Recent {service.name} projects</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
@@ -975,9 +964,9 @@ function GenericServiceLayout({ params }: Props) {
         </section>
       )}
 
-      {crossSell.length > 0 && <CrossSellBlock heading={`What pairs with ${service.name.toLowerCase()}`} items={crossSell} />}
+      {crossSell.length > 0 && <CrossSellBlock heading="Related services" items={crossSell} />}
 
-      <CTASection variant="orange" heading={`Ready to discuss your ${service.name.toLowerCase()} project?`} />
+      <CTASection variant="orange" heading="Ready to talk through your project?" subtext="Share the property address and what needs attention. Seacoast will help you understand the next step." />
     </>
   );
 }
@@ -1008,35 +997,33 @@ export default function ServiceDetailPage({ params }: Props) {
   return <GenericServiceLayout params={params} />;
 }
 
-// ─── Solar Panel Cleaning rich layout (contract / recurring-revenue offering) ──
-// PROPOSED pricing below is pending Clear's approval. Update the planTiers
-// "price" values once final pricing is confirmed.
+// ─── Solar Panel Cleaning rich layout ─────────────────────────────────────────
 function SolarPanelCleaningLayout() {
   const faqs: FAQItem[] = [
     {
       question: "How often should solar panels be cleaned in Southwest Florida?",
       answer:
-        "Most Southwest Florida systems benefit from professional cleaning two to four times a year. Our coastal climate adds salt spray, pollen, dust, and bird droppings faster than inland areas, and that buildup blocks sunlight and lowers output. Twice-a-year cleaning is the baseline for residential roofs, and quarterly cleaning is common for larger or commercial systems.",
+        "The right interval depends on the array, roof access, surrounding trees, pollen, salt exposure, bird activity, and the panel manufacturer's care instructions. We can quote a one-time visit or discuss recurring scheduling after reviewing the property.",
     },
     {
       question: "Does cleaning my solar panels actually increase output?",
       answer:
-        "Yes. Dirt, pollen, and grime can reduce a panel's energy production noticeably, and in Florida's growing season that loss adds up month over month. Regular cleaning restores panels to near-peak efficiency, which means more of the power you already paid to generate.",
+        "Removing debris can improve light exposure when soiling is affecting the array, but the result varies with weather, equipment condition, shading, and system design. Cleaning does not guarantee a particular production increase.",
     },
     {
       question: "Do you offer solar panel cleaning service contracts?",
       answer:
-        "Yes. Our maintenance contracts schedule your cleanings automatically (biannual or quarterly) so you never have to remember to book. Each visit includes a visual inspection and before-and-after photos, and contract clients get priority scheduling. You can also book a one-time cleaning any time.",
+        "Ask about one-time and recurring scheduling. The visit frequency, documentation, access requirements, and other service terms are confirmed in the written quote.",
     },
     {
       question: "How do you clean the panels without damaging them?",
       answer:
-        "We use a soft-wash method with purified, deionized water and panel-safe equipment, never harsh chemicals or abrasive pads that can scratch the glass or void manufacturer warranties. Our crews are trained to work safely on Southwest Florida roof types, from tile to metal to flat commercial roofs.",
+        "The cleaning method is selected for the panel manufacturer's instructions, roof material, array condition, and safe access. We avoid abrasive techniques and document any visible concerns found before work begins.",
     },
     {
       question: "What areas do you serve for solar panel cleaning?",
       answer:
-        "Seacoast cleans solar panels across six Southwest Florida counties: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier, including Fort Myers, Cape Coral, Naples, Bonita Springs, Punta Gorda, Sarasota, Bradenton, and Venice.",
+        "Ask about solar panel cleaning in Seacoast's six-county service area: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. Availability depends on the address, array, access, and current schedule.",
     },
   ];
 
@@ -1044,7 +1031,7 @@ function SolarPanelCleaningLayout() {
     serviceSchema({
       name: "Solar Panel Cleaning",
       description:
-        "Professional solar panel cleaning and recurring maintenance contracts that keep your system producing at peak output across Southwest Florida.",
+        "Solar panel cleaning for residential and commercial properties in Southwest Florida, with one-time and recurring scheduling options quoted for the site.",
       url: "/services/solar-panel-cleaning",
       serviceType: "Solar Panel Cleaning Service",
       areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
@@ -1055,22 +1042,21 @@ function SolarPanelCleaningLayout() {
   const planTiers = [
     {
       tier: "One-Time Clean",
-      price: "Starting at $699",
+      price: "Custom quote",
       cadence: "Single visit",
-      includes: ["Soft-wash clean with purified water", "Panel-safe, no harsh chemicals", "Visual inspection of array", "Before-and-after photos"],
+      includes: ["Site-specific cleaning method", "Visible-condition review", "Roof and array access assessment", "Scope confirmed before work"],
     },
     {
-      tier: "Maintenance Contract",
-      price: "Starting at $1,199/year",
-      cadence: "Two cleanings per year",
-      includes: ["Everything in One-Time Clean", "Auto-scheduled biannual cleanings", "Priority scheduling for contract clients", "Output-loss check and written report"],
-      featured: true,
+      tier: "Recurring Scheduling",
+      price: "Custom quote",
+      cadence: "Frequency selected for the property",
+      includes: ["Agreed visit frequency", "Site-specific cleaning method", "Access requirements documented", "Service terms in writing"],
     },
     {
       tier: "Commercial & Solar Farm",
       price: "Custom quote",
-      cadence: "Quarterly or monthly",
-      includes: ["Per-panel pricing for large arrays", "Quarterly or monthly cleaning schedule", "Production and condition reporting", "Dedicated account contact"],
+      cadence: "Site-specific schedule",
+      includes: ["Array size and layout review", "Access and safety planning", "Visit frequency by agreement", "Documentation options in the quote"],
     },
   ];
 
@@ -1079,9 +1065,9 @@ function SolarPanelCleaningLayout() {
     .slice(0, 3);
 
   const crossSell: CrossSellItem[] = [
-    { title: "Solar Services", href: "/services/solar-services", blurb: "Full solar installs, inverters, storage, and EV charging from Seacoast's solar team.", icon: "☀️" },
-    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Soft washing, roof, concrete, and gutter cleaning to match your panel cleaning visit.", icon: "💦" },
-    { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Confirm the roof beneath your array is sound with an insurance-ready inspection report.", icon: "📋" },
+    { title: "Solar Services", href: "/services/solar-services", blurb: "Review solar panels, inverters, battery storage, or EV charging as a separate project scope.", icon: "☀️" },
+    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Coordinate exterior-surface cleaning where the materials and access are compatible.", icon: "💦" },
+    { title: "Roof Certification Inspection", href: "/services/roof-certification-inspection", blurb: "Request a separate roof-condition inspection when documentation is needed.", icon: "📋" },
   ];
 
   return (
@@ -1090,19 +1076,20 @@ function SolarPanelCleaningLayout() {
 
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-navy py-20 text-white">
-        <Image src="/images/services/solar-ave-maria-tile-roof.webp" alt="Aerial view of clean black solar panels on a barrel-tile roof of a Southwest Florida home maintained by Seacoast Building & Design" fill priority className="object-cover" sizes="100vw" />
+        <Image src="/images/services/solar-ave-maria-tile-roof.webp" alt="Representative aerial view of black solar panels on a barrel-tile roof in Southwest Florida" fill priority className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/55" aria-hidden />
         <div className="container relative">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Solar Panel Cleaning" }]} />
           <div className="mt-4 text-4xl" aria-hidden>🧼</div>
-          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Solar Panel Cleaning Service &amp; Maintenance Contracts in Southwest Florida</h1>
+          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Solar Panel Cleaning for Southwest Florida Homes and Businesses</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">
-            Dirty panels lose power. Seacoast keeps your solar array producing at peak output with professional soft-wash cleaning and easy recurring service contracts across Southwest Florida.
+            Seacoast cleans accessible residential and commercial solar arrays using a method selected for the panels, roof, visible condition, and manufacturer guidance.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Cleaning Quote</Link>
             <a href="#plans" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Service Plans</a>
           </div>
+          <p className="mt-5 text-xs text-white/60">Illustrative service image — not a Seacoast project photo.</p>
         </div>
       </section>
 
@@ -1110,9 +1097,9 @@ function SolarPanelCleaningLayout() {
       <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
-            { label: "Panel-Safe Soft Wash", body: "Purified, deionized water and panel-safe equipment. No harsh chemicals, no abrasives, no warranty risk." },
-            { label: "Licensed and Insured", body: "Every visit is performed by licensed, insured crews trained to work safely on Southwest Florida roofs." },
-            { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
+            { label: "Start with the site", body: "We look at the roof, array, visible condition, and safe access before cleaning." },
+            { label: "Use the right method", body: "The cleaning approach is chosen for the panel guidance and the surrounding roof surface." },
+            { label: "Choose the schedule", body: "Request a one-time visit or ask about recurring service for the property." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
               <p className="eyebrow">{card.label}</p>
@@ -1126,15 +1113,15 @@ function SolarPanelCleaningLayout() {
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Why it matters</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Dirty panels quietly cost you money.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Clear away the buildup you can see.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Southwest Florida is hard on solar. Salt air, pollen, dust, and bird droppings build up fast and block the sunlight your panels need. The loss is gradual and easy to miss, but it shows up on every power bill.
+            Pollen, dust, salt residue, leaves, and bird debris can collect on solar panels. A cleaning visit addresses accessible buildup and creates an opportunity to note visible conditions that may need separate service.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { icon: "📉", heading: "Lost production", body: "Grime and buildup reduce how much energy your panels generate, so you pay for power you already invested to make." },
-              { icon: "🌴", heading: "Florida buildup", body: "Pollen seasons, coastal salt spray, and bird activity coat panels faster here than almost anywhere else." },
-              { icon: "🛡️", heading: "Protect the investment", body: "Regular cleaning and inspection catch shading, debris, and wear early, protecting the value of your solar system." },
+              { icon: "🧼", heading: "Accessible buildup", body: "Remove surface debris included in the quote using a method appropriate to the panel and roof." },
+              { icon: "🌴", heading: "Local exposure", body: "Account for pollen, coastal residue, surrounding trees, and bird activity when selecting a schedule." },
+              { icon: "🔍", heading: "Visible-condition notes", body: "Identify visible debris, shading, or physical concerns that may warrant separate evaluation." },
             ].map((card) => (
               <div key={card.heading} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{card.icon}</div>
@@ -1150,13 +1137,13 @@ function SolarPanelCleaningLayout() {
       <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">What&apos;s included</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Every solar panel cleaning visit.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">What a cleaning quote can include</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "💧", heading: "Soft-wash clean", body: "Purified, deionized water and gentle equipment remove dirt, pollen, and salt without scratching the glass." },
-              { icon: "🔍", heading: "Visual inspection", body: "We check the array for shading, debris, loose mounting, and visible wear while we're up there." },
-              { icon: "📸", heading: "Before-and-after photos", body: "You get clear documentation of the work and the condition of your system after every visit." },
-              { icon: "📅", heading: "Easy scheduling", body: "One-time or recurring. Contract clients are auto-scheduled and get priority on the calendar." },
+              { icon: "💧", heading: "Selected cleaning method", body: "The method and materials are chosen for the panel guidance, visible condition, and roof surface." },
+              { icon: "🔍", heading: "Visible review", body: "Accessible areas are reviewed for debris, shading, and physical concerns visible during the visit." },
+              { icon: "📸", heading: "Photo documentation", body: "When included in the quote, photos document the accessible array before and after cleaning." },
+              { icon: "📅", heading: "Scheduling options", body: "Choose a one-time visit or request recurring scheduling with terms confirmed in writing." },
             ].map((item) => (
               <div key={item.heading} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{item.icon}</div>
@@ -1172,14 +1159,13 @@ function SolarPanelCleaningLayout() {
       <section id="plans" className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Service plans</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Choose a one-time clean or a maintenance contract.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Choose a one-time visit or recurring schedule</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Final pricing depends on your system size and roof access. We confirm it with a quick on-site quote. A recurring contract is the easiest way to keep panels producing year-round.
+            We price the visit around the array size, roof type, access, visible condition, and services requested. You will see the scope and price before work begins.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {planTiers.map((plan) => (
-              <div key={plan.tier} className={`rounded-2xl border p-6 ${plan.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
-                {plan.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
+              <div key={plan.tier} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
                 <h3 className="font-heading text-xl font-bold text-navy">{plan.tier}</h3>
                 <p className="mt-2 font-heading text-2xl font-bold text-navy">{plan.price}</p>
                 <p className="text-sm text-text-secondary">{plan.cadence}</p>
@@ -1204,7 +1190,7 @@ function SolarPanelCleaningLayout() {
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy">
           <div className="container">
-            <p className="eyebrow">In the field</p>
+            <p className="eyebrow">Project examples</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent solar projects</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
@@ -1225,47 +1211,47 @@ function SolarPanelCleaningLayout() {
         </div>
       </section>
 
-      <CrossSellBlock heading="What pairs with solar panel cleaning" items={crossSell} />
-      <CTASection variant="orange" heading="Keep your panels producing at peak." subtext="Request a solar panel cleaning quote or set up a maintenance contract with Seacoast." buttonLabel="Get a Cleaning Quote" />
+      <CrossSellBlock heading="Related services" items={crossSell} />
+      <CTASection variant="orange" heading="Request a solar panel cleaning quote." subtext="Tell us the property address, approximate array size, roof type, and access conditions." buttonLabel="Get a Cleaning Quote" />
     </>
   );
 }
 
-// ─── Whole-House Battery Systems rich layout (storm-readiness offering) ──────────
+// ─── Home Battery Backup rich layout ─────────────────────────────────────────
 function WholeHouseBatteryLayout() {
   const faqs: FAQItem[] = [
     {
       question: "What is a whole-house battery backup system?",
       answer:
-        "A whole-house battery stores energy so your home keeps running when the grid goes down. When power is lost in a storm or outage, the battery takes over automatically, keeping essentials like your refrigerator, lights, internet, medical equipment, and AC running. It can be charged from the grid, from solar, or both.",
+        "A home battery stores energy that can be assigned to selected circuits during a grid outage. What it can power, how switchover works, and how long it lasts depend on the equipment, system design, battery capacity, and connected loads.",
     },
     {
       question: "Do I need solar panels to install a home battery?",
       answer:
-        "No. A battery can be installed on its own and charged from the grid, then discharge during an outage. Pairing it with solar adds the most resilience, because the battery can recharge from the sun even during a multi-day outage, but solar is not required to get storm-ready backup power.",
+        "Not necessarily. Some systems can be charged from the grid, while compatible solar and battery equipment may be designed to work together. The available configuration depends on the existing electrical and solar equipment, utility requirements, and product specifications.",
     },
     {
       question: "How long will a home battery power my house during an outage?",
       answer:
-        "It depends on the battery capacity and how much you run. A single battery can typically carry essential circuits (fridge, lights, internet, a few outlets) for a day or more, while multiple batteries or a solar-paired system can power most of a home for several days. We size the system to your priorities during the on-site assessment.",
+        "Runtime depends on usable battery capacity, the circuits selected, actual power use, equipment efficiency, weather, and whether a compatible charging source is available. A site assessment and load review are needed before estimating runtime.",
     },
     {
       question: "Why is battery backup a good idea in Southwest Florida?",
       answer:
-        "Hurricane season brings extended power outages, and a battery means you do not lose your food, your AC, or your ability to stay connected when the grid is down. It is one of the most practical storm-readiness upgrades you can make, and it keeps working long after the storm passes.",
+        "A properly designed battery system can make selected circuits available during some grid outages. It should be planned as one part of a broader emergency plan and does not guarantee uninterrupted power or replace evacuation guidance.",
     },
     {
       question: "What areas do you serve for battery installation?",
       answer:
-        "Seacoast installs whole-house battery systems across six Southwest Florida counties: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier, including Fort Myers, Cape Coral, Naples, Bonita Springs, Punta Gorda, Sarasota, Bradenton, and Venice.",
+        "Ask about battery installation in Seacoast's six-county service area: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. Availability depends on the address, project scope, and current schedule.",
     },
   ];
 
   const schemas = [
     serviceSchema({
-      name: "Whole-House Battery Systems",
+      name: "Home Battery Backup",
       description:
-        "Whole-house battery backup installation that keeps your home powered through storms and grid outages across Southwest Florida. Standalone or paired with solar.",
+        "Site-specific home battery backup assessment and installation options for selected circuits or broader backup goals in Southwest Florida.",
       url: "/services/whole-house-battery-systems",
       serviceType: "Home Battery Backup Installation",
       areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
@@ -1276,22 +1262,21 @@ function WholeHouseBatteryLayout() {
   const systemOptions = [
     {
       tier: "Essential Backup",
-      price: "Single battery",
-      cadence: "Critical circuits",
-      includes: ["Powers fridge, lights, internet, and key outlets", "Automatic switchover during outages", "Compact wall-mount installation", "Grid-charged, solar-ready"],
+      price: "Custom quote",
+      cadence: "Selected-circuit assessment",
+      includes: ["Load and circuit priorities", "Equipment compatibility review", "Location and access review", "Runtime estimate based on assumptions"],
     },
     {
-      tier: "Whole-Home Backup",
-      price: "Multi-battery",
-      cadence: "Most of the home",
-      includes: ["Powers most of the home including AC", "Scales with added battery modules", "Seamless automatic backup", "Monitoring app for charge and usage"],
-      featured: true,
+      tier: "Expanded Backup",
+      price: "Custom quote",
+      cadence: "Broader load assessment",
+      includes: ["Detailed load review", "Battery-capacity options", "Transfer-equipment requirements", "Permit and utility requirements"],
     },
     {
       tier: "Solar + Battery",
       price: "Custom quote",
-      cadence: "Multi-day resilience",
-      includes: ["Recharges from the sun during outages", "Lower power bills day to day", "Maximum storm-season resilience", "Integrated with new or existing solar"],
+      cadence: "Compatibility assessment",
+      includes: ["Existing solar equipment review", "Compatible charging configuration", "Product-specific operating limits", "Site-specific design and quote"],
     },
   ];
 
@@ -1300,9 +1285,9 @@ function WholeHouseBatteryLayout() {
     .slice(0, 3);
 
   const crossSell: CrossSellItem[] = [
-    { title: "Solar Services", href: "/services/solar-services", blurb: "Pair your battery with a solar install so it recharges from the sun during long outages.", icon: "☀️" },
-    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Lock in your storm-readiness plan before hurricane season, backup power included.", icon: "🛡️" },
-    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Responsive inspection, documentation, and repairs after wind and hurricane damage.", icon: "⛈️" },
+    { title: "Solar Services", href: "/services/solar-services", blurb: "Review whether the proposed battery equipment is compatible with a new or existing solar system.", icon: "☀️" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Coordinate backup-power goals with a broader property preparation plan.", icon: "🛡️" },
+    { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Request visible-condition documentation and a construction repair estimate after a storm.", icon: "⛈️" },
   ];
 
   return (
@@ -1312,11 +1297,11 @@ function WholeHouseBatteryLayout() {
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-navy py-20 text-white">
         <div className="container relative">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Whole-House Battery Systems" }]} />
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Home Battery Backup" }]} />
           <div className="mt-4 text-4xl" aria-hidden>🔋</div>
-          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Whole-House Battery Backup Installation in Southwest Florida</h1>
+          <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Home Battery Backup Options in Southwest Florida</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">
-            When the grid goes down, your home stays on. Seacoast installs whole-house battery backup systems that keep your power running through storms and outages, on their own or paired with solar.
+            Seacoast can assess the circuits you want available during an outage and quote a battery configuration based on loads, equipment compatibility, permitting, and site conditions.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Battery Quote</Link>
@@ -1329,9 +1314,9 @@ function WholeHouseBatteryLayout() {
       <section className="section dark-band bg-navy">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
-            { label: "Automatic Backup", body: "When the grid fails, the battery takes over in an instant. No generators to start, no fuel to store." },
-            { label: "Licensed and Insured", body: "Installed to code by licensed, insured Seacoast crews who handle the permitting and inspection." },
-            { label: "All Six Counties Served", body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. One call covers the region." },
+            { label: "Start with priorities", body: "We identify the circuits and equipment you want to keep available during an outage." },
+            { label: "Check what works together", body: "Existing electrical and solar equipment is reviewed for product and utility compatibility." },
+            { label: "Know what to expect", body: "The quote explains the proposed equipment, loads, assumptions, permits, and operating limits." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
               <p className="eyebrow">{card.label}</p>
@@ -1345,15 +1330,15 @@ function WholeHouseBatteryLayout() {
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Why it matters</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Storm season means outages. A battery means you keep going.</h2>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Plan backup around the circuits that matter most.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            In Southwest Florida, a single storm can knock out power for hours or days. A whole-house battery keeps the lights on, the food cold, and your family comfortable and connected, automatically, the moment the grid drops.
+            Start with the lights, refrigeration, communications, or other circuits you care about most. We use those priorities to discuss capacity, expected runtime, charging, and equipment limits for the property.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { icon: "⚡", heading: "Power through outages", body: "Keep essentials running during storms and grid failures without the noise, fumes, or fuel of a generator." },
-              { icon: "🌀", heading: "Storm readiness", body: "Backup power is one of the most practical hurricane-season upgrades, and it keeps working after the storm." },
-              { icon: "💰", heading: "Everyday value", body: "Paired with solar, a battery can lower your day-to-day power bills, not just protect you in an emergency." },
+              { icon: "⚡", heading: "Circuit priorities", body: "Identify which appliances and circuits should be considered in the backup design." },
+              { icon: "🔋", heading: "Capacity options", body: "Compare equipment configurations using documented load and runtime assumptions." },
+              { icon: "☀️", heading: "Solar compatibility", body: "Review whether compatible solar equipment can be included in the proposed charging design." },
             ].map((card) => (
               <div key={card.heading} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{card.icon}</div>
@@ -1371,12 +1356,11 @@ function WholeHouseBatteryLayout() {
           <p className="eyebrow">System options</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Backup sized to your home and your priorities.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            We size your system during an on-site assessment based on what you want to keep running and how long. Start with essential circuits or back up the whole home. Final pricing is confirmed with a quote.
+            We size the proposed system around what you want to keep running and for how long. Broader backup goals need a detailed load and equipment review, and some homes or product combinations may need a different approach. Your quote will confirm the proposed equipment and price.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {systemOptions.map((option) => (
-              <div key={option.tier} className={`rounded-2xl border p-6 ${option.featured ? "border-orange bg-orange/5 shadow-soft" : "border-navy/10 bg-white shadow-sm"}`}>
-                {option.featured && <p className="mb-3 text-xs font-bold uppercase tracking-widest text-orange">Most popular</p>}
+              <div key={option.tier} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
                 <h3 className="font-heading text-xl font-bold text-navy">{option.tier}</h3>
                 <p className="mt-2 font-heading text-2xl font-bold text-navy">{option.price}</p>
                 <p className="text-sm text-text-secondary">{option.cadence}</p>
@@ -1401,7 +1385,7 @@ function WholeHouseBatteryLayout() {
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy-deep">
           <div className="container">
-            <p className="eyebrow">In the field</p>
+            <p className="eyebrow">Project examples</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent solar &amp; energy projects</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {relatedProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}
@@ -1417,13 +1401,13 @@ function WholeHouseBatteryLayout() {
       <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
-          <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Whole-House Battery FAQ</h2>
+          <h2 className="mt-2 mb-8 font-heading text-3xl font-bold text-navy">Home Battery Backup FAQ</h2>
           <FAQAccordion items={faqs} />
         </div>
       </section>
 
-      <CrossSellBlock heading="What pairs with battery backup" items={crossSell} />
-      <CTASection variant="orange" heading="Keep your home powered through the next storm." subtext="Request a whole-house battery backup quote from Seacoast and get storm-ready." buttonLabel="Get a Battery Quote" />
+      <CrossSellBlock heading="Related services" items={crossSell} />
+      <CTASection variant="orange" heading="Request a site-specific battery assessment." subtext="Tell us which circuits matter most and whether the property has existing solar equipment." buttonLabel="Get a Battery Quote" />
     </>
   );
 }

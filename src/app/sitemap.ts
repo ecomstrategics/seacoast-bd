@@ -11,7 +11,7 @@ const CURRENT_UPDATE = "2026-07-12";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: "2026-06-21" },
+    { url: BASE, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/services`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/storm-ready`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/solutions`, lastModified: CURRENT_UPDATE },
@@ -21,12 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/containers/compare`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/containers/prebuilt`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/our-work`, lastModified: CURRENT_UPDATE },
-    { url: `${BASE}/about`, lastModified: "2026-07-02" },
+    { url: `${BASE}/about`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/contact`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/faq`, lastModified: CURRENT_UPDATE },
-    { url: `${BASE}/financing`, lastModified: "2026-06-27" },
+    { url: `${BASE}/financing`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/customer-reviews`, lastModified: CURRENT_UPDATE },
-    { url: `${BASE}/service-area`, lastModified: "2026-06-27" },
+    { url: `${BASE}/service-area`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/privacy`, lastModified: "2026-06-21" },
     { url: `${BASE}/terms`, lastModified: "2026-06-21" },
     { url: `${BASE}/accessibility`, lastModified: "2026-06-16" },

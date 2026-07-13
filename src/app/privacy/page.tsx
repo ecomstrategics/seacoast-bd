@@ -103,7 +103,7 @@ export default function PrivacyPage() {
 
             <h2 className="mt-10 font-heading text-2xl font-bold text-navy">Contact us</h2>
             <p className="mt-3 text-text-secondary">
-              If you have questions about this Privacy Policy or your information, contact Seacoast Building &amp; Design, Fort Myers, Florida, at <a href="mailto:sales@seacoastbd.com" className="font-bold text-navy hover:text-orange">sales@seacoastbd.com</a>, <a href="tel:+19415005431" className="font-bold text-navy hover:text-orange">(941) 500-5431</a>, or through our <Link href="/contact" className="font-bold text-navy hover:text-orange">contact page</Link>. FL Certified General Contractor #CGC1509237, Roofing Contractor #CCC1332648.
+              If you have questions about this Privacy Policy or your information, contact Seacoast Building &amp; Design at <a href="mailto:sales@seacoastbd.com" className="font-bold text-navy hover:text-orange">sales@seacoastbd.com</a>, <a href="tel:+19415005431" className="font-bold text-navy hover:text-orange">(941) 500-5431</a>, or through our <Link href="/contact" className="font-bold text-navy hover:text-orange">contact page</Link>. FL Certified General Contractor #CGC1509237, Roofing Contractor #CCC1332648.
             </p>
           </article>
         </div>

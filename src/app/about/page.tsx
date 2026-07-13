@@ -9,7 +9,7 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "40+ years of Southwest Florida contracting. Licensed, insured, and video-documented. Learn more about Seacoast Building & Design.",
+  description: "Meet the owners of Seacoast Building & Design, a Florida-certified general and roofing contractor serving homes, businesses, and communities.",
 };
 
 export default function AboutPage() {
@@ -21,9 +21,9 @@ export default function AboutPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
           <p className="eyebrow">Our story</p>
-          <h1 className="mt-4 font-heading text-5xl font-bold">Built on 40+ years of Southwest Florida work</h1>
+          <h1 className="mt-4 font-heading text-5xl font-bold">A family-owned contractor focused on Florida properties</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
-            Seacoast Building &amp; Design is a full-service exterior contractor serving Southwest Florida since the 1980s. We specialize in roofing, storm repair, exterior renovations, and enclosures for residential, commercial, and multi-family properties.
+            Clear and Chandra Dayland lead Seacoast Building &amp; Design, coordinating roofing, storm repair, exterior renovations, and additions for residential, commercial, and multi-family properties.
           </p>
         </div>
       </section>
@@ -34,19 +34,19 @@ export default function AboutPage() {
         <div className="container grid gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow">What we do</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team. Full exterior scope.</h2>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team for the whole exterior.</h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              We handle the full exterior envelope: roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, and storm damage repairs. Our team coordinates trades, permitting, materials, and documentation from first inspection to final walkthrough.
+              Depending on the agreed scope, Seacoast can coordinate roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, storm repairs, permits, materials, and documentation.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
-              Every project we complete is documented on video, and our library of project videos keeps growing. This level of transparency is rare in contracting. We believe it&apos;s the most honest way to show what we can do.
+              Our project library includes videos and photos from completed work across the region. It gives property owners a practical way to review our experience before starting a conversation.
             </p>
           </div>
           <div>
             <p className="eyebrow">Why Southwest Florida</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Coastal properties need coastal expertise.</h2>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Florida weather changes what works.</h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              Salt air, intense UV, hurricane exposure, and Florida building codes are a distinct combination. Our team has spent decades working in these conditions. We know which materials hold up, which methods fail, and how to build for durability in this environment.
+              Salt air, intense sun, hurricane exposure, and Florida building codes all shape an exterior project. Our team considers those local conditions when recommending materials, planning the work, and explaining the maintenance a property may need.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
               We&apos;re licensed and insured in Florida, and we serve six counties across the Southwest coast: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier.
@@ -60,20 +60,20 @@ export default function AboutPage() {
           <p className="eyebrow">On the ground in Southwest Florida</p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Real crews. Real jobsites.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Commercial, residential, and public works across the SW Florida corridor. Here is a look at our team and our signs in the field.
+            Here is a look at Seacoast&apos;s team and active jobsites across residential, commercial, and community projects.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
               <div className="relative aspect-[3/2]">
                 <Image src="/images/about/seacoast-jobsite-sign.webp" alt="Seacoast Building & Design jobsite sign on a Southwest Florida golf course listing roofing, gutters, solar, and renovation services with the company license numbers" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
               </div>
-              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our jobsite signs go up across the region, from residential roofs to commercial and public works projects.</figcaption>
+              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our jobsite signs identify the company, services, and Florida contractor licenses behind the work.</figcaption>
             </figure>
             <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
               <div className="relative aspect-[3/2]">
                 <Image src="/images/about/seacoast-crew-vinyl-fence.webp" alt="Seacoast crew installing a new white vinyl privacy fence to replace a storm-damaged wood fence in Southwest Florida" fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
               </div>
-              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">Our crew replacing a storm-damaged fence. The same team handles the full exterior envelope on every job.</figcaption>
+              <figcaption className="bg-white px-5 py-4 text-sm text-text-secondary">A Seacoast crew replaces a storm-damaged fence as part of an exterior repair project.</figcaption>
             </figure>
           </div>
         </div>
@@ -88,39 +88,42 @@ export default function AboutPage() {
             <div>
               <figure className="overflow-hidden rounded-2xl border border-navy/10 shadow-soft">
                 <div className="relative aspect-[4/5]">
-                  <Image src="/images/about/clear-dayland.webp" alt="Clear Dayland, owner of Seacoast Building & Design, a Florida Certified General Contractor and Certified Roofing Contractor, wearing a Seacoast Building & Design shirt" fill className="object-cover" sizes="(min-width: 768px) 40vw, 100vw" priority />
+                  <Image src="/images/about/clear-dayland.webp" alt="Clear Dayland, owner of Seacoast Building & Design, wearing a Seacoast Building & Design shirt" fill className="object-cover" sizes="(min-width: 768px) 40vw, 100vw" priority />
                 </div>
               </figure>
               <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
-                <p className="font-heading font-bold text-navy">Credentials</p>
+                <p className="font-heading font-bold text-navy">Seacoast credentials</p>
                 <ul className="mt-3 space-y-2 text-sm text-text-secondary">
-                  <li>Florida Certified General Contractor</li>
-                  <li>Florida Certified Roofing Contractor</li>
-                  <li>OSHA-certified jobsite safety</li>
-                  <li>A+ rated with the Better Business Bureau</li>
-                  <li>5-star Google review rating</li>
+                  <li>Florida Certified General Contractor license CGC1509237</li>
+                  <li>Florida Certified Roofing Contractor license CCC1332648</li>
+                  <li>Licensed and insured for contracting work</li>
+                  <li>Project photo and video library</li>
                 </ul>
+                <p className="mt-4 text-xs leading-5 text-text-secondary">
+                  Florida DBPR lists Richard Warren Spieth as the qualifying licensee for Seacoast&apos;s general-contractor and roofing-contractor credentials.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-3 text-xs font-semibold">
+                  <a href="https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=9F07B1C529550789F66A7035331BA130" target="_blank" rel="noreferrer" className="text-orange hover:underline">Verify general-contractor license ↗</a>
+                  <a href="https://www.myfloridalicense.com/LicenseDetail.asp?SID=&amp;id=DE0037BC6D66FB5A7FD663DFDCA7E919" target="_blank" rel="noreferrer" className="text-orange hover:underline">Verify roofing license ↗</a>
+                </div>
               </div>
             </div>
             <div>
               <p className="leading-8 text-text-secondary">
-                Clear Dayland is the owner of Seacoast Building &amp; Design and a Florida Certified General Contractor and Certified Roofing Contractor with more than 30 years of hands-on experience. He has spent three decades building and improving high-value residential and commercial properties across the State of Florida.
+                Clear Dayland owns Seacoast Building &amp; Design. His experience includes hands-on construction, roofing, production, sales, and storm-related property work.
               </p>
               <p className="mt-5 leading-8 text-text-secondary">
-                Clear has worked every tier of the trade, from apprentice and builder to roofer, sales and production manager, insurance adjuster, and finally owner of his own company. That full-stack experience is why he stays personally involved at every level of a project, from the first inspection to the final result.
-              </p>
-              <p className="mt-5 leading-8 text-text-secondary">
-                His commitment to homeowners and businesses shows in the standards he holds the company to: OSHA-certified safety practices, an A+ rating with the Better Business Bureau, and 5-star Google reviews that reflect the quality and value clients see in his work.
+                That broad background helps him evaluate both the work itself and the decisions homeowners, property managers, and commercial clients face. He is involved in project assessment and construction decisions as the scope requires.
               </p>
               <div className="mt-6">
                 <p className="font-heading font-bold text-navy">What Clear specializes in</p>
                 <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
                   <li>Storm readiness programs for homeowners and communities</li>
-                  <li>Shipping and Connex container build-outs for homes, offices, and micro-green gardens, including buying, moving, and renting</li>
+                  <li>Container build-outs for homes, offices, and storage</li>
                   <li>Residential and commercial roofing</li>
-                  <li>Radiant barrier roof underlayment</li>
-                  <li>Land and property investment</li>
-                  <li>General contracting across all trades: doors, drywall, gutters, lanais, painting, remodeling, siding, and windows</li>
+                  <li>Exterior renovations and storm repairs</li>
+                  <li>Windows, doors, gutters, siding, and lanais</li>
+                  <li>Coordinating related trades from inspection to walkthrough</li>
                 </ul>
               </div>
             </div>
@@ -136,7 +139,7 @@ export default function AboutPage() {
               <div className="mt-6 rounded-2xl border border-navy/10 bg-white px-6 py-5">
                 <p className="font-heading font-bold text-navy">Background</p>
                 <ul className="mt-3 space-y-2 text-sm text-text-secondary">
-                  <li>20+ years immersed in construction operations</li>
+                  <li>Construction operations experience</li>
                   <li>Former aviation professional</li>
                   <li>Operations, finance, and analytics lead</li>
                   <li>Co-owner, Seacoast Building &amp; Design</li>
@@ -145,24 +148,16 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="leading-8 text-text-secondary">
-                Chandra Dayland is co-owner of Seacoast Building &amp; Design and the operational backbone of the company. Her career began in aviation, spanning piloting, ground control, and aircraft dispatching, where uncompromising attention to detail, strict safety standards, and complex logistics were part of the job every day.
-              </p>
-              <p className="mt-5 leading-8 text-text-secondary">
-                Over the past two decades, Chandra immersed herself in the construction industry alongside her husband, Clear, learning the trade through hands-on observation and direct experience. She carried the same analytical, safety-first discipline from aviation into residential and commercial building, holding every project to exact specifications and top-tier quality standards.
-              </p>
-              <p className="mt-5 leading-8 text-text-secondary">
-                Today she leads the operational side of the business: communications, employee training, accounting, analytics, management, and sales. Her all-in-one approach helped expand Seacoast Building &amp; Design into multiple divisions, giving homeowners and businesses a true full-service experience under one roof. A dedicated wife and mother of two, Chandra knows firsthand how much a home means to a family, and she brings that perspective to every client&apos;s project and long-term investment.
+                Chandra Dayland co-owns Seacoast and leads the systems that keep projects moving: client communication, team training, accounting, analytics, management, and sales. Her aviation background shaped a practical approach to safety, documentation, and complex coordination. She works alongside Clear to keep clients informed and Seacoast&apos;s service teams organized.
               </p>
               <div className="mt-6">
                 <p className="font-heading font-bold text-navy">What Chandra leads</p>
                 <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
-                  <li>Operations, accounting, and analytics</li>
-                  <li>Employee training and team management</li>
-                  <li>Client communications and sales</li>
-                  <li>Restoration and structural upgrades and repairs</li>
-                  <li>Shipping container homes, offices, and material storage rentals</li>
-                  <li>Micro-green growing systems for families, businesses, and restaurants</li>
-                  <li>Land and property sourcing for investment and living</li>
+                  <li>Client communication and project coordination</li>
+                  <li>Team training and operations</li>
+                  <li>Accounting and analytics</li>
+                  <li>Sales and customer support</li>
+                  <li>Coordination across Seacoast service divisions</li>
                 </ul>
               </div>
             </div>
@@ -170,10 +165,7 @@ export default function AboutPage() {
           <div className="mt-12 rounded-2xl border border-navy/10 bg-white px-8 py-7">
             <p className="eyebrow">A family business</p>
             <p className="mt-3 leading-8 text-text-secondary">
-              Clear and his wife Chandra are the visionary owners behind Seacoast Building &amp; Design, serving as the operational anchors for the company in the State of Florida. Together they have built a stellar reputation as a trusted Certified General Contractor and Roofing Contractor team.
-            </p>
-            <p className="mt-4 leading-8 text-text-secondary">
-              Mentoring the next generation is a priority for Clear, and both of his sons are following in his footsteps. Donovan is a Journeyman Electrician, and Cazwyn works as a Storm Restoration Consultant, helping homeowners and business owners recover after a storm.
+              Clear and Chandra lead Seacoast together, combining field experience with day-to-day operations. Their sons also work in the trades: Donovan is a journeyman electrician, and Cazwyn works in storm restoration.
             </p>
           </div>
         </div>
@@ -196,9 +188,9 @@ export default function AboutPage() {
       <section className="section dark-band bg-navy-deep">
         <div className="container max-w-3xl text-center">
           <p className="eyebrow">The work speaks</p>
-          <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Decades of completed work, documented on video.</h2>
+          <h2 className="mt-3 font-heading text-4xl font-bold text-navy">Review the work before you request a quote</h2>
           <p className="mt-5 text-lg text-text-secondary">
-            We don&apos;t just tell you we do good work. We show you every project, documented on video, with real results you can evaluate before you sign anything.
+            Browse completed projects to see the property type, scope, materials, and finished work before you start a conversation.
           </p>
           <div className="mt-8">
             <Link href="/our-work" className="rounded-full bg-orange-deep px-8 py-4 text-center font-bold text-white hover:bg-copper">Browse Project Videos</Link>
@@ -206,7 +198,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTASection variant="navy" heading="Ready to work with Seacoast?" subtext="Request a no-pressure quote. We'll schedule a walkthrough and give you a straight answer about your project." />
+      <CTASection variant="navy" heading="Ready to talk through your property?" subtext="Share what you are planning or what needs attention. We will review the details and help you understand the next step." />
     </>
   );
 }

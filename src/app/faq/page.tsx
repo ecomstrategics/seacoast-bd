@@ -6,7 +6,7 @@ import { SchemaScript, faqSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description: "Answers about Seacoast services, licenses, estimates, project documentation, service areas, storm preparation, financing, and container builds.",
+  description: "Answers about Seacoast services, licenses, estimates, completed projects, service areas, storm preparation, financing, and container builds.",
 };
 
 const faqs = [
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     question: "How do I request an estimate?",
-    answer: "Use the online quote form or call (941) 500-5431. After you share the property, service, and project details, the team follows up within one business day to discuss the work and arrange an on-site assessment.",
+    answer: "Use the online project form or call (941) 500-5431. Share the property location, the work you need, and any timing concerns. The team will review the details and contact you about the next step, including whether an on-site assessment is needed.",
   },
   {
     question: "Does Seacoast handle commercial and multi-family projects?",
-    answer: "Yes. Seacoast works on residential, commercial, multi-family, HOA, and property-management projects. The project portfolio includes documented commercial roofing and coordinated work across occupied multi-building communities.",
+    answer: "Yes. Seacoast works on residential, commercial, multi-family, HOA, and property-management projects. The portfolio includes commercial roofing and coordinated work across occupied multi-building communities.",
   },
   {
     question: "Can I see completed Seacoast projects?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "What storm services are available?",
-    answer: "Seacoast offers pre-season inspections, storm-readiness memberships, boarding and shuttering, emergency stabilization, damage documentation, and repair. Availability and response times depend on conditions, access, and when the request is made.",
+    answer: "Seacoast offers pre-season property reviews, storm-preparation planning, boarding and shuttering, temporary stabilization, damage documentation, and repair. Availability and response times depend on conditions, access, crew capacity, and when the request is made.",
   },
   {
     question: "Does a shipping container project require a permit?",
@@ -57,7 +57,7 @@ export default function FAQPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ" }]} />
           <p className="eyebrow">Frequently asked questions</p>
           <h1 className="mt-4 max-w-3xl font-heading text-5xl font-bold">Answers about working with Seacoast</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Start with the most common questions about services, coverage, estimates, storm work, and container projects. For property-specific guidance, contact the team directly.</p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Have a question before you invite us out? Here is what to know about our services, coverage area, estimates, storm work, financing, and container projects.</p>
         </div>
       </section>
 

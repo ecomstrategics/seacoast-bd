@@ -14,9 +14,9 @@ export const solutions: SolutionPillar[] = [
   {
     slug: "protect",
     title: "Protect",
-    tagline: "Storm & Resilience",
-    heroHeading: "Storm-Proof Your Property Before the Season Starts.",
-    heroSub: "From proactive preparedness to emergency response to insurance-backed repair, Seacoast handles every stage of the storm lifecycle across Southwest Florida.",
+    tagline: "Storm Preparation & Repair",
+    heroHeading: "Prepare Your Property Before Hurricane Season.",
+    heroSub: "Plan ahead for shutters and boarding, check emergency-service availability, and arrange post-storm assessment and repairs with one team.",
     accent: "orange",
     serviceslugs: [
       "storm-preparedness",
@@ -30,9 +30,9 @@ export const solutions: SolutionPillar[] = [
   {
     slug: "improve",
     title: "Improve",
-    tagline: "Exteriors & Renovations",
-    heroHeading: "Renovate the Exterior. Raise the Value.",
-    heroSub: "Roofing, siding, windows, gutters, and full exterior renovations. Seacoast handles the trades so you don't have to coordinate three contractors for one project.",
+    tagline: "Roofing & Exterior Work",
+    heroHeading: "Repair and Update Your Property's Exterior.",
+    heroSub: "Coordinate roofing, siding, windows, gutters, and exterior repairs in one agreed scope.",
     accent: "navy",
     serviceslugs: [
       "roofing",
@@ -47,9 +47,9 @@ export const solutions: SolutionPillar[] = [
   {
     slug: "expand",
     title: "Expand",
-    tagline: "Property Solutions",
-    heroHeading: "Add Space Without the Wait.",
-    heroSub: "Container guest houses, offices, workshops, pool enclosures, and room additions. Seacoast builds everything outside the main footprint, faster and with one contractor from start to finish.",
+    tagline: "Additional Space & Structures",
+    heroHeading: "Plan the Extra Space Your Property Needs.",
+    heroSub: "Explore container-based rooms, offices, workshops, pool enclosures, and traditional additions. Feasibility and timing depend on the site, permits, and final scope.",
     accent: "copper",
     serviceslugs: [
       "pool-enclosures-lanais",

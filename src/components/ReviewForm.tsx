@@ -55,7 +55,8 @@ export function ReviewForm() {
         </label>
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Rating
-          <select name="rating" defaultValue="5 stars" className={fieldClass}>
+          <select name="rating" defaultValue="" required className={fieldClass}>
+            <option value="" disabled>Select a rating</option>
             <option>5 stars</option>
             <option>4 stars</option>
             <option>3 stars</option>
@@ -77,10 +78,11 @@ export function ReviewForm() {
 
       <label className="flex items-start gap-3 text-sm text-text-secondary">
         <input type="checkbox" name="permissionToPublish" value="Yes" className="mt-1 h-4 w-4 rounded border-navy/30 text-orange focus:ring-orange/30" />
-        I give Seacoast Building &amp; Design permission to publish this review on their website.
+        I give Seacoast Building &amp; Design permission to publish this review on the Seacoast website.
       </label>
+      <p className="-mt-2 text-xs leading-5 text-text-secondary">If you give permission, we may publish all or part of your review and omit personal contact details.</p>
 
-      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thank you. Your review was sent to our team and will be reviewed before it is posted.</p>}
+      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thank you—your feedback reached our team. We will only publish it if you gave permission.</p>}
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button

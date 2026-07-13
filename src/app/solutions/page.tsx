@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 export default function SolutionsPage() {
   const pillarBlurbs: Record<string, string> = {
     protect:
-      "Storm preparedness, emergency response, storm damage repair, and impact windows. The full lifecycle of storm protection in one contractor.",
+      "Plan ahead for storms, check emergency-service availability, and arrange assessment and repairs after the weather clears.",
     improve:
-      "Roofing, siding, gutters, windows, and complete exterior renovations. One contractor. One project. No coordinating three separate trades.",
+      "Coordinate roofing, siding, gutters, windows, and exterior repairs under one agreed scope.",
     expand:
-      "Container guest houses, offices, pool enclosures, and room additions. Add real, finished space to your property faster than traditional construction.",
+      "Explore container-based rooms and offices, pool enclosures, and room additions based on your site and goals.",
   };
 
   return (
@@ -57,12 +57,11 @@ export default function SolutionsPage() {
             Protect. Improve. Expand.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">
-            Every Seacoast service maps to one outcome: protecting your property from Florida&apos;s weather,
-            improving it from the outside in, or expanding it with new structures.
-            Find the pillar that matches your project.
+            Start with what you want to do: prepare for storms, update the exterior, or add usable space.
+            Choose a goal below or tell us about the property and we will point you to the right service.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Free Quote</Link>
+            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Quote</Link>
             <Link href="/services" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">Browse All Services</Link>
           </div>
         </div>
@@ -71,11 +70,11 @@ export default function SolutionsPage() {
       {/* Three-pillar cards */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">What we build</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Three outcomes. Dozens of services.</h2>
+          <p className="eyebrow">Project goals</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Choose what you want to accomplish</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Southwest Florida properties face a specific set of challenges: hurricane season, coastal humidity, aging exteriors, and the need for more space.
-            Each pillar is built around one of those outcomes.
+            Florida projects often overlap: a roof may involve gutters and fascia, while an addition may need
+            siding, roofing, and electrical work. Start with the outcome that matters most to you.
           </p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {solutions.map((pillar) => {
@@ -101,24 +100,24 @@ export default function SolutionsPage() {
       {/* How it fits together */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
-          <p className="eyebrow">One contractor</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Why one company for all three.</h2>
+          <p className="eyebrow">Coordinated work</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">When project scopes overlap</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               {
                 icon: "🔗",
-                heading: "Cross-pillar projects are common",
-                body: "A storm damage repair almost always touches roofing, gutters, and siding at the same time. A container guest house needs a roof that matches the main house. Seacoast handles all of it.",
+                heading: "Connected exterior work",
+                body: "Roofing, gutters, fascia, siding, and windows meet at the same edges. One coordinated scope can reduce handoffs and scheduling conflicts.",
               },
               {
                 icon: "📋",
-                heading: "One estimate. One schedule. One call.",
-                body: "Coordinating three separate contractors for one project adds weeks. Seacoast scopes, schedules, and completes every system in a single project cycle.",
+                heading: "One point of contact",
+                body: "Your proposal identifies the included trades, working schedule, allowances, and exclusions so you know who is responsible for each part.",
               },
               {
                 icon: "📹",
-                heading: "Every project documented on video",
-                body: "40+ years of Southwest Florida project work, documented. Every project has a video walkthrough so you can see exactly what Seacoast delivers.",
+                heading: "See completed work",
+                body: "Browse video walkthroughs and field photos from selected Seacoast roofing, exterior, and community projects.",
               },
             ].map((item) => (
               <div key={item.heading} className="rounded-2xl bg-white p-6 shadow-soft">
@@ -134,8 +133,8 @@ export default function SolutionsPage() {
       {/* Quick links to each pillar */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Go deeper</p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Explore each pillar.</h2>
+          <p className="eyebrow">Service groups</p>
+          <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Explore each project goal</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               { slug: "protect", label: "Protect: Storm and Resilience", href: "/solutions/protect", accent: "border-orange", textAccent: "text-orange" },
@@ -156,7 +155,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <CTASection variant="navy" heading="Not sure which pillar fits your project?" subtext="Contact Seacoast for a free consultation. We'll match your project to the right services and give you a clear scope." buttonLabel="Get a Free Quote" />
+      <CTASection variant="navy" heading="Not sure where to start?" subtext="Describe the property and the problem. We will recommend the right inspection, estimate, or site visit." buttonLabel="Tell Us About Your Project" />
     </>
   );
 }

@@ -5,7 +5,7 @@ const stages = [
     id: "before",
     label: "Before",
     heading: "Storm Preparedness",
-    blurb: "Proactive boarding, shuttering, supply delivery, and priority response contracts, locked in before hurricane season.",
+    blurb: "Inspect the property, inventory shutters or panels, and agree on activation terms before hurricane season.",
     href: "/services/storm-preparedness",
     icon: "🛡️",
   },
@@ -13,7 +13,7 @@ const stages = [
     id: "during",
     label: "During",
     heading: "Emergency Response",
-    blurb: "Same-day boarding, tarp deployment, and damage stabilization when a storm is active or has just made landfall.",
+    blurb: "Boarding, tarping, and temporary stabilization when conditions are safe and crews are available.",
     href: "/services/emergency-response",
     icon: "🚨",
   },
@@ -21,7 +21,7 @@ const stages = [
     id: "after",
     label: "After",
     heading: "Storm Damage Repair",
-    blurb: "Insurance documentation, adjuster coordination, and full repair from roofing to gutters to siding. Seacoast handles the claim and the rebuild.",
+    blurb: "Photo documentation, a construction estimate, and coordinated repairs for roofing, gutters, siding, and other agreed work.",
     href: "/services/storm-damage-repair",
     icon: "🔨",
   },
@@ -31,8 +31,8 @@ export function StormLifecycle({ activeStage }: { activeStage?: "before" | "duri
   return (
     <section className="section dark-band bg-navy text-white">
       <div className="container">
-        <p className="eyebrow text-orange/80">The Storm Lifecycle</p>
-        <h2 className="mt-2 font-heading text-3xl font-bold">Seacoast covers every stage.</h2>
+        <p className="eyebrow text-orange/80">Before and after a storm</p>
+        <h2 className="mt-2 font-heading text-3xl font-bold">Plan early. Confirm availability. Repair what the storm damaged.</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {stages.map((stage, index) => {
             const isActive = stage.id === activeStage;

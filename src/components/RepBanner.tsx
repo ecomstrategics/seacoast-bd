@@ -27,11 +27,11 @@ function RepBannerInner() {
     <aside
       className="bg-orange-deep text-white"
       role="complementary"
-      aria-label={`Assigned representative: ${rep.name}`}
+      aria-label={`Your Seacoast contact: ${rep.name}`}
     >
       <div className="container flex flex-wrap items-center justify-between gap-3 py-2.5 text-sm">
         <p className="font-semibold">
-          Your Seacoast rep: <span className="font-bold">{rep.name}</span>
+          Your Seacoast contact: <span className="font-bold">{rep.name}</span>
         </p>
         <div className="flex flex-wrap items-center gap-4 text-sm">
           {rep.phone && (

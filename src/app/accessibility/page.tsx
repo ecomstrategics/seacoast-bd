@@ -51,7 +51,7 @@ export default function AccessibilityPage() {
               If you experience any difficulty accessing part of this website, or if you have suggestions for improvement, please let us know. We welcome your feedback and will make reasonable efforts to provide the information or service you need through an alternative method.
             </p>
             <p className="mt-3 text-text-secondary">
-              Contact Seacoast Building &amp; Design, Fort Myers, Florida, at <a href="mailto:sales@seacoastbd.com" className="font-bold text-navy hover:text-orange">sales@seacoastbd.com</a>, <a href="tel:+19415005431" className="font-bold text-navy hover:text-orange">(941) 500-5431</a>, or through our <Link href="/contact" className="font-bold text-navy hover:text-orange">contact page</Link>. Please include the web address of the page and a description of the issue so we can assist you promptly.
+              Contact Seacoast Building &amp; Design at <a href="mailto:sales@seacoastbd.com" className="font-bold text-navy hover:text-orange">sales@seacoastbd.com</a>, <a href="tel:+19415005431" className="font-bold text-navy hover:text-orange">(941) 500-5431</a>, or through our <Link href="/contact" className="font-bold text-navy hover:text-orange">contact page</Link>. Please include the web address of the page and a description of the issue so we can assist you promptly.
             </p>
           </article>
         </div>

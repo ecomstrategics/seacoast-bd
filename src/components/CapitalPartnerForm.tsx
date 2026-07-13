@@ -83,7 +83,7 @@ export function CapitalPartnerForm() {
             <option>Build-to-rent community</option>
             <option>For-sale single-family</option>
             <option>55+ senior housing</option>
-            <option>Land to delivery (acquire + build)</option>
+            <option>Other residential development</option>
             <option>Not sure yet</option>
           </select>
         </label>
@@ -92,12 +92,12 @@ export function CapitalPartnerForm() {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Target Market / Area
-          <input name="market" placeholder="e.g. Bradenton to Estero, statewide" className={fieldClass} />
+          <input name="market" placeholder="e.g. Fort Myers, Sarasota, or another Florida market" className={fieldClass} />
         </label>
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Timeline
           <select name="timeline" className={fieldClass}>
-            <option>Exploring / positioning</option>
+            <option>Early planning</option>
             <option>Next 3 to 6 months</option>
             <option>6 to 12 months</option>
             <option>Active now</option>
@@ -107,10 +107,10 @@ export function CapitalPartnerForm() {
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
         Details
-        <textarea name="description" rows={5} placeholder="Tell us about the mandate: door count or unit volume, markets, capital structure, and what you need from a build partner." className={fieldClass} />
+        <textarea name="description" rows={5} placeholder="Tell us about the location, product type, approximate unit count, schedule, and what you want Seacoast to evaluate." className={fieldClass} />
       </label>
 
-      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks -- your inquiry was sent. We will follow up shortly.</p>}
+      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—your project details were sent. A Seacoast team member will follow up.</p>}
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button
@@ -118,8 +118,9 @@ export function CapitalPartnerForm() {
         type="submit"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Sending..." : "Request a capacity conversation"}
+        {isSubmitting ? "Sending..." : "Send Project Details"}
       </button>
+      <p className="text-center text-xs text-text-secondary">We will use these details only to respond about the opportunity.</p>
     </form>
   );
 }

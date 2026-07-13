@@ -1,2 +1,2 @@
-const signals = ["Licensed & Insured", "40+ Years Experience", "6 Counties Served", "Financing Available"];
+const signals = ["Florida-Certified Contractor", "Licensed & Insured", "Project Photos & Videos", "Financing Options Available"];
 export function TrustBar() { return <section className="border-y border-white/10 bg-navy-deep py-5"><div className="container grid gap-3 text-center font-heading font-bold text-white sm:grid-cols-2 lg:grid-cols-4">{signals.map((signal) => <div key={signal} className="rounded-xl bg-white/5 px-4 py-3">{signal}</div>)}</div></section>; }

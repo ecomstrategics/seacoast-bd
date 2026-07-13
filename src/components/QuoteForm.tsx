@@ -79,15 +79,18 @@ export function QuoteForm({
         <label className="grid gap-2 text-sm font-semibold text-navy">
           Property Type
           <select name="propertyType" className={fieldClass}>
-            <option>Residential</option>
-            <option>Commercial</option>
+            <option>Home</option>
+            <option>Condo or HOA community</option>
+            <option>Multi-family property</option>
+            <option>Commercial property</option>
+            <option>Other</option>
           </select>
         </label>
       </div>
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
-        Description
-        <textarea name="description" rows={5} placeholder="Tell us about the project, location, timeline, or damage you need help with." className={fieldClass} />
+        What can we help with?
+        <textarea name="description" rows={5} placeholder="Tell us what you are seeing or planning, where the property is, and whether there is a deadline or active damage." className={fieldClass} />
       </label>
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
@@ -99,7 +102,7 @@ export function QuoteForm({
         </select>
       </label>
 
-      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks -- your quote request was sent. We will follow up shortly.</p>}
+      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—we received your request. A Seacoast team member will contact you to discuss the next step.</p>}
       {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
 
       <button
@@ -107,8 +110,9 @@ export function QuoteForm({
         type="submit"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Sending..." : "Submit Quote Request"}
+        {isSubmitting ? "Sending..." : "Send My Project Details"}
       </button>
+      <p className="text-center text-xs text-text-secondary">We will use these details only to respond about your project.</p>
     </form>
   );
 }

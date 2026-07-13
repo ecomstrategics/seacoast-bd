@@ -3,7 +3,7 @@ import Link from "next/link";
 export type CrossSellItem = { title: string; href: string; blurb: string; icon?: string };
 
 export function CrossSellBlock({
-  heading = "What pairs with this",
+  heading = "Related work you may want to plan together",
   items,
 }: {
   heading?: string;

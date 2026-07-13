@@ -14,7 +14,7 @@ export function localBusinessSchema(): SchemaObject {
     image: "https://seacoastbd.com/images/og-default.jpg",
     telephone: "+1-941-500-5431",
     description:
-      "Full-service property solutions contractor serving Southwest Florida. Roofing, siding, storm damage repair, storm preparedness, container guest houses, and more.",
+      "Florida-certified contractor serving Southwest Florida with roofing, storm repair, exterior improvements, additions, and selected container-based projects.",
     areaServed: [
       "Hillsborough County, FL",
       "Manatee County, FL",
@@ -23,17 +23,6 @@ export function localBusinessSchema(): SchemaObject {
       "Lee County, FL",
       "Collier County, FL",
     ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Fort Myers",
-      addressRegion: "FL",
-      addressCountry: "US",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 26.6406,
-      longitude: -81.8723,
-    },
     sameAs: [
       "https://www.facebook.com/seacoastbuilding/",
       "https://www.instagram.com/seacoastband/",
@@ -47,7 +36,6 @@ export function localBusinessSchema(): SchemaObject {
       { "@id": "https://seacoastbd.com/about#clear-dayland" },
       { "@id": "https://seacoastbd.com/about#chandra-dayland" },
     ],
-    priceRange: "$$",
   };
 }
 
@@ -60,29 +48,15 @@ export function personSchema(): SchemaObject {
     jobTitle: "Owner",
     worksFor: { "@id": "https://seacoastbd.com/#organization" },
     description:
-      "Owner of Seacoast Building & Design and a Florida Certified General Contractor and Certified Roofing Contractor with more than 30 years of hands-on experience in residential and commercial construction.",
+      "Owner of Seacoast Building & Design, with experience in residential and commercial construction, roofing, production, sales, and storm-related property work.",
     image: "https://seacoastbd.com/images/about/clear-dayland.webp",
     knowsAbout: [
       "Residential roofing",
       "Commercial roofing",
       "Storm damage restoration",
       "Storm preparedness programs",
-      "Radiant barrier roof underlayment",
       "Shipping container build-outs",
       "General contracting",
-      "Real estate investment",
-    ],
-    hasCredential: [
-      {
-        "@type": "EducationalOccupationalCredential",
-        credentialCategory: "license",
-        name: "Florida Certified General Contractor",
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        credentialCategory: "license",
-        name: "Florida Certified Roofing Contractor",
-      },
     ],
   };
 }
@@ -96,17 +70,14 @@ export function chandraSchema(): SchemaObject {
     jobTitle: "Co-Owner",
     worksFor: { "@id": "https://seacoastbd.com/#organization" },
     description:
-      "Co-owner and operations lead of Seacoast Building & Design. A former aviation professional, Chandra brings precision, safety-focused discipline, and analytical rigor to residential and commercial construction across Southwest Florida, and oversees operations, training, accounting, analytics, management, and sales.",
+      "Co-owner and operations lead of Seacoast Building & Design, overseeing client communication, team training, accounting, analytics, management, and sales.",
     image: "https://seacoastbd.com/images/about/chandra-dayland.webp",
     knowsAbout: [
       "Construction operations management",
       "Employee training and team management",
       "Accounting and analytics",
       "Client communications and sales",
-      "Storm and structural restoration",
-      "Shipping container build-outs",
-      "Micro-green growing systems",
-      "Land and property investment",
+      "Construction project coordination",
     ],
   };
 }
@@ -118,11 +89,6 @@ export function webSiteSchema(): SchemaObject {
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
     publisher: { "@id": "https://seacoastbd.com/#organization" },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://seacoastbd.com/our-work?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -199,21 +165,16 @@ export function productSchema({
       "@type": "Brand",
       name: "Seacoast Building & Design",
     },
-    offers: {
-      "@type": "Offer",
-      availability: offers?.availability ?? "https://schema.org/InStock",
-      seller: localBusinessSchema(),
-      // Numeric price emitted only when known; otherwise expose currency via priceSpecification
-      // to keep the Offer valid for Google Rich Results without inventing a dollar figure.
-      ...(offers?.price
-        ? { price: offers.price, priceCurrency: offers?.priceCurrency ?? "USD" }
-        : {
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              priceCurrency: offers?.priceCurrency ?? "USD",
-            },
-          }),
-    },
+    ...(offers && (offers.price || offers.availability)
+      ? {
+          offers: {
+            "@type": "Offer",
+            seller: localBusinessSchema(),
+            ...(offers.price ? { price: offers.price, priceCurrency: offers.priceCurrency ?? "USD" } : {}),
+            ...(offers.availability ? { availability: offers.availability } : {}),
+          },
+        }
+      : {}),
   };
 }
 
