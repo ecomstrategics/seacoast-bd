@@ -46,6 +46,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/our-work/cinnamon-cove-gutters-fascia-soffits",
+        destination: "/our-work/cinnamon-cove-shuffleboard-project",
+        permanent: true,
+      },
+      {
         source: "/roofing-contractor-services",
         destination: "/services/roofing",
         permanent: true,

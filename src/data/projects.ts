@@ -9,7 +9,7 @@ export type ProjectPhoto = {
 export type Project = {
   slug: string;
   title: string;
-  videoId: string;
+  videoId?: string;
   serviceType: string;
   location: string;
   description: string;
@@ -79,41 +79,40 @@ export const projects: Project[] = [
   },
   { slug: "standing-seam-copper-roof", title: "Copper-Color Standing Seam Metal Roof", videoId: "cPrH0gBbI1E", serviceType: "Roofing - Metal", location: "Southwest Florida", description: "Project video featuring a standing-seam metal roof with a copper-color finish." },
   {
-    slug: "cinnamon-cove-gutters-fascia-soffits",
-    title: "Cinnamon Cove Shuffleboard Soffit & Fascia",
+    slug: "cinnamon-cove-shuffleboard-project",
+    title: "Cinnamon Cove Shuffleboard Project",
     videoId: "aEUvKk13NJM",
-    serviceType: "Fascia & Soffit",
+    serviceType: "Community Recreation Project",
     location: "Fort Myers, FL",
-    description: "Seacoast installed vented soffit and fascia on the Cinnamon Cove shuffleboard shelter in Fort Myers. Completed March 2026.",
-    propertyType: "Community recreation amenity",
+    description: "Seacoast completed a project for the Cinnamon Cove master board community focused on its shuffleboard amenity in Fort Myers. Completed March 2026.",
+    propertyType: "Master community recreation amenity",
     completedOn: "2026-03-03",
-    scope: ["Vented soffit installation", "Fascia installation"],
     photos: [
       {
         src: "/images/projects/cinnamon-cove-shuffleboard/soffit-fascia-01.webp",
-        alt: "Completed vented soffit and fascia above the Cinnamon Cove shuffleboard courts in Fort Myers",
-        caption: "Completed vented soffit and fascia along the shuffleboard shelter beside the courts.",
+        alt: "Completed covered shuffleboard courts at Cinnamon Cove in Fort Myers",
+        caption: "Completed covered shuffleboard courts at Cinnamon Cove.",
         width: 1900,
         height: 878,
       },
       {
         src: "/images/projects/cinnamon-cove-shuffleboard/soffit-fascia-02.webp",
-        alt: "Close view of vented soffit panels beneath the Cinnamon Cove shuffleboard shelter roof",
-        caption: "Close view of the dark vented soffit panels and finished fascia at the shelter roofline.",
+        alt: "Covered seating beside the Cinnamon Cove shuffleboard courts",
+        caption: "Covered seating beside the community shuffleboard courts.",
         width: 1900,
         height: 878,
       },
       {
         src: "/images/projects/cinnamon-cove-shuffleboard/soffit-fascia-03.webp",
-        alt: "Wide view of the Cinnamon Cove shuffleboard shelter soffit installation beside the lake",
-        caption: "Continuous soffit coverage along the shuffleboard courts at Cinnamon Cove.",
+        alt: "Cinnamon Cove shuffleboard courts and covered seating beside the lake",
+        caption: "Shuffleboard courts and covered seating overlooking the lake.",
         width: 1900,
         height: 878,
       },
       {
         src: "/images/projects/cinnamon-cove-shuffleboard/soffit-fascia-04.webp",
-        alt: "Cinnamon Cove shuffleboard shelter framing and fascia during installation",
-        caption: "Shelter framing and fascia during the phased installation.",
+        alt: "Covered seating structure during the Cinnamon Cove shuffleboard project",
+        caption: "Covered seating structure during the shuffleboard project.",
         width: 1900,
         height: 878,
       },

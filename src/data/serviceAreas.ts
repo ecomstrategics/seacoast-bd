@@ -11,10 +11,10 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "fort-myers",
     name: "Fort Myers",
     county: "Lee County",
-    intro: "Seacoast's Fort Myers portfolio includes roofing, soffit and fascia, and multi-family work at properties such as Cinnamon Cove and Heritage Pointe. We serve residential, commercial, condominium, and HOA properties across Lee County.",
+    intro: "Seacoast's Fort Myers portfolio includes roofing, community amenities, exterior structures, and multi-family work at properties such as Cinnamon Cove and Heritage Pointe. We serve residential, commercial, condominium, and HOA properties across Lee County.",
     featuredProjectSlugs: [
       "mels-diner-pvc-roof",
-      "cinnamon-cove-gutters-fascia-soffits",
+      "cinnamon-cove-shuffleboard-project",
       "gordons-fine-furniture-tpo",
       "heritage-pointe-carports",
     ],

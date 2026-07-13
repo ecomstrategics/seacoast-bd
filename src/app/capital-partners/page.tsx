@@ -55,6 +55,21 @@ const trackRecord = [
   { metric: String(projects.length), label: "Project examples online" },
 ];
 
+const reportedExperience = [
+  {
+    category: "Residential work",
+    metric: "413 homes",
+    value: "$63,566,688",
+    label: "in reported project value",
+  },
+  {
+    category: "Community and commercial work",
+    metric: "56",
+    value: "$48,442,320",
+    label: "in reported project value across condo and townhome communities, HOA organizations, and commercial structures",
+  },
+];
+
 const submarkets = [
   {
     name: "Fort Myers & Cape Coral",
@@ -107,7 +122,7 @@ const faqs = [
   {
     question: "Why partner with Seacoast specifically?",
     answer:
-      "Seacoast brings Florida general-contractor and roofing-contractor credentials, regional project examples, and experience coordinating work across commercial and multi-building properties. Project-specific capacity, references, insurance, bonding, delivery structure, and warranty terms should be reviewed during diligence.",
+      "Seacoast reports project experience across 413 homes representing $63,566,688 in project value, plus 56 condominium and townhome communities, HOA organizations, and commercial structures representing $48,442,320 in project value. Seacoast also brings Florida general-contractor and roofing-contractor credentials. Project-specific capacity, references, insurance, bonding, delivery structure, and warranty terms should be reviewed during diligence.",
   },
   {
     question: "What markets does Seacoast build in?",
@@ -229,10 +244,24 @@ export default function CapitalPartnersPage() {
       {/* Track record / underwriting proof */}
       <section className="section dark-band bg-navy text-white">
         <div className="container">
-          <p className="eyebrow text-orange">Track record</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold">Start with information you can verify</h2>
+          <p className="eyebrow text-orange">Experience reported by Seacoast</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold">Project experience across homes, communities, and commercial properties</h2>
           <p className="mt-4 max-w-2xl text-white/70">
-            Seacoast can provide contractor-license information, relevant project references, a proposed project team and schedule, and available insurance, bonding, and warranty documentation for the specific opportunity.
+            These figures were supplied by the company. Supporting project records and relevant references can be reviewed with a capital partner during diligence.
+          </p>
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {reportedExperience.map((item) => (
+              <div key={item.category} className="rounded-2xl border border-white/10 bg-white/5 p-7">
+                <p className="text-xs font-bold uppercase tracking-widest text-orange">{item.category}</p>
+                <p className="mt-4 font-heading text-4xl font-bold text-white">{item.metric}</p>
+                <p className="mt-5 font-heading text-2xl font-bold text-orange">{item.value}</p>
+                <p className="mt-2 text-sm leading-6 text-white/70">{item.label}</p>
+              </div>
+            ))}
+          </div>
+          <h3 className="mt-12 font-heading text-2xl font-bold text-white">Credentials and public project information</h3>
+          <p className="mt-3 max-w-2xl text-white/70">
+            Seacoast can also provide contractor-license information, a proposed project team and schedule, and available insurance, bonding, and warranty documentation for the specific opportunity.
           </p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {trackRecord.map((item) => (
