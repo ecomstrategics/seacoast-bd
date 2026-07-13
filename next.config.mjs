@@ -15,6 +15,61 @@ const nextConfig = {
         destination: "/customer-reviews",
         permanent: true,
       },
+      {
+        source: "/company-and-industry-news",
+        destination: "/road-to-housing-act",
+        permanent: true,
+      },
+      {
+        source: "/f-a-q",
+        destination: "/faq",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/room-additions",
+        destination: "/services/room-additions",
+        permanent: true,
+      },
+      {
+        source: "/roofing-services",
+        destination: "/services/roofing",
+        permanent: true,
+      },
+      {
+        source: "/project-portfolio",
+        destination: "/our-work",
+        permanent: true,
+      },
+      {
+        source: "/roofing-contractor-services",
+        destination: "/services/roofing",
+        permanent: true,
+      },
+      {
+        source: "/project-discount-offers",
+        destination: "/financing",
+        permanent: true,
+      },
+      {
+        source: "/floridas-2025-residential-demographics",
+        destination: "/road-to-housing-act",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/uploads/Seacost-Roof-Cleaning-Maintenance-Contract.pdf",
+        destination: "/services/exterior-cleaning-services",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/uploads/Hurricane-Preparedness-Website-PDF.pdf",
+        destination: "/services/storm-preparedness",
+        permanent: true,
+      },
     ];
   },
   async headers() {

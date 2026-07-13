@@ -4,11 +4,12 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { CTASection } from "@/components/CTASection";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, productSchema, faqSchema } from "@/components/Schema";
+import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Container vs. Everything: Storage, Shed, RV, and Traditional Addition",
+  title: seoTitle("Containers vs. Sheds, RVs & Additions"),
   description:
-    "Not sure if a container is right for you? We compare shipping containers head-to-head against self-storage units, garden sheds, RVs, and traditional additions. Including when NOT to buy a container.",
+    "Compare shipping containers with self-storage, garden sheds, RVs, and traditional additions, including the situations where a container is not the right choice.",
 };
 
 const compareFaqs = [

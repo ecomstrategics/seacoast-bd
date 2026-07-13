@@ -3,11 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
+import { SchemaScript, productSchema } from "@/components/Schema";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Mobile Container Mini-Home for Sale",
-  description:
-    "A finished container mini-home on a road-ready trailer, available now from Seacoast Building & Design. Base price $35,000 with deck, solar, siding, and foundation add-ons.",
+  title: seoTitle("Mobile Container Mini-Home for Sale"),
+  description: seoDescription("A finished container mini-home on a road-ready trailer, available now from Seacoast. Base price $35,000 with deck, solar, siding, and foundation add-ons."),
 };
 
 const highlights = [
@@ -49,6 +50,14 @@ const addOns = [
 export default function PrebuiltContainersPage() {
   return (
     <>
+      <SchemaScript
+        schema={productSchema({
+          name: "Mobile Container Mini-Home",
+          description: "A finished container mini-home on a road-ready trailer, available now from Seacoast. Base price $35,000 with deck, solar, siding, and foundation add-ons.",
+          url: "/containers/prebuilt",
+          offers: { price: "35000", priceCurrency: "USD", availability: "https://schema.org/InStock" },
+        })}
+      />
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Containers", href: "/containers" }, { label: "Prebuilt Options" }]} />

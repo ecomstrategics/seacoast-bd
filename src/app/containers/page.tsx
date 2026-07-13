@@ -8,11 +8,12 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, localBusinessSchema, faqSchema } from "@/components/Schema";
 import Image from "next/image";
 import { containers } from "@/data/containers";
+import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Custom Containers, Built for Florida Living",
+  title: seoTitle("Custom Shipping Containers for Florida"),
   description:
-    "Cat-5-rated storage containers, custom guest houses, offices, workshops, and storm shelters. Seacoast builds and finishes shipping containers to match your home and your hurricane plan.",
+    "Storage containers, custom guest houses, offices, workshops, and storm shelters built and finished for Florida properties, placement, and hurricane plans.",
 };
 
 const landingFaqs = [

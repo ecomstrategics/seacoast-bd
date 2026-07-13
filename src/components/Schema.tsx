@@ -117,7 +117,6 @@ export function webSiteSchema(): SchemaObject {
     "@type": "WebSite",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
-    dateModified: new Date().toISOString().slice(0, 10),
     publisher: { "@id": "https://seacoastbd.com/#organization" },
     potentialAction: {
       "@type": "SearchAction",
@@ -146,8 +145,7 @@ export function videoObjectSchema({
     thumbnailUrl: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
     contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
-    uploadDate: uploadDate ?? "2024-01-01",
-    dateModified: new Date().toISOString().slice(0, 10),
+    ...(uploadDate ? { uploadDate } : {}),
     publisher: { "@id": "https://seacoastbd.com/#organization" },
   };
 }
