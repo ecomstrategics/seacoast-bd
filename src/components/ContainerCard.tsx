@@ -23,9 +23,6 @@ export function ContainerCard({ container }: { container: Container }) {
           className="object-cover transition group-hover:scale-105"
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
         />
-        <span className="absolute bottom-3 left-3 rounded-full bg-navy/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
-          Illustrative — not a project photo
-        </span>
       </div>
       <div className="p-6">
         <div className="text-3xl" aria-hidden>{container.icon}</div>

@@ -207,7 +207,6 @@ export default function ContainerDetailPage({ params }: Props) {
           <div className="relative aspect-video overflow-hidden rounded-2xl">
             <Image src={content.image} alt={content.imageAlt} fill priority className="object-cover" sizes="100vw" />
           </div>
-          <p className="mt-3 text-sm text-white/60">Representative design image. Final configuration depends on the site, plans, approvals, and written scope.</p>
         </div>
       </div>
 
