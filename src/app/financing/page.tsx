@@ -7,37 +7,37 @@ import { SchemaScript, faqSchema } from "@/components/Schema";
 export const metadata: Metadata = {
   title: "Project Financing",
   description:
-    "Renovation financing through Hearth for roofing, exterior renovations, storm repairs, additions, containers, and home improvement projects across Southwest Florida.",
+    "Ask about current financing options through Hearth for eligible residential repairs and improvements quoted by Seacoast in Southwest Florida.",
 };
 
 const benefits = [
-  "Loan amounts up to $250,000",
-  "Affordable monthly payment options",
-  "Funding as fast as 1 to 3 days",
-  "No prepayment penalties",
-  "No home equity required",
+  "Review available options in one place",
+  "Compare rates, terms, and estimated payments",
+  "Choose whether to continue with a participating lender",
+  "Final approval and funding come from the lender",
+  "Ask Seacoast how financing fits your project quote",
 ];
 
 const steps = [
   {
     label: "Apply",
     title: "Check options",
-    body: "Review personalized loan options without affecting your credit score during pre-qualification.",
+    body: "Use Hearth to review financing options you may qualify for. Hearth will explain any credit-check requirements before you continue.",
   },
   {
     label: "Compare",
-    title: "Speak with a consultant",
-    body: "Get instant answers online or talk with a loan consultant about the options that fit your project.",
+    title: "Review the details",
+    body: "Compare the rates, terms, estimated payments, and lender disclosures shown with the available options.",
   },
   {
-    label: "Verify",
-    title: "Provide documents",
-    body: "Securely upload basic documents needed for loan verification and final approval.",
+    label: "Decide",
+    title: "Choose whether to apply",
+    body: "If an option fits, continue with that lender and provide the information it requests for a final decision.",
   },
   {
     label: "Fund",
-    title: "Start the project",
-    body: "Most approved loans fund by ACH quickly, so urgent repairs and renovations do not have to wait.",
+    title: "Coordinate the project",
+    body: "If financing is approved, let Seacoast know so the project schedule and contract can be coordinated with you.",
   },
 ];
 
@@ -68,17 +68,17 @@ const projectTypes = [
   "Siding, gutters, fascia, and soffits",
   "Pool enclosures and lanais",
   "Room additions",
-  "Container guest houses, offices, and shelters",
+  "Other eligible residential improvements",
 ];
 
 const faqs = [
   {
     q: "Does checking financing options affect my credit score?",
-    a: "Pre-qualification through Hearth is designed to show options without affecting your credit score. A hard inquiry can occur if you choose to move forward with a full loan application.",
+    a: "Hearth will explain whether a step uses a soft or hard credit inquiry before you submit it. Review the disclosure shown with each option before continuing.",
   },
   {
-    q: "Why use an unsecured personal loan instead of home equity?",
-    a: "Unsecured personal loans can move faster because they do not require home-equity underwriting or appraisal. They can be useful for urgent repairs, storm work, and projects you want to start quickly.",
+    q: "Will I need to use home equity?",
+    a: "That depends on the financing product and participating lender. Review whether an option is secured or unsecured, whether an appraisal is required, and every fee and disclosure before applying.",
   },
   {
     q: "Does Seacoast make the loan decision?",
@@ -100,7 +100,7 @@ export default function FinancingPage() {
           <p className="eyebrow">Financing options through Hearth</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">Renovation financing</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">
-            Home improvement projects do not always line up neatly with cash on hand. Seacoast Building &amp; Design offers Hearth as a financing option so qualified homeowners can review monthly payment options quickly and move forward with repairs, renovations, and upgrades.
+            Home improvement projects do not always line up neatly with cash on hand. Ask about options through Hearth when you request a Seacoast quote, then review the lender&apos;s rates, terms, disclosures, and eligibility requirements before deciding.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Ask About Financing</Link>
@@ -113,9 +113,9 @@ export default function FinancingPage() {
         <div className="container grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <div>
             <p className="eyebrow">Why financing helps</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Start important work without waiting on home equity.</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Review the project and payment options together</h2>
             <p className="mt-4 text-text-secondary">
-              Personal loan options can be a fit for urgent repairs or projects you want to start quickly. Hearth can show personalized payment options within minutes, while home-equity financing often involves longer underwriting and appraisal timelines.
+              Financing may help some homeowners plan repairs or improvements around a monthly budget. Hearth works with participating lenders; Seacoast does not make lending decisions or set the available rates and terms.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -132,7 +132,7 @@ export default function FinancingPage() {
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">How it works</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Four steps from options to funding</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Four steps from options to project planning</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <div key={step.label} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
@@ -150,9 +150,9 @@ export default function FinancingPage() {
         <div className="container grid gap-10 lg:grid-cols-2">
           <div>
             <p className="eyebrow">Project fit</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Use financing across Seacoast project types.</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Ask whether your residential project may be a fit</h2>
             <p className="mt-4 text-text-secondary">
-              Financing can be discussed with most residential project quotes, from storm repairs to larger renovation and expansion work.
+              Ask whether current Hearth options are available for the project in your Seacoast quote. Eligibility and the offers shown are determined by participating lenders.
             </p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {projectTypes.map((type) => (
@@ -204,7 +204,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <CTASection variant="orange" heading="Want monthly payment options with your quote?" subtext="Tell us what project you are considering and ask about Hearth financing when you request your estimate." buttonLabel="Request a Quote" />
+      <CTASection variant="orange" heading="Want to discuss financing with your quote?" subtext="Tell us what project you are considering and ask how to review current Hearth options." buttonLabel="Request a Quote" />
     </>
   );
 }

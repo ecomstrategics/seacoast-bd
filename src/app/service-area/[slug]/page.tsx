@@ -24,7 +24,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!city) return {};
   return {
     title: seoTitle(`Contractor in ${city.name}, ${city.county}`),
-    description: seoDescription(`Seacoast serves ${city.name}, ${city.county} with roofing, siding, storm protection, container builds, and more. Licensed and insured. Call (941) 500-5431.`),
+    description: seoDescription(`Ask Seacoast about roofing, siding, storm repair, and exterior work in ${city.name}, ${city.county}. Share the property address to confirm service.`),
   };
 }
 
@@ -40,7 +40,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
     localBusinessSchema(),
     serviceSchema({
       name: `Property Services in ${city.name}`,
-      description: `Full-service exterior contractor serving ${city.name}, ${city.county}. Roofing, siding, storm damage repair, storm preparedness, container builds, and more.`,
+      description: `Ask Seacoast about roofing, siding, storm repair, exterior work, and container-based projects in ${city.name}, ${city.county}. Service is confirmed by address and scope.`,
       url: `/service-area/${city.slug}`,
       areaServed: [city.county],
     }),
@@ -62,7 +62,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
           />
           <p className="eyebrow mt-2">{city.county}</p>
           <h1 className="mt-3 font-heading text-5xl font-bold leading-tight md:text-6xl">
-            Seacoast in {city.name}.
+            Roofing &amp; Exterior Contractor in {city.name}, Florida
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{city.intro}</p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -70,7 +70,7 @@ export default function ServiceAreaCityPage({ params }: Props) {
               href="/contact"
               className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition"
             >
-              Get a Free Quote in {city.name}
+              Request a Quote in {city.name}
             </Link>
             <a
               href="tel:+19415005431"
@@ -85,20 +85,21 @@ export default function ServiceAreaCityPage({ params }: Props) {
       {/* Trust Strip */}
       <section className="border-y border-white/10 bg-navy-deep py-5">
         <div className="container grid gap-3 text-center font-heading font-bold text-white sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-xl bg-white/5 px-4 py-3">Licensed and Insured</div>
-          <div className="rounded-xl bg-white/5 px-4 py-3">40+ Years Experience</div>
-          <div className="rounded-xl bg-white/5 px-4 py-3">{city.county} Coverage</div>
-          <div className="rounded-xl bg-white/5 px-4 py-3">Financing Available</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">Florida Certified Contractor</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">Residential &amp; Commercial</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">Service Confirmed by Address</div>
+          <div className="rounded-xl bg-white/5 px-4 py-3">Written Project Scope</div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Available in {city.name}</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Services we offer in {city.county}</h2>
+          <p className="eyebrow">Ask about service in {city.name}</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Common services for {city.name} properties</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Seacoast provides the full range of exterior and property services across {city.county}. Same team, same quality, same license from Protect to Improve to Expand.
+            Tell us what you need done and we will confirm the right Seacoast service, availability,
+            and next step for your address.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
@@ -113,9 +114,9 @@ export default function ServiceAreaCityPage({ params }: Props) {
         <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">Local work</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Projects near {city.name}</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">See Seacoast projects near {city.name}</h2>
             <p className="mt-4 max-w-2xl text-text-secondary">
-              Here is some of our recent work in and around {city.name}. Every project is filmed from setup to completion.
+              Browse project videos and, where available, field photos from Seacoast&apos;s portfolio.
             </p>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {featuredProjects.map((project) => (
@@ -136,10 +137,11 @@ export default function ServiceAreaCityPage({ params }: Props) {
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="eyebrow text-orange">Container builds in {city.name}</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold">Guest houses, offices, and storm shelters for {city.county} properties</h2>
+              <p className="eyebrow text-orange">Container options in {city.name}</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold">Storage, workspace, and guest-space concepts for {city.county}</h2>
               <p className="mt-4 text-white/75 leading-7">
-                Seacoast builds and finishes shipping containers to match your home. Cat-5-rated construction for Southwest Florida conditions. We handle delivery, site prep, utilities, and all finish work in {city.county}.
+                Container-based projects can include delivery, site preparation, utilities, and finishes.
+                Feasibility, engineering, access, and permitting depend on the address and intended use.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link href="/containers/guest-houses" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
@@ -148,8 +150,9 @@ export default function ServiceAreaCityPage({ params }: Props) {
             </div>
             <div>
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/images/service-area/generic-guest-house.webp" alt={`Finished container guest house built by Seacoast in ${city.name}, ${city.county}`} fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                <Image src="/images/service-area/generic-guest-house.webp" alt="Representative container-based guest-space design in a Southwest Florida setting" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
               </div>
+              <p className="mt-3 text-xs text-white/60">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>
@@ -163,7 +166,8 @@ export default function ServiceAreaCityPage({ params }: Props) {
               <p className="eyebrow">Get a quote in {city.name}</p>
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Ready to talk through your project?</h2>
               <p className="mt-4 max-w-lg text-text-secondary">
-                Fill out the form or call us directly. We serve {city.name} and all of {city.county}. Quote requests are typically followed up within one business day.
+                Fill out the form or call us directly. Include the property address, property type, and
+                work you are considering so we can confirm coverage and the right next step.
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex items-center gap-3">
@@ -174,15 +178,12 @@ export default function ServiceAreaCityPage({ params }: Props) {
                   <span className="font-bold text-orange">Service area:</span>
                   <span className="text-text-secondary">{city.county} and surrounding areas</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="font-bold text-orange">Local rep:</span>
-                  <span className="text-text-secondary">Ask about our {city.name}-area representative when you submit</span>
-                </div>
               </div>
               <div className="mt-8">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/service-area/generic-neighborhood.webp" alt={`Southwest Florida neighborhood in ${city.name}, ${city.county} — Seacoast service area`} fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                  <Image src="/images/service-area/generic-neighborhood.webp" alt="Representative Southwest Florida neighborhood" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
+                <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
               </div>
             </div>
             <div>
@@ -194,9 +195,9 @@ export default function ServiceAreaCityPage({ params }: Props) {
 
       <CTASection
         variant="navy"
-        heading={`Seacoast serves ${city.name} and all of ${city.county}.`}
-        subtext="One contractor for roofing, storm protection, containers, and every exterior project on your list. Licensed and insured."
-        buttonLabel="Get a Free Quote"
+        heading={`Planning work in ${city.name}?`}
+        subtext="Share the address and project scope so we can confirm service, scheduling, and the right next step."
+        buttonLabel="Tell Us About Your Project"
       />
     </>
   );

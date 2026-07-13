@@ -34,19 +34,19 @@ export function generateMetadata({ params }: Props): Metadata {
 // ─── Per-pillar cross-sell items (strategy §6.2) ───────────────────────────────
 const pillarCrossSell: Record<string, CrossSellItem[]> = {
   protect: [
-    { title: "Container Storm Shelters", href: "/containers/storm-shelters", blurb: "A Cat-5-rated container shelter gives your family a safe structure on-site. No evacuation required.", icon: "🛡️" },
-    { title: "Roofing", href: "/services/roofing", blurb: "A hurricane-rated roof is the first line of storm defense. Seacoast installs and replaces every roofing system in Southwest Florida.", icon: "🏠" },
-    { title: "Siding", href: "/services/siding", blurb: "Impact-resistant siding keeps water and debris out when winds strip lesser cladding off neighboring homes.", icon: "🧱" },
+    { title: "Container-Based Structures", href: "/containers/storm-shelters", blurb: "Ask about site-specific engineering, anchoring, permits, and occupancy requirements for an emergency-use structure.", icon: "🛡️" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Repair or replace shingle, tile, metal, and flat-roof systems as part of a broader exterior plan.", icon: "🏠" },
+    { title: "Siding", href: "/services/siding", blurb: "Repair or replace siding and coordinate the work with roofing, trim, windows, and doors.", icon: "🧱" },
   ],
   improve: [
-    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Every exterior improvement pairs with a storm preparedness plan to protect your investment during hurricane season.", icon: "🛡️" },
-    { title: "Room Additions", href: "/services/room-additions", blurb: "Expand the footprint while the crew is already on-site. Seacoast handles additions and exterior work in one project.", icon: "➕" },
-    { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Add a finished guest house faster and for less than traditional construction. The siding and roofing match your main home.", icon: "🏡" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Review shutters, boards, and storm activation needs while planning other exterior work.", icon: "🛡️" },
+    { title: "Room Additions", href: "/services/room-additions", blurb: "Plan an addition and the related roofing, siding, and exterior tie-ins under one agreed scope.", icon: "➕" },
+    { title: "Container Guest Spaces", href: "/containers/guest-houses", blurb: "Compare a container-based guest space with a traditional addition after reviewing the site, permitting, schedule, and budget.", icon: "🏡" },
   ],
   expand: [
-    { title: "Roofing", href: "/services/roofing", blurb: "Match your container or addition roof to the main house. Seacoast handles the roofing on both structures.", icon: "🏠" },
-    { title: "Siding", href: "/services/siding", blurb: "Hardie board, stucco, or vinyl: match the finish on your expansion to the existing home so it looks built-in.", icon: "🧱" },
-    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "New structures need to be in the storm plan. Seacoast adds your container or addition to your preparedness coverage.", icon: "🛡️" },
+    { title: "Roofing", href: "/services/roofing", blurb: "Coordinate the roof on a new structure with the existing property and approved design.", icon: "🏠" },
+    { title: "Siding", href: "/services/siding", blurb: "Review siding and exterior-finish options for the addition or container-based structure.", icon: "🧱" },
+    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Include new structures and openings when reviewing your property's storm-preparation plan.", icon: "🛡️" },
   ],
 };
 
@@ -117,34 +117,35 @@ export default function SolutionPillarPage({ params }: Props) {
       <div className="container py-8">
         {slug === "protect" && (
           <div className="relative aspect-video overflow-hidden rounded-2xl">
-            <Image src="/images/solutions/protect-hero.webp" alt="Seacoast crew preparing a Southwest Florida home for hurricane season — shutters and boarding installed on a coastal property" fill className="object-cover" sizes="100vw" />
+            <Image src="/images/solutions/protect-hero.webp" alt="Representative view of a crew installing storm panels on a Southwest Florida home" fill className="object-cover" sizes="100vw" />
           </div>
         )}
         {slug === "improve" && (
           <div className="relative aspect-video overflow-hidden rounded-2xl">
-            <Image src="/images/solutions/improve-hero.webp" alt="Seacoast exterior renovation in progress — new roofing, siding, and gutters on a Southwest Florida residential property" fill className="object-cover" sizes="100vw" />
+            <Image src="/images/solutions/improve-hero.webp" alt="Representative view of roofing, siding, and gutter work on a Southwest Florida home" fill className="object-cover" sizes="100vw" />
           </div>
         )}
         {slug === "expand" && (
           <div className="relative aspect-video overflow-hidden rounded-2xl">
-            <Image src="/images/solutions/expand-hero.webp" alt="Finished container guest house with Hardie siding and custom roof matching the main residence in Southwest Florida" fill className="object-cover" sizes="100vw" />
+            <Image src="/images/solutions/expand-hero.webp" alt="Representative container-based guest-space design in a Southwest Florida yard" fill className="object-cover" sizes="100vw" />
           </div>
         )}
+        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Services in this pillar */}
       <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Services included</p>
+          <p className="eyebrow">Services to consider</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">
-            {slug === "protect" && "Every stage of storm protection."}
-            {slug === "improve" && "Every exterior trade, one contractor."}
-            {slug === "expand" && "More space. More value. Less time."}
+            {slug === "protect" && "Plan before, during, and after a storm."}
+            {slug === "improve" && "Exterior work planned as one scope."}
+            {slug === "expand" && "Ways to add usable space."}
           </h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            {slug === "protect" && "From locking in your prep plan before the season to navigating the insurance claim after, Seacoast handles the full storm lifecycle."}
-            {slug === "improve" && "Roofing, siding, gutters, windows, and exterior renovations scoped and completed together, without three separate contractor relationships."}
-            {slug === "expand" && "Container builds, pool enclosures, and room additions that add real finished space to your property, built by the same crews who do the roofing and siding."}
+            {slug === "protect" && "Plan shutters and boards before the season, check service availability when weather approaches, and arrange damage assessment and repairs afterward."}
+            {slug === "improve" && "Roofing, siding, gutters, windows, and exterior repairs can be reviewed together and organized under one proposal."}
+            {slug === "expand" && "Compare container-based spaces, pool enclosures, and room additions after reviewing the site, intended use, permitting, and budget."}
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {pillarServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
@@ -157,10 +158,10 @@ export default function SolutionPillarPage({ params }: Props) {
         <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">Container builds</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Custom containers, built for Florida living.</h2>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Container options planned around your property</h2>
             <p className="mt-4 max-w-2xl text-text-secondary">
-              Storage, guest houses, offices, and storm shelters. Seacoast builds and finishes
-              shipping containers to match your home, your hurricane plan, and your budget.
+              Explore storage, guest-space, office, and emergency-use concepts. Site access, engineering,
+              zoning, permits, utilities, and the final scope determine what can be built.
             </p>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {containers.map((container) => <ContainerCard key={container.slug} container={container} />)}
@@ -181,22 +182,22 @@ export default function SolutionPillarPage({ params }: Props) {
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <p className="eyebrow">
-                {slug === "protect" && "Year-round protection"}
-                {slug === "improve" && "The Seacoast difference"}
+                {slug === "protect" && "Plan before and after storms"}
+                {slug === "improve" && "Coordinated exterior work"}
                 {slug === "expand" && "Why containers"}
               </p>
               <h2 className="mt-2 font-heading text-3xl font-bold text-navy">
-                {slug === "protect" && "Storm season doesn't end in November."}
-                {slug === "improve" && "40+ years. Every exterior trade. Six counties."}
-                {slug === "expand" && "Real buildings. Faster timelines. One contractor."}
+                {slug === "protect" && "Prepare before the forecast turns urgent."}
+                {slug === "improve" && "Plan connected exterior work together."}
+                {slug === "expand" && "Start with the site, use, and permit path."}
               </h2>
               <p className="mt-4 text-text-secondary">
                 {slug === "protect" &&
-                  "Seacoast's protect pillar is built around the reality that hurricane preparedness is a year-round discipline in Southwest Florida. The most protected properties are the ones that locked in their boarding contracts and shutter systems before June 1, not the ones scrambling when the cone appears on the radar."}
+                  "Early planning gives you time to measure openings, label shutters or boards, check stored materials, and put activation terms in writing before a storm approaches."}
                 {slug === "improve" &&
-                  "Most Southwest Florida homeowners end up coordinating a roofer, a siding crew, and a gutter company separately for what is actually one connected project. Seacoast handles every exterior trade in a single scope, single schedule, and single contract, backed by 40 years of documented Southwest Florida project work behind it."}
+                  "Roofing, siding, gutters, fascia, windows, and doors meet at shared edges. Reviewing them together can reduce handoffs and make responsibilities, sequencing, allowances, and exclusions clearer in the proposal."}
                 {slug === "expand" &&
-                  "Container guest houses and offices deliver finished, permitted, livable space in a fraction of the time and cost of traditional construction. Because they're built on-site by the same licensed crews who do Seacoast's roofing and siding work, the finish quality and code compliance match a traditionally built structure. The exterior can be sided and roofed to be indistinguishable from one."}
+                  "Container-based rooms and offices can be configured with insulation, utilities, siding, and roofing. Site access, zoning, engineering, permits, price, and schedule determine whether they are a fit for your property."}
               </p>
               <Link href="/contact" className={`mt-6 inline-block rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
                 {pillar.ctaLabel}
@@ -205,19 +206,20 @@ export default function SolutionPillarPage({ params }: Props) {
             <div>
               {slug === "protect" && (
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/solutions/protect-secondary.webp" alt="Southwest Florida property after hurricane — Seacoast storm damage assessment in progress with drone visible overhead" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                  <Image src="/images/solutions/protect-secondary.webp" alt="Representative post-storm roof assessment with aerial documentation" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
               )}
               {slug === "improve" && (
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/solutions/improve-secondary.webp" alt="Before and after exterior renovation — new roofing and Hardie siding transforming a Southwest Florida home" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                  <Image src="/images/solutions/improve-secondary.webp" alt="Representative Southwest Florida exterior with updated roofing and siding" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
               )}
               {slug === "expand" && (
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/solutions/expand-secondary.webp" alt="Finished container guest house interior with drywall, mini-split, kitchenette, and hardwood floor matching the main residence" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                  <Image src="/images/solutions/expand-secondary.webp" alt="Representative interior layout for a finished container-based guest space" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
               )}
+              <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>
@@ -227,7 +229,7 @@ export default function SolutionPillarPage({ params }: Props) {
       {relatedProjects.length > 0 && (
         <section className="section dark-band bg-navy-deep">
           <div className="container">
-            <p className="eyebrow">In the field</p>
+            <p className="eyebrow">Project examples</p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-navy">
               Recent {slug === "protect" ? "storm and roofing" : slug === "improve" ? "exterior" : "expansion"} projects
             </h2>
@@ -242,14 +244,14 @@ export default function SolutionPillarPage({ params }: Props) {
       )}
 
       <CrossSellBlock
-        heading={`What pairs with ${pillar.title.toLowerCase()}`}
+        heading="Related services"
         items={crossSell}
       />
 
       <CTASection
         variant={slug === "protect" ? "orange" : slug === "improve" ? "navy" : "orange"}
-        heading={slug === "protect" ? "Ready to lock in your storm preparedness plan?" : slug === "improve" ? "Ready to start your exterior project?" : "Ready to add space to your property?"}
-        subtext={slug === "protect" ? "Seacoast serves six Southwest Florida counties with emergency boarding crews and priority response contracts." : slug === "improve" ? "Request a free quote from Seacoast. We scope and complete every exterior trade in a single project cycle." : "Container guest houses, offices, pool enclosures, and room additions. All from one Southwest Florida contractor."}
+        heading={slug === "protect" ? "Ready to review your storm plan?" : slug === "improve" ? "Ready to discuss your exterior project?" : "Ready to explore additional space?"}
+        subtext={slug === "protect" ? "Tell us about the property, existing shutters or boards, and the help you need before or after a storm." : slug === "improve" ? "Share the property address and work you are considering. We will recommend the right inspection or site visit." : "Tell us how you want to use the space. We will review the site, project type, and next steps."}
         buttonLabel={pillar.ctaLabel}
       />
     </>

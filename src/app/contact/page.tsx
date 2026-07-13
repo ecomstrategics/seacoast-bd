@@ -5,7 +5,7 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Request a free quote or get in touch with Seacoast Building & Design. Serving Southwest Florida: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier Counties.",
+  description: "Request a quote or get in touch with Seacoast Building & Design. Serving Southwest Florida: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier Counties.",
 };
 
 export default function ContactPage() {
@@ -15,9 +15,9 @@ export default function ContactPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
           <p className="eyebrow">Get in touch</p>
-          <h1 className="mt-4 font-heading text-5xl font-bold">Request a Free Quote</h1>
+          <h1 className="mt-4 font-heading text-5xl font-bold">Request a Quote</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
-            Tell us about your project. We&apos;ll follow up within one business day to schedule an on-site assessment.
+            Tell us what you are planning or what needs attention. A Seacoast team member will review the details and contact you to discuss the right next step.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function ContactPage() {
           <div>
             <h2 className="font-heading text-2xl font-bold text-navy">What happens after I request a quote?</h2>
             <p className="mt-3 leading-7 text-text-secondary">
-              After you submit your project details, Seacoast will follow up within one business day to discuss the work and arrange an on-site assessment. You can also call or email the team directly using the contact information below.
+              We will review your project details, contact you to clarify the scope, and arrange a property visit when one is needed. For urgent storm damage or an active leak, call us directly at (941) 500-5431.
             </p>
             <h2 className="mt-10 font-heading text-2xl font-bold text-navy">Contact information</h2>
             <div className="mt-6 space-y-5">

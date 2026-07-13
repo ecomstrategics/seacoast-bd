@@ -1,157 +1,183 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContainerCard } from "@/components/ContainerCard";
-import { FAQAccordion } from "@/components/FAQAccordion";
 import { CrossSellBlock } from "@/components/CrossSellBlock";
 import { CTASection } from "@/components/CTASection";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SchemaScript, localBusinessSchema, faqSchema } from "@/components/Schema";
-import Image from "next/image";
+import { FAQAccordion } from "@/components/FAQAccordion";
+import { SchemaScript, faqSchema, localBusinessSchema } from "@/components/Schema";
 import { containers } from "@/data/containers";
 import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: seoTitle("Custom Shipping Containers for Florida"),
+  title: seoTitle("Shipping Container Storage, Offices & Guest Spaces"),
   description:
-    "Storage containers, custom guest houses, offices, workshops, and storm shelters built and finished for Florida properties, placement, and hurricane plans.",
+    "Explore container-based storage, offices, workshops, and guest-space concepts for Southwest Florida properties. Site review and current estimates from Seacoast.",
 };
 
 const landingFaqs = [
   {
-    question: "What is a Cat-5-rated container?",
+    question: "Does a shipping container have a hurricane rating?",
     answer:
-      "Standard shipping containers are built from corten steel and engineered for ocean shipping in hurricane-force conditions. With proper anchoring and site prep, they exceed Florida Building Code wind ratings for most residential structures.",
+      "Not automatically. Wind performance depends on the complete engineered installation, including the foundation, anchoring, openings, doors, and modifications. Ask what engineering and product documentation applies to your proposed design.",
   },
   {
     question: "Do I need a permit for a container on my property?",
     answer:
-      "It depends on your county and how the container will be used. For storage only, many SW Florida counties require no permit. For habitable structures like guest houses, permits are required. Seacoast handles the permit process for you.",
+      "Permit and zoning rules vary by parcel and intended use. Before buying or placing a container, confirm zoning, HOA, floodplain, access, utility, and building requirements for the address.",
   },
   {
-    question: "What about zoning for a container home?",
+    question: "Can a container be used as a guest house or office?",
     answer:
-      "Zoning and permitting is the most crucial step. Container homes are legal in Florida, but they are not automatically permitted everywhere. You must verify whether your local municipality's building department allows Accessory Dwelling Units (ADUs) and upcycled shipping containers on your parcel. Do not purchase or place anything on your property until we have discussed the project and consulted with your local building and zoning officials.",
+      "It may be possible, depending on the parcel, intended use, design, and local rules. Habitable space generally involves zoning, engineered plans, permits, inspections, utilities, and life-safety requirements. We start by reviewing the address and your goals.",
   },
   {
-    question: "How long does a container last?",
+    question: "How long does a shipping container last?",
     answer:
-      "A properly maintained and finished container can last 50 or more years. The corten steel shell is designed to resist rust and corrosion, and our Florida-appropriate finishes (siding, stucco, sealed coatings) extend that lifespan further.",
+      "Service life depends on the shell's prior condition, salt exposure, drainage, coatings, modifications, and maintenance. We can review the unit and explain the maintenance considerations for your project; there is no one lifespan that applies to every installation.",
   },
   {
-    question: "Can a container guest house be financed?",
+    question: "Can a container project be financed?",
     answer:
-      "Yes. Container builds can be financed through Hearth or traditional construction financing. Ask us about options when you request your quote.",
+      "Financing programs and eligibility change. Ask which options are currently available. Approval, rates, terms, and timing are set by the participating lender.",
   },
   {
-    question: "Will it look like a shipping container when you are done?",
+    question: "Will a finished build still look like a shipping container?",
     answer:
-      "Only if you want it to. Our standard finishes include Hardie board siding, stucco, metal roofing, custom trim, and paint matched to your home. Most finished guest houses are indistinguishable from stick-built cottages.",
+      "That depends on the design you choose. Available options can include siding, roofing, windows, doors, paint, trim, HVAC, plumbing, and interior finishes, subject to the approved plans and scope.",
   },
   {
-    question: "What does it cost?",
+    question: "What does a container project cost?",
     answer:
-      "Storage containers start around $3,200 delivered, with add-ons available. Finished container offices and workshops start around $13,000, 20-foot guest house builds start around $32,000, 40-foot guest house builds start around $50,000, and storm shelters start around $3,200 (they require a foundation). Final pricing varies by site, permitting, configuration, utilities, and finish level.",
+      "Price depends on container condition, delivery access, foundation, permits, utilities, openings, and finishes. Send the property address and intended use for a current written estimate.",
+  },
+];
+
+const processImages = [
+  {
+    step: "1",
+    src: "/images/containers/process/real-delivery.webp",
+    title: "Delivery and placement",
+    body: "Access, turning space, lifting equipment, drainage, and the prepared base all affect how a container can be placed.",
+    alt: "Representative image of a container being placed from a flatbed truck",
+  },
+  {
+    step: "2",
+    src: "/images/containers/process/real-insulation.webp",
+    title: "Weather and temperature control",
+    body: "Insulation, ventilation, moisture control, coatings, and HVAC are selected for the intended use and site conditions.",
+    alt: "Representative image of insulation inside a shipping container build-out",
+  },
+  {
+    step: "3",
+    src: "/images/containers/process/real-buildout.webp",
+    title: "Interior and exterior finish",
+    body: "Openings, electrical work, plumbing, wall finishes, flooring, siding, and trim are defined in the approved scope.",
+    alt: "Representative image of interior finish work in a shipping container",
   },
 ];
 
 export default function ContainersLandingPage() {
-  const schemaItems = landingFaqs.map((f) => ({ question: f.question, answer: f.answer }));
   return (
     <>
-      <SchemaScript schema={[localBusinessSchema(), faqSchema(schemaItems)]} />
+      <SchemaScript schema={[localBusinessSchema(), faqSchema(landingFaqs)]} />
 
-      {/* Hero */}
       <section className="bg-navy py-20 text-white">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Containers" }]} />
-          <p className="eyebrow mt-4">Seacoast Container Builds</p>
-          <h1 className="mt-2 font-heading text-5xl font-bold leading-tight">Custom Containers,<br className="hidden md:block" /> Built for Florida Living.</h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">Cat-5-rated storage. Custom guest houses. Mobile offices. Storm shelters. We build and finish shipping containers to match your home and your hurricane plan.</p>
+          <p className="eyebrow mt-4">Container-based storage and workspace</p>
+          <h1 className="mt-2 max-w-4xl font-heading text-5xl font-bold leading-tight">
+            Container options planned around your property.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+            Explore storage containers, offices, workshops, and guest-space concepts. We help review site access, configuration options, and permitting questions before you commit.
+          </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#products" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Browse Container Builds</Link>
-            <Link href="/contact?service=containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">Configure Your Container</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Hero visual */}
-      <div className="bg-navy pb-16">
-        <div className="container">
-          <div className="relative aspect-video overflow-hidden rounded-2xl">
-            <Image src="/images/containers/containers-hero.webp" alt="Finished container guest house with Hardie siding and stucco matching the adjacent home exterior, palm trees, coastal Southwest Florida" fill className="object-cover" sizes="100vw" />
-          </div>
-        </div>
-      </div>
-
-      {/* Why containers */}
-      <section className="section dark-band bg-navy">
-        <div className="container">
-          <p className="eyebrow">Why containers</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Built like a fortress. Finished like a home.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-container-steel/20 bg-white p-6 shadow-soft">
-              <div className="text-3xl" aria-hidden>🏗️</div>
-              <h3 className="mt-4 font-heading text-xl font-bold text-navy">Built like a fortress</h3>
-              <p className="mt-3 text-text-secondary">Cat-5-rated corten steel construction beats stick-built storage and standard sheds for hurricane survival, security, and longevity. These structures were built for ocean shipping in the worst weather on earth.</p>
-            </div>
-            <div className="rounded-2xl border border-container-steel/20 bg-white p-6 shadow-soft">
-              <div className="text-3xl" aria-hidden>📅</div>
-              <h3 className="mt-4 font-heading text-xl font-bold text-navy">Year-round value</h3>
-              <p className="mt-3 text-text-secondary">Add a guest house, office, or workshop without the timeline or permitting headache of traditional construction. Weeks, not years. Move in, then start generating rental income or business deductions.</p>
-            </div>
-            <div className="rounded-2xl border border-container-steel/20 bg-white p-6 shadow-soft">
-              <div className="text-3xl" aria-hidden>🏡</div>
-              <h3 className="mt-4 font-heading text-xl font-bold text-navy">Finished to match your home</h3>
-              <p className="mt-3 text-text-secondary">Custom siding, stucco, roofing, mini-splits, full bathrooms, and trim that matches your existing home. Most finished container builds look like a real building, because they are one.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product grid */}
-      <section id="products" className="section dark-band bg-navy-deep">
-        <div className="container">
-          <p className="eyebrow">Product line</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Four ways to put containers to work</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">Every container build is delivered, finished, and integrated by licensed Florida contractors. Not a drop-and-walk-away operation.</p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {containers.map((container) => (
-              <ContainerCard key={container.slug} container={container} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Prebuilt options */}
-      <section className="section dark-band bg-navy">
-        <div className="container">
-          <div className="grid gap-8 rounded-2xl border border-container-steel/20 bg-white p-8 shadow-soft md:grid-cols-[1fr_auto] md:items-center">
-            <div>
-              <p className="eyebrow">Prebuilt options</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Mobile mini-home available now</h2>
-              <p className="mt-4 max-w-2xl text-text-secondary">
-                A finished container mini-home on a road-ready trailer is ready to view. Move-in finished interior, kitchenette, and bathroom. Base price $35,000 with deck, solar, siding, and foundation add-ons available.
-              </p>
-            </div>
-            <Link href="/containers/prebuilt" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
-              View Prebuilt Options
+            <Link href="#options" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
+              Explore the Options
+            </Link>
+            <Link href="/contact?service=containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">
+              Ask About Your Site
             </Link>
           </div>
         </div>
       </section>
 
-      {/* The Seacoast difference */}
+      <div className="bg-navy pb-16">
+        <div className="container">
+          <div className="relative aspect-video overflow-hidden rounded-2xl">
+            <Image
+              src="/images/containers/containers-hero.webp"
+              alt="Representative container-based guest-space design in a Florida setting"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+          <p className="mt-3 text-sm text-white/60">Representative design image. Final appearance depends on the approved plans and finish selections.</p>
+        </div>
+      </div>
+
+      <section className="section dark-band bg-navy">
+        <div className="container">
+          <p className="eyebrow">Start with the property</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A useful container build starts with a practical site review.</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                icon: "🔒",
+                title: "Configure the steel shell",
+                body: "Choose doors, ventilation, insulation, electrical work, coatings, and finishes around how the space will be used.",
+              },
+              {
+                icon: "📍",
+                title: "Check the site first",
+                body: "Delivery access, drainage, foundation, utilities, floodplain requirements, zoning, and HOA rules shape the project.",
+              },
+              {
+                icon: "🏠",
+                title: "Select the right finish",
+                body: "Available options include siding, roofing, windows, HVAC, plumbing, and interior finishes based on the approved design.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-container-steel/20 bg-white p-6 shadow-soft">
+                <div className="text-3xl" aria-hidden>{item.icon}</div>
+                <h3 className="mt-4 font-heading text-xl font-bold text-navy">{item.title}</h3>
+                <p className="mt-3 text-text-secondary">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="options" className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Available configurations</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Storage, work, and guest-space options</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">
+            Seacoast can coordinate delivery, placement, and selected finish work under the agreed scope. Site preparation, utilities, engineering, and permits are priced after review.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {containers.map((container) => <ContainerCard key={container.slug} container={container} />)}
+          </div>
+        </div>
+      </section>
+
       <section className="section dark-band bg-navy text-white">
         <div className="container">
-          <p className="eyebrow">The Seacoast difference</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold">We don&apos;t just sell containers. We build them.</h2>
-          <p className="mt-4 max-w-2xl text-white/75">Most container sellers drop a box in your yard and leave. Seacoast does the whole project: procurement, pad prep, delivery, finish work, permits, and hookups.</p>
+          <p className="eyebrow">A coordinated scope</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold">From delivery to finish work</h2>
+          <p className="mt-4 max-w-2xl text-white/75">
+            Depending on the project, Seacoast can coordinate the container, site preparation, delivery, exterior finish, and utility work. Your proposal identifies inclusions, exclusions, allowances, and change-order terms.
+          </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { icon: "🎨", title: "Match your home's exterior", body: "Siding, stucco, paint, trim, and roof line selected to blend with your existing property. Your neighbors won't know it's a container." },
-              { icon: "⚡", title: "Full hookups included", body: "Electrical, plumbing, HVAC, and RV hookups for off-grid builds. One crew handles it all under one contract." },
-              { icon: "📋", title: "Licensed Florida contractors", body: "Every container build is installed by our licensed crew, not a third-party delivery driver. Permitted, inspected, and signed off." },
-              { icon: "🔧", title: "Finish work at any level", body: "Basic sealed shell to full luxury interior. We scope to your budget and timeline. No hidden costs after the bid." },
+              { icon: "🚚", title: "Delivery planning", body: "We review the address, access, placement area, and equipment needed before scheduling delivery." },
+              { icon: "📐", title: "Design and site requirements", body: "The intended use determines what zoning, engineering, foundation, utility, and permit work may be needed." },
+              { icon: "🎨", title: "Finish selections", body: "Choose exterior and interior options that fit the property, purpose, approved plans, and budget." },
+              { icon: "🧾", title: "A written project scope", body: "The proposal explains the work Seacoast will coordinate and the decisions or approvals still needed." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-6">
                 <div className="shrink-0 text-3xl" aria-hidden>{item.icon}</div>
@@ -165,18 +191,13 @@ export default function ContainersLandingPage() {
         </div>
       </section>
 
-      {/* How we build it — real jobsite process */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
-          <p className="eyebrow">How we build it</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">From delivery to finished build</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">Real photos from Seacoast container projects. Our crew handles every stage, from the day the container lands on site to the final interior finish.</p>
+          <p className="eyebrow">How the work comes together</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Common delivery and build-out stages</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">These representative images illustrate common stages. Your project plan will reflect the actual site and approved scope.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              { step: "1", src: "/images/containers/process/real-delivery.webp", title: "Delivered to your site", body: "We procure the container and deliver it to your pad. A forklift sets a finished office unit into place at a SW Florida jobsite.", alt: "Seacoast crew delivering a finished container office to a Southwest Florida jobsite, a forklift lifting the unit off a flatbed truck under a blue sky" },
-              { step: "2", src: "/images/containers/process/real-insulation.webp", title: "Insulated and sealed", body: "Walls and ceiling get rigid foam insulation and an epoxy floor, sealing the steel shell against Florida heat and humidity.", alt: "Interior of a Seacoast container build lined floor to ceiling with rigid foam insulation panels and a sealed epoxy floor" },
-              { step: "3", src: "/images/containers/process/real-buildout.webp", title: "Finished out", body: "Our crew frames, panels, wires, and trims the interior to your spec, turning the shell into a finished, livable space.", alt: "Seacoast crew member finishing the plywood-paneled interior of a container build, working from a step ladder during the build-out" },
-            ].map((item) => (
+            {processImages.map((item) => (
               <figure key={item.step} className="overflow-hidden rounded-2xl border border-container-steel/20 bg-white shadow-soft">
                 <div className="relative aspect-[4/3]">
                   <Image src={item.src} alt={item.alt} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />
@@ -192,83 +213,58 @@ export default function ContainersLandingPage() {
         </div>
       </section>
 
-      {/* Zoning & permitting */}
-      <section className="section dark-band bg-navy-deep">
+      <section className="section dark-band bg-navy">
         <div className="container">
           <div className="rounded-2xl border-2 border-orange bg-white p-8 shadow-soft">
             <p className="eyebrow text-orange-deep">Before you buy</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Zoning and permitting is the most crucial step</h2>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Check the parcel before purchasing a container.</h2>
             <p className="mt-4 max-w-3xl text-text-secondary">
-              Container homes are legal in Florida, but they are not automatically permitted everywhere. You must verify whether your local municipality&apos;s building department allows Accessory Dwelling Units (ADUs) and upcycled shipping containers on your parcel.
-            </p>
-            <p className="mt-4 max-w-3xl font-semibold text-navy">
-              Do not purchase or place anything on your property until we have discussed the project and consulted with your local building and zoning officials. We walk you through this first, so you never sink money into a build your county will not approve.
+              Zoning, building, HOA, floodplain, access, and utility rules vary by property. Send the address and intended use before purchasing a container so feasibility can be checked with the appropriate authorities.
             </p>
             <div className="mt-6">
-              <Link href="/contact?service=containers" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Start With a Consultation</Link>
+              <Link href="/contact?service=containers" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">
+                Start With Your Address
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Compare teaser */}
-      <section className="section dark-band bg-navy">
-        <div className="container">
-          <div className="flex flex-col gap-8 md:flex-row md:items-center">
-            <div className="flex-1">
-              <p className="eyebrow">Container vs. everything else</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Not sure if a container is right for you?</h2>
-              <p className="mt-4 text-text-secondary">We put containers head-to-head against self-storage units, garden sheds, RVs, and traditional additions across every factor that matters: hurricane rating, 10-year cost, build time, mobility, and more. We also tell you honestly when a container is not the right answer.</p>
-              <div className="mt-6">
-                <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">See the Full Comparison</Link>
-              </div>
-            </div>
-            <div className="flex-1 md:max-w-xs">
-              <div className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft">
-                {[
-                  { label: "Hurricane rating", a: "Cat 5", b: "Garden Shed: Low" },
-                  { label: "Build time", a: "Days to weeks", b: "Traditional: 6-12 months" },
-                  { label: "Durability", a: "50+ years", b: "Self-storage: not owned" },
-                ].map((row) => (
-                  <div key={row.label} className="border-b border-cool-gray py-3 last:border-0">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-text-secondary">{row.label}</p>
-                    <div className="mt-1 flex items-center justify-between gap-2">
-                      <span className="text-sm font-bold text-success">Container: {row.a}</span>
-                      <span className="text-sm text-text-secondary">{row.b}</span>
-                    </div>
-                  </div>
-                ))}
-                <Link href="/containers/compare" className="mt-4 block text-center text-sm font-semibold text-orange hover:underline">Full comparison table →</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
       <section className="section dark-band bg-navy-deep">
+        <div className="container flex flex-col gap-8 md:flex-row md:items-center">
+          <div className="flex-1">
+            <p className="eyebrow">Compare the practical details</p>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Is a container the right fit?</h2>
+            <p className="mt-4 text-text-secondary">
+              Compare ownership, delivery, site requirements, customization, and permitting with sheds, rented storage, RVs, and traditional additions. A property review is still required before choosing a direction.
+            </p>
+          </div>
+          <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Compare the Options</Link>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy mb-8">Container FAQ</h2>
+          <h2 className="mb-8 mt-2 font-heading text-4xl font-bold text-navy">Container planning FAQ</h2>
           <FAQAccordion items={landingFaqs} />
         </div>
       </section>
 
-      {/* Cross-sell to main business */}
       <CrossSellBlock
-        heading="Container builds pair well with"
+        heading="Related work you may want to plan together"
         items={[
-          { icon: "🏠", title: "Roofing", href: "/services/roofing", blurb: "Match your container's roof line and material to your existing home. One crew, one contract." },
-          { icon: "🪟", title: "Siding", href: "/services/siding", blurb: "Hardie board, stucco, or vinyl on your container to match your house exterior down to the paint color." },
-          { icon: "🛡️", title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "A storm-rated container shelter paired with a full preparedness plan keeps you protected year-round." },
+          { icon: "🏠", title: "Roofing", href: "/services/roofing", blurb: "Discuss roofing and drainage details where a new structure meets the rest of the property." },
+          { icon: "🧱", title: "Siding", href: "/services/siding", blurb: "Explore siding, trim, and paint options for a more finished exterior." },
+          { icon: "⚡", title: "Battery Backup", href: "/services/whole-house-battery-systems", blurb: "Plan backup power around the circuits and equipment the space needs." },
         ]}
       />
 
       <CTASection
         variant="orange"
-        heading="Ready to get a container quote?"
-        subtext="Tell us what you have in mind. We scope it, price it, and build it start to finish."
-        buttonLabel="Get a Container Quote"
+        heading="Have a container project in mind?"
+        subtext="Send the property address and tell us how you want to use the space. We will help identify the right next step."
+        buttonLabel="Tell Us About the Site"
       />
     </>
   );

@@ -206,7 +206,7 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Get a Free Quote</Link>
+          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Request a Quote</Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -239,14 +239,14 @@ export function Header() {
             ))}
             <div className="my-3 border-t border-white/10" />
             <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Containers</Link>
-            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Prebuilt Options</Link>
+            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Finished Mini-Home Example</Link>
             <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Financing</Link>
             <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Our Work</Link>
             <Link href="/customer-reviews" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Customer Reviews</Link>
             <Link href="/about" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>About</Link>
             <Link href="/resources" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Resources</Link>
             <div className="my-3 border-t border-white/10" />
-            <Link href="/contact" className="block rounded-full bg-orange-deep px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Get a Free Quote</Link>
+            <Link href="/contact" className="block rounded-full bg-orange-deep px-5 py-3 text-center font-bold text-white" onClick={() => setMobileOpen(false)}>Request a Quote</Link>
             <a href="tel:+19415005431" className="block rounded-full border border-white/25 px-5 py-3 text-center font-semibold text-white" onClick={() => setMobileOpen(false)}>(941) 500-5431</a>
           </div>
         </nav>

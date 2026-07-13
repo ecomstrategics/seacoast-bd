@@ -5,65 +5,69 @@ import { SchemaScript, faqSchema, localBusinessSchema } from "@/components/Schem
 import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: seoTitle("ROAD to Housing Act: Florida BTR Impact"),
+  title: seoTitle("ROAD to Housing Act: What Section 1001 Says"),
   description:
-    "A plain-English look at the ROAD to Housing Act, its proposed new-construction and build-to-rent exemptions, and potential impact on Florida housing capital.",
+    "A sourced overview of Section 1001 of the 21st Century ROAD to Housing Act, including covered investors, purchase restrictions, exceptions, penalties, and effective timing.",
 };
+
+const finalActUrl = "https://www.govinfo.gov/content/pkg/BILLS-119hr6644enr/html/BILLS-119hr6644enr.htm";
+const enactmentSourceUrl = "https://www.crapo.senate.gov/media/newsreleases/crapo-backed-housing-legislation-becomes-law";
 
 const faqs = [
   {
     question: "What is the 21st Century ROAD to Housing Act?",
     answer:
-      "The 21st Century ROAD to Housing Act is federal legislation moving through Congress that would restrict large institutional investors from acquiring existing single-family homes, while keeping new construction, build-to-rent, renovate-to-rent, and 55+ senior housing as permitted paths. Its goal is to push large pools of housing capital toward building and renovating supply rather than buying up existing homes.",
+      "The 21st Century ROAD to Housing Act became law in July 2026. It is a broad federal housing package. Section 1001 addresses certain single-family-home purchases by large institutional investors.",
   },
   {
     question: "Who does the Act restrict?",
     answer:
-      "As drafted, the restrictions target large institutional investors, generally those holding portfolios at or above a defined threshold (reported around 350 or more single-family homes). It is aimed at large-scale buyers of existing single-family housing, not individual homeowners or small operators.",
+      "Section 1001 applies to defined for-profit entities with direct or indirect investment control of at least 350 single-family homes after enactment, subject to the statute's definitions and exclusions.",
   },
   {
     question: "What is exempt from the Act?",
     answer:
-      "The Act keeps several paths open: newly constructed single-family homes, build-to-rent (BTR) new construction, renovate-to-rent properties where the investor spends above a defined renovation threshold (reported around 15% of value), new or converted 55+ senior housing, and certain manufactured-housing categories. These exemptions are why institutional capital is being redirected toward building and substantial renovation.",
+      "The statute lists several exceptions, including qualifying newly constructed homes, build-to-rent programs, certain renovate-to-rent work, qualifying homeownership programs, and qualifying 55+ communities. Review the enacted text and legal counsel for a specific transaction.",
   },
   {
     question: "What are the penalties?",
     answer:
-      "Reported penalties for acquiring prohibited existing single-family homes are steep, up to roughly $1 million per home or three times the purchase price, with disposition requirements (reported around a 7-year window) for portfolios that fall under the restriction. These figures are based on the bill as drafted and could change before enactment.",
+      "A violation may carry a civil penalty of up to $1 million per violation or three times the purchase price, whichever is greater. The purchase restriction and penalty provisions take effect 180 days after enactment.",
   },
   {
     question: "Has the Act become law?",
     answer:
-      "Not yet. The Act has advanced through the legislative process (with strong reported votes in both chambers) but still requires final reconciliation and enactment, after which a phase-in period (reported around 180 days) would apply. Until it is signed into law, the specific thresholds, penalties, and timelines may change. This page is a positioning resource, not legal advice.",
+      "Yes. The Act became law in July 2026. Some Section 1001 requirements take effect 180 days after enactment, and implementation guidance may follow.",
   },
   {
     question: "What does the Act mean for institutional housing capital?",
     answer:
-      "If enacted, capital that wants single-family exposure would largely have to reach it through new construction, build-to-rent, renovate-to-rent, or 55+ housing. The practical effect is that builders in high-growth markets become the access point for that capital. Seacoast Building & Design is positioned as a build-to-rent and new-construction partner in the Southwest Florida growth corridor.",
+      "Covered investors may need to reconsider some acquisition strategies. The impact depends on portfolio size, ownership control, transaction structure, the applicable exception, and implementation guidance.",
   },
 ];
 
 const exemptions = [
   {
     title: "Newly constructed single-family homes",
-    body: "Homes built new for sale sit in a permitted category. Capital gets single-family exposure by creating supply, not absorbing it.",
+    body: "The statute includes an exception for certain newly constructed, renovated, or rental-conversion homes intended for sale rather than rental pending sale.",
   },
   {
     title: "Build-to-rent (BTR) new construction",
-    body: "Purpose-built rental communities of new single-family product remain open to institutional ownership, the clearest path for SFR rental strategies.",
+    body: "The statute includes qualifying programs in which a covered investor purchases, constructs, or constructs and retains newly built single-family homes as rental properties.",
   },
   {
     title: "Renovate-to-rent",
-    body: "Properties where the investor spends above a defined renovation threshold (reported around 15% of value) qualify, rewarding substantial reinvestment over passive acquisition.",
+    body: "The exception requires substantial rehabilitation of homes that do not meet structural or core-system elements of local building codes and improvements totaling at least 15% of the purchase price.",
   },
   {
     title: "55+ and senior housing",
-    body: "New, renovated, or converted 55+ senior housing is its own permitted category, aligned with strong retirement and active-adult demand in markets like Southwest Florida.",
+    body: "The statute includes certain newly constructed, renovated, or converted homes operated as part of a 55+ community that also satisfies HUD visitability standards.",
   },
 ];
 
 export default function RoadToHousingActPage() {
-  const lastUpdated = "2026-06-28";
+  const lastUpdated = "2026-07-12";
+  const datePublished = "2026-06-28";
   return (
     <>
       <SchemaScript
@@ -71,10 +75,10 @@ export default function RoadToHousingActPage() {
           {
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "The 21st Century ROAD to Housing Act, Explained",
+            headline: "The 21st Century ROAD to Housing Act: What Section 1001 Says",
             description:
-              "A plain-English explainer on the 21st Century ROAD to Housing Act: what it bans, the exemptions for new construction, build-to-rent, renovate-to-rent, and 55+ housing, the penalties, and what it means for institutional housing capital.",
-            datePublished: lastUpdated,
+              "A sourced overview of Section 1001 of the 21st Century ROAD to Housing Act, including covered investors, purchase restrictions, exceptions, penalties, and effective timing.",
+            datePublished,
             dateModified: lastUpdated,
             author: { "@id": "https://seacoastbd.com/#organization" },
             publisher: { "@id": "https://seacoastbd.com/#organization" },
@@ -96,15 +100,18 @@ export default function RoadToHousingActPage() {
               { label: "ROAD to Housing Act" },
             ]}
           />
-          <p className="eyebrow text-orange/80">Resource for capital partners</p>
+          <p className="eyebrow text-orange/80">Federal housing-policy update</p>
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-5xl">
-            The 21st Century ROAD to Housing Act, explained.
+            The 21st Century ROAD to Housing Act became law
           </h1>
           <p className="mt-6 text-lg text-white/80">
-            A plain-English breakdown of the legislation that is redirecting institutional housing capital from buying
-            existing homes to building new ones, and what it means for build-to-rent and new construction in Florida.
+            Signed into law in July 2026, the Act includes a new federal framework for certain single-family-home purchases by large institutional investors. Section 1001 defines covered investors, exceptions, penalties, and a 180-day period before the purchase restrictions take effect.
           </p>
-          <p className="mt-4 text-sm text-white/50">Last updated {lastUpdated}. Positioning resource, not legal advice.</p>
+          <p className="mt-4 text-sm text-white/50">Last updated July 12, 2026. General information only; not legal or investment advice.</p>
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <a href={finalActUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">Read the final enrolled text</a>
+            <a href={enactmentSourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">Read the official enactment announcement</a>
+          </div>
         </div>
       </section>
 
@@ -113,19 +120,10 @@ export default function RoadToHousingActPage() {
         <div className="container max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-navy">The short version</h2>
           <p className="mt-4 text-text-secondary">
-            The 21st Century ROAD to Housing Act would bar large institutional investors from buying existing single-family
-            homes, with steep penalties, while deliberately keeping new construction, build-to-rent, renovate-to-rent, and
-            55+ senior housing open. The intended effect is to channel housing capital into creating and improving supply
-            rather than competing with families for the existing stock.
+            Section 1001 generally prohibits future single-family-home purchases by covered institutional investors with investment control of at least 350 homes. Homes acquired through defined exceptions are excluded from that threshold after enactment. The law does not require covered investors to sell homes acquired before enactment.
           </p>
           <p className="mt-4 text-text-secondary">
-            For institutional capital that still wants single-family exposure, the practical takeaway is simple: the legal
-            path runs through building and substantial renovation. That makes builders in high-growth markets the access
-            point. Seacoast Building &amp; Design is positioned as a{" "}
-            <Link href="/capital-partners" className="font-semibold text-orange hover:underline">
-              build-to-rent and new-construction partner
-            </Link>{" "}
-            in the Southwest Florida growth corridor.
+            The purchase restriction and civil-penalty provisions take effect 180 days after enactment and are scheduled to expire 15 years after that effective date. The statute includes multiple exceptions, and their application depends on the facts of a transaction.
           </p>
         </div>
       </section>
@@ -135,14 +133,13 @@ export default function RoadToHousingActPage() {
         <div className="container max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-navy">What the Act restricts</h2>
           <p className="mt-4 text-text-secondary">
-            The restrictions target large institutional investors, generally those holding single-family portfolios at or
-            above a defined threshold (reported around 350 or more homes). The Act focuses on the acquisition of existing
-            single-family homes, the part of the market where large buyers compete most directly with individual
-            homebuyers. Reported penalties are severe, up to roughly $1 million per home or three times the purchase price,
-            with disposition requirements (reported around a 7-year window) for affected portfolios.
+            The law defines a large institutional investor as a covered for-profit entity that, after enactment, has direct or indirect investment control of at least 350 single-family homes, excluding qualifying excepted purchases made after enactment. Subject to the listed exceptions, Section 1001 prohibits those investors from purchasing additional single-family homes.
+          </p>
+          <p className="mt-4 text-text-secondary">
+            A violation may carry a civil penalty of up to $1 million per violation or three times the purchase price, whichever is greater. The final law does not require divestiture of homes purchased before enactment.
           </p>
           <p className="mt-4 text-sm text-text-secondary/80">
-            Thresholds, penalty amounts, and timelines reflect the bill as drafted and could change before enactment.
+            Read Section 1001 in the <a href={finalActUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">final enrolled text</a>. Consult legal counsel about a specific investor or transaction.
           </p>
         </div>
       </section>
@@ -152,8 +149,7 @@ export default function RoadToHousingActPage() {
         <div className="container max-w-4xl">
           <h2 className="font-heading text-3xl font-bold text-navy">What stays open: the exemptions</h2>
           <p className="mt-4 text-text-secondary">
-            The exemptions are the whole story for capital. They define the legal paths to single-family exposure once the
-            existing-home door closes.
+            Section 1001 contains several exceptions. The examples below are highlights, not a complete legal analysis.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {exemptions.map((e) => (
@@ -169,17 +165,12 @@ export default function RoadToHousingActPage() {
       {/* What it means */}
       <section className="section dark-band bg-navy-deep">
         <div className="container max-w-4xl">
-          <h2 className="font-heading text-3xl font-bold text-navy">What it means for housing capital</h2>
+          <h2 className="font-heading text-3xl font-bold text-navy">What the law may change for housing investors</h2>
           <p className="mt-4 text-text-secondary">
-            If the Act is enacted, billions in institutional housing capital that previously bought existing homes would
-            need a new path to single-family exposure. New construction, build-to-rent, renovate-to-rent, and 55+ housing
-            are that path, and they all require builders. Funds, single-family rental operators, and family offices will be
-            looking for construction partners in the highest-growth markets, on institutional timelines and underwriting.
+            The law may affect how covered investors evaluate existing-home acquisitions, new construction, build-to-rent programs, substantial rehabilitation, and qualifying 55+ communities. The practical effect will depend on each investor&apos;s portfolio, transaction structure, effective timing, and future implementation guidance.
           </p>
           <p className="mt-4 text-text-secondary">
-            Southwest Florida is one of the strongest of those markets, combining sustained in-migration with a deep
-            retirement and seasonal demographic. Seacoast builds across the three permitted categories, from land sourcing
-            through delivery, and documents every project on video for remote capital partners.
+            For developers considering new residential construction in Florida, Seacoast can discuss construction scope and project fit. Legal and investment conclusions should come from the partner&apos;s own advisers.
           </p>
         </div>
       </section>
@@ -202,15 +193,15 @@ export default function RoadToHousingActPage() {
       {/* CTA */}
       <section className="section dark-band bg-navy-deep">
         <div className="container max-w-4xl text-center">
-          <h2 className="font-heading text-3xl font-bold text-navy">Get positioned before the capital arrives.</h2>
+          <h2 className="font-heading text-3xl font-bold text-navy">Discuss a Florida residential project</h2>
           <p className="mt-4 text-text-secondary">
-            See how Seacoast partners with build-to-rent funds, SFR operators, and senior-housing investors across Florida.
+            Share the location, product type, unit count, schedule, and construction questions your team needs to evaluate.
           </p>
           <Link
             href="/capital-partners"
             className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 font-bold text-white hover:bg-copper"
           >
-            Explore capital partnerships
+            Discuss a Development Opportunity
           </Link>
         </div>
       </section>

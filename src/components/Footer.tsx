@@ -5,7 +5,7 @@ import { containers } from "@/data/containers";
 
 const pillarLinks = {
   protect: [
-    { label: "Storm Ready Programs", href: "/storm-ready" },
+    { label: "Storm Preparation Plans", href: "/storm-ready" },
     { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
     { label: "Storm Preparedness", href: "/services/storm-preparedness" },
     { label: "Emergency Response", href: "/services/emergency-response" },
@@ -49,7 +49,7 @@ export function Footer() {
         {/* Company */}
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
-          <p className="mt-3 text-sm text-white/75 leading-6">Southwest Florida&rsquo;s full-service property solutions company. Protect it. Improve it. Expand it.</p>
+          <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, and additions for Florida Gulf Coast homes, businesses, and communities.</p>
           <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
           <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
           <p className="mt-1 text-sm text-white/70">
