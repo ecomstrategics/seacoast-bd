@@ -27,6 +27,7 @@ export function YouTubeFacade({ videoId, title }: { videoId: string; title: stri
             src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
             alt=""
             fill
+            priority
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover opacity-80 transition group-hover:scale-105"
           />
