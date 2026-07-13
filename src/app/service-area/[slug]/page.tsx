@@ -11,6 +11,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/data/services";
 import { projects } from "@/data/projects";
 import { serviceAreaCities } from "@/data/serviceAreas";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -22,8 +23,8 @@ export function generateMetadata({ params }: Props): Metadata {
   const city = serviceAreaCities.find((c) => c.slug === params.slug);
   if (!city) return {};
   return {
-    title: `Seacoast Building and Design in ${city.name} | ${city.county}`,
-    description: `Seacoast Building and Design serves ${city.name}, ${city.county}. Roofing, siding, storm protection, container builds, and more. Licensed and insured. (941) 500-5431`,
+    title: seoTitle(`Contractor in ${city.name}, ${city.county}`),
+    description: seoDescription(`Seacoast serves ${city.name}, ${city.county} with roofing, siding, storm protection, container builds, and more. Licensed and insured. Call (941) 500-5431.`),
   };
 }
 

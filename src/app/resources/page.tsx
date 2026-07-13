@@ -5,6 +5,7 @@ import { CTASection } from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Resources",
   description: "Guides, articles, and resources about roofing, storm prep, exterior renovations, and building codes for Southwest Florida property owners.",
+  robots: { index: false, follow: true },
 };
 
 const articles = [

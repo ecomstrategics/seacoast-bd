@@ -67,6 +67,10 @@ export default function CustomerReviewsPage() {
         <div className="container">
           <p className="eyebrow">Leave a review</p>
           <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Two quick ways to share your experience</h2>
+          <div className="mt-6 max-w-3xl">
+            <h3 className="font-heading text-xl font-bold text-navy">Where can I read or leave a Seacoast review?</h3>
+            <p className="mt-3 leading-7 text-text-secondary">You can read selected customer stories further down this page, then share your own experience on Google or the Better Business Bureau. If you prefer to contact Seacoast directly, submit the review form and the team will moderate it before publication.</p>
+          </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {reviewChannels.map((channel) => (
               <div key={channel.name} className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8 shadow-soft">

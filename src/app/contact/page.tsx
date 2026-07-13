@@ -25,7 +25,11 @@ export default function ContactPage() {
       <section className="section dark-band bg-navy">
         <div className="container grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <div>
-            <h2 className="font-heading text-2xl font-bold text-navy">Contact information</h2>
+            <h2 className="font-heading text-2xl font-bold text-navy">What happens after I request a quote?</h2>
+            <p className="mt-3 leading-7 text-text-secondary">
+              After you submit your project details, Seacoast will follow up within one business day to discuss the work and arrange an on-site assessment. You can also call or email the team directly using the contact information below.
+            </p>
+            <h2 className="mt-10 font-heading text-2xl font-bold text-navy">Contact information</h2>
             <div className="mt-6 space-y-5">
               <div>
                 <p className="eyebrow">Phone</p>

@@ -14,6 +14,7 @@ import { getSolutionBySlug, solutions } from "@/data/solutions";
 import { getServicesByPillar } from "@/data/services";
 import { containers } from "@/data/containers";
 import { projects } from "@/data/projects";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -25,8 +26,8 @@ export function generateMetadata({ params }: Props): Metadata {
   const pillar = getSolutionBySlug(params.slug as "protect" | "improve" | "expand");
   if (!pillar) return {};
   return {
-    title: pillar.heroHeading,
-    description: pillar.heroSub,
+    title: seoTitle(`${pillar.title}: ${pillar.tagline}`),
+    description: seoDescription(pillar.heroSub),
   };
 }
 

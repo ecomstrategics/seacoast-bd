@@ -11,6 +11,7 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import Image from "next/image";
 import { SchemaScript, productSchema, faqSchema } from "@/components/Schema";
 import { containers, getContainerBySlug } from "@/data/containers";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -22,8 +23,8 @@ export function generateMetadata({ params }: Props): Metadata {
   const container = getContainerBySlug(params.slug);
   if (!container) return {};
   return {
-    title: container.name,
-    description: container.shortDescription,
+    title: seoTitle(container.name),
+    description: seoDescription(container.shortDescription),
   };
 }
 

@@ -5,6 +5,7 @@ import { CTASection } from "@/components/CTASection";
 import { SchemaScript, videoObjectSchema } from "@/components/Schema";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
 import { getProjectBySlug, projects } from "@/data/projects";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -16,8 +17,8 @@ export function generateMetadata({ params }: Props): Metadata {
   const project = getProjectBySlug(params.slug);
   if (!project) return {};
   return {
-    title: project.title,
-    description: project.description,
+    title: seoTitle(project.title),
+    description: seoDescription(project.description),
   };
 }
 

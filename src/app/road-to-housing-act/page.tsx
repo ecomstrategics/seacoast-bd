@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, faqSchema, localBusinessSchema } from "@/components/Schema";
+import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "21st Century ROAD to Housing Act Explained | Build-to-Rent Impact",
+  title: seoTitle("ROAD to Housing Act: Florida BTR Impact"),
   description:
-    "Plain-English explainer on the 21st Century ROAD to Housing Act: what it bans, the exemptions for new construction, build-to-rent, renovate-to-rent, and 55+ housing, the penalties, and what it means for institutional housing capital in Florida.",
+    "A plain-English look at the ROAD to Housing Act, its proposed new-construction and build-to-rent exemptions, and potential impact on Florida housing capital.",
 };
 
 const faqs = [

@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, serviceSchema, faqSchema } from "@/components/Schema";
+import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Storm Ready Programs | Annual Hurricane Prep Memberships | Seacoast Building & Design",
+  title: seoTitle("Storm Ready Hurricane Memberships"),
   description:
-    "Seacoast Storm Ready Programs turn one-off storm work into an annual membership. Pre-season inspections, wind mitigation reports, priority boarding and shuttering, and first-in-line emergency response across Southwest Florida. Gold and Platinum tiers.",
+    "Annual hurricane preparation memberships with inspections, wind mitigation reports, priority boarding, shuttering, and emergency response across Southwest Florida.",
 };
 
 const gold = {

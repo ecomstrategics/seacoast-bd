@@ -11,6 +11,7 @@ import { SchemaScript, serviceSchema, faqSchema } from "@/components/Schema";
 import Image from "next/image";
 import { getServiceBySlug, services } from "@/data/services";
 import { projects } from "@/data/projects";
+import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -263,8 +264,8 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!service) return {};
   const rich = stormContent[params.slug];
   return {
-    title: service.name,
-    description: rich ? rich.heroSub : service.shortDescription,
+    title: seoTitle(service.name),
+    description: seoDescription(rich ? rich.heroSub : service.shortDescription),
   };
 }
 

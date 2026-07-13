@@ -4,11 +4,12 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CapitalPartnerForm } from "@/components/CapitalPartnerForm";
 import { SchemaScript, serviceSchema, faqSchema, personSchema } from "@/components/Schema";
+import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Build-to-Rent Builder Florida | Capital Partners | Seacoast Building & Design",
+  title: seoTitle("Florida Build-to-Rent & Capital Partnerships"),
   description:
-    "Seacoast is a Florida build-to-rent and new-construction partner for institutional capital. BTR communities, 55+ housing, and land-to-delivery across Fort Myers, Cape Coral, Naples, and the North Port-Sarasota-Bradenton corridor, positioned for the 21st Century ROAD to Housing Act.",
+    "Florida build-to-rent and new-construction partnerships for institutional capital, including BTR communities, 55+ housing, and land-to-delivery programs.",
 };
 
 const offerings = [
