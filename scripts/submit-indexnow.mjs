@@ -30,7 +30,9 @@ function normalizeUrls(values) {
 async function main() {
   const args = process.argv.slice(2);
   const sitemapIndex = args.indexOf("--sitemap");
-  let values = args.filter((value, index) => value !== "--sitemap" && index !== sitemapIndex + 1);
+  let values = args.filter(
+    (value, index) => value !== "--sitemap" && (sitemapIndex < 0 || index !== sitemapIndex + 1),
+  );
 
   if (sitemapIndex >= 0) {
     const sitemapUrl = args[sitemapIndex + 1] || `${SITE.origin}/sitemap.xml`;
