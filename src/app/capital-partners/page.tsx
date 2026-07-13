@@ -8,42 +8,53 @@ import { projects } from "@/data/projects";
 import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: seoTitle("Southwest Florida Residential Development Partnerships"),
+  title: seoTitle("Southwest Florida Housing Development Project Review"),
   description:
-    "Discuss Southwest Florida build-to-rent, active-adult, and residential development opportunities with Seacoast Building & Design.",
+    "Request a project review for Florida build-to-rent, new housing, substantial rehabilitation, adaptive reuse, affordable, multifamily, and active-adult work.",
 };
 
 const finalActUrl = "https://www.govinfo.gov/content/pkg/BILLS-119hr6644enr/html/BILLS-119hr6644enr.htm";
+const enactmentSourceUrl = "https://www.banking.senate.gov/newsroom/minority/warren-statement-on-bipartisan-housing-bill-becoming-law-without-trump-signature";
 
-const offerings = [
+const projectTypes = [
   {
-    eyebrow: "Build-to-rent",
-    title: "Evaluate a build-to-rent opportunity",
-    body: "For a proposed single-family rental community, Seacoast can review the site, plans, scope, schedule, reporting requirements, and delivery structure with the project team. Final capacity, pricing, and contract terms are confirmed during preconstruction.",
+    eyebrow: "New housing",
+    title: "Build-to-rent and for-sale communities",
+    body: "Bring Seacoast a proposed site, plans, product mix, and delivery goals for a ground-up single-family or build-to-rent opportunity. The team will review construction fit before making a commitment.",
     points: [
-      "Ground-up single-family and build-to-rent scope review",
-      "Budget and schedule development based on plans and site conditions",
-      "Delivery approach confirmed for the specific opportunity",
+      "Ground-up single-family, build-to-rent, and for-sale scope review",
+      "Early budget and schedule discussion based on available information",
+      "Capacity and delivery approach confirmed for the specific project",
     ],
   },
   {
-    eyebrow: "Senior housing",
-    title: "55+ and active-adult communities",
-    body: "For active-adult and 55+ opportunities, Seacoast can evaluate ground-up construction, renovation, or conversion scope alongside the owner's design, legal, and operating teams.",
+    eyebrow: "Existing homes",
+    title: "Substantial rehabilitation and renovate-to-rent",
+    body: "For an existing-home program, Seacoast can review observed conditions, code-related construction scope, phasing, budget inputs, and schedule. The capital partner and its counsel remain responsible for determining whether a transaction meets the Act's renovate-to-rent exception.",
     points: [
-      "Ground-up, renovation, and conversion scope review",
-      "Planning around site conditions and local requirements",
-      "Project structure confirmed during diligence and preconstruction",
+      "Property-condition and rehabilitation-scope review",
+      "Construction planning around occupied or phased work",
+      "Documentation needed to support project-specific diligence",
     ],
   },
   {
-    eyebrow: "Preconstruction",
-    title: "Coordinate the path from plans to delivery",
-    body: "Seacoast can work with the owner's land, design, engineering, and finance teams to evaluate constructability, scope, schedule, and permitting before a build commitment is made.",
+    eyebrow: "Community housing",
+    title: "Affordable, multifamily, and active-adult housing",
+    body: "Seacoast welcomes conversations about new construction and renovation for affordable, multifamily, 55+, and active-adult properties. Program, funding, accessibility, and operating requirements should be identified at the start of the review.",
     points: [
-      "Early constructability and scope review",
+      "New construction and renovation scope review",
       "Coordination with owner-selected design and engineering teams",
-      "Clear assumptions before pricing and scheduling are finalized",
+      "Project requirements confirmed before pricing and scheduling",
+    ],
+  },
+  {
+    eyebrow: "Existing buildings",
+    title: "Adaptive reuse and residential conversions",
+    body: "For a proposed conversion, Seacoast can help evaluate the construction path with the owner's architect, engineers, code professionals, and legal team. Feasibility depends on the building, intended use, zoning, code, utilities, and permitting.",
+    points: [
+      "Existing-building and intended-use review",
+      "Early constructability, phasing, and systems coordination",
+      "Scope developed around site-specific professional findings",
     ],
   },
 ];
@@ -112,12 +123,22 @@ const faqs = [
   {
     question: "What is the 21st Century ROAD to Housing Act?",
     answer:
-      "The 21st Century ROAD to Housing Act became law in July 2026. Section 1001 generally restricts certain future single-family-home purchases by defined large institutional investors, subject to multiple exceptions and an effective date 180 days after enactment. See our sourced overview and consult legal counsel for a specific transaction.",
+      "H.R. 6644, the 21st Century ROAD to Housing Act, became law on July 11, 2026, without the President's signature. Section 1001 generally restricts certain future single-family-home purchases by defined large institutional investors, subject to multiple exceptions. The purchase restriction and penalty provisions begin January 7, 2027. See our sourced overview and consult legal counsel for a specific transaction.",
   },
   {
-    question: "Can Seacoast evaluate a build-to-rent opportunity?",
+    question: "What project types can Seacoast review?",
     answer:
-      "Yes. Share the location, plans, product type, unit count, schedule, and delivery expectations. Seacoast will review the opportunity and confirm whether the scope, geography, and available capacity are a fit.",
+      "Seacoast can review potential build-to-rent and for-sale housing, substantial rehabilitation and renovate-to-rent work, affordable and multifamily housing, active-adult and 55+ communities, and adaptive-reuse or conversion projects. Share the site, plans, scope, unit count, schedule, and delivery expectations so the team can confirm whether the project is a fit.",
+  },
+  {
+    question: "Does a project type automatically qualify for a ROAD Act exception?",
+    answer:
+      "No. A construction category or form selection does not establish legal eligibility. Section 1001 has specific definitions, thresholds, conditions, and exceptions. The investor and its legal counsel should determine whether a proposed transaction qualifies; Seacoast can evaluate construction scope and project fit.",
+  },
+  {
+    question: "What should we send for an initial project review?",
+    answer:
+      "Start with the address or target market, project type, approximate homes or units, current stage, target start, available plans or reports, and the decision you need to make. Seacoast will review the information and identify practical next steps or additional diligence needed.",
   },
   {
     question: "Why partner with Seacoast specifically?",
@@ -132,7 +153,7 @@ const faqs = [
   {
     question: "What kinds of capital partners do you work with?",
     answer:
-      "Seacoast welcomes inquiries from developers, build-to-rent and single-family rental operators, active-adult and senior-housing teams, family offices, and other owners planning residential construction in Southwest Florida. Other locations are reviewed individually.",
+      "Seacoast welcomes inquiries from developers and owners, build-to-rent and single-family rental operators, affordable and multifamily housing teams, active-adult and senior-housing teams, public or nonprofit housing organizations, family offices, and other capital partners planning residential construction or rehabilitation. Each opportunity is reviewed individually.",
   },
 ];
 
@@ -142,11 +163,11 @@ export default function CapitalPartnersPage() {
       <SchemaScript
         schema={[
           serviceSchema({
-            name: "Residential Development Opportunity Review",
+            name: "Housing Development and Rehabilitation Project Review",
             description:
-              "Construction opportunity review for build-to-rent, active-adult, and other residential development projects in Southwest Florida.",
+              "Construction project review for build-to-rent, new housing, substantial rehabilitation, adaptive reuse, affordable, multifamily, and active-adult opportunities in Florida.",
             url: "/capital-partners",
-            serviceType: "Build-to-Rent and New Residential Construction",
+            serviceType: "Residential Development, Rehabilitation, and Adaptive Reuse Project Review",
             areaServed: [
               "Hillsborough County, FL",
               "Manatee County, FL",
@@ -174,16 +195,16 @@ export default function CapitalPartnersPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/95" aria-hidden />
         <div className="container relative">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Capital Partners" }]} />
-          <p className="eyebrow text-orange/80">For developers and housing investors</p>
+          <p className="eyebrow text-orange/80">For developers, owners, and capital partners</p>
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-6xl">
-            A Southwest Florida construction partner for residential development
+            Bring us the site, plans, and project goals
           </h1>
           <p className="mt-6 max-w-3xl text-lg text-white/80">
-            Seacoast welcomes conversations with developers and investors planning build-to-rent, active-adult, and other residential projects across its six-county service area. We evaluate each opportunity around location, scope, schedule, delivery structure, and available capacity.
+            Seacoast reviews potential new housing, build-to-rent, substantial rehabilitation, adaptive reuse, affordable, multifamily, and active-adult work. Start with an address or target market, approximate unit count, current plans, and schedule so the team can evaluate construction fit and next steps.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="#inquire" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Discuss a Development Opportunity</Link>
-            <Link href="#offerings" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See How We Evaluate a Project</Link>
+            <Link href="#inquire" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Project Review</Link>
+            <Link href="#project-types" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Project Types</Link>
           </div>
         </div>
       </section>
@@ -192,13 +213,13 @@ export default function CapitalPartnersPage() {
       <section className="section dark-band bg-navy">
         <div className="container grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-start">
           <div>
-            <p className="eyebrow">A new federal framework</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Section 1001 changes certain institutional home purchases</h2>
+            <p className="eyebrow">H.R. 6644 is now law</p>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Plan from the enacted text, not the old bill headlines</h2>
             <p className="mt-4 text-text-secondary">
-              The new law generally restricts future single-family-home purchases by covered institutional investors with investment control of at least 350 homes. It also lists exceptions that include qualifying newly constructed homes, build-to-rent programs, certain renovate-to-rent work, and qualifying 55+ communities. The purchase restriction takes effect 180 days after enactment.
+              H.R. 6644, the 21st Century ROAD to Housing Act, became law on July 11, 2026, without the President&apos;s signature. Section 1001 generally restricts future purchases of covered one- or two-unit homes by defined large institutional investors—generally certain for-profit entities with direct or indirect investment control of at least 350 covered homes. Manufactured homes and specified post-enactment excepted purchases are excluded under the statute. The purchase restriction and penalty provisions begin January 7, 2027.
             </p>
             <p className="mt-4 text-text-secondary">
-              How the law applies depends on the investor, transaction, property, and final implementing guidance. Investors should review the enacted text and consult legal counsel before relying on an exception.
+              Project type alone does not establish an exception. Eligibility depends on the investor, ownership and transaction structure, property, program details, statutory conditions, and any applicable implementing regulations or guidance. Investors should review the enacted text and consult legal counsel before relying on an exception.
             </p>
             <p className="mt-4 text-sm text-text-secondary/80">
               <Link href="/road-to-housing-act" className="font-semibold text-orange hover:underline">
@@ -208,24 +229,31 @@ export default function CapitalPartnersPage() {
             </p>
           </div>
           <div className="rounded-3xl border border-navy/10 bg-white p-8 shadow-soft">
-            <p className="font-heading text-xl font-bold text-navy">Examples listed in the final law</p>
+            <p className="font-heading text-xl font-bold text-navy">Examples Section 1001 treats as excepted purchases</p>
             <ul className="mt-5 space-y-4 text-sm text-text-secondary">
-              <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Certain newly constructed or renovated homes intended for sale</li>
+              <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Certain newly constructed, renovated, or rental-conversion homes for sale by the investor and not rented as residences pending sale</li>
               <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Qualifying build-to-rent programs</li>
-              <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Qualifying renovate-to-rent work and 55+ communities</li>
+              <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Qualifying renovate-to-rent programs that meet the Act&apos;s rehabilitation and improvement thresholds</li>
+              <li className="flex gap-3"><span className="text-success" aria-hidden>✓</span> Certain qualifying homeownership programs and 55+ communities</li>
             </ul>
-            <a href={finalActUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-semibold text-orange hover:underline">Read the final enrolled text →</a>
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              <a href={finalActUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">Read the final enrolled text →</a>
+              <a href={enactmentSourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">Official enactment notice →</a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Offerings */}
-      <section id="offerings" className="section dark-band bg-navy-deep scroll-mt-24">
+      {/* Project types */}
+      <section id="project-types" className="section dark-band bg-navy-deep scroll-mt-24">
         <div className="container">
-          <p className="eyebrow">How we partner</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Three ways capital works with Seacoast.</h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {offerings.map((o) => (
+          <p className="eyebrow">Project types</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">What would you like Seacoast to review?</h2>
+          <p className="mt-4 max-w-3xl text-text-secondary">
+            These are construction categories, not legal classifications under H.R. 6644. Seacoast will confirm whether the scope, location, schedule, and current capacity are a fit; the capital partner and its counsel should determine statutory eligibility.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {projectTypes.map((o) => (
               <div key={o.title} className="flex flex-col rounded-2xl bg-white p-7 shadow-soft">
                 <p className="text-xs font-bold uppercase tracking-widest text-orange">{o.eyebrow}</p>
                 <h3 className="mt-3 font-heading text-xl font-bold text-navy">{o.title}</h3>
@@ -237,6 +265,13 @@ export default function CapitalPartnersPage() {
                 </ul>
               </div>
             ))}
+          </div>
+          <div className="mt-10 rounded-3xl border border-navy/10 bg-white p-7 shadow-soft md:flex md:items-center md:justify-between md:gap-8">
+            <div>
+              <p className="font-heading text-2xl font-bold text-navy">Have a site or building in mind?</p>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">Send the address, project type, approximate homes or units, current plans, stage, and target start. Seacoast will review what you have and identify the next construction questions.</p>
+            </div>
+            <Link href="#inquire" className="mt-5 inline-flex shrink-0 rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper md:mt-0">Request a Project Review</Link>
           </div>
         </div>
       </section>
@@ -299,9 +334,9 @@ export default function CapitalPartnersPage() {
         <div className="container grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div>
             <p className="eyebrow">Project-specific diligence</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Confirm the legal and delivery structure before you build</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Confirm legal eligibility and construction fit separately</h2>
             <p className="mt-4 text-text-secondary">
-              Seacoast can discuss construction scope, schedule, site conditions, and delivery capacity. Each capital partner remains responsible for confirming that its ownership and transaction structure complies with applicable law.
+              Seacoast can discuss construction scope, schedule, site conditions, and delivery capacity. A Seacoast project review is not a determination that a transaction qualifies for an exception under H.R. 6644. Each capital partner remains responsible for confirming that its investor status, ownership, transaction structure, property, and program comply with applicable law.
             </p>
           </div>
           <div className="rounded-3xl border border-navy/10 bg-white p-8 shadow-soft">
@@ -376,9 +411,9 @@ export default function CapitalPartnersPage() {
         <div className="container grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <div>
             <p className="eyebrow text-orange/80">Get in touch</p>
-            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Discuss a project or development program</h2>
+            <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Request a project review</h2>
             <p className="mt-4 text-text-secondary">
-              Share the location, product type, expected unit count, schedule, and the information your team needs. Seacoast will review the opportunity and explain what can be confirmed now and what requires further diligence.
+              Share the property or target market, project type, approximate homes or units, current stage, available plans, and target start. Seacoast will review the opportunity and explain what can be confirmed now and what requires further diligence.
             </p>
             <div className="mt-6 space-y-4">
               <div>

@@ -252,6 +252,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Development resources */}
+      <section className="bg-navy py-10 text-white">
+        <div className="container">
+          <div className="grid gap-7 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
+            <div>
+              <p className="eyebrow text-orange">For developers and capital partners</p>
+              <h2 className="mt-2 font-heading text-3xl font-bold">Planning a residential development program?</h2>
+              <p className="mt-3 max-w-3xl leading-7 text-white/75">
+                If your team is evaluating new housing, build-to-rent, substantial rehabilitation, adaptive reuse, or another housing opportunity, see how Seacoast approaches project diligence and review the current federal housing-law overview.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">
+              <Link href="/capital-partners" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-copper">Capital Partners</Link>
+              <Link href="/road-to-housing-act" className="rounded-full border border-white/25 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-navy">H.R. 6644 Guide</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTASection
         variant="orange"
         heading="Ready to protect, improve, or expand your property?"

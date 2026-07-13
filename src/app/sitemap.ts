@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/solutions`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/capital-partners`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/road-to-housing-act`, lastModified: CURRENT_UPDATE },
+    { url: `${BASE}/resources`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/containers`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/containers/compare`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/containers/prebuilt`, lastModified: CURRENT_UPDATE },

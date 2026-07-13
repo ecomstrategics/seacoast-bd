@@ -37,9 +37,14 @@ const quickLinks = [
   { label: "Frequently Asked Questions", href: "/faq" },
   { label: "Customer Reviews", href: "/customer-reviews" },
   { label: "Financing", href: "/financing" },
-  { label: "Capital Partners", href: "/capital-partners" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+];
+
+const resourceLinks = [
+  { label: "Resources Hub", href: "/resources" },
+  { label: "H.R. 6644 & ROAD Act", href: "/road-to-housing-act" },
+  { label: "Capital Partners", href: "/capital-partners" },
 ];
 
 export function Footer() {
@@ -111,7 +116,13 @@ export function Footer() {
               <li key={city.slug}><Link href={`/service-area/${city.slug}`} className="hover:text-white">{city.name}</Link></li>
             ))}
           </ul>
-          <h3 className="mt-6 font-heading font-bold">Quick Links</h3>
+          <h3 className="mt-6 font-heading font-bold">Resources</h3>
+          <ul className="mt-3 space-y-2 text-sm text-white/75">
+            {resourceLinks.map((link) => (
+              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+            ))}
+          </ul>
+          <h3 className="mt-6 font-heading font-bold">Company</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
             {quickLinks.map((link) => (
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
