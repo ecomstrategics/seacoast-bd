@@ -116,7 +116,6 @@ export default function ContainersLandingPage() {
               sizes="100vw"
             />
           </div>
-          <p className="mt-3 text-sm text-white/60">Representative design image. Final appearance depends on the approved plans and finish selections.</p>
         </div>
       </div>
 

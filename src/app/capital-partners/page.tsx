@@ -170,7 +170,6 @@ export default function CapitalPartnersPage() {
             <Link href="#inquire" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Discuss a Development Opportunity</Link>
             <Link href="#offerings" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See How We Evaluate a Project</Link>
           </div>
-          <p className="mt-5 text-xs text-white/60">Illustrative image — not a Seacoast project photo.</p>
         </div>
       </section>
 

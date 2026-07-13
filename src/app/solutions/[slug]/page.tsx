@@ -130,7 +130,6 @@ export default function SolutionPillarPage({ params }: Props) {
             <Image src="/images/solutions/expand-hero.webp" alt="Representative container-based guest-space design in a Southwest Florida yard" fill className="object-cover" sizes="100vw" />
           </div>
         )}
-        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Services in this pillar */}
@@ -219,7 +218,6 @@ export default function SolutionPillarPage({ params }: Props) {
                   <Image src="/images/solutions/expand-secondary.webp" alt="Representative interior layout for a finished container-based guest space" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
               )}
-              <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>

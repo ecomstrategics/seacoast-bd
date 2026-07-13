@@ -152,7 +152,6 @@ export default function ServiceAreaCityPage({ params }: Props) {
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image src="/images/service-area/generic-guest-house.webp" alt="Representative container-based guest-space design in a Southwest Florida setting" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
               </div>
-              <p className="mt-3 text-xs text-white/60">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>
@@ -183,7 +182,6 @@ export default function ServiceAreaCityPage({ params }: Props) {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                   <Image src="/images/service-area/generic-neighborhood.webp" alt="Representative Southwest Florida neighborhood" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
-                <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
               </div>
             </div>
             <div>

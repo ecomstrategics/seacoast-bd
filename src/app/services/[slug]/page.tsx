@@ -428,7 +428,6 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
         <div className="relative aspect-video overflow-hidden rounded-2xl">
           <Image src="/images/services/storm-preparedness-hero.webp" alt="Representative view of storm shutters being installed on a Southwest Florida home" fill className="object-cover" sizes="100vw" />
         </div>
-        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Trust bar */}
@@ -608,7 +607,6 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <div className="relative aspect-video overflow-hidden rounded-2xl">
           <Image src="/images/services/storm-damage-repair-hero.webp" alt="Representative view of a roof inspection and storm-damage documentation" fill className="object-cover" sizes="100vw" />
         </div>
-        <p className="mt-3 text-xs text-text-secondary">Illustrative image — not a Seacoast project photo.</p>
       </div>
 
       {/* Trust bar */}
@@ -674,7 +672,6 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image src="/images/services/storm-damage-repair-completed.webp" alt="Representative view of a completed residential roof repair in Southwest Florida" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
               </div>
-              <p className="mt-3 text-xs text-white/60">Illustrative image — not a Seacoast project photo.</p>
             </div>
           </div>
         </div>
@@ -897,7 +894,6 @@ function GenericServiceLayout({ params }: Props) {
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Quote</Link>
             <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
           </div>
-          {heroImage && <p className="mt-5 text-xs text-white/60">Illustrative service image — not a Seacoast project photo. See Our Work for completed projects.</p>}
         </div>
       </section>
 
@@ -1089,7 +1085,6 @@ function SolarPanelCleaningLayout() {
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Cleaning Quote</Link>
             <a href="#plans" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Service Plans</a>
           </div>
-          <p className="mt-5 text-xs text-white/60">Illustrative service image — not a Seacoast project photo.</p>
         </div>
       </section>
 
