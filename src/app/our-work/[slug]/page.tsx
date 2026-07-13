@@ -74,7 +74,9 @@ export default function ProjectDetailPage({ params }: Props) {
 
   return (
     <>
-      <SchemaScript schema={videoObjectSchema({ name: project.title, description: project.description, videoId: project.videoId })} />
+      {project.videoId && (
+        <SchemaScript schema={videoObjectSchema({ name: project.title, description: project.description, videoId: project.videoId })} />
+      )}
       <section className="section dark-band bg-navy">
         <div className="container">
           <Breadcrumbs tone="light" items={[{ label: "Home", href: "/" }, { label: "Our Work", href: "/our-work" }, { label: project.title }]} />
@@ -89,18 +91,22 @@ export default function ProjectDetailPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="pb-16">
-        <div className="container">
-          <YouTubeFacade videoId={project.videoId} title={project.title} />
-        </div>
-      </section>
+      {project.videoId && (
+        <section className="pb-16">
+          <div className="container">
+            <YouTubeFacade videoId={project.videoId} title={project.title} />
+          </div>
+        </section>
+      )}
 
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">See the work</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy md:text-4xl">Project overview</h2>
           <p className="mt-4 max-w-3xl text-text-secondary">
-            Review the project details and work completed, then watch the video for a closer look at the job.
+            {project.videoId
+              ? "Review the project details and work completed, then watch the video for a closer look at the job."
+              : "Review the project details, work completed, and jobsite photos available for this project."}
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {projectFacts.map((fact) => (

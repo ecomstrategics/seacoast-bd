@@ -5,6 +5,10 @@ import type { Project } from "@/data/projects";
 export function ProjectCard({ project }: { project: Project }) {
   const featuredPhoto = project.photos?.[0];
   const hasSpecificLocation = project.location !== "Southwest Florida";
+  const imageSrc = featuredPhoto?.src
+    ?? (project.videoId ? `https://i.ytimg.com/vi/${project.videoId}/hqdefault.jpg` : "/images/og-default.jpg");
+  const imageAlt = featuredPhoto?.alt
+    ?? (project.videoId ? `${project.title} project video thumbnail` : `${project.title} project`);
 
   return (
     <Link
@@ -13,15 +17,17 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative aspect-video overflow-hidden bg-navy">
         <Image
-          src={featuredPhoto?.src ?? `https://i.ytimg.com/vi/${project.videoId}/hqdefault.jpg`}
-          alt={featuredPhoto?.alt ?? `${project.title} project video thumbnail`}
+          src={imageSrc}
+          alt={imageAlt}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover opacity-85 transition group-hover:scale-105"
         />
-        <div className="absolute inset-0 grid place-items-center">
-          <span aria-hidden="true" className="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-xl text-orange shadow-soft">▶</span>
-        </div>
+        {project.videoId && (
+          <div className="absolute inset-0 grid place-items-center">
+            <span aria-hidden="true" className="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-xl text-orange shadow-soft">▶</span>
+          </div>
+        )}
       </div>
       <div className="p-5">
         <div className="flex flex-wrap gap-2 text-xs font-bold">
