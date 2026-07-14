@@ -3,133 +3,262 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
-import { SchemaScript, serviceSchema } from "@/components/Schema";
+import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
+import { SchemaScript, faqSchema, productSchema } from "@/components/Schema";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
+const listingPath = "/containers/prebuilt";
+const listingDescription =
+  "See real exterior and interior photos of Seacoast's available 20-foot mobile container in Southwest Florida. Last published at $35,000; confirm current sale details.";
+
 export const metadata: Metadata = {
-  title: seoTitle("Finished Container Mini-Home Example"),
-  description: seoDescription(
-    "Tour a finished container mini-home example with a kitchenette, bathroom, glass doors, and tandem-axle trailer. Ask Seacoast about current availability and pricing.",
-  ),
+  title: seoTitle("20-Foot Mobile Container for Sale"),
+  description: seoDescription(listingDescription),
+  alternates: { canonical: listingPath },
+  openGraph: {
+    title: "Available 20-Foot Mobile Container | Seacoast",
+    description: listingDescription,
+    url: listingPath,
+    type: "website",
+    images: [
+      {
+        url: "/images/containers/prebuilt/20ft-mobile-container-social.webp",
+        width: 1200,
+        height: 630,
+        alt: "Actual 20-foot mobile container mounted on a tandem-axle trailer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Available 20-Foot Mobile Container | Seacoast",
+    description: listingDescription,
+    images: ["/images/containers/prebuilt/20ft-mobile-container-social.webp"],
+  },
 };
 
-const highlights = [
+const quickFacts = [
+  { label: "Container size", value: "20 feet" },
+  { label: "Last published price", value: "$35,000" },
+  { label: "Current status", value: "Available" },
+];
+
+const interiorGallery = [
   {
-    icon: "🚚",
-    title: "Built on a trailer",
-    body: "The unit sits on a tandem-axle trailer. Transport, registration, towing, placement, foundation, and allowable use must be confirmed for the destination.",
+    src: "/images/containers/prebuilt/20ft-mobile-container-kitchenette.webp",
+    alt: "Interior of the 20-foot mobile container showing a butcher-block kitchenette, stone backsplash, cooktop, and black-framed windows",
+    caption: "Kitchenette with butcher-block counter, stone backsplash, cooktop, and natural light from two windows.",
   },
   {
-    icon: "🏠",
-    title: "Finished interior",
-    body: "The photographed example includes an insulated interior, wood-look flooring, a kitchenette, private bathroom, and glass entry doors.",
+    src: "/images/containers/prebuilt/20ft-mobile-container-glass-door-room.webp",
+    alt: "Bright finished room inside the 20-foot mobile container with wood-look flooring, an interior pass-through window, and glass double doors",
+    caption: "Bright interior room with wood-look flooring, a pass-through window, and glass double doors.",
   },
   {
-    icon: "🛠️",
-    title: "Options to discuss",
-    body: "Deck, solar, siding, foundation, utility, and site-work options can be discussed for a current unit or a custom build.",
+    src: "/images/containers/prebuilt/20ft-mobile-container-flex-room.webp",
+    alt: "Flex room inside the 20-foot mobile container with wood-look flooring, reclaimed-wood accent trim, and a black-framed glass door",
+    caption: "Separate flex room with a glass door, wood-look flooring, and reclaimed-wood accent trim.",
+  },
+  {
+    src: "/images/containers/prebuilt/20ft-mobile-container-wet-bath.webp",
+    alt: "Compact wet bath inside the 20-foot mobile container with black fixtures, corrugated wall panels, and pebble-look shower flooring",
+    caption: "Compact wet bath with black fixtures, corrugated wall panels, and pebble-look shower flooring.",
   },
 ];
 
-const gallery = [
-  { src: "/images/containers/prebuilt/prebuilt-exterior-side.webp", alt: "Charcoal-painted container mini-home example on a tandem-axle trailer with glass doors", caption: "Charcoal exterior with full-glass entry doors on a tandem-axle trailer." },
-  { src: "/images/containers/prebuilt/prebuilt-exterior-rear.webp", alt: "Rear view of a container mini-home example with rooftop steel frame and exterior water heater", caption: "Rear view showing the rooftop frame and exterior water-heater equipment." },
-  { src: "/images/containers/prebuilt/prebuilt-entry.webp", alt: "Glass entry doors in a reclaimed-wood accent wall on a container mini-home example", caption: "Glass entry doors set into a reclaimed-wood accent wall." },
-  { src: "/images/containers/prebuilt/prebuilt-interior-hall.webp", alt: "Interior hallway of a finished container mini-home example", caption: "Finished interior with wood-look flooring and light walls." },
-  { src: "/images/containers/prebuilt/prebuilt-kitchenette.webp", alt: "Kitchenette inside a finished container mini-home example", caption: "Kitchenette with butcher-block counter, backsplash, and cooktop." },
-  { src: "/images/containers/prebuilt/prebuilt-interior-wall.webp", alt: "Reclaimed-wood accent wall inside a container mini-home example", caption: "Reclaimed-wood accent band and an interior pass-through opening." },
-  { src: "/images/containers/prebuilt/prebuilt-bathroom.webp", alt: "Private bathroom inside a finished container mini-home example", caption: "Private bathroom with corrugated-metal walls and pebble-look flooring." },
-  { src: "/images/containers/prebuilt/prebuilt-exterior-transport.webp", alt: "Container mini-home example on its trailer behind a transport truck", caption: "The unit shown on its trailer for transport." },
+const exteriorGallery = [
+  {
+    src: "/images/containers/prebuilt/prebuilt-exterior-rear.webp",
+    alt: "Three-quarter exterior view of the actual 20-foot mobile container with glass doors and rooftop steel frame",
+    caption: "Three-quarter view showing the glass doors, rooftop frame, and exterior equipment.",
+  },
+  {
+    src: "/images/containers/prebuilt/prebuilt-entry.webp",
+    alt: "Open shipping-container doors framing glass entry doors and a reclaimed-wood accent wall",
+    caption: "Original cargo doors open around the glass entry doors and reclaimed-wood accent wall.",
+  },
+  {
+    src: "/images/containers/prebuilt/prebuilt-exterior-transport.webp",
+    alt: "Actual 20-foot container unit shown mounted on its tandem-axle trailer near a transport truck",
+    caption: "The actual unit shown on its trailer. Towing and transport arrangements must be confirmed separately.",
+  },
 ];
 
 const visibleFeatures = [
-  "Container shell mounted on a tandem-axle trailer",
-  "Full-glass entry doors and additional windows",
-  "Finished interior walls and wood-look flooring",
-  "Kitchenette with butcher-block counter, backsplash, and cooktop",
-  "Private bathroom",
-  "Reclaimed-wood accents",
+  "20-foot steel container shell",
+  "Tandem-axle trailer beneath the unit",
+  "Black-framed glass double doors and additional windows",
+  "White interior walls and wood-look flooring",
+  "Kitchenette with butcher-block counter, stone backsplash, and cooktop",
+  "Compact wet bath with sink, toilet, corrugated wall panels, and floor drain",
+  "Black-framed interior pass-through window",
+  "Reclaimed-wood accent details",
   "Rooftop steel frame and exterior water-heater equipment",
 ];
 
+const confirmationItems = [
+  "Current availability, price, payment terms, and everything included in the sale",
+  "Present finish condition, equipment operation, warranties, and any remaining work",
+  "Trailer title, registration, brakes, axle and tire condition, roadworthiness, and towing requirements",
+  "Delivery distance, route, permits, lifting or placement equipment, and transport cost",
+  "Zoning, HOA terms, floodplain requirements, utilities, engineering, permits, inspections, and lawful use at the destination",
+];
+
 const possibleAddOns = [
-  { name: "Deck and stairs", body: "Discuss a code-compliant exterior landing, stairs, guards, and site connection for the proposed placement." },
-  { name: "Solar and battery", body: "System design depends on the electrical loads, roof or rack space, utility connection, equipment, and backup goals." },
-  { name: "Exterior siding", body: "Explore siding, trim, coatings, and heat-control details around the final design." },
-  { name: "Foundation and site work", body: "Foundation, anchoring, drainage, utility, and access requirements are specific to the parcel and intended use." },
+  {
+    name: "Deck and steps",
+    body: "Plan a code-compliant landing, stairs, guards, and connection to the approved placement area.",
+  },
+  {
+    name: "Solar and battery",
+    body: "System design and price depend on the intended loads, available mounting space, equipment, and utility plan.",
+  },
+  {
+    name: "Exterior siding",
+    body: "Discuss siding, trim, coatings, and heat-control details for the desired exterior finish.",
+  },
+  {
+    name: "Foundation and site work",
+    body: "Foundation, anchoring, drainage, access, and utility work are specific to the parcel and intended use.",
+  },
+];
+
+const faqs: FAQItem[] = [
+  {
+    question: "Is this exact 20-foot container currently available?",
+    answer:
+      "It is listed as available as of July 2026. Inventory can change, so contact Seacoast before traveling or making plans to confirm the unit is still available, the current price, and the sale terms.",
+  },
+  {
+    question: "What did the $35,000 listing show?",
+    answer:
+      "The last published listing showed the container shell, tandem-axle trailer, glass doors and windows, interior finishes, kitchenette, wet bath, accent details, rooftop frame, and exterior equipment. A current written sale agreement must confirm the current price and identify every included item, its condition, and any remaining work.",
+  },
+  {
+    question: "Is the trailer ready to tow on public roads?",
+    answer:
+      "Do not assume roadworthiness from the photos. Trailer ownership, title, registration, brakes, axles, tires, lighting, weight, towing equipment, route requirements, and transport responsibility must be inspected and confirmed before movement.",
+  },
+  {
+    question: "Can I use this container as a home or guest house?",
+    answer:
+      "A finished interior does not automatically make a container approved for residential occupancy. The answer depends on the destination property, intended use, zoning, HOA terms, floodplain, engineering, foundation, utilities, permits, inspections, and life-safety requirements.",
+  },
+  {
+    question: "Is delivery included in the listed price?",
+    answer:
+      "Delivery is not represented as included unless a current written agreement says so. Distance, route, access, towing or lifting equipment, placement, foundation, and site conditions all affect the transport scope and cost.",
+  },
 ];
 
 export default function PrebuiltContainersPage() {
-  const description = "A photo tour of a finished container mini-home example. Contact Seacoast to confirm current inventory, pricing, transport, placement, and allowable use.";
-
   return (
     <>
       <SchemaScript
-        schema={serviceSchema({
-          name: "Finished Container Mini-Home Planning",
-          description,
-          url: "/containers/prebuilt",
-          serviceType: "Container planning and build-out",
-        })}
+        schema={[
+          productSchema({
+            name: "20-Foot Mobile Container",
+            description: listingDescription,
+            url: listingPath,
+            image: [
+              "/images/containers/prebuilt/prebuilt-exterior-side.webp",
+              "/images/containers/prebuilt/20ft-mobile-container-kitchenette.webp",
+            ],
+          }),
+          faqSchema(faqs),
+        ]}
       />
 
-      <section className="bg-navy py-20 text-white">
+      <section className="bg-navy py-16 text-white md:py-20">
         <div className="container">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Containers", href: "/containers" }, { label: "Finished Example" }]} />
-          <p className="eyebrow mt-4">Photo tour</p>
-          <h1 className="mt-3 max-w-3xl font-heading text-5xl font-bold leading-tight">See a finished container mini-home example.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-            Walk through an actual finished unit with a kitchenette, private bathroom, glass doors, and tandem-axle trailer. Use it as a starting point for a conversation about current availability or a custom build.
-          </p>
-          <p className="mt-5 max-w-2xl rounded-xl border border-white/15 bg-white/5 p-4 text-sm leading-6 text-white/75">
-            Inventory and pricing can change. Contact Seacoast to confirm whether this unit is available and to review transport, utilities, placement, permits, and allowable use for your property.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact?service=prebuilt-containers" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper">Ask About Current Options</Link>
-            <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-navy">View Custom Container Builds</Link>
-          </div>
-        </div>
-      </section>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Containers", href: "/containers" },
+              { label: "20-Foot Mobile Container" },
+            ]}
+          />
+          <div className="mt-8 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p className="eyebrow">Available container inventory</p>
+              <div className="mt-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white">
+                Available — last confirmed July 2026
+              </div>
+              <h1 className="mt-5 max-w-3xl font-heading text-4xl font-bold leading-tight md:text-5xl">
+                20-Foot Mobile Container for Sale
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+                This is the actual unit shown in the photos: a built-out 20-foot container mounted on a tandem-axle trailer, with glass doors and windows, a kitchenette, a compact wet bath, and two flexible interior areas.
+              </p>
+              <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-5">
+                <p className="text-sm font-bold uppercase tracking-widest text-white/70">Last published asking price</p>
+                <p className="mt-2 font-heading text-4xl font-bold text-orange">$35,000</p>
+                <p className="mt-2 text-sm leading-6 text-white/70">
+                  Confirm the current price, availability, included equipment, sale terms, and transport arrangements with Seacoast before making plans.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/contact?service=prebuilt-containers"
+                  className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white transition hover:bg-copper"
+                >
+                  Ask About This Unit
+                </Link>
+                <a
+                  href="tel:+19415005431"
+                  className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white transition hover:bg-white hover:text-navy"
+                >
+                  Call (941) 500-5431
+                </a>
+              </div>
+            </div>
 
-      <div className="bg-navy pb-16">
-        <div className="container">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl sm:aspect-video">
-            <Image src="/images/containers/prebuilt/prebuilt-exterior-side.webp" alt="Finished charcoal container mini-home example on a tandem-axle trailer" fill priority className="object-cover" sizes="100vw" />
+            <figure className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3 shadow-soft">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/containers/prebuilt/prebuilt-exterior-side.webp"
+                  alt="Actual charcoal 20-foot mobile container mounted on a tandem-axle trailer"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 55vw, 100vw"
+                />
+              </div>
+              <figcaption className="px-2 pb-1 pt-3 text-sm font-semibold text-white/80">Actual available unit shown</figcaption>
+            </figure>
           </div>
-        </div>
-      </div>
 
-      <section className="section dark-band bg-navy">
-        <div className="container">
-          <p className="eyebrow">A closer look</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A compact space with a finished interior</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
-            This photographed example shows how a steel shell can be finished into a bright, compact room. The final use of any container structure depends on zoning, engineered plans, permits, inspections, utility connections, transportation requirements, and the approved placement.
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {highlights.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-container-steel/20 bg-white p-6 shadow-soft">
-                <div className="text-3xl" aria-hidden>{item.icon}</div>
-                <h3 className="mt-4 font-heading text-xl font-bold text-navy">{item.title}</h3>
-                <p className="mt-3 text-text-secondary">{item.body}</p>
+          <dl className="mt-10 grid gap-4 sm:grid-cols-3">
+            {quickFacts.map((fact) => (
+              <div key={fact.label} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <dt className="text-xs font-bold uppercase tracking-widest text-white/60">{fact.label}</dt>
+                <dd className="mt-2 font-heading text-2xl font-bold text-white">{fact.value}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
       <section className="section dark-band bg-navy-deep">
         <div className="container">
-          <p className="eyebrow">Photos from the unit</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Inside and out</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">These are photos of the finished example shown on this page.</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((image) => (
-              <figure key={image.src} className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm">
-                <div className="relative aspect-[4/3]">
-                  <Image src={image.src} alt={image.alt} fill className="object-cover" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
+          <p className="eyebrow">New interior photos</p>
+          <h2 className="mt-2 max-w-3xl font-heading text-4xl font-bold text-navy">Step inside the actual unit</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+            These additional views show the kitchenette, glass-door room, flex room, and wet bath. The photos document visible condition; a walkthrough and written agreement should confirm finish details, operation, and anything included in the sale.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {interiorGallery.map((image) => (
+              <figure key={image.src} className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft">
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  />
                 </div>
-                <figcaption className="p-4 text-sm text-text-secondary">{image.caption}</figcaption>
+                <figcaption className="p-4 text-sm leading-6 text-text-secondary">{image.caption}</figcaption>
               </figure>
             ))}
           </div>
@@ -137,27 +266,69 @@ export default function PrebuiltContainersPage() {
       </section>
 
       <section className="section dark-band bg-navy">
-        <div className="container max-w-4xl">
-          <p className="eyebrow">What the photos show</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Features visible in this example</h2>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {visibleFeatures.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-0.5 shrink-0 font-bold text-success">✓</span>
-                <span className="text-text-secondary">{item}</span>
-              </li>
+        <div className="container">
+          <p className="eyebrow">Exterior and entry</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">See the shell, trailer, and access points</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {exteriorGallery.map((image) => (
+              <figure key={image.src} className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <figcaption className="p-5 text-sm leading-6 text-text-secondary">{image.caption}</figcaption>
+              </figure>
             ))}
-          </ul>
-          <p className="mt-6 text-sm leading-6 text-text-secondary">A current written proposal should confirm condition, equipment operation, roadworthiness, included personal property, warranties, and every item included in a sale or custom build.</p>
+          </div>
         </div>
       </section>
 
       <section className="section dark-band bg-navy-deep">
+        <div className="container grid gap-8 lg:grid-cols-2">
+          <div className="rounded-3xl border border-navy/10 bg-white p-7 shadow-soft md:p-8">
+            <p className="eyebrow">Visible in the photos</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Features shown on this unit</h2>
+            <ul className="mt-6 space-y-3">
+              {visibleFeatures.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-0.5 shrink-0 font-bold text-success" aria-hidden>✓</span>
+                  <span className="leading-7 text-text-secondary">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border-2 border-orange bg-white p-7 shadow-soft md:p-8">
+            <p className="eyebrow text-orange-deep">Confirm before purchase</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Put the condition and transport details in writing</h2>
+            <ul className="mt-6 space-y-3">
+              {confirmationItems.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 shrink-0 text-orange-deep" aria-hidden>•</span>
+                  <span className="leading-7 text-text-secondary">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm leading-6 text-text-secondary">
+              A finished interior does not by itself establish roadworthiness or approval for residential occupancy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
         <div className="container">
-          <p className="eyebrow">Options to discuss</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Plan the property connection</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">Availability and pricing depend on the site, approved design, products, labor, and final scope.</p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <p className="eyebrow">Optional scopes</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Plan the site and finish around your property</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+            Deck, power, exterior finish, foundation, delivery, placement, and utility work are separate unless the written agreement includes them.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {possibleAddOns.map((item) => (
               <div key={item.name} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
                 <h3 className="font-heading text-xl font-bold text-navy">{item.name}</h3>
@@ -168,23 +339,20 @@ export default function PrebuiltContainersPage() {
         </div>
       </section>
 
-      <section className="section dark-band bg-navy">
-        <div className="container">
-          <div className="rounded-2xl border-2 border-orange bg-white p-8 shadow-soft">
-            <p className="eyebrow text-orange-deep">Before you commit</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Confirm the address, transport, and allowable use.</h2>
-            <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
-              A finished interior does not by itself make a unit approved for residential occupancy. Review zoning, HOA terms, floodplain, access, trailer and transport requirements, foundation, utilities, engineered plans, permits, and inspections for the destination property.
-            </p>
-          </div>
+      <section className="section dark-band bg-navy-deep">
+        <div className="container max-w-3xl">
+          <p className="eyebrow">Common questions</p>
+          <h2 className="mb-8 mt-2 font-heading text-4xl font-bold text-navy">20-Foot Mobile Container FAQ</h2>
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 
       <CTASection
         variant="orange"
-        heading="Want to ask about this example?"
-        subtext="Send the property address and tell us how you would use the space. We can discuss current inventory, custom options, and the requirements to check next."
-        buttonLabel="Ask About Current Options"
+        heading="Want to see whether this unit fits your property?"
+        subtext="Send the destination address and intended use. Seacoast can confirm current availability, sale details, transport questions, and the next property checks."
+        buttonLabel="Ask About This Unit"
+        buttonHref="/contact?service=prebuilt-containers"
       />
     </>
   );

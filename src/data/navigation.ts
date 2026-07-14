@@ -14,6 +14,7 @@ export const primaryNav: NavItem[] = [
     href: "/services",
     dropdown: [
       { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
+      { label: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections" },
       { label: "Roofing", href: "/services/roofing" },
       { label: "Siding", href: "/services/siding" },
       { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
@@ -33,6 +34,7 @@ export const primaryNav: NavItem[] = [
     href: "/containers",
     dropdown: [
       { label: "All Container Builds", href: "/containers" },
+      { label: "Available 20' Mobile Container", href: "/containers/prebuilt" },
       { label: "Guest Houses", href: "/containers/guest-houses" },
       { label: "Offices & Workshops", href: "/containers/offices-workshops" },
       { label: "Storage Containers", href: "/containers/storage" },
@@ -57,6 +59,7 @@ export type SolutionsMegaItem = { label: string; href: string };
 export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMegaItem[]; expand: SolutionsMegaItem[] } = {
   protect: [
     { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
+    { label: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections" },
     { label: "Storm Preparedness", href: "/services/storm-preparedness" },
     { label: "Emergency Response", href: "/services/emergency-response" },
     { label: "Storm Damage Repair", href: "/services/storm-damage-repair" },

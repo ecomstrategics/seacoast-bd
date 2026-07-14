@@ -11,11 +11,13 @@ export type Project = {
   title: string;
   videoId?: string;
   serviceType: string;
-  location: string;
+  location?: string;
   description: string;
   propertyType?: string;
   completedOn?: string;
   completionLabel?: string;
+  challenge?: string;
+  approach?: string;
   scope?: string[];
   photos?: ProjectPhoto[];
 };
@@ -27,6 +29,8 @@ export function getCategory(serviceType: string): string {
   if (/siding/i.test(serviceType)) return "Siding";
   if (/gutter|fascia|soffit/i.test(serviceType)) return "Gutters & Trim";
   if (/exterior structure|carport/i.test(serviceType)) return "Exterior Structures";
+  if (/rehabilitation|restoration/i.test(serviceType)) return "Rehabilitation";
+  if (/commercial buildout/i.test(serviceType)) return "Commercial Construction";
   if (/roof/i.test(serviceType)) return "Roofing";
   return "Other";
 }
@@ -118,7 +122,21 @@ export const projects: Project[] = [
       },
     ],
   },
-  { slug: "cinnamon-cove-terrace-condos", title: "Cinnamon Cove Terrace Condos Roofing", videoId: "88qGW2x-tLg", serviceType: "Roofing - Multi-Family", location: "Fort Myers, FL", description: "Project video showing roofing work at the Cinnamon Cove Terrace condominium community in Fort Myers." },
+  {
+    slug: "cinnamon-cove-terrace-condos",
+    title: "Cinnamon Cove Terrace Condo II Improvements",
+    videoId: "88qGW2x-tLg",
+    serviceType: "Roofing - Multi-Family",
+    location: "Fort Myers, FL",
+    description: "Seacoast completed coordinated roofing and exterior improvements at Cinnamon Cove Terrace Condo II in Fort Myers.",
+    propertyType: "Condominium community",
+    scope: [
+      "Roofing",
+      "Soffit, fascia, and gutters",
+      "Stucco repairs and painting",
+      "Electrical work",
+    ],
+  },
   { slug: "naples-olympia-tpo-flat-roof", title: "Olympia Court TPO Flat Roof in Naples", videoId: "8OSkAJKjdKc", serviceType: "Roofing - Commercial", location: "Naples, FL", description: "Project video showing a TPO flat-roof installation at Olympia Court in Naples." },
   {
     slug: "gordons-fine-furniture-tpo",
@@ -136,7 +154,20 @@ export const projects: Project[] = [
   { slug: "galvalum-r-panel-roofing", title: "Galvalume R-Panel Building Roof", videoId: "D1X-e9CCuAI", serviceType: "Roofing - Metal", location: "Southwest Florida", description: "Project video showing a Galvalume R-panel metal roof installation on a commercial building." },
   { slug: "tpo-roofing-single-ply", title: "Commercial TPO Single-Ply Roof", videoId: "a7KivugMQtY", serviceType: "Roofing - Commercial", location: "Southwest Florida", description: "Project video showing single-ply TPO membrane installation on a commercial flat roof." },
   { slug: "stone-coated-steel-flat-panel", title: "Stone-Coated Steel Flat-Panel Roof", videoId: "Tb4sGtzdvvI", serviceType: "Roofing - Metal", location: "Southwest Florida", description: "Project video showing installation of a flat-profile stone-coated steel roof." },
-  { slug: "cinnamon-cove-carports-lockers", title: "Cinnamon Cove Carports & Lockers", videoId: "gbe7uAXk5hY", serviceType: "Exterior Structures", location: "Fort Myers, FL", description: "Project video showing carport and storage-locker construction at Cinnamon Cove in Fort Myers." },
+  {
+    slug: "cinnamon-cove-carports-lockers",
+    title: "Cinnamon Cove Carports & Storage Lockers",
+    videoId: "gbe7uAXk5hY",
+    serviceType: "Exterior Structures",
+    location: "Fort Myers, FL",
+    description: "Seacoast built and repaired carports, framed storage lockers, and finished the structures with Hardie lap siding at Cinnamon Cove in Fort Myers.",
+    propertyType: "Condominium community",
+    scope: [
+      "Carport construction and repair",
+      "Framed storage lockers",
+      "Hardie lap siding",
+    ],
+  },
   { slug: "mission-gold-steel-roser-cleo", title: "Mission Gold Roser Cleo Steel Roof", videoId: "FR2V9tjwY7E", serviceType: "Roofing - Metal", location: "Southwest Florida", description: "Project video showing a Roser Cleo steel roof in a Mission Gold finish." },
   { slug: "tpo-single-ply-flat-roofing", title: "White TPO Single-Ply Flat Roof", videoId: "aFSU9e7gYCc", serviceType: "Roofing - Commercial", location: "Southwest Florida", description: "Project video showing white TPO single-ply roofing on a commercial flat roof." },
   { slug: "concrete-roof-s-tile", title: "Concrete S-Tile Roof Installation", videoId: "vGsMiqEfXlA", serviceType: "Roofing - Tile", location: "Southwest Florida", description: "Project video showing a concrete S-tile roof installation." },
@@ -145,6 +176,56 @@ export const projects: Project[] = [
   { slug: "gannons-tpo-roofing-solar", title: "Gannon's TPO Roofing Project", videoId: "SqvikEx7pOI", serviceType: "Roofing - Commercial", location: "Southwest Florida", description: "A Seacoast project video showing TPO flat-roof work at the Gannon property." },
   { slug: "saxony-900-slate-roof-lanai", title: "Saxony 900 Roof & Lanai", videoId: "2HXcoaQvivE", serviceType: "Roofing + Enclosures", location: "Southwest Florida", description: "Project video showing a Saxony 900 roof installation alongside a lanai screen enclosure." },
   { slug: "saxony-900-slate-roof", title: "Saxony 900 Roof Installation", videoId: "1Vp0npdfC3c", serviceType: "Roofing - Tile", location: "Southwest Florida", description: "Project video showing a Saxony 900 roof installation." },
+  {
+    slug: "nautical-bowls-florida-commercial-buildout",
+    title: "Nautical Bowls Florida Commercial Buildout",
+    serviceType: "Commercial Buildout",
+    description: "Seacoast completed the first Nautical Bowls location built in Florida, coordinating a full commercial buildout during COVID-era material and shipping disruptions.",
+    propertyType: "Commercial restaurant buildout",
+    challenge: "Seven of 41 key materials were unavailable during the project, shipping delays affected sequencing, and 16 changes to the original plans extended the permitting process.",
+    approach: "Seacoast coordinated the changing plans and trade sequence while moving the buildout through demolition, foundation work, interior construction, building systems, finishes, and final completion.",
+    scope: [
+      "Demolition and foundation work",
+      "Metal-stud framing, drywall, and trim",
+      "Electrical, plumbing, HVAC, and sprinklers",
+      "Murals, flooring, and painting",
+    ],
+  },
+  {
+    slug: "tara-golf-club-multi-building-rehabilitation",
+    title: "Tara Golf Club Multi-Building Rehabilitation",
+    serviceType: "Commercial Rehabilitation",
+    description: "Seacoast coordinated rehabilitation work across three Tara Golf Club buildings at the same time, combining structural, roofing, exterior, and mechanical scopes.",
+    propertyType: "Golf club community",
+    challenge: "The work moved forward during the rainy season while settlement-related conditions required major framing repairs to roof rafters across an active, multi-building property.",
+    approach: "Seacoast phased multiple trades across the three buildings, addressed concealed and deteriorated conditions, and coordinated roofing, exterior, structural, and HVAC work as one rehabilitation program.",
+    scope: [
+      "Stucco, masonry, and painting",
+      "Flat roofing with tapered insulation",
+      "Roof-rafter framing repairs",
+      "Rotten fascia-board replacement and custom metal fascia",
+      "Soffit and gutters",
+      "Standing-seam metal roofing with roof windows and solar vents",
+      "HVAC work",
+    ],
+  },
+  {
+    slug: "hurricane-ian-storm-surge-restoration",
+    title: "Hurricane Ian Storm-Surge Restoration",
+    serviceType: "Storm Restoration",
+    description: "Seacoast restored three private residences and the Coco Bay Amenities Center after Hurricane Ian storm-surge damage affected interior and exterior building systems.",
+    propertyType: "Residential homes and community amenities center",
+    challenge: "Storm surge affected materials and systems up to four feet high, requiring coordinated mitigation and rebuilding across several occupied-property types.",
+    approach: "Seacoast removed damaged materials, cleaned affected areas, and rebuilt interior finishes, building systems, exterior components, and outdoor living areas under coordinated scopes.",
+    scope: [
+      "Drywall, insulation, tile, and hardwood flooring",
+      "Kitchen and bathroom counters and shower tile",
+      "Framing for islands, pillars, closets, and workbenches",
+      "Trim, painting, electrical, plumbing, cabinets, and doors",
+      "Exterior painting, gutters, soffit, and roofing",
+      "Pavers and screen lanais",
+    ],
+  },
   {
     slug: "heritage-pointe-carports",
     title: "Heritage Pointe Carports",
@@ -192,7 +273,7 @@ export const serviceTypes = Array.from(new Set(projects.map((project) => project
 export const categories = Array.from(
   new Set(projects.map((project) => getCategory(project.serviceType)))
 ).sort((a, b) => {
-  const order = ["Roofing", "Siding", "Exterior Structures", "Gutters & Trim", "Enclosures", "Solar", "Other"];
+  const order = ["Roofing", "Rehabilitation", "Commercial Construction", "Siding", "Exterior Structures", "Gutters & Trim", "Enclosures", "Solar", "Other"];
   return order.indexOf(a) - order.indexOf(b);
 });
 

@@ -7,7 +7,7 @@ import { SchemaScript } from "@/components/Schema";
 export const metadata: Metadata = {
   title: "Southwest Florida Construction Resources",
   description:
-    "Explore Seacoast project examples, property-planning guides, H.R. 6644 and ROAD to Housing Act information, and resources for developers and capital partners.",
+    "Explore Seacoast project examples, Florida building-code guidance, build-to-rent, major rehabilitation, commercial buildout, H.R. 6644, and investor resources.",
   alternates: { canonical: "/resources" },
   robots: { index: true, follow: true },
 };
@@ -26,18 +26,59 @@ const featuredResources = [
     eyebrow: "For developers and investors",
     title: "Capital-partner information",
     description:
-      "Review Seacoast's reported project experience and learn how the team evaluates new housing, build-to-rent, substantial rehabilitation, adaptive reuse, affordable, multifamily, and active-adult opportunities.",
+      "Review Seacoast's reported project experience, current build-to-rent and major-rehabilitation focus, project-fit guidance, and statewide review criteria for larger contracts.",
     linkLabel: "Explore Capital Partners",
   },
 ];
 
+const projectReviewResources = [
+  {
+    href: "/build-to-rent-construction",
+    eyebrow: "Build-to-rent",
+    title: "Bring contractor review into the plan early",
+    description:
+      "Review Seacoast's current project-fit guidance, typical planning window, statewide review threshold, and the information that makes an early build-to-rent conversation useful.",
+    linkLabel: "Explore build-to-rent construction",
+  },
+  {
+    href: "/major-rehabilitation",
+    eyebrow: "Major rehabilitation",
+    title: "Plan multi-trade property work as one program",
+    description:
+      "See how existing conditions, phasing, occupied properties, and connected scopes shape a rehabilitation review, with completed Tara Golf Club and Hurricane Ian examples.",
+    linkLabel: "Explore major rehabilitation",
+  },
+  {
+    href: "/commercial-buildouts",
+    eyebrow: "Commercial buildouts",
+    title: "Connect the space, plans, trades, and schedule",
+    description:
+      "Review commercial buildout planning questions and the verified Nautical Bowls scope, material shortages, plan changes, and permitting challenges.",
+    linkLabel: "Explore commercial buildouts",
+  },
+];
+
 const planningResources = [
+  {
+    href: "/understanding-floridas-building-codes",
+    eyebrow: "Florida building codes",
+    title: "Understand the code and permit path",
+    description: "See how the current Florida Building Code, local plan review, product approval, and project-specific design fit together before construction begins.",
+    linkLabel: "Read the building-code guide",
+  },
   {
     href: "/our-work",
     eyebrow: "Project examples",
     title: "See completed work",
     description: "Review available project scopes, materials, photos, and videos from roofing, exterior, and community work across the region.",
     linkLabel: "Browse projects",
+  },
+  {
+    href: "/services/thermal-drone-inspections",
+    eyebrow: "Roof inspection planning",
+    title: "See what thermal imaging adds",
+    description: "Learn how visible and thermal drone images can document roof-surface temperature patterns and help prioritize a closer inspection.",
+    linkLabel: "Explore thermal inspections",
   },
   {
     href: "/faq",
@@ -68,12 +109,12 @@ const resourcesSchema = {
   "@id": "https://seacoastbd.com/resources#page",
   name: "Southwest Florida Construction Resources",
   description:
-    "Project examples, property-planning guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
+    "Project examples, Florida building-code guidance, commercial project guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
   url: "https://seacoastbd.com/resources",
-  dateModified: "2026-07-13",
+  dateModified: "2026-07-14",
   mainEntity: {
     "@type": "ItemList",
-    itemListElement: [...featuredResources, ...planningResources].map((resource, index) => ({
+    itemListElement: [...featuredResources, ...projectReviewResources, ...planningResources].map((resource, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: resource.title,
@@ -93,7 +134,7 @@ export default function ResourcesPage() {
           <p className="eyebrow">Project planning help</p>
           <h1 className="mt-4 max-w-4xl font-heading text-5xl font-bold">Clear information for Florida property decisions</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">
-            Start with completed work and practical answers for your property. Developers and investors can also find Seacoast&apos;s capital-partner information and sourced overview of H.R. 6644.
+            Start with completed work, Florida building-code and permit-planning information, thermal inspection details, and practical answers for your property. Developers and investors can also find Seacoast&apos;s capital-partner information and sourced overview of H.R. 6644.
           </p>
         </div>
       </section>
@@ -119,6 +160,29 @@ export default function ResourcesPage() {
               </Link>
             ))}
           </div>
+          <div className="mt-16">
+            <p className="eyebrow">Construction project guides</p>
+            <h2 className="mt-2 max-w-3xl font-heading text-3xl font-bold text-navy">
+              Go deeper on the project type your team is evaluating
+            </h2>
+            <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+              Each guide covers a different construction conversation, with verified Seacoast facts, relevant completed work, and a clear list of what to bring for project review.
+            </p>
+            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+              {projectReviewResources.map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
+                >
+                  <p className="eyebrow">{resource.eyebrow}</p>
+                  <h3 className="mt-3 font-heading text-xl font-bold text-navy">{resource.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-text-secondary">{resource.description}</p>
+                  <span className="mt-5 inline-flex text-sm font-semibold text-orange">{resource.linkLabel} →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -126,7 +190,7 @@ export default function ResourcesPage() {
         <div className="container">
           <p className="eyebrow">For every property</p>
           <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Plan the next step with better context</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {planningResources.map((resource) => (
               <Link
                 key={resource.href}

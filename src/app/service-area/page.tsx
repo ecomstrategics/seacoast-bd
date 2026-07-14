@@ -8,7 +8,7 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Service Areas",
-  description: "Ask about roofing, storm repair, exterior work, and container-based projects across Seacoast's six-county Southwest Florida service area.",
+  description: "Ask about construction across Seacoast's six-county Gulf Coast service area. Contracts of $100,000 or more may be evaluated throughout Florida.",
 };
 
 export default function ServiceAreaIndexPage() {
@@ -24,7 +24,7 @@ export default function ServiceAreaIndexPage() {
           <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Roofing and exterior services across Southwest Florida</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
             Seacoast serves six counties. Send your property address and project type so we can confirm
-            coverage, scheduling, and the right next step.
+            coverage, scheduling, and the right next step. Contracts of $100,000 or more can also be evaluated elsewhere in Florida.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Request a Quote</Link>
@@ -50,6 +50,13 @@ export default function ServiceAreaIndexPage() {
                 <p className="mt-2 text-sm text-text-secondary">Contact us with the address and scope to confirm availability.</p>
               </div>
             ))}
+          </div>
+          <div className="mt-8 rounded-2xl border border-orange/20 bg-orange/10 p-6 md:flex md:items-center md:justify-between md:gap-8">
+            <div>
+              <h3 className="font-heading text-xl font-bold text-navy">Planning a larger project elsewhere in Florida?</h3>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-text-secondary">For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout the state. Travel, schedule, scope, and current capacity are confirmed before commitment.</p>
+            </div>
+            <Link href="/capital-partners#inquire" className="mt-5 inline-flex shrink-0 rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper md:mt-0">Request a Project Review</Link>
           </div>
         </div>
       </section>
@@ -125,7 +132,7 @@ export default function ServiceAreaIndexPage() {
       <CTASection
         variant="navy"
         heading="Not sure if we serve your area?"
-        subtext="Call or send the property address and we will confirm whether it is in our current service area."
+        subtext="Call or send the property address, construction value, and scope. We will confirm whether the project fits our regular service area or statewide large-project review."
         buttonLabel="Check Your Area"
       />
     </>

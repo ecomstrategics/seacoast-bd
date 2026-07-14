@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Where does Seacoast work?",
-    answer: "Seacoast serves Southwest Florida, including Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. City-specific service pages cover Fort Myers, Sarasota, Naples, Cape Coral, Bonita Springs, Bradenton, Venice, and Punta Gorda.",
+    answer: "Seacoast's regular service area includes Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida, subject to scope, travel, schedule, and current capacity.",
   },
   {
     question: "Is Seacoast licensed and insured?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "Does Seacoast handle commercial and multi-family projects?",
-    answer: "Yes. Seacoast works on residential, commercial, multi-family, HOA, and property-management projects. The portfolio includes commercial roofing and coordinated work across occupied multi-building communities.",
+    answer: "Yes. Seacoast works on residential, commercial, multi-family, HOA, and property-management projects. Current Capital Partner priorities include build-to-rent, major rehabilitation, and select additions. Projects with construction values around $20,000 or more are generally the best fit, and each opportunity is reviewed individually.",
   },
   {
     question: "Can I see completed Seacoast projects?",

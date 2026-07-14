@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: pageDescription,
     siteName: "Seacoast Building & Design",
     publishedTime: "2026-06-28",
-    modifiedTime: "2026-07-13",
+    modifiedTime: "2026-07-14",
     authors: ["Seacoast Building & Design"],
     tags: [
       "H.R. 6644",
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: "What can Seacoast evaluate?",
     answer:
-      "Seacoast can review construction scope, plans, constructability, schedule, site conditions, documentation needs, and budget assumptions. Seacoast does not determine whether an investor, transaction, or project qualifies for a statutory exception, grant, tax treatment, or financing program.",
+      "Seacoast can review construction scope, plans, constructability, schedule, site conditions, documentation needs, and budget assumptions. Current priorities are build-to-rent, major rehabilitation, and select additions. Seacoast does not determine whether an investor, transaction, or project qualifies for a statutory exception, grant, tax treatment, or financing program.",
   },
 ];
 
@@ -158,11 +158,11 @@ const projectChecklist = [
   "Confirm who can receive or administer the relevant benefit; many programs run through public or nonprofit partners rather than directly to an investor.",
   "Separate enacted law from future funding: verify appropriations, agency rules, notices of funding opportunity, and local program requirements.",
   "Have legal, tax, financing, and grant advisers confirm eligibility before the construction team relies on a statutory pathway.",
-  "Give Seacoast the property, plans, unit count, project stage, target schedule, and documentation requirements for a construction-fit review.",
+  "Give Seacoast the property, plans, estimated construction value, project stage, target schedule, unit count when known, and documentation requirements for a construction-fit review.",
 ];
 
 export default function RoadToHousingActPage() {
-  const lastUpdated = "2026-07-13";
+  const lastUpdated = "2026-07-14";
   const datePublished = "2026-06-28";
 
   return (
@@ -240,7 +240,7 @@ export default function RoadToHousingActPage() {
 
       <section className="section dark-band bg-navy">
         <div className="container max-w-5xl">
-          <p className="eyebrow">Status as of July 13, 2026</p>
+          <p className="eyebrow">Status as of July 14, 2026</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">The facts to start with</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -336,6 +336,9 @@ export default function RoadToHousingActPage() {
             <p className="mt-4 text-sm leading-6 text-text-secondary">
               Seacoast can help a project team evaluate plans, scope, constructability, site conditions, schedule, budget assumptions, and construction documentation. The investor&apos;s counsel, lender, tax adviser, grant administrator, and applicable government agency remain responsible for legal and program conclusions.
             </p>
+            <p className="mt-4 text-sm leading-6 text-text-secondary">
+              Seacoast is currently prioritizing build-to-rent and major rehabilitation, with select additions where applicable. Projects around $20,000 or more are generally the best fit, and contracts of $100,000 or more can be evaluated throughout Florida. Investors should involve Seacoast at least two months before the desired start when possible.
+            </p>
             <Link
               href="/capital-partners?source=road-act#inquire"
               className="mt-6 inline-flex rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper"
@@ -416,7 +419,7 @@ export default function RoadToHousingActPage() {
         <div className="container max-w-4xl text-center">
           <h2 className="font-heading text-3xl font-bold text-navy">Bring Seacoast the project—not a legal conclusion</h2>
           <p className="mt-4 text-text-secondary">
-            Share the location, product type, unit count, stage, plans, target schedule, and construction questions your team needs to evaluate.
+            Share the location, product type, estimated construction value, stage, plans, target schedule, unit count when known, and construction questions your team needs to evaluate.
           </p>
           <Link
             href="/capital-partners?source=road-act#inquire"

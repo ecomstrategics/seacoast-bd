@@ -1,6 +1,6 @@
 # Seacoast Building & Design
 
-> Seacoast Building & Design is a Florida-certified general and roofing contractor serving homes, businesses, associations, and multi-family properties across six Gulf Coast counties. The company coordinates roofing, exterior improvements, storm preparation and repair, additions, and selected container-based projects.
+> Seacoast Building & Design is a Florida-certified general and roofing contractor serving homes, businesses, associations, and multi-family properties across six Gulf Coast counties. The company coordinates commercial buildouts, major rehabilitation, roofing, exterior improvements, storm preparation and restoration, additions, and selected container-based projects.
 
 Phone: [(941) 500-5431](tel:+19415005431)
 
@@ -15,17 +15,22 @@ Florida Certified Roofing Contractor: CCC1332648
 ## Start Here
 
 - [Our Work](https://seacoastbd.com/our-work): Seacoast project videos, completed-work details, and jobsite photos where available.
-- [Services](https://seacoastbd.com/services): Roofing, exterior, storm, energy, cleaning, enclosure, and addition services.
+- [Services](https://seacoastbd.com/services): Roofing and thermal inspections, exterior, storm, energy, cleaning, enclosure, and addition services.
 - [Service Area](https://seacoastbd.com/service-area): Counties and city pages across Southwest Florida.
 - [About Seacoast](https://seacoastbd.com/about): Company leadership, licenses, service area, and project approach.
 - [Customer Reviews](https://seacoastbd.com/customer-reviews): Direct links to Google and Better Business Bureau feedback.
-- [Capital Partners](https://seacoastbd.com/capital-partners): Residential-development opportunity review and company-reported project experience for developer and investor diligence.
+- [Capital Partners](https://seacoastbd.com/capital-partners): Build-to-rent, major-rehabilitation, and select-addition project review, including current project-fit, timing, geographic, bonding, and insurance information.
+- [Build-to-Rent Construction](https://seacoastbd.com/build-to-rent-construction): Early contractor-review guidance for Florida build-to-rent opportunities, including current project-fit, unit-count, construction-value, planning-window, and statewide-review information.
+- [Major Rehabilitation](https://seacoastbd.com/major-rehabilitation): Coordinated multi-trade rehabilitation planning for residential, commercial, condominium, HOA, community, and investor-owned properties, with Tara Golf Club and Hurricane Ian restoration examples.
+- [Commercial Buildouts](https://seacoastbd.com/commercial-buildouts): Commercial buildout planning and verified Nautical Bowls project facts, including scope, material shortages, plan changes, permitting effects, and trade coordination.
 - [Resources](https://seacoastbd.com/resources): Project-planning information, completed work, the H.R. 6644 explainer, and links for property owners, developers, and investors.
+- [Understanding Florida's Building Codes](https://seacoastbd.com/understanding-floridas-building-codes): A property-owner and investor guide to the current Florida Building Code edition, local permit review, Florida Product Approval, and project-specific design coordination.
 - [Contact](https://seacoastbd.com/contact): Request a quote or discuss a property.
 
 ## Roofing and Exterior Services
 
 - [Roof Certification Inspection](https://seacoastbd.com/services/roof-certification-inspection): Roof-condition inspections with photos, observed issues, and estimated remaining service life when requested.
+- [Thermal Drone Inspections](https://seacoastbd.com/services/thermal-drone-inspections): Aerial visible and thermal imaging for residential, commercial, condominium, and multi-family roofs. Temperature patterns can help prioritize a closer inspection but do not, by themselves, confirm leaks, moisture, or insulation defects.
 - [Roofing](https://seacoastbd.com/services/roofing): Repairs and replacements for tile, metal, shingle, and low-slope roofing systems.
 - [Gutters, Fascia, and Soffits](https://seacoastbd.com/services/gutters-fascia-soffits): Installation and repair for drainage, ventilation, and finished roof edges.
 - [Siding](https://seacoastbd.com/services/siding): Siding installation and repair for residential, commercial, and multi-family properties.
@@ -39,10 +44,20 @@ Florida Certified Roofing Contractor: CCC1332648
 
 - [Storm Preparedness](https://seacoastbd.com/services/storm-preparedness): Property review, opening inventory, material planning, and written activation terms.
 - [Emergency Response](https://seacoastbd.com/services/emergency-response): Call to confirm current availability for boarding, temporary protection, or damage stabilization. Availability depends on safe access, weather, materials, demand, and crew capacity.
-- [Storm Damage Repair](https://seacoastbd.com/services/storm-damage-repair): Visible-damage photos, a construction estimate, and agreed roof and exterior repairs. Seacoast does not negotiate insurance coverage or settlements for property owners.
+- [Storm Damage Repair](https://seacoastbd.com/services/storm-damage-repair): Visible-damage photos, a construction estimate, and agreed interior, exterior, roofing, or major-rehabilitation work after wind, rain, or storm-surge damage. Seacoast does not negotiate insurance coverage or settlements for property owners.
 - [Storm Preparation Plans](https://seacoastbd.com/storm-ready): Property-specific planning for homes, associations, and multi-building properties.
 
 Contractor availability is not a substitute for an emergency plan. Follow evacuation orders and local public-safety guidance.
+
+## Florida Building Code Planning
+
+Last reviewed: July 14, 2026.
+
+- [Seacoast's Florida Building Code guide](https://seacoastbd.com/understanding-floridas-building-codes)
+- [Florida Building Commission code resources](https://www.floridabuilding.org/fbc/links_to_code_resources.html)
+- [Florida Product Approval search](https://www.floridabuilding.org/pr/pr_app_srch.aspx)
+
+As of this review date, the Florida Building Commission identifies the Florida Building Code, 8th Edition (2023), as the edition in effect, with an effective date of December 31, 2023. Florida uses a statewide code, while local governments and enforcement districts review plans, issue permits, inspect work, and make project-specific approval decisions. A statewide Florida Product Approval documents the evaluated product and its conditions of use; it does not by itself approve a product for every property or installation. Check the current official code resources, the product's full approval documents, required professional design, and the appropriate local building department before construction.
 
 ## Solar and Battery Services
 
@@ -57,13 +72,13 @@ Contractor availability is not a substitute for an emergency plan. Follow evacua
 - [Container Guest Spaces](https://seacoastbd.com/containers/guest-houses): Site- and permit-dependent guest-space concepts with available interior, utility, and exterior-finish options.
 - [Container Offices and Workshops](https://seacoastbd.com/containers/offices-workshops): Workspaces planned around equipment, electrical demand, ventilation, access, and finishes.
 - [Engineered Container Structures](https://seacoastbd.com/containers/storm-shelters): Emergency use requires a complete, site-specific design. A steel shipping container alone is not a hurricane safe room, and FEMA does not certify products.
-- [Finished Mini-Home Example](https://seacoastbd.com/containers/prebuilt): Photos of one finished example; contact Seacoast for current availability, feasibility, and pricing.
+- [Available 20-Foot Mobile Container](https://seacoastbd.com/containers/prebuilt): An actual built-out 20-foot container unit last published at $35,000 and shown in exterior and interior photos. It is mounted on a tandem-axle trailer and includes visible kitchenette and wet-bath areas. Confirm current availability, condition, included equipment, transport arrangements, price, and lawful use with Seacoast before purchase.
 
 Container feasibility, price, schedule, wind performance, and legal use depend on the unit, parcel, design, engineering, permits, inspections, and written project scope.
 
 ## Service Area
 
-Seacoast serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties in Florida. City pages include Fort Myers, Cape Coral, Naples, Sarasota, Bradenton, Bonita Springs, Venice, and Punta Gorda. Send the property address so the team can confirm service and scheduling.
+Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties in Florida. City pages include Fort Myers, Cape Coral, Naples, Sarasota, Bradenton, Bonita Springs, Venice, and Punta Gorda. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida. Send the property address, construction value, and scope so the team can confirm service, travel, and scheduling.
 
 ## Financing
 
@@ -73,9 +88,27 @@ Seacoast serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier cou
 
 Seacoast reports project experience across 413 homes representing $63,566,688 in project value. The company also reports work across 56 condominium and townhome communities, HOA organizations, and commercial structures representing $48,442,320 in project value. Supporting project records and relevant references can be reviewed during diligence.
 
+Seacoast is currently prioritizing build-to-rent and major rehabilitation, with select additions where applicable. Projects with construction values around $20,000 or more are generally the best fit. Scope and value matter more than unit count; Seacoast can evaluate one property through programs of roughly 300 units. The current typical mobilization planning window is one to three months, and investors should involve Seacoast at least two months before the desired start when possible. Final timing depends on scope, permits, materials, phasing, and crew requirements.
+
+Dedicated project guides:
+
+- [Build-to-Rent Construction](https://seacoastbd.com/build-to-rent-construction): Focuses on early review of the site or target market, plan stage, product mix, construction value, phase approach, unit count, schedule, and project controls. A Seacoast construction review does not determine legal eligibility under the ROAD to Housing Act or any other law.
+- [Major Rehabilitation](https://seacoastbd.com/major-rehabilitation): Focuses on existing conditions, connected trade scopes, occupied or multi-building phasing, documentation, and completed rehabilitation evidence.
+- [Commercial Buildouts](https://seacoastbd.com/commercial-buildouts): Focuses on the existing space, intended use, plan and permit stage, trade dependencies, schedule, change control, and verified completed-buildout evidence.
+
+Seacoast reports bonding capability up to $27 million, subject to surety approval and project-specific underwriting, and a $3 million general insurance limit. Proof of insurance, higher project-specific limits, certificate-holder requirements, and insured-party requirements must be confirmed with Seacoast and its carrier for the specific contract. Capital Partner inquiries are assigned to owner Clear Dayland for review and follow-up.
+
+Selected completed-project summaries:
+
+- [Cinnamon Cove Carports and Storage Lockers](https://seacoastbd.com/our-work/cinnamon-cove-carports-lockers): Carport construction and repair, framed storage lockers, and Hardie lap siding.
+- [Cinnamon Cove Terrace Condo II Improvements](https://seacoastbd.com/our-work/cinnamon-cove-terrace-condos): Roofing, soffit, fascia, gutters, stucco repairs, painting, and electrical work.
+- [Nautical Bowls Florida Commercial Buildout](https://seacoastbd.com/our-work/nautical-bowls-florida-commercial-buildout): Full commercial buildout completed through COVID-era material shortages, shipping delays, plan changes, and permitting effects.
+- [Tara Golf Club Multi-Building Rehabilitation](https://seacoastbd.com/our-work/tara-golf-club-multi-building-rehabilitation): Simultaneous structural, roofing, exterior, and HVAC work across three buildings during rainy-season conditions.
+- [Hurricane Ian Storm-Surge Restoration](https://seacoastbd.com/our-work/hurricane-ian-storm-surge-restoration): Coordinated interior and exterior restoration for three private residences and the Coco Bay Amenities Center.
+
 ## H.R. 6644 and the ROAD to Housing Act
 
-Last reviewed: July 13, 2026.
+Last reviewed: July 14, 2026.
 
 - [Seacoast's H.R. 6644 and 21st Century ROAD to Housing Act overview](https://seacoastbd.com/road-to-housing-act)
 - [Official enrolled text of H.R. 6644](https://www.govinfo.gov/content/pkg/BILLS-119hr6644enr/html/BILLS-119hr6644enr.htm)

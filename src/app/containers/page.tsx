@@ -13,7 +13,7 @@ import { seoTitle } from "@/lib/seo";
 export const metadata: Metadata = {
   title: seoTitle("Shipping Container Storage, Offices & Guest Spaces"),
   description:
-    "Explore container-based storage, offices, workshops, and guest-space concepts for Southwest Florida properties. Site review and current estimates from Seacoast.",
+    "See an available 20-foot mobile container plus storage, office, workshop, and guest-space options for Southwest Florida properties from Seacoast.",
 };
 
 const landingFaqs = [
@@ -118,6 +118,37 @@ export default function ContainersLandingPage() {
           </div>
         </div>
       </div>
+
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <Link
+            href="/containers/prebuilt"
+            className="group grid overflow-hidden rounded-3xl border border-orange/25 bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-xl lg:grid-cols-[0.9fr_1.1fr]"
+          >
+            <div className="relative min-h-72 lg:min-h-full">
+              <Image
+                src="/images/containers/prebuilt/prebuilt-exterior-side.webp"
+                alt="Actual available 20-foot mobile container mounted on a tandem-axle trailer"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+              />
+            </div>
+            <div className="p-7 md:p-10">
+              <div className="inline-flex rounded-full bg-success/10 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-success">
+                Available — July 2026
+              </div>
+              <p className="eyebrow mt-6">Actual unit for sale</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">20-Foot Mobile Container</h2>
+              <p className="mt-4 text-2xl font-bold text-orange-deep">Last published at $35,000</p>
+              <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
+                See real exterior and interior photos of a built-out 20-foot unit mounted on a tandem-axle trailer, with glass doors and windows, a kitchenette, wet bath, and flexible interior space. Confirm the current price and sale terms with Seacoast.
+              </p>
+              <p className="mt-6 font-bold text-orange transition group-hover:text-copper">View the available unit &rarr;</p>
+            </div>
+          </Link>
+        </div>
+      </section>
 
       <section className="section dark-band bg-navy">
         <div className="container">

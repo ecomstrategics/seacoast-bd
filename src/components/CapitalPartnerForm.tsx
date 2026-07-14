@@ -46,15 +46,18 @@ export function CapitalPartnerForm() {
   const labelClass = "grid min-w-0 gap-2 text-sm font-semibold text-navy";
 
   return (
-    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} className="grid min-w-0 w-full max-w-full gap-5 rounded-3xl bg-white p-6 shadow-soft md:p-8 [color-scheme:light]">
+    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} aria-busy={isSubmitting} className="grid min-w-0 w-full max-w-full gap-5 rounded-3xl bg-white p-6 shadow-soft md:p-8 [color-scheme:light]">
       {/* Hidden tracking fields */}
-      <input type="hidden" name="inquiryType" value="Housing Development Project Review" />
+      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+      <input type="hidden" name="inquiryType" value="Capital Partner Project Review" />
       <input type="hidden" name="rep" value={repKey} />
       <input type="hidden" name="inquirySource" value={inquirySource} />
+      <input type="hidden" name="leadOwner" value="Clear Dayland" />
+      <input type="hidden" name="_subject" value="Capital Partners project review for Clear Dayland" />
 
       <div>
         <p className="font-heading text-2xl font-bold text-navy">Tell us what you are planning</p>
-        <p className="mt-2 text-sm leading-6 text-text-secondary">Share what you know now. Seacoast will use it to evaluate construction fit and prepare a useful first conversation.</p>
+        <p className="mt-2 text-sm leading-6 text-text-secondary">Share what you know now. The inquiry is assigned to Clear Dayland, Seacoast&apos;s owner, for project-fit review and follow-up.</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -96,31 +99,42 @@ export function CapitalPartnerForm() {
           </select>
         </label>
         <label className={labelClass}>
-          Product Type
+          Project Type
           <select name="productType" defaultValue="" required className={fieldClass}>
             <option value="" disabled>Select a project type</option>
-            <option>New for-sale single-family housing</option>
             <option>Build-to-rent / single-family rental</option>
-            <option>Substantial rehabilitation / renovate-to-rent</option>
-            <option>Affordable housing</option>
-            <option>Multifamily housing</option>
-            <option>55+ / active-adult / senior housing</option>
-            <option>Adaptive reuse / residential conversion</option>
-            <option>Mixed residential development</option>
-            <option>Other housing project</option>
+            <option>Major rehabilitation / renovate-to-rent</option>
+            <option>Commercial / condominium / HOA rehabilitation</option>
+            <option>Addition / property expansion</option>
+            <option>Other construction project</option>
             <option>Not sure yet</option>
           </select>
         </label>
       </div>
 
+      <label className={labelClass}>
+        Property Address / Target Market
+        <input name="market" autoComplete="street-address" placeholder="Address, city, or Florida market" className={fieldClass} />
+      </label>
+
       <div className="grid gap-4 md:grid-cols-2">
         <label className={labelClass}>
-          Property Address / Target Market
-          <input name="market" autoComplete="street-address" placeholder="Address, city, or Florida market" className={fieldClass} />
+          Estimated Construction Value
+          <select name="constructionValue" defaultValue="" required className={fieldClass}>
+            <option value="" disabled>Select an approximate range</option>
+            <option>Under $20,000</option>
+            <option>$20,000–$49,999</option>
+            <option>$50,000–$99,999</option>
+            <option>$100,000–$499,999</option>
+            <option>$500,000–$999,999</option>
+            <option>$1 million–$4.99 million</option>
+            <option>$5 million or more</option>
+            <option>Not sure yet</option>
+          </select>
         </label>
         <label className={labelClass}>
-          Approximate Homes / Units / Structures
-          <input name="unitCount" placeholder="e.g. 48 homes or 120 units" className={fieldClass} />
+          Approximate Homes / Units / Structures (optional)
+          <input name="unitCount" placeholder="e.g. 1 property or 120 units" className={fieldClass} />
         </label>
       </div>
 
@@ -141,8 +155,8 @@ export function CapitalPartnerForm() {
           Target Start
           <select name="timeline" defaultValue="" className={fieldClass}>
             <option value="">Select a target</option>
-            <option>As soon as practical</option>
-            <option>Next 3 to 6 months</option>
+            <option>Within 1 to 3 months</option>
+            <option>3 to 6 months</option>
             <option>6 to 12 months</option>
             <option>More than 12 months</option>
             <option>Not sure yet</option>
@@ -172,8 +186,8 @@ export function CapitalPartnerForm() {
         <textarea name="description" rows={5} placeholder="Tell us about the property, current conditions or plans, desired scope, schedule, and the decision you need to make." className={fieldClass} />
       </label>
 
-      <div aria-live="polite">
-        {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—we received your project details. A Seacoast team member will review them and follow up.</p>}
+      <div aria-live="polite" role="status">
+        {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—we received your project details for Clear Dayland&apos;s review. Seacoast will follow up.</p>}
         {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
       </div>
 

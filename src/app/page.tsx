@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { SolutionsPillar } from "@/components/SolutionsPillar";
 import { TrustBar } from "@/components/TrustBar";
+import { TrustProofLinks } from "@/components/TrustProofLinks";
 import { containers } from "@/data/containers";
 import { projects } from "@/data/projects";
 import { getServicesByPillar } from "@/data/services";
@@ -82,6 +83,7 @@ export default function Home() {
       </section>
 
       <TrustBar />
+      <TrustProofLinks />
 
       {/* Three-Pillar Section */}
       <section className="section dark-band bg-navy">
@@ -173,6 +175,28 @@ export default function Home() {
             </div>
             <Link href="/containers" className="hidden font-bold text-orange sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
           </div>
+          <Link
+            href="/containers/prebuilt"
+            className="group mb-8 grid overflow-hidden rounded-2xl border border-orange/25 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.7fr_1.3fr]"
+          >
+            <div className="relative min-h-56 md:min-h-full">
+              <Image
+                src="/images/containers/prebuilt/prebuilt-exterior-side.webp"
+                alt="Actual available 20-foot mobile container mounted on a tandem-axle trailer"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 35vw, 100vw"
+              />
+            </div>
+            <div className="p-6 md:p-8">
+              <p className="eyebrow">Available now</p>
+              <h3 className="mt-2 font-heading text-3xl font-bold text-navy">20-Foot Mobile Container</h3>
+              <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
+                Tour the actual unit inside and out. It was last published at $35,000; contact Seacoast to confirm the current price, availability, condition, sale terms, and transport details.
+              </p>
+              <p className="mt-5 font-bold text-orange transition group-hover:text-copper">See the listing &rarr;</p>
+            </div>
+          </Link>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {containers.map((container) => (
               <ContainerCard key={container.slug} container={container} />
@@ -258,9 +282,9 @@ export default function Home() {
           <div className="grid gap-7 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
             <div>
               <p className="eyebrow text-orange">For developers and capital partners</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold">Planning a residential development program?</h2>
+              <h2 className="mt-2 font-heading text-3xl font-bold">Planning build-to-rent, major rehabilitation, or an addition?</h2>
               <p className="mt-3 max-w-3xl leading-7 text-white/75">
-                If your team is evaluating new housing, build-to-rent, substantial rehabilitation, adaptive reuse, or another housing opportunity, see how Seacoast approaches project diligence and review the current federal housing-law overview.
+                Seacoast is currently reviewing both large and small opportunities, with a regular six-county service area and statewide review for contracts of $100,000 or more. Bring the team in early to discuss scope, construction value, schedule, and project fit.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteForm } from "@/components/QuoteForm";
+import { TrustProofLinks } from "@/components/TrustProofLinks";
 import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function ContactPage() {
 
       <section className="section dark-band bg-navy">
         <div className="container grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-          <div>
+          <div className="order-2 lg:order-1">
             <h2 className="font-heading text-2xl font-bold text-navy">What happens after I request a quote?</h2>
             <p className="mt-3 leading-7 text-text-secondary">
               We will review your project details, contact you to clarify the scope, and arrange a property visit when one is needed. For urgent storm damage or an active leak, call us directly at (941) 500-5431.
@@ -64,9 +65,12 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            <div className="mt-10">
+              <TrustProofLinks compact />
+            </div>
           </div>
 
-          <div>
+          <div className="order-1 lg:order-2">
             <QuoteForm />
           </div>
         </div>

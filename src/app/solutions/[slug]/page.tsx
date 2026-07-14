@@ -16,14 +16,15 @@ import { containers } from "@/data/containers";
 import { projects } from "@/data/projects";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return solutions.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const pillar = getSolutionBySlug(params.slug as "protect" | "improve" | "expand");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const pillar = getSolutionBySlug(slug as "protect" | "improve" | "expand");
   if (!pillar) return {};
   return {
     title: seoTitle(`${pillar.title}: ${pillar.tagline}`),
@@ -64,8 +65,9 @@ const accentBg: Record<string, string> = {
   expand: "bg-copper",
 };
 
-export default function SolutionPillarPage({ params }: Props) {
-  const slug = params.slug as "protect" | "improve" | "expand";
+export default async function SolutionPillarPage({ params }: Props) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug as "protect" | "improve" | "expand";
   const pillar = getSolutionBySlug(slug);
   if (!pillar) notFound();
 

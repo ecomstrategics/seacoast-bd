@@ -14,10 +14,40 @@ a { text-decoration: none; }
 /* Eyebrow + orange text default to the lighter soft coral so they clear WCAG AA
    on every dark blue band (>=4.5:1 even on the brightest band #24407F). On light surfaces
    the contrast-island layer below overrides this to deep orange #B83410. */
-.eyebrow { color: #FF9468; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
-.text-orange { color: #FF9468; }
+.eyebrow { color: #FFA07A; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; }
+.text-orange { color: #FFA07A; }
 /* Orange focus ring reads clearly on dark blue. */
 .focus-ring { @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E15A2B]; }
+
+/* A two-color keyboard indicator remains visible on both light and dark surfaces. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #FFA07A;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #0E2150;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 9999px;
+  background: #FFFFFF;
+  color: #1E3A7A;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 /*
   Dark-band text contrast layer.
@@ -65,7 +95,7 @@ a { text-decoration: none; }
 
 /*
   Orange accessibility layer.
-  Soft coral (#FF9468) is the default for `.text-orange`/`.eyebrow`; it clears
+  Soft coral (#FFA07A) is the default for `.text-orange`/`.eyebrow`; it clears
   WCAG AA on the dark navy bands (>=4.6:1). On LIGHT surfaces that coral fails,
   so inside any light contrast island we swap orange text to the accessible deep
   orange #B83410 (>=4.9:1 on white/warm-white/cool-gray). Covers descendant text,

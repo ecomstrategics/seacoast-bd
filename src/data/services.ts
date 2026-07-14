@@ -19,7 +19,7 @@ export const services: Service[] = [
   { slug: "whole-house-battery-systems", name: "Home Battery Backup", shortDescription: "Battery-backup systems sized around the circuits you want to support, with standalone and solar-paired options.", icon: "🔋", pillar: "protect" },
   { slug: "pool-enclosures-lanais", name: "Pool Enclosures & Lanais", shortDescription: "New screen enclosures and lanais, plus repairs and re-screening for existing outdoor structures.", icon: "🌴", pillar: "expand" },
   { slug: "room-additions", name: "Room Additions", shortDescription: "Room additions and enclosed spaces planned around your existing structure, site, and permitting requirements.", icon: "➕", pillar: "expand" },
-  { slug: "storm-damage-repair", name: "Storm Damage Repair", shortDescription: "Inspection, photo documentation, temporary stabilization, and repairs after wind and rain damage.", icon: "⛈️", pillar: "protect" },
+  { slug: "storm-damage-repair", name: "Storm Damage Repair", shortDescription: "Inspection, documentation, stabilization, and coordinated interior or exterior rehabilitation after wind, rain, or storm-surge damage.", icon: "⛈️", pillar: "protect" },
   {
     slug: "storm-preparedness",
     name: "Storm Preparedness",
@@ -51,7 +51,7 @@ export const services: Service[] = [
   {
     slug: "thermal-drone-inspections",
     name: "Thermal Drone Inspections",
-    shortDescription: "Aerial thermal imaging that helps identify temperature patterns associated with trapped moisture, water intrusion, or insulation gaps.",
+    shortDescription: "Aerial thermal and visible imaging that documents roof-surface temperature patterns and helps prioritize areas for closer inspection. Thermal images alone do not confirm leaks or moisture.",
     icon: "🚁",
     pillar: "protect",
   },

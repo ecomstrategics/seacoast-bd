@@ -34,9 +34,9 @@ export default function AboutPage() {
         <div className="container grid gap-14 md:grid-cols-2">
           <div>
             <p className="eyebrow">What we do</p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team for the whole exterior.</h2>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team for a coordinated construction scope.</h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              Depending on the agreed scope, Seacoast can coordinate roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, storm repairs, permits, materials, and documentation.
+              Depending on the agreed scope, Seacoast can coordinate buildouts, major rehabilitation, additions, roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, storm repairs, permits, materials, and documentation.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
               Our project library includes videos and photos from completed work across the region. It gives property owners a practical way to review our experience before starting a conversation.
@@ -121,7 +121,8 @@ export default function AboutPage() {
                   <li>Storm readiness programs for homeowners and communities</li>
                   <li>Container build-outs for homes, offices, and storage</li>
                   <li>Residential and commercial roofing</li>
-                  <li>Exterior renovations and storm repairs</li>
+                  <li>Commercial buildouts, major rehabilitation, and storm restoration</li>
+                  <li>Additions and coordinated exterior renovations</li>
                   <li>Windows, doors, gutters, siding, and lanais</li>
                   <li>Coordinating related trades from inspection to walkthrough</li>
                 </ul>
