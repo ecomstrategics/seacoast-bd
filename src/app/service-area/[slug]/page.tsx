@@ -13,14 +13,15 @@ import { projects } from "@/data/projects";
 import { serviceAreaCities } from "@/data/serviceAreas";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return serviceAreaCities.map((city) => ({ slug: city.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const city = serviceAreaCities.find((c) => c.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const city = serviceAreaCities.find((c) => c.slug === slug);
   if (!city) return {};
   return {
     title: seoTitle(`Contractor in ${city.name}, ${city.county}`),
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ServiceAreaCityPage({ params }: Props) {
-  const city = serviceAreaCities.find((c) => c.slug === params.slug);
+export default async function ServiceAreaCityPage({ params }: Props) {
+  const { slug } = await params;
+  const city = serviceAreaCities.find((c) => c.slug === slug);
   if (!city) notFound();
 
   const featuredProjects = city.featuredProjectSlugs

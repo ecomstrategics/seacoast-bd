@@ -1,21 +1,37 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
+import { ProjectCard } from "@/components/ProjectCard";
 import { SchemaScript, videoObjectSchema } from "@/components/Schema";
 import { YouTubeFacade } from "@/components/YouTubeFacade";
-import { getProjectBySlug, projects } from "@/data/projects";
+import { getCategory, getProjectBySlug, projects } from "@/data/projects";
+import { videoMetadata } from "@/data/videoMetadata";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
+
+const categoryDestinations: Record<string, { label: string; href: string; inquiryHref: string }> = {
+  Roofing: { label: "Explore roofing services", href: "/services/roofing", inquiryHref: "/contact?service=roofing" },
+  Siding: { label: "Explore siding services", href: "/services/siding", inquiryHref: "/contact?service=siding" },
+  "Gutters & Trim": { label: "Explore gutter, fascia, and soffit services", href: "/services/gutters-fascia-soffits", inquiryHref: "/contact?service=gutters-fascia-soffits" },
+  "Exterior Structures": { label: "Explore carport and structure services", href: "/services/carports", inquiryHref: "/contact?service=carports" },
+  Enclosures: { label: "Explore enclosure and lanai services", href: "/services/pool-enclosures-lanais", inquiryHref: "/contact?service=pool-enclosures-lanais" },
+  Solar: { label: "Explore solar services", href: "/services/solar-services", inquiryHref: "/contact?service=solar-services" },
+  Rehabilitation: { label: "Explore major rehabilitation partnerships", href: "/capital-partners", inquiryHref: "/capital-partners#inquire" },
+  "Commercial Construction": { label: "Explore commercial project partnerships", href: "/capital-partners", inquiryHref: "/capital-partners#inquire" },
+  Other: { label: "Explore Seacoast services", href: "/services", inquiryHref: "/contact" },
+};
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const project = getProjectBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
   if (!project) return {};
 
   const description = seoDescription(project.description);
@@ -55,14 +71,23 @@ function formatProjectDate(date: string) {
   }).format(new Date(`${date}T00:00:00Z`));
 }
 
-export default function ProjectDetailPage({ params }: Props) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  const hasSpecificLocation = project.location !== "Southwest Florida";
+  const hasSpecificLocation = Boolean(project.location && project.location !== "Southwest Florida");
+  const hasPhotos = Boolean(project.photos?.length);
+  const overviewIntro = project.videoId && hasPhotos
+    ? "Review the project details and work completed, then watch the video and browse the jobsite photos for a closer look."
+    : project.videoId
+      ? "Review the project details and work completed, then watch the video for a closer look at the job."
+      : hasPhotos
+        ? "Review the project details, work completed, and jobsite photos available for this project."
+        : "Review the verified project summary, the conditions Seacoast worked through, and the completed construction scope.";
   const projectFacts = [
     { label: "Service", value: project.serviceType },
-    ...(hasSpecificLocation ? [{ label: "Location", value: project.location }] : []),
+    ...(hasSpecificLocation && project.location ? [{ label: "Location", value: project.location }] : []),
     ...(project.propertyType ? [{ label: "Property", value: project.propertyType }] : []),
     ...(project.completedOn
       ? [{
@@ -71,18 +96,32 @@ export default function ProjectDetailPage({ params }: Props) {
         }]
       : []),
   ];
+  const currentVideoMetadata = project.videoId ? videoMetadata[project.videoId] : undefined;
+  const projectCategory = getCategory(project.serviceType);
+  const categoryDestination = categoryDestinations[projectCategory] ?? categoryDestinations.Other;
+  const relatedProjects = projects
+    .filter((candidate) => candidate.slug !== project.slug && getCategory(candidate.serviceType) === projectCategory)
+    .slice(0, 3);
 
   return (
     <>
       {project.videoId && (
-        <SchemaScript schema={videoObjectSchema({ name: project.title, description: project.description, videoId: project.videoId })} />
+        <SchemaScript
+          schema={videoObjectSchema({
+            name: project.title,
+            description: project.description,
+            videoId: project.videoId,
+            uploadDate: currentVideoMetadata?.uploadDate,
+            duration: currentVideoMetadata?.duration,
+          })}
+        />
       )}
       <section className="section dark-band bg-navy">
         <div className="container">
           <Breadcrumbs tone="light" items={[{ label: "Home", href: "/" }, { label: "Our Work", href: "/our-work" }, { label: project.title }]} />
           <div className="flex flex-wrap gap-2 text-xs font-bold mb-4">
             <span className="rounded-full bg-orange/10 px-3 py-1 text-orange">{project.serviceType}</span>
-            {hasSpecificLocation && (
+            {hasSpecificLocation && project.location && (
               <span className="rounded-full bg-cool-gray px-3 py-1 text-text-secondary">{project.location}</span>
             )}
           </div>
@@ -104,9 +143,7 @@ export default function ProjectDetailPage({ params }: Props) {
           <p className="eyebrow">See the work</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy md:text-4xl">Project overview</h2>
           <p className="mt-4 max-w-3xl text-text-secondary">
-            {project.videoId
-              ? "Review the project details and work completed, then watch the video for a closer look at the job."
-              : "Review the project details, work completed, and jobsite photos available for this project."}
+            {overviewIntro}
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {projectFacts.map((fact) => (
@@ -116,6 +153,23 @@ export default function ProjectDetailPage({ params }: Props) {
               </div>
             ))}
           </div>
+
+          {(project.challenge || project.approach) && (
+            <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              {project.challenge && (
+                <article className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm md:p-8">
+                  <h3 className="eyebrow">The challenge</h3>
+                  <p className="mt-3 leading-7 text-text-secondary">{project.challenge}</p>
+                </article>
+              )}
+              {project.approach && (
+                <article className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm md:p-8">
+                  <h3 className="eyebrow">How Seacoast handled it</h3>
+                  <p className="mt-3 leading-7 text-text-secondary">{project.approach}</p>
+                </article>
+              )}
+            </div>
+          )}
 
           {project.scope && project.scope.length > 0 && (
             <div className="mt-8 max-w-3xl rounded-2xl border border-white/15 bg-white/5 p-6 md:p-8">
@@ -160,11 +214,38 @@ export default function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
+      <section className="section dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Keep exploring</p>
+          <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="font-heading text-3xl font-bold text-navy md:text-4xl">
+                {relatedProjects.length > 0 ? "Similar Seacoast projects" : "Planning your next project"}
+              </h2>
+              <p className="mt-4 max-w-2xl text-text-secondary">
+                Review the service behind this work, or send Seacoast the property details to discuss a similar scope.
+              </p>
+            </div>
+            <Link href={categoryDestination.href} className="font-bold text-orange hover:underline">
+              {categoryDestination.label} &rarr;
+            </Link>
+          </div>
+          {relatedProjects.length > 0 && (
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {relatedProjects.map((relatedProject) => (
+                <ProjectCard key={relatedProject.slug} project={relatedProject} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
       <CTASection
         variant="navy"
         heading="Planning a similar project?"
         subtext="Tell us what you are working on. Seacoast will review the property, explain practical options, and outline the next steps."
-        buttonLabel="Request a Quote"
+        buttonLabel="Discuss a Similar Project"
+        buttonHref={categoryDestination.inquiryHref}
       />
     </>
   );

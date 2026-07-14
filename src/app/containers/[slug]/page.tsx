@@ -10,7 +10,7 @@ import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
 import { containers, getContainerBySlug } from "@/data/containers";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 type DetailContent = {
   eyebrow: string;
@@ -156,9 +156,10 @@ export function generateStaticParams() {
   return containers.map((container) => ({ slug: container.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const container = getContainerBySlug(params.slug);
-  const content = detailContent[params.slug];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const container = getContainerBySlug(slug);
+  const content = detailContent[slug];
   if (!container || !content) return {};
   return {
     title: seoTitle(container.name),
@@ -166,9 +167,10 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ContainerDetailPage({ params }: Props) {
-  const container = getContainerBySlug(params.slug);
-  const content = detailContent[params.slug];
+export default async function ContainerDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const container = getContainerBySlug(slug);
+  const content = detailContent[slug];
   if (!container || !content) notFound();
 
   return (

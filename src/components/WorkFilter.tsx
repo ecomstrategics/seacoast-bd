@@ -72,7 +72,7 @@ export function WorkFilter({
               }
             >
               {type}
-              <span className={isActive ? "ml-2 text-white/80" : "ml-2 text-text-secondary"}>
+              <span className={isActive ? "ml-2 text-white" : "ml-2 text-text-secondary"}>
                 {counts[type] ?? 0}
               </span>
             </button>
@@ -102,7 +102,7 @@ export function WorkFilter({
                 }
               >
                 {label}
-                <span className={isActive ? "ml-1.5 text-white/80" : "ml-1.5 text-text-secondary"}>
+                <span className={isActive ? "ml-1.5 text-white" : "ml-1.5 text-text-secondary"}>
                   {subCounts[sub] ?? 0}
                 </span>
               </button>
@@ -110,6 +110,12 @@ export function WorkFilter({
           })}
         </div>
       )}
+
+      <p className="mt-6 text-sm font-semibold text-text-secondary" aria-live="polite" role="status">
+        Showing {visible.length} {visible.length === 1 ? "project" : "projects"}
+        {active !== "All" ? ` in ${active}` : ""}
+        {active === "Roofing" && roofSub !== "All" ? `: ${roofSub}` : ""}.
+      </p>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {visible.map((project) => (

@@ -13,7 +13,8 @@ import { getServiceBySlug, services } from "@/data/services";
 import { projects } from "@/data/projects";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
-type Props = { params: { slug: string } };
+type SlugParams = { slug: string };
+type Props = { params: Promise<SlugParams> };
 
 // ─── Rich content map (storm trio) ────────────────────────────────────────────
 // All three storm pages override the generic template. emergency-response uses
@@ -127,7 +128,7 @@ const stormContent: Record<string, StormRichContent> = {
   "storm-damage-repair": {
     heroH1: "Storm Damage Repair With a Clear Plan From the Start",
     heroSub:
-      "Seacoast photographs visible damage, explains what needs repair, prepares a written estimate, and carries the agreed roof and exterior work through the final walkthrough.",
+      "Seacoast photographs visible damage, explains what needs repair, prepares a written estimate, and coordinates the agreed interior, exterior, roofing, or major-rehabilitation scope through the final walkthrough.",
     heroPrimary: "Get a Damage Assessment",
     heroSecondary: "Call (941) 500-5431",
     stormLifecycleStage: "after",
@@ -152,6 +153,13 @@ const stormContent: Record<string, StormRichContent> = {
         blurb:
           "Call to confirm current availability for temporary protection or damage stabilization when conditions are safe.",
         icon: "🚨",
+      },
+      {
+        title: "Thermal Drone Inspections",
+        href: "/services/thermal-drone-inspections",
+        blurb:
+          "Use aerial visible and thermal imaging to document roof-surface temperature patterns and prioritize closer inspection areas.",
+        icon: "🚁",
       },
     ],
     faqs: [
@@ -254,15 +262,96 @@ const slugToServiceTypeKeywords: Record<string, string[]> = {
   "emergency-response": ["storm", "hurricane"],
 };
 
+const serviceMetadata: Record<string, { title: string; description: string }> = {
+  "roof-certification-inspection": {
+    title: "Roof Certification Inspections in Southwest Florida",
+    description: "Roof-condition inspections with photos, observed issues, and estimated remaining service life for Florida insurance, sale, and maintenance needs.",
+  },
+  roofing: {
+    title: "Residential & Commercial Roofing in Southwest Florida",
+    description: "Roof repair and replacement for shingle, tile, metal, and flat-roof systems across Southwest Florida homes, businesses, condos, and communities.",
+  },
+  "gutters-fascia-soffits": {
+    title: "Gutter, Fascia & Soffit Services in Southwest Florida",
+    description: "Gutter, fascia, and soffit installation and repair for Florida homes, commercial buildings, condominiums, and HOA communities.",
+  },
+  siding: {
+    title: "Siding Installation & Repair in Southwest Florida",
+    description: "Siding installation and repair, including Hardie siding, for Southwest Florida homes, commercial buildings, and multi-family properties.",
+  },
+  "windows-and-doors": {
+    title: "Impact Windows & Exterior Doors in Southwest Florida",
+    description: "Window and exterior-door replacement, including impact-rated options, for homes and commercial properties across Southwest Florida.",
+  },
+  "exterior-renovations": {
+    title: "Exterior Renovation Contractor in Southwest Florida",
+    description: "Coordinate roofing, siding, trim, paint, and structural exterior improvements under one construction scope in Southwest Florida.",
+  },
+  "exterior-cleaning-services": {
+    title: "Exterior & Roof Cleaning in Southwest Florida",
+    description: "Soft washing and pressure cleaning for roofs, siding, concrete, gutters, patios, fences, and solar panels across Southwest Florida.",
+  },
+  "solar-services": {
+    title: "Solar, Battery & EV Charging Services in Southwest Florida",
+    description: "Solar panels, inverters, battery storage, EV charging, and maintenance options for Southwest Florida homes and commercial properties.",
+  },
+  "solar-panel-cleaning": {
+    title: "Solar Panel Cleaning in Southwest Florida",
+    description: "One-time and recurring solar-panel cleaning for Florida dirt, salt, pollen, and debris, with methods selected for the roof and array.",
+  },
+  "whole-house-battery-systems": {
+    title: "Home Battery Backup Systems in Southwest Florida",
+    description: "Battery-backup systems sized around the circuits you want to support, with standalone and solar-paired options for Florida properties.",
+  },
+  "pool-enclosures-lanais": {
+    title: "Pool Enclosures & Lanais in Southwest Florida",
+    description: "New screen enclosures and lanais, plus repair and re-screening for existing outdoor structures across Southwest Florida.",
+  },
+  "room-additions": {
+    title: "Room Additions in Southwest Florida",
+    description: "Room additions and enclosed spaces planned around your existing Florida structure, property conditions, and permitting requirements.",
+  },
+  "storm-damage-repair": {
+    title: "Storm Damage Repair in Southwest Florida",
+    description: "Inspection, documentation, stabilization, and coordinated interior or exterior rehabilitation after Florida wind, rain, or storm-surge damage.",
+  },
+  "storm-preparedness": {
+    title: "Storm Preparedness for Southwest Florida Properties",
+    description: "Pre-season property inspections and plans for shutters, boards, materials, and storm activation across Southwest Florida.",
+  },
+  "emergency-response": {
+    title: "Emergency Storm Response in Southwest Florida",
+    description: "Emergency boarding, tarping, and damage stabilization when conditions and crew availability allow. Call Seacoast to confirm local response.",
+  },
+  "metal-buildings": {
+    title: "Metal Buildings & Pole Barns in Southwest Florida",
+    description: "Pole barns, barndominiums, and metal buildings with insulation and metal-panel roofing options for residential and commercial sites.",
+  },
+  carports: {
+    title: "Carports & Metal Roof Structures in Southwest Florida",
+    description: "New carport structures and repairs with insulated-panel and metal-roof options for Florida homes, businesses, and communities.",
+  },
+  "thermal-drone-inspections": {
+    title: "Thermal Drone Roof Inspections in Southwest Florida",
+    description: "Thermal and visible drone imaging documents roof-surface temperature patterns and helps prioritize areas for closer inspection.",
+  },
+};
+
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const service = getServiceBySlug(params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
   if (!service) return {};
-  const rich = stormContent[params.slug];
+  const tailoredMetadata = serviceMetadata[slug];
+  if (tailoredMetadata) return {
+    title: seoTitle(tailoredMetadata.title),
+    description: seoDescription(tailoredMetadata.description),
+  };
+  const rich = stormContent[slug];
   return {
     title: seoTitle(service.name),
     description: seoDescription(rich ? rich.heroSub : service.shortDescription),
@@ -301,7 +390,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
           <div className="mt-8 flex flex-wrap gap-4">
             <a href="tel:+19415005431" className="rounded-full bg-white px-6 py-3 font-bold text-storm hover:bg-white/90">Call Now</a>
             <a href="sms:+19415005431" className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-storm">Text Us</a>
-            <Link href="/contact" className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-storm">Request Emergency Quote</Link>
+            <Link href="/contact?service=emergency-response" className="rounded-full border border-white/30 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-storm">Request Emergency Quote</Link>
           </div>
         </div>
       </section>
@@ -385,7 +474,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="during" />
       <CrossSellBlock heading="Before the next storm" items={content.crossSellItems} />
-      <CTASection variant="orange" heading="Need storm-response help?" subtext="Call (941) 500-5431 or use the form to confirm current availability and safe-access conditions." buttonLabel="Request Storm-Response Help" />
+      <CTASection variant="orange" heading="Need storm-response help?" subtext="Call (941) 500-5431 or use the form to confirm current availability and safe-access conditions." buttonLabel="Request Storm-Response Help" buttonHref="/contact?service=emergency-response" />
     </>
   );
 }
@@ -415,7 +504,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact?service=storm-preparedness" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
               <a href="#whats-included" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">{content.heroSecondary}</a>
             )}
@@ -541,7 +630,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
               </div>
             ))}
           </div>
-          <Link href="/contact" className="mt-8 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+          <Link href="/contact?service=storm-preparedness" className="mt-8 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
             Get a Plan Quote
           </Link>
         </div>
@@ -558,7 +647,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="before" />
       <CrossSellBlock heading="Related services" items={content.crossSellItems} />
-      <CTASection variant="orange" heading="Plan your property preparation before a storm approaches." subtext="Request a property review and a written preparedness scope from Seacoast." buttonLabel="Get a Preparedness Plan" />
+      <CTASection variant="orange" heading="Plan your property preparation before a storm approaches." subtext="Request a property review and a written preparedness scope from Seacoast." buttonLabel="Get a Preparedness Plan" buttonHref="/contact?service=storm-preparedness" />
     </>
   );
 }
@@ -578,6 +667,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 
   const relatedProjects = projects
     .filter((p) => ["storm", "hurricane", "damage", "repair", "roofing", "roof"].some((kw) => p.serviceType.toLowerCase().includes(kw)))
+    .sort((a, b) => Number(!/storm|hurricane/i.test(a.serviceType)) - Number(!/storm|hurricane/i.test(b.serviceType)))
     .slice(0, 4);
 
   return (
@@ -592,7 +682,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">{content.heroH1}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{content.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
+            <Link href="/contact?service=storm-damage-repair" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">{content.heroPrimary}</Link>
             {content.heroSecondary && (
               <a href="tel:+19415005431" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">
                 {content.heroSecondary}
@@ -614,7 +704,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <div className="container grid gap-8 md:grid-cols-3">
           {[
             { label: "Florida Certified Contractor", body: "Seacoast Building & Design is a Florida certified general and roofing contractor." },
-            { label: "Residential and Commercial", body: "Repair scopes are available for homes, businesses, associations, and managed properties." },
+            { label: "Residential, Commercial, and Community", body: "Repair and rehabilitation scopes are available for homes, businesses, associations, amenities, and managed properties." },
             { label: "A Clear Repair Plan", body: "You receive a written explanation of the conditions we saw, the work we recommend, and the proposed price." },
           ].map((card) => (
             <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
@@ -632,14 +722,14 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
           <h2 className="mt-2 font-heading text-3xl font-bold text-navy">See what happened, understand the options, and move into repairs.</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
             Seacoast records the visible damage, prepares a construction estimate, explains the proposed work,
-            and completes the repairs you authorize.
+            and completes the interior, exterior, roofing, or multi-trade rehabilitation you authorize.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               { step: "1", icon: "📸", heading: "Photograph the damage", body: "Photos and written notes create a clear record of what we can see during the assessment." },
               { step: "2", icon: "📋", heading: "Build the repair estimate", body: "We outline the recommended work and price based on the conditions we observed." },
               { step: "3", icon: "🧾", heading: "Talk through the scope", body: "We explain our construction methods and estimate to you or your insurer while coverage decisions stay with the appropriate claim professionals." },
-              { step: "4", icon: "🔨", heading: "Complete the agreed work", body: "Seacoast carries out the authorized roof and exterior repairs, subject to permits, materials, weather, and site conditions." },
+              { step: "4", icon: "🔨", heading: "Complete the agreed work", body: "Seacoast carries out the authorized repair or rehabilitation scope, subject to permits, materials, weather, and site conditions." },
             ].map((item) => (
               <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
                 <div className="text-3xl" aria-hidden>{item.icon}</div>
@@ -664,7 +754,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
                 Seacoast can provide photos, observed-condition notes, and its construction estimate for the proposed work.
                 Your insurer decides coverage and payment; a licensed public adjuster or attorney can advise you on claim negotiation or disputes.
               </p>
-              <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
+              <Link href="/contact?service=storm-damage-repair" className="mt-6 inline-block rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">
                 Get a Damage Assessment
               </Link>
             </div>
@@ -688,7 +778,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
               insurance coverage or settlement on behalf of the property owner. If you need claim representation or advice about
               a denial, supplement, or appeal, speak with your insurer, a Florida-licensed public adjuster, or an attorney.
             </p>
-            <Link href="/contact" className="mt-6 inline-block font-bold text-orange hover:underline">Request a construction assessment →</Link>
+            <Link href="/contact?service=storm-damage-repair" className="mt-6 inline-block font-bold text-orange hover:underline">Request a construction assessment →</Link>
           </div>
         </div>
       </section>
@@ -698,12 +788,12 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
         <section className="section dark-band bg-navy-deep">
           <div className="container">
             <p className="eyebrow">Project examples</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Recent repair and roofing projects</h2>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Storm restoration, repair, and roofing projects</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {relatedProjects.slice(0, 3).map((project) => <ProjectCard key={project.slug} project={project} />)}
             </div>
             <div className="mt-8">
-              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project videos →</Link>
+              <Link href="/our-work" className="font-bold text-orange hover:underline">View all project examples →</Link>
             </div>
           </div>
         </section>
@@ -720,7 +810,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
 
       <StormLifecycle activeStage="after" />
       <CrossSellBlock heading="Related services" items={content.crossSellItems} />
-      <CTASection variant="navy" heading="Need a storm-damage construction assessment?" subtext="Start with a clear record of the visible damage and the repairs Seacoast recommends." buttonLabel="Get a Damage Assessment" />
+      <CTASection variant="navy" heading="Need a storm-damage construction assessment?" subtext="Start with a clear record of the visible damage and the repairs Seacoast recommends." buttonLabel="Get a Damage Assessment" buttonHref="/contact?service=storm-damage-repair" />
     </>
   );
 }
@@ -731,12 +821,12 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
   "roof-certification-inspection": [
     { title: "Roofing", href: "/services/roofing", blurb: "If the inspection finds repairs or replacement needs, Seacoast can scope and complete the roof work.", icon: "🏠" },
     { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible storm-related roof conditions and get a construction repair estimate.", icon: "⛈️" },
-    { title: "Exterior Cleaning Services", href: "/services/exterior-cleaning-services", blurb: "Roof and gutter cleaning can help preserve roof condition between inspections.", icon: "💦" },
+    { title: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections", blurb: "Add aerial visible and thermal imaging when surface-temperature patterns may help prioritize closer inspection areas.", icon: "🚁" },
   ],
   roofing: [
     { title: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits", blurb: "Finish the roof system with water management built for Southwest Florida rainfall.", icon: "🌧️" },
     { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible roof damage and get a construction repair estimate after a storm.", icon: "⛈️" },
-    { title: "Storm Preparedness", href: "/services/storm-preparedness", blurb: "Review openings, materials, and activation terms before hurricane season.", icon: "🛡️" },
+    { title: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections", blurb: "Use aerial thermal and visible imaging to help prioritize roof areas for closer review.", icon: "🚁" },
   ],
   "gutters-fascia-soffits": [
     { title: "Roofing", href: "/services/roofing", blurb: "Coordinate roof-edge and water-management work in one construction scope.", icon: "🏠" },
@@ -855,7 +945,7 @@ const serviceTypeLists: Record<string, { heading: string; items: string[] }[]> =
   ],
 };
 
-function GenericServiceLayout({ params }: Props) {
+function GenericServiceLayout({ params }: { params: SlugParams }) {
   const service = getServiceBySlug(params.slug)!;
   const heroImage = serviceHeroImages[params.slug];
   const keywords = slugToServiceTypeKeywords[params.slug] ?? [params.slug.split("-")[0]];
@@ -891,7 +981,7 @@ function GenericServiceLayout({ params }: Props) {
           <h1 className="mt-4 font-heading text-5xl font-bold">{service.name}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{service.shortDescription}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Quote</Link>
+            <Link href={`/contact?service=${params.slug}`} className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Quote</Link>
             <Link href="/our-work" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Project Videos</Link>
           </div>
         </div>
@@ -962,35 +1052,264 @@ function GenericServiceLayout({ params }: Props) {
 
       {crossSell.length > 0 && <CrossSellBlock heading="Related services" items={crossSell} />}
 
-      <CTASection variant="orange" heading="Ready to talk through your project?" subtext="Share the property address and what needs attention. Seacoast will help you understand the next step." />
+      <CTASection variant="orange" heading="Ready to talk through your project?" subtext="Share the property address and what needs attention. Seacoast will help you understand the next step." buttonHref={`/contact?service=${params.slug}`} />
     </>
   );
 }
 
 // ─── Page entry point ─────────────────────────────────────────────────────────
-export default function ServiceDetailPage({ params }: Props) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServiceDetailPage({ params }: Props) {
+  const resolvedParams = await params;
+  const service = getServiceBySlug(resolvedParams.slug);
   if (!service) notFound();
 
-  const rich = stormContent[params.slug];
+  const rich = stormContent[resolvedParams.slug];
 
   // Emergency response: phone-first layout
   if (rich?.variant === "emergency") return <EmergencyResponseLayout content={rich} />;
 
   // Storm preparedness: full rich layout per strategy §3.1
-  if (params.slug === "storm-preparedness" && rich) return <StormPrepLayout content={rich} />;
+  if (resolvedParams.slug === "storm-preparedness" && rich) return <StormPrepLayout content={rich} />;
 
   // Storm damage repair: insurance-focused rich layout per strategy §3.3
-  if (params.slug === "storm-damage-repair" && rich) return <StormDamageRepairLayout content={rich} />;
+  if (resolvedParams.slug === "storm-damage-repair" && rich) return <StormDamageRepairLayout content={rich} />;
 
   // Solar panel cleaning: contract-focused rich layout (recurring-revenue offering)
-  if (params.slug === "solar-panel-cleaning") return <SolarPanelCleaningLayout />;
+  if (resolvedParams.slug === "solar-panel-cleaning") return <SolarPanelCleaningLayout />;
 
   // Whole-house battery systems: storm-readiness rich layout
-  if (params.slug === "whole-house-battery-systems") return <WholeHouseBatteryLayout />;
+  if (resolvedParams.slug === "whole-house-battery-systems") return <WholeHouseBatteryLayout />;
+
+  // Thermal drone inspections: image-led service layout with interpretation guidance
+  if (resolvedParams.slug === "thermal-drone-inspections") return <ThermalDroneInspectionLayout />;
 
   // All other services: generic template
-  return <GenericServiceLayout params={params} />;
+  return <GenericServiceLayout params={resolvedParams} />;
+}
+
+// ─── Thermal Drone Inspections rich layout ───────────────────────────────────
+function ThermalDroneInspectionLayout() {
+  const faqs: FAQItem[] = [
+    {
+      question: "Can thermal imaging find a roof leak?",
+      answer:
+        "Thermal imaging can reveal surface-temperature patterns that may warrant a closer look, but an image alone does not prove that a leak or moisture is present or identify its source. A hands-on inspection, moisture testing, or other follow-up may be needed before repair decisions are made.",
+    },
+    {
+      question: "Does a thermal drone inspection replace a roof certification inspection?",
+      answer:
+        "No. Thermal imaging is a screening and documentation tool. A roof certification has a different purpose and may require roof-age, condition, visible-issue, and remaining-service-life information. Seacoast can help determine which service fits the request.",
+    },
+    {
+      question: "Why do the weather and time of day matter?",
+      answer:
+        "Sun exposure, recent rain, wind, outdoor temperature, roof material, rooftop equipment, and reflections can all affect thermal contrast. Seacoast reviews the property and conditions before deciding when the flight is likely to be useful.",
+    },
+    {
+      question: "Can you inspect metal and flat roofs?",
+      answer:
+        "Seacoast can evaluate thermal drone imaging for metal, low-slope, and other accessible roof systems on residential, commercial, condominium, and multi-family properties. Flight access depends on the property, airspace, weather, and site conditions.",
+    },
+    {
+      question: "What will I receive after the inspection?",
+      answer:
+        "The written quote confirms the visible and thermal images, observed-area notes, and follow-up guidance included for the property. Any direct inspection, moisture testing, repair estimate, or roof certification is identified separately unless the proposal includes it.",
+    },
+  ];
+
+  const schemas = [
+    serviceSchema({
+      name: "Thermal Drone Roof Inspections",
+      description:
+        "Aerial visible and thermal imaging that documents roof-surface temperature patterns and helps prioritize areas for closer inspection on Southwest Florida properties.",
+      url: "/services/thermal-drone-inspections",
+      serviceType: "Thermal Drone Roof Inspection",
+      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+    }),
+    faqSchema(faqs),
+  ];
+
+  const examples = [
+    {
+      src: "/images/services/thermal-drone-inspections/thermal-rooftop-equipment.webp",
+      alt: "Top-down thermal drone view of rooftop mechanical equipment surrounded by standing-seam metal roof sections",
+      title: "Rooftop equipment and surrounding areas",
+      body: "Thermal imagery adds context around mechanical equipment, curbs, transitions, and the roof areas around them.",
+    },
+    {
+      src: "/images/services/thermal-drone-inspections/thermal-metal-roof-planes.webp",
+      alt: "Thermal aerial view of intersecting standing-seam metal roof planes on a multi-building property",
+      title: "Metal roof planes and transitions",
+      body: "Aerial coverage can document roof planes, ridges, valleys, penetrations, and other areas that may need a closer review.",
+    },
+    {
+      src: "/images/services/thermal-drone-inspections/thermal-flat-roof-overview.webp",
+      alt: "Thermal drone image of a large flat roof and rooftop equipment showing surface-temperature variation",
+      title: "Larger flat-roof coverage",
+      body: "A broader thermal view can help a property team prioritize where a hands-on inspection or other testing should begin.",
+    },
+  ];
+
+  const relatedServices: CrossSellItem[] = [
+    {
+      title: "Roof Certification Inspection",
+      href: "/services/roof-certification-inspection",
+      blurb: "Request condition, photo, and remaining-service-life documentation when an insurer, buyer, or property plan calls for it.",
+      icon: "📋",
+    },
+    {
+      title: "Roofing",
+      href: "/services/roofing",
+      blurb: "If follow-up confirms a repair or replacement need, Seacoast can prepare a separate construction scope and quote.",
+      icon: "🏠",
+    },
+    {
+      title: "Storm Damage Repair",
+      href: "/services/storm-damage-repair",
+      blurb: "Document visible storm-related conditions and plan the agreed roof, exterior, or rehabilitation work.",
+      icon: "⛈️",
+    },
+  ];
+
+  const trustCards = [
+    { label: "Visible and thermal context", body: "Standard aerial photos help orient the thermal view and make follow-up areas easier to discuss." },
+    { label: "Homes to larger properties", body: "Seacoast can evaluate residential, commercial, condominium, association, and multi-family roof areas." },
+    { label: "Planned around the conditions", body: "Roof material, sun, weather, recent rain, and flight timing all affect the patterns a thermal camera records." },
+  ];
+
+  const processSteps = [
+    { step: "1", title: "Share the property", body: "Send the address, roof type, property use, and the area or concern you want reviewed." },
+    { step: "2", title: "Plan useful conditions", body: "Seacoast considers weather, recent rain, roof material, sun exposure, access, and flight conditions." },
+    { step: "3", title: "Capture both views", body: "Visible-light images provide context while thermal images record surface-temperature variation." },
+    { step: "4", title: "Decide the next step", body: "The agreed deliverables help prioritize direct inspection, other testing, monitoring, or a separate repair scope." },
+  ];
+
+  return (
+    <>
+      <SchemaScript schema={schemas} />
+
+      <section className="bg-navy py-16 text-white md:py-20">
+        <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: "Thermal Drone Inspections" }]} />
+          <div className="mt-8 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <div className="text-4xl" aria-hidden>🚁</div>
+              <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl">Thermal Drone Roof Inspections in Southwest Florida</h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+                Seacoast provides aerial thermal and visible imaging for accessible residential, commercial, condominium, and multi-family roofs. Temperature patterns can help prioritize areas for closer inspection; they do not, by themselves, confirm moisture, leaks, or insulation defects.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link href="/contact?service=thermal-drone-inspections" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Request a Thermal Inspection</Link>
+                <a href="#flight-images" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Real Flight Images</a>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <figure className="overflow-hidden rounded-2xl bg-white/10 p-2">
+                <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/services/thermal-drone-inspections/visible-light-metal-roof-overview.webp"
+                    alt="Daylight drone view of a multi-story Florida building with a standing-seam metal roof"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+                <figcaption className="px-2 pb-1 pt-3 text-sm font-semibold text-white/80">Visible-light roof view</figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-2xl bg-white/10 p-2">
+                <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
+                  <Image
+                    src="/images/services/thermal-drone-inspections/thermal-metal-roof-overview.webp"
+                    alt="Thermal drone view of the same multi-story Florida building with a metal roof shown in orange and purple surface-temperature colors"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 320px, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+                <figcaption className="px-2 pb-1 pt-3 text-sm font-semibold text-white/80">Thermal view of the same property</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
+        <div className="container grid gap-8 md:grid-cols-3">
+          {trustCards.map((card) => (
+            <div key={card.label} className="rounded-2xl bg-white p-6 shadow-soft">
+              <p className="eyebrow">{card.label}</p>
+              <p className="mt-3 leading-7 text-text-secondary">{card.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="flight-images" className="section scroll-mt-24 dark-band bg-navy-deep">
+        <div className="container">
+          <p className="eyebrow">Real thermal roof imaging examples</p>
+          <h2 className="mt-2 max-w-3xl font-heading text-4xl font-bold text-navy">See the roof from more than one point of view</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+            These real thermal roof images were provided by Seacoast. They show relative surface-temperature variation at the time of capture—not a diagnosis by color alone.
+          </p>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {examples.map((example) => (
+              <figure key={example.src} className="overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft">
+                <div className="relative aspect-[5/4] overflow-hidden">
+                  <Image src={example.src} alt={example.alt} fill className="object-cover" sizes="(min-width: 1024px) 33vw, 100vw" />
+                </div>
+                <figcaption className="p-6">
+                  <h3 className="font-heading text-xl font-bold text-navy">{example.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-text-secondary">{example.body}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-8 rounded-2xl border border-orange/20 bg-white p-6 text-sm leading-6 text-text-secondary shadow-sm">
+            <strong className="text-navy">How to read these images:</strong> Thermal colors represent relative surface-temperature differences at the time of capture. Weather, sun exposure, roof material, equipment, and reflections can affect the pattern. Findings may need direct inspection or other testing before repair decisions are made.
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
+        <div className="container">
+          <p className="eyebrow">What to expect</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">A flight planned around the property and the question</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((item) => (
+              <div key={item.step} className="rounded-2xl bg-white p-6 shadow-soft">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-deep text-sm font-bold text-white">{item.step}</span>
+                <h3 className="mt-5 font-heading text-xl font-bold text-navy">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-text-secondary">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-6 text-text-secondary">
+            Drone access and flight availability depend on the property, airspace, weather, site conditions, and applicable flight requirements. The written quote confirms the inspection scope and deliverables.
+          </p>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy-deep">
+        <div className="container max-w-3xl">
+          <p className="eyebrow">Common questions</p>
+          <h2 className="mb-8 mt-2 font-heading text-4xl font-bold text-navy">Thermal Drone Inspection FAQ</h2>
+          <FAQAccordion items={faqs} />
+        </div>
+      </section>
+
+      <CrossSellBlock heading="Plan the inspection and any follow-up together" items={relatedServices} />
+      <CTASection
+        variant="navy"
+        heading="Have a roof area you want to understand better?"
+        subtext="Share the property address, roof type, and what prompted the inspection. Seacoast will help you decide whether thermal imaging is the right next step."
+        buttonLabel="Request a Thermal Inspection"
+        buttonHref="/contact?service=thermal-drone-inspections"
+      />
+    </>
+  );
 }
 
 // ─── Solar Panel Cleaning rich layout ─────────────────────────────────────────
@@ -1082,7 +1401,7 @@ function SolarPanelCleaningLayout() {
             Seacoast cleans accessible residential and commercial solar arrays using a method selected for the panels, roof, visible condition, and manufacturer guidance.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Cleaning Quote</Link>
+            <Link href="/contact?service=solar-panel-cleaning" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Cleaning Quote</Link>
             <a href="#plans" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See Service Plans</a>
           </div>
         </div>
@@ -1172,7 +1491,7 @@ function SolarPanelCleaningLayout() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+                <Link href="/contact?service=solar-panel-cleaning" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
                   Get a Quote
                 </Link>
               </div>
@@ -1207,7 +1526,7 @@ function SolarPanelCleaningLayout() {
       </section>
 
       <CrossSellBlock heading="Related services" items={crossSell} />
-      <CTASection variant="orange" heading="Request a solar panel cleaning quote." subtext="Tell us the property address, approximate array size, roof type, and access conditions." buttonLabel="Get a Cleaning Quote" />
+      <CTASection variant="orange" heading="Request a solar panel cleaning quote." subtext="Tell us the property address, approximate array size, roof type, and access conditions." buttonLabel="Get a Cleaning Quote" buttonHref="/contact?service=solar-panel-cleaning" />
     </>
   );
 }
@@ -1299,7 +1618,7 @@ function WholeHouseBatteryLayout() {
             Seacoast can assess the circuits you want available during an outage and quote a battery configuration based on loads, equipment compatibility, permitting, and site conditions.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Battery Quote</Link>
+            <Link href="/contact?service=whole-house-battery-systems" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Get a Battery Quote</Link>
             <a href="#options" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy">See System Options</a>
           </div>
         </div>
@@ -1367,7 +1686,7 @@ function WholeHouseBatteryLayout() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
+                <Link href="/contact?service=whole-house-battery-systems" className="mt-6 inline-block rounded-full bg-orange-deep px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-copper">
                   Get a Quote
                 </Link>
               </div>
@@ -1402,7 +1721,7 @@ function WholeHouseBatteryLayout() {
       </section>
 
       <CrossSellBlock heading="Related services" items={crossSell} />
-      <CTASection variant="orange" heading="Request a site-specific battery assessment." subtext="Tell us which circuits matter most and whether the property has existing solar equipment." buttonLabel="Get a Battery Quote" />
+      <CTASection variant="orange" heading="Request a site-specific battery assessment." subtext="Tell us which circuits matter most and whether the property has existing solar equipment." buttonLabel="Get a Battery Quote" buttonHref="/contact?service=whole-house-battery-systems" />
     </>
   );
 }

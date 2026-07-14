@@ -4,7 +4,7 @@ import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   const featuredPhoto = project.photos?.[0];
-  const hasSpecificLocation = project.location !== "Southwest Florida";
+  const hasSpecificLocation = Boolean(project.location && project.location !== "Southwest Florida");
   const imageSrc = featuredPhoto?.src
     ?? (project.videoId ? `https://i.ytimg.com/vi/${project.videoId}/hqdefault.jpg` : "/images/og-default.jpg");
   const imageAlt = featuredPhoto?.alt
@@ -32,7 +32,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="p-5">
         <div className="flex flex-wrap gap-2 text-xs font-bold">
           <span className="rounded-full bg-orange/10 px-3 py-1 text-orange">{project.serviceType}</span>
-          {hasSpecificLocation && (
+          {hasSpecificLocation && project.location && (
             <span className="rounded-full bg-cool-gray px-3 py-1 text-text-secondary">{project.location}</span>
           )}
         </div>

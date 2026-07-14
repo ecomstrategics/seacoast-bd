@@ -14,7 +14,7 @@ export function localBusinessSchema(): SchemaObject {
     image: "https://seacoastbd.com/images/og-default.jpg",
     telephone: "+1-941-500-5431",
     description:
-      "Florida-certified contractor serving Southwest Florida with roofing, storm repair, exterior improvements, additions, and selected container-based projects.",
+      "Florida-certified contractor serving Southwest Florida with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and selected container-based projects.",
     areaServed: [
       "Hillsborough County, FL",
       "Manatee County, FL",
@@ -54,6 +54,9 @@ export function personSchema(): SchemaObject {
       "Residential roofing",
       "Commercial roofing",
       "Storm damage restoration",
+      "Commercial buildouts",
+      "Major rehabilitation",
+      "Build-to-rent construction",
       "Storm preparedness programs",
       "Shipping container build-outs",
       "General contracting",
@@ -97,11 +100,13 @@ export function videoObjectSchema({
   description,
   videoId,
   uploadDate,
+  duration,
 }: {
   name: string;
   description: string;
   videoId: string;
   uploadDate?: string;
+  duration?: string;
 }): SchemaObject {
   return {
     "@context": "https://schema.org",
@@ -109,9 +114,9 @@ export function videoObjectSchema({
     name,
     description,
     thumbnailUrl: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-    contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
     embedUrl: `https://www.youtube.com/embed/${videoId}`,
     ...(uploadDate ? { uploadDate } : {}),
+    ...(duration ? { duration } : {}),
     publisher: { "@id": "https://seacoastbd.com/#organization" },
   };
 }
@@ -146,14 +151,22 @@ export function productSchema({
   description,
   url,
   sku,
+  image,
   offers,
 }: {
   name: string;
   description: string;
   url: string;
   sku?: string;
+  image?: string | string[];
   offers?: { price?: string; priceCurrency?: string; availability?: string };
 }): SchemaObject {
+  const absoluteImage = image
+    ? (Array.isArray(image) ? image : [image]).map((src) =>
+        src.startsWith("http") ? src : `https://seacoastbd.com${src}`,
+      )
+    : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -161,6 +174,7 @@ export function productSchema({
     description,
     url: `https://seacoastbd.com${url}`,
     ...(sku ? { sku } : {}),
+    ...(absoluteImage ? { image: absoluteImage } : {}),
     brand: {
       "@type": "Brand",
       name: "Seacoast Building & Design",
@@ -169,7 +183,8 @@ export function productSchema({
       ? {
           offers: {
             "@type": "Offer",
-            seller: localBusinessSchema(),
+            url: `https://seacoastbd.com${url}`,
+            seller: { "@id": "https://seacoastbd.com/#organization" },
             ...(offers.price ? { price: offers.price, priceCurrency: offers.priceCurrency ?? "USD" } : {}),
             ...(offers.availability ? { availability: offers.availability } : {}),
           },

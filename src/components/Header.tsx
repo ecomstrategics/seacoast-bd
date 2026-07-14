@@ -90,9 +90,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="Seacoast Building & Design"
-            width={199}
-            height={48}
-            className="h-12 w-auto"
+            width={256}
+            height={62}
+            style={{ width: "auto", height: "48px" }}
             priority
           />
         </Link>
@@ -190,7 +190,7 @@ export function Header() {
 
                   {openDropdown === key && (
                     <div
-                      className="absolute left-0 top-full z-50 mt-2 min-w-[220px] rounded-2xl border border-navy/10 bg-white py-2 shadow-soft"
+                      className="absolute left-0 top-full z-50 mt-2 max-h-[calc(100vh-8rem)] min-w-[220px] overflow-y-auto overscroll-contain rounded-2xl border border-navy/10 bg-white py-2 shadow-soft"
                       onMouseEnter={cancelClose}
                       onMouseLeave={scheduleClose}
                       role="region"
@@ -259,7 +259,7 @@ export function Header() {
             ))}
             <div className="my-3 border-t border-white/10" />
             <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Containers</Link>
-            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Finished Mini-Home Example</Link>
+            <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Available 20&apos; Mobile Container</Link>
             <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Financing</Link>
             <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Our Work</Link>
             <Link href="/customer-reviews" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Customer Reviews</Link>

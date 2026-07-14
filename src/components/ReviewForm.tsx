@@ -32,8 +32,9 @@ export function ReviewForm() {
     "rounded-xl border border-navy/20 bg-white px-4 py-3 text-charcoal placeholder:text-text-secondary transition focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/30";
 
   return (
-    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} className="grid gap-5 rounded-3xl bg-white p-6 shadow-soft md:p-8 [color-scheme:light]">
+    <form action={formspreeUrl} method="POST" onSubmit={handleSubmit} aria-busy={isSubmitting} className="grid gap-5 rounded-3xl bg-white p-6 shadow-soft md:p-8 [color-scheme:light]">
       {/* Routes the submission to Seacoast for manual moderation before any review is posted. */}
+      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <input type="hidden" name="_subject" value="New website review submission - Seacoast Building & Design" />
       <input type="hidden" name="formType" value="Customer Review" />
 
@@ -82,8 +83,10 @@ export function ReviewForm() {
       </label>
       <p className="-mt-2 text-xs leading-5 text-text-secondary">If you give permission, we may publish all or part of your review and omit personal contact details.</p>
 
-      {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thank you—your feedback reached our team. We will only publish it if you gave permission.</p>}
-      {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
+      <div aria-live="polite" role="status">
+        {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thank you—your feedback reached our team. We will only publish it if you gave permission.</p>}
+        {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
+      </div>
 
       <button
         className="w-full rounded-full bg-orange-deep px-6 py-3.5 text-center font-bold text-white transition hover:bg-copper disabled:cursor-not-allowed disabled:opacity-60"

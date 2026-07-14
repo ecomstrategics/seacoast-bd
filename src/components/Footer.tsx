@@ -43,6 +43,10 @@ const quickLinks = [
 
 const resourceLinks = [
   { label: "Resources Hub", href: "/resources" },
+  { label: "Build-to-Rent Construction", href: "/build-to-rent-construction" },
+  { label: "Major Rehabilitation", href: "/major-rehabilitation" },
+  { label: "Commercial Buildouts", href: "/commercial-buildouts" },
+  { label: "Florida Building Code Guide", href: "/understanding-floridas-building-codes" },
   { label: "H.R. 6644 & ROAD Act", href: "/road-to-housing-act" },
   { label: "Capital Partners", href: "/capital-partners" },
 ];
@@ -100,6 +104,7 @@ export function Footer() {
           </ul>
           <h3 className="mt-6 font-heading font-bold text-white/90">Containers</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
+            <li><Link href="/containers/prebuilt" className="hover:text-white">Available 20&apos; Mobile Container</Link></li>
             {containers.map((c) => (
               <li key={c.slug}><Link href={`/containers/${c.slug}`} className="hover:text-white">{c.name}</Link></li>
             ))}
