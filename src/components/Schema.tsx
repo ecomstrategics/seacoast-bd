@@ -12,6 +12,7 @@ export function localBusinessSchema(): SchemaObject {
     url: "https://seacoastbd.com",
     logo: "https://seacoastbd.com/logo.png",
     image: "https://seacoastbd.com/images/og-default.jpg",
+    slogan: "Protect. Improve. Expand.",
     telephone: "+1-941-500-5431",
     description:
       "Florida-certified contractor serving Southwest Florida with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and selected container-based projects.",
