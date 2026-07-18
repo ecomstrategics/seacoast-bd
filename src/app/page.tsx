@@ -26,6 +26,33 @@ const pillarBlurbs: Record<string, string> = {
   expand: "Container guest houses, offices, pool enclosures, and room additions planned around your property, intended use, and local permitting requirements.",
 };
 
+const missionProofs = [
+  {
+    heading: "Clear Communication",
+    body: "We explain the scope, decisions, and next steps in plain language so property owners and project teams know what is happening.",
+  },
+  {
+    heading: "Coordinated Scope",
+    body: "We bring the agreed trades, permits, materials, schedule, and project decisions into one coordinated process.",
+  },
+  {
+    heading: "Property & Occupant Planning",
+    body: "For occupied properties, staging, access, protection, cleanup, and communication are addressed as part of project planning.",
+  },
+  {
+    heading: "Documented Progress",
+    body: "Photos, project records, approvals, inspection milestones, and closeout documents are organized around the contract.",
+  },
+  {
+    heading: "Licensed and Insured",
+    body: "Florida Certified General Contractor CGC1509237 and Roofing Contractor CCC1332648. Proof of insurance is available for your project.",
+  },
+  {
+    heading: "Work You Can Review",
+    body: "Many completed projects include photos or video, so you can review the property type, scope, and finished work for yourself.",
+  },
+] as const;
+
 export default function Home() {
   const featuredProjects = projects.slice(0, 6);
 
@@ -108,6 +135,27 @@ export default function Home() {
                 />
               );
             })}
+          </div>
+          <div
+            id="mission-in-practice"
+            className="mt-14 scroll-mt-28 border-t border-white/10 pt-12 md:mt-16 md:pt-14"
+          >
+            <p className="eyebrow text-orange">Why Seacoast</p>
+            <h2 className="mt-2 font-heading text-4xl font-bold">Our mission in practice</h2>
+            <p className="mt-4 max-w-3xl text-white/70">
+              Our mission is to protect, improve, and expand Florida properties through coordinated construction, clear communication, and disciplined follow-through—from the first scope conversation through the final walkthrough.
+            </p>
+            <Link href="/about#mission" className="mt-5 inline-block font-bold text-orange transition hover:text-white">
+              Read our mission &rarr;
+            </Link>
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {missionProofs.map((item) => (
+                <div key={item.heading} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                  <h3 className="font-heading text-xl font-bold text-orange">{item.heading}</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/70">{item.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -204,41 +252,6 @@ export default function Home() {
           </div>
           <div className="mt-8 text-center sm:hidden">
             <Link href="/containers" className="font-bold text-orange">Browse all container builds &rarr;</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Seacoast */}
-      <section className="section dark-band bg-navy text-white">
-        <div className="container">
-          <p className="eyebrow text-orange">Why Seacoast</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold">Why property owners choose Seacoast</h2>
-          <p className="mt-4 max-w-2xl text-white/70">See our Florida contractor licenses, completed work, and project photos and videos before you decide.</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">See Our Work</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">Many completed projects include photos or video, so you can see the scope and finished work for yourself.</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">Storm Help From One Team</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">One team can help with readiness planning, damage documentation, emergency stabilization, and repairs authorized in the signed construction scope.</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">Container Project Planning</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">Seacoast can evaluate container sourcing, delivery, build-out, and site-integration needs. Feasibility, permits, and final responsibilities are confirmed for each property.</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">Licensed and Insured</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">Florida Certified General Contractor CGC1509237 and Roofing Contractor CCC1332648. Proof of insurance is available for your project.</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">Photos That Show the Details</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">We document visible damage and completed work with photos and video that can support your conversations with an insurer.</p>
-            </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-heading text-xl font-bold text-orange">Financing Available</p>
-              <p className="mt-3 text-sm leading-6 text-white/70">Ask about financing through Hearth. Participating lenders set eligibility, rates, terms, and funding timing.</p>
-            </div>
           </div>
         </div>
       </section>
