@@ -9,8 +9,23 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Meet the owners of Seacoast Building & Design, a Florida-certified general and roofing contractor serving homes, businesses, and communities.",
+  description: "Learn Seacoast Building & Design's mission and meet the owners of this Florida-certified general and roofing contractor serving homes, businesses, and communities.",
 };
+
+const missionPrinciples = [
+  {
+    heading: "Plan around people and property",
+    body: "Consider the property, its occupants, access, protection, and agreed site requirements before work begins.",
+  },
+  {
+    heading: "Coordinate the agreed scope",
+    body: "Keep trades, permits, materials, schedule, and project decisions moving through one coordinated process.",
+  },
+  {
+    heading: "Document decisions and progress",
+    body: "Organize scope decisions, approvals, progress information, inspections, and closeout around the contract.",
+  },
+] as const;
 
 export default function AboutPage() {
   return (
@@ -29,6 +44,27 @@ export default function AboutPage() {
       </section>
 
       <TrustBar />
+
+      <section id="mission" className="section scroll-mt-28 bg-navy-deep text-white">
+        <div className="container">
+          <p className="eyebrow text-orange">Our mission</p>
+          <h2 className="mt-3 max-w-4xl font-heading text-4xl font-bold">Protect. Improve. Expand—with clarity at every step.</h2>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-white/80">
+            Our mission is to protect, improve, and expand Florida properties through coordinated construction, clear communication, and disciplined follow-through—from the first scope conversation through the final walkthrough.
+          </p>
+          <p className="mt-4 max-w-3xl leading-7 text-white/70">
+            We plan each project around the property, its occupants, the agreed scope, applicable requirements, and the commitments in the signed contract.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {missionPrinciples.map((principle) => (
+              <div key={principle.heading} className="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 className="font-heading text-xl font-bold text-orange">{principle.heading}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/70">{principle.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="section dark-band bg-navy">
         <div className="container grid gap-14 md:grid-cols-2">
