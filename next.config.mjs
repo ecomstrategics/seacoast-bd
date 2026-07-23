@@ -94,12 +94,12 @@ const nextConfig = {
       },
       {
         source: "/commercial-roof-restoration",
-        destination: "/services/roofing",
+        destination: "/commercial-roofing",
         permanent: true,
       },
       {
         source: "/r-panel-commercial-roofing",
-        destination: "/services/roofing",
+        destination: "/commercial-roofing",
         permanent: true,
       },
       {
@@ -109,7 +109,7 @@ const nextConfig = {
       },
       {
         source: "/your-guide-to-tpo-roofing",
-        destination: "/services/roofing",
+        destination: "/commercial-roofing",
         permanent: true,
       },
       {

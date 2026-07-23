@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Contractor Services in Southwest Florida",
-  description: "Roofing, siding, gutters, windows, doors, storm repair, cleaning, enclosures, and exterior work for Southwest Florida properties.",
+  description: "Roofing, siding, gutters, windows, doors, storm repair, cleaning, enclosures, and exterior work. Seacoast is a GAF GoldElite™ Commercial Contractor.",
 };
 
 export default function ServicesPage() {

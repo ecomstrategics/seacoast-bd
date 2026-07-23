@@ -282,6 +282,9 @@ export default function CommercialBuildoutsPage() {
               <Link href="/understanding-floridas-building-codes" className="text-orange hover:underline">
                 Review Florida code planning →
               </Link>
+              <Link href="/commercial-roofing" className="text-orange hover:underline">
+                Explore commercial roofing →
+              </Link>
               <Link href="/our-work" className="text-orange hover:underline">
                 Browse completed projects →
               </Link>

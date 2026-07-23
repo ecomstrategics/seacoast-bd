@@ -412,10 +412,22 @@ export default function CapitalPartnersPage() {
             ))}
           </div>
 
-          <h3 className="mt-16 font-heading text-2xl font-bold text-white">Licensing, bonding, and insurance information</h3>
+          <h3 className="mt-16 font-heading text-2xl font-bold text-white">Licensing, bonding, insurance, and commercial roofing credentials</h3>
           <p className="mt-3 max-w-2xl text-white/70">
-            Seacoast can provide contractor-license information, a proposed project team and schedule, and available bonding, insurance, and warranty documentation for the specific opportunity.
+            Seacoast can provide contractor-license information, a proposed project team and schedule, and available bonding and insurance documentation for the specific opportunity. For qualifying GAF commercial roofing systems, Seacoast&apos;s GAF GoldElite™ Commercial Contractor status provides a project-specific path to the Diamond Pledge™ NDL Roof Guarantee for terms up to 25 years.
           </p>
+          <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+            <Link href="/commercial-roofing" className="text-orange hover:underline">Explore commercial roofing →</Link>
+            <a
+              href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange hover:underline"
+            >
+              Verify Seacoast on GAF.com <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {trackRecord.map((item) => (
               <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
@@ -432,7 +444,7 @@ export default function CapitalPartnersPage() {
                 <li className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> Schedule, reporting, and draw requirements agreed before work begins</li>
                 <li className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> Bonding capability up to $27 million, subject to surety and project approval</li>
                 <li className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> Proof of insurance and project-specific limit documentation available</li>
-                <li className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> Warranty terms documented in the project contract</li>
+                <li className="flex gap-2.5"><span className="mt-0.5 text-orange" aria-hidden>✓</span> GAF Diamond Pledge™ NDL Roof Guarantee capability for qualifying commercial systems, with project-specific eligibility and terms</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
@@ -446,7 +458,7 @@ export default function CapitalPartnersPage() {
             </div>
           </div>
           <p className="mt-6 max-w-4xl text-xs leading-5 text-white/60">
-            Bonding is subject to surety approval and project-specific underwriting. Seacoast reports a $3 million general insurance limit; higher limits, certificate-holder requirements, and insured-party requirements must be confirmed with Seacoast and its carrier for the specific contract.
+            Bonding is subject to surety approval and project-specific underwriting. Seacoast reports a $3 million general insurance limit; higher limits, certificate-holder requirements, and insured-party requirements must be confirmed with Seacoast and its carrier for the specific contract. GAF reviews the GoldElite™ Commercial Contractor designation annually. Diamond Pledge™ system eligibility, term, inspections, coverage, and restrictions are confirmed for each roof and governed by GAF&apos;s applicable guarantee documents.
           </p>
         </div>
       </section>

@@ -209,6 +209,8 @@ const serviceFaqs: Record<string, FAQItem[]> = {
     { question: "What roofing materials do you work with?", answer: "We install and repair tile, metal (standing seam, R-panel, stone-coated steel), TPO/flat, shingle, and slate-profile systems." },
     { question: "Do you handle storm damage claims?", answer: "We document visible damage, prepare a construction repair estimate, and complete agreed repairs. The property owner, a licensed public adjuster, or an attorney handles claim negotiation and coverage questions." },
     { question: "How long does a roof replacement take?", answer: "Timing depends on roof size and material, permitting, product availability, weather, and site conditions. We provide a project-specific schedule with the written scope." },
+    { question: "What is Seacoast's GAF contractor designation?", answer: "Seacoast Building & Design is a GAF GoldElite™ Commercial Contractor. GAF reviews this commercial contractor designation annually. You can confirm Seacoast's current status on its official GAF contractor profile." },
+    { question: "Does every GAF commercial roof qualify for the Diamond Pledge™ NDL Roof Guarantee?", answer: "No. For qualifying GAF commercial roofing systems, Seacoast can offer the Diamond Pledge™ NDL Roof Guarantee for terms up to 25 years. Eligibility, term, system requirements, inspections, coverage, and restrictions are confirmed for the specific roof and governed by GAF's applicable guarantee documents." },
   ],
   "gutters-fascia-soffits": [
     { question: "What gutter styles do you offer?", answer: "We install seamless K-style and half-round gutters in aluminum and copper, sized for Southwest Florida rainfall." },
@@ -1003,6 +1005,51 @@ function GenericServiceLayout({ params }: { params: SlugParams }) {
           </div>
         </div>
       </section>
+
+      {params.slug === "roofing" && (
+        <section className="section dark-band bg-navy-deep">
+          <div className="container grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+            <div>
+              <p className="eyebrow">GAF GoldElite™ Commercial Contractor</p>
+              <h2 className="mt-2 max-w-3xl font-heading text-4xl font-bold text-navy">
+                A verified commercial roofing credential
+              </h2>
+              <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+                Seacoast Building &amp; Design is a GAF GoldElite™ Commercial Contractor, a designation GAF reviews annually. For qualifying GAF commercial roofing systems, Seacoast can offer the Diamond Pledge™ NDL Roof Guarantee for terms up to 25 years.
+              </p>
+              <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+                Depending on the qualifying system and applicable guarantee, Diamond Pledge coverage can include material defects, workmanship, replacement materials, and labor for covered leaks, with no dollar limit on covered repairs. System eligibility, term, inspections, coverage, and restrictions are confirmed for each roof.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-4">
+                <Link
+                  href="/commercial-roofing"
+                  className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper"
+                >
+                  Explore Commercial Roofing
+                </Link>
+                <a
+                  href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-navy/20 px-6 py-3 text-center font-bold text-navy hover:border-orange hover:text-orange"
+                >
+                  Verify Seacoast on GAF.com <span aria-hidden="true">↗</span>
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
+            <aside className="rounded-3xl border border-navy/10 bg-white p-8 shadow-soft">
+              <p className="font-heading text-xl font-bold text-navy">Start with the building and roof system</p>
+              <p className="mt-3 leading-7 text-text-secondary">
+                Share the property address, plans or roof information, approximate area, existing conditions, and target schedule. Seacoast can review the construction scope and confirm whether a qualifying GAF system and guarantee path fit the project.
+              </p>
+              <Link href="/contact?service=roofing" className="mt-6 inline-block font-bold text-orange hover:underline">
+                Request a roof review →
+              </Link>
+            </aside>
+          </div>
+        </section>
+      )}
 
       {(serviceTypeLists[params.slug]?.length ?? 0) > 0 && (
         <section className="section dark-band bg-navy-deep">

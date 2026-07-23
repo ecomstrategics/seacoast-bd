@@ -270,6 +270,10 @@ export default function MajorRehabilitationPage() {
                 <span className="font-heading text-lg font-bold text-navy">Exterior renovations</span>
                 <span className="mt-2 block text-sm leading-6 text-text-secondary">Roofing, siding, trim, paint, and structural exterior work coordinated around the property.</span>
               </Link>
+              <Link href="/commercial-roofing" className="block rounded-2xl bg-white p-5 shadow-sm hover:shadow-soft">
+                <span className="font-heading text-lg font-bold text-navy">Commercial roofing</span>
+                <span className="mt-2 block text-sm leading-6 text-text-secondary">Review existing conditions, system requirements, phasing, and project-specific GAF guarantee eligibility.</span>
+              </Link>
               <Link href="/services/storm-damage-repair" className="block rounded-2xl bg-white p-5 shadow-sm hover:shadow-soft">
                 <span className="font-heading text-lg font-bold text-navy">Storm damage repair</span>
                 <span className="mt-2 block text-sm leading-6 text-text-secondary">Visible-condition documentation, construction estimating, stabilization discussion, and agreed repair work.</span>
