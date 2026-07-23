@@ -8,7 +8,7 @@ export type Service = {
 
 export const services: Service[] = [
   { slug: "roof-certification-inspection", name: "Roof Certification Inspection", shortDescription: "Roof-condition inspections with photos, observed issues, and estimated remaining service life for insurance, sale, or maintenance needs.", icon: "📋", pillar: "protect" },
-  { slug: "roofing", name: "Roofing", shortDescription: "Roof repairs and replacements for shingle, tile, metal, and flat-roof systems, including storm-damage work.", icon: "🏠", pillar: "improve" },
+  { slug: "roofing", name: "Roofing", shortDescription: "Residential and commercial roof repair and replacement for shingle, tile, metal, and low-slope systems. Seacoast is a GAF GoldElite™ Commercial Contractor.", icon: "🏠", pillar: "improve" },
   { slug: "gutters-fascia-soffits", name: "Gutters, Fascia & Soffits", shortDescription: "Gutter, fascia, and soffit installation and repair for drainage, ventilation, and finished roof edges.", icon: "🌧️", pillar: "improve" },
   { slug: "siding", name: "Siding Services", shortDescription: "Siding installation and repair for homes, commercial buildings, and multi-family properties.", icon: "🧱", pillar: "improve" },
   { slug: "windows-and-doors", name: "Windows & Doors", shortDescription: "Window and exterior-door replacement, including impact-rated options for Florida properties.", icon: "🚪", pillar: "improve" },

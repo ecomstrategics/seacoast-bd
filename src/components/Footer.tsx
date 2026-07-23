@@ -15,6 +15,7 @@ const pillarLinks = {
   ],
   improve: [
     { label: "Roofing", href: "/services/roofing" },
+    { label: "Commercial Roofing", href: "/commercial-roofing" },
     { label: "Siding", href: "/services/siding" },
     { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
     { label: "Windows & Doors", href: "/services/windows-and-doors" },
@@ -61,6 +62,17 @@ export function Footer() {
           <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, and additions for Florida Gulf Coast homes, businesses, and communities.</p>
           <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
           <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
+          <p className="mt-2 text-sm text-white/70">
+            <a
+              href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white hover:underline"
+            >
+              GAF GoldElite™ Commercial Contractor <span aria-hidden="true">↗</span>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </p>
           <p className="mt-1 text-sm text-white/70">
             <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
           </p>

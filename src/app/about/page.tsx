@@ -132,6 +132,17 @@ export default function AboutPage() {
                 <ul className="mt-3 space-y-2 text-sm text-text-secondary">
                   <li>Florida Certified General Contractor license CGC1509237</li>
                   <li>Florida Certified Roofing Contractor license CCC1332648</li>
+                  <li>
+                    <a
+                      href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-orange hover:underline"
+                    >
+                      GAF GoldElite™ Commercial Contractor <span aria-hidden="true">↗</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </li>
                   <li>Licensed and insured for contracting work</li>
                   <li>Project photo and video library</li>
                 </ul>

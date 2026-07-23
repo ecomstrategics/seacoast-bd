@@ -7,7 +7,7 @@ import { SchemaScript } from "@/components/Schema";
 export const metadata: Metadata = {
   title: "Southwest Florida Construction Resources",
   description:
-    "Explore Seacoast project examples, Florida building-code guidance, build-to-rent, major rehabilitation, commercial buildout, H.R. 6644, and investor resources.",
+    "Explore Seacoast commercial roofing, project examples, Florida building-code guidance, build-to-rent, major rehabilitation, commercial buildout, H.R. 6644, and investor resources.",
   alternates: { canonical: "/resources" },
   robots: { index: true, follow: true },
 };
@@ -32,6 +32,14 @@ const featuredResources = [
 ];
 
 const projectReviewResources = [
+  {
+    href: "/commercial-roofing",
+    eyebrow: "Commercial roofing",
+    title: "Review the roof, system, and guarantee path early",
+    description:
+      "See how Seacoast approaches commercial, condominium, HOA, and multifamily roofing as a verified GAF GoldElite™ Commercial Contractor.",
+    linkLabel: "Explore commercial roofing",
+  },
   {
     href: "/build-to-rent-construction",
     eyebrow: "Build-to-rent",
@@ -109,9 +117,9 @@ const resourcesSchema = {
   "@id": "https://seacoastbd.com/resources#page",
   name: "Southwest Florida Construction Resources",
   description:
-    "Project examples, Florida building-code guidance, commercial project guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
+    "Commercial roofing, project examples, Florida building-code guidance, commercial project guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
   url: "https://seacoastbd.com/resources",
-  dateModified: "2026-07-14",
+  dateModified: "2026-07-23",
   mainEntity: {
     "@type": "ItemList",
     itemListElement: [...featuredResources, ...projectReviewResources, ...planningResources].map((resource, index) => ({
@@ -168,7 +176,7 @@ export default function ResourcesPage() {
             <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
               Each guide covers a different construction conversation, with verified Seacoast facts, relevant completed work, and a clear list of what to bring for project review.
             </p>
-            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {projectReviewResources.map((resource) => (
                 <Link
                   key={resource.href}

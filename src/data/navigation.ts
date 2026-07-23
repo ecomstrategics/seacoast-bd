@@ -16,6 +16,7 @@ export const primaryNav: NavItem[] = [
       { label: "Roof Certification Inspection", href: "/services/roof-certification-inspection" },
       { label: "Thermal Drone Inspections", href: "/services/thermal-drone-inspections" },
       { label: "Roofing", href: "/services/roofing" },
+      { label: "Commercial Roofing", href: "/commercial-roofing" },
       { label: "Siding", href: "/services/siding" },
       { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
       { label: "Windows & Doors", href: "/services/windows-and-doors" },
@@ -67,6 +68,7 @@ export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMe
   ],
   improve: [
     { label: "Roofing", href: "/services/roofing" },
+    { label: "Commercial Roofing", href: "/commercial-roofing" },
     { label: "Siding", href: "/services/siding" },
     { label: "Gutters, Fascia & Soffits", href: "/services/gutters-fascia-soffits" },
     { label: "Windows & Doors", href: "/services/windows-and-doors" },

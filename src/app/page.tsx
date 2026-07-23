@@ -17,7 +17,7 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
   title: { absolute: "Seacoast Building & Design | SW Florida Contractor" },
-  description: "Roofing, storm repair, exterior renovations, and property improvements across six Florida Gulf Coast counties. Florida-certified contractor. (941) 500-5431",
+  description: "Roofing, storm repair, exterior renovations, and commercial roofing across Florida's Gulf Coast. GAF GoldElite™ Commercial Contractor. (941) 500-5431",
 };
 
 const pillarBlurbs: Record<string, string> = {

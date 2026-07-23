@@ -28,7 +28,19 @@ export function localBusinessSchema(): SchemaObject {
       "https://www.facebook.com/seacoastbuilding/",
       "https://www.instagram.com/seacoastband/",
       "https://www.youtube.com/@SeacoastBuildingDesign",
+      "https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417",
     ],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      name: "GAF GoldElite™ Commercial Contractor",
+      credentialCategory: "Commercial roofing contractor certification",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "GAF",
+        url: "https://www.gaf.com",
+      },
+      url: "https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417",
+    },
     brand: {
       "@type": "Brand",
       name: "Seacoast Building & Design",

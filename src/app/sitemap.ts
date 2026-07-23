@@ -7,7 +7,7 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 
 const BASE = "https://seacoastbd.com";
 // Update this only when the corresponding page or shared content template changes.
-const CURRENT_UPDATE = "2026-07-14";
+const CURRENT_UPDATE = "2026-07-23";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/build-to-rent-construction`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/major-rehabilitation`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/commercial-buildouts`, lastModified: CURRENT_UPDATE },
+    { url: `${BASE}/commercial-roofing`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/road-to-housing-act`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/resources`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/understanding-floridas-building-codes`, lastModified: CURRENT_UPDATE },
