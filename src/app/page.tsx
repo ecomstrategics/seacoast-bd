@@ -229,13 +229,14 @@ export default function Home() {
               href="/services/structural-insulated-panel-buildings"
               className="group grid overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.9fr_1.1fr]"
             >
-              <div className="relative min-h-64 overflow-hidden bg-navy p-8" aria-hidden="true">
-                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
-                <svg viewBox="0 0 320 240" className="relative h-full w-full text-white" fill="none">
-                  <path d="M42 112 160 43l118 69v92H42v-92Z" stroke="currentColor" strokeWidth="8" strokeLinejoin="round" />
-                  <path d="M82 204v-68h72v68M190 136h48v42h-48z" stroke="#f28c28" strokeWidth="8" strokeLinejoin="round" />
-                  <path d="M160 43v161" stroke="currentColor" strokeWidth="4" strokeDasharray="10 10" opacity=".45" />
-                </svg>
+              <div className="relative min-h-64 overflow-hidden bg-navy">
+                <Image
+                  src="/images/sip/sip-wall-panel-assembly.webp"
+                  alt="Structural insulated wall panels arranged around door and window openings during construction"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 22vw, (min-width: 768px) 45vw, 100vw"
+                />
               </div>
               <div className="p-7">
                 <p className="eyebrow">SIP homes &amp; buildings</p>
