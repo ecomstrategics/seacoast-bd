@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!city) return {};
   return {
     title: seoTitle(`Contractor in ${city.name}, ${city.county}`),
-    description: seoDescription(`Ask Seacoast about roofing, siding, storm repair, and exterior work in ${city.name}, ${city.county}. Share the property address to confirm service.`),
+    description: seoDescription(`Ask Seacoast about roofing, siding, storm repair, exterior work, and custom building projects in ${city.name}, ${city.county}. Share the property address to confirm service.`),
   };
 }
 
@@ -42,7 +42,7 @@ export default async function ServiceAreaCityPage({ params }: Props) {
     localBusinessSchema(),
     serviceSchema({
       name: `Property Services in ${city.name}`,
-      description: `Ask Seacoast about roofing, siding, storm repair, exterior work, and container-based projects in ${city.name}, ${city.county}. Service is confirmed by address and scope.`,
+      description: `Ask Seacoast about roofing, siding, storm repair, exterior work, and site-specific custom building projects in ${city.name}, ${city.county}. Service is confirmed by address and scope.`,
       url: `/service-area/${city.slug}`,
       areaServed: [city.county],
     }),
@@ -134,25 +134,30 @@ export default async function ServiceAreaCityPage({ params }: Props) {
         </section>
       )}
 
-      {/* Container Callout */}
+      {/* Custom Buildings Callout */}
       <section className="section dark-band bg-navy text-white">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="eyebrow text-orange">Container options in {city.name}</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold">Storage, workspace, and guest-space concepts for {city.county}</h2>
+              <p className="eyebrow text-orange">Custom building options in {city.name}</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold">Compare SIP, container, metal, and addition paths for {city.county}</h2>
               <p className="mt-4 text-white/75 leading-7">
-                Container-based projects can include delivery, site preparation, utilities, and finishes.
-                Feasibility, engineering, access, and permitting depend on the address and intended use.
+                Start with the property address and intended use. Site access, utilities, engineering,
+                zoning, permitting, and the final scope determine which building route can move forward.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link href="/containers/guest-houses" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Container Guest Houses</Link>
-                <Link href="/containers" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition">Browse All Builds</Link>
+                <Link href="/custom-buildings" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Compare Building Options</Link>
+                <Link href="/services/structural-insulated-panel-buildings" className="rounded-full border border-white/25 px-6 py-3 text-center font-bold text-white hover:bg-white hover:text-navy transition">Explore SIP Buildings</Link>
               </div>
             </div>
-            <div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image src="/images/service-area/generic-guest-house.webp" alt="Representative container-based guest-space design in a Southwest Florida setting" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8" aria-hidden="true">
+              <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+              <div className="relative flex h-full items-center justify-center">
+                <svg viewBox="0 0 420 280" className="h-full w-full" fill="none">
+                  <path d="M45 128 170 50l80 49 52-32 73 45v119H45V128Z" stroke="white" strokeWidth="9" strokeLinejoin="round" />
+                  <path d="M87 231v-73h79v73M206 152h54v45h-54zM306 145h35v86" stroke="#f28c28" strokeWidth="9" strokeLinejoin="round" />
+                  <path d="M170 50v181M250 99v132" stroke="white" strokeWidth="4" strokeDasharray="10 10" opacity=".4" />
+                </svg>
               </div>
             </div>
           </div>

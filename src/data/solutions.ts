@@ -49,14 +49,17 @@ export const solutions: SolutionPillar[] = [
     title: "Expand",
     tagline: "Additional Space & Structures",
     heroHeading: "Plan the Extra Space Your Property Needs.",
-    heroSub: "Explore container-based rooms, offices, workshops, pool enclosures, and traditional additions. Feasibility and timing depend on the site, permits, and final scope.",
+    heroSub: "Compare structural insulated panel buildings, custom container builds, metal structures, pool enclosures, and traditional additions. Feasibility and timing depend on the site, intended use, engineering, permits, and final scope.",
     accent: "copper",
     serviceslugs: [
+      "structural-insulated-panel-buildings",
+      "metal-buildings",
+      "carports",
       "pool-enclosures-lanais",
       "room-additions",
     ],
     ctaLabel: "Explore Your Options",
-    ctaHref: "/contact",
+    ctaHref: "/custom-buildings",
   },
 ];
 

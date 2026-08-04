@@ -15,7 +15,7 @@ export function localBusinessSchema(): SchemaObject {
     slogan: "Protect. Improve. Expand.",
     telephone: "+1-941-500-5431",
     description:
-      "Florida-certified contractor serving Southwest Florida with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and selected container-based projects.",
+      "Florida-certified contractor serving Southwest Florida with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and site-specific custom buildings, including structural insulated panel and container-based projects.",
     areaServed: [
       "Hillsborough County, FL",
       "Manatee County, FL",
@@ -102,6 +102,7 @@ export function webSiteSchema(): SchemaObject {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://seacoastbd.com/#website",
     name: "Seacoast Building & Design",
     url: "https://seacoastbd.com",
     publisher: { "@id": "https://seacoastbd.com/#organization" },

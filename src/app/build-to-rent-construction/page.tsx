@@ -274,6 +274,9 @@ export default function BuildToRentConstructionPage() {
               <Link href="/understanding-floridas-building-codes" className="text-orange hover:underline">
                 Review Florida code planning →
               </Link>
+              <Link href="/services/structural-insulated-panel-buildings" className="text-orange hover:underline">
+                Explore panelized building review →
+              </Link>
             </div>
           </div>
         </div>

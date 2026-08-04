@@ -9,10 +9,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SchemaScript, serviceSchema } from "@/components/Schema";
 import Image from "next/image";
 import { ServiceCard } from "@/components/ServiceCard";
-import { ContainerCard } from "@/components/ContainerCard";
 import { getSolutionBySlug, solutions } from "@/data/solutions";
 import { getServicesByPillar } from "@/data/services";
-import { containers } from "@/data/containers";
 import { projects } from "@/data/projects";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
@@ -105,7 +103,7 @@ export default async function SolutionPillarPage({ params }: Props) {
           <h1 className="mt-3 font-heading text-4xl font-bold leading-tight md:text-5xl">{pillar.heroHeading}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">{pillar.heroSub}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/contact" className={`rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
+            <Link href={pillar.ctaHref} className={`rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
               {pillar.ctaLabel}
             </Link>
             <Link href="/services" className="rounded-full border border-white/25 px-6 py-3 font-bold text-white hover:bg-white hover:text-navy">
@@ -146,7 +144,7 @@ export default async function SolutionPillarPage({ params }: Props) {
           <p className="mt-4 max-w-2xl text-text-secondary">
             {slug === "protect" && "Plan shutters and boards before the season, check service availability when weather approaches, and arrange damage assessment and repairs afterward."}
             {slug === "improve" && "Roofing, siding, gutters, windows, and exterior repairs can be reviewed together and organized under one proposal."}
-            {slug === "expand" && "Compare container-based spaces, pool enclosures, and room additions after reviewing the site, intended use, permitting, and budget."}
+            {slug === "expand" && "Compare SIP buildings, custom containers, metal structures, pool enclosures, and room additions after reviewing the site, intended use, engineering, permitting, and budget."}
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {pillarServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
@@ -154,21 +152,40 @@ export default async function SolutionPillarPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Expand pillar: container products */}
+      {/* Expand pillar: custom building paths */}
       {slug === "expand" && (
         <section className="section dark-band bg-navy-deep">
           <div className="container">
-            <p className="eyebrow">Container builds</p>
-            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Container options planned around your property</h2>
-            <p className="mt-4 max-w-2xl text-text-secondary">
-              Explore storage, guest-space, office, and emergency-use concepts. Site access, engineering,
-              zoning, permits, utilities, and the final scope determine what can be built.
+            <p className="eyebrow">Compare before you commit</p>
+            <h2 className="mt-2 font-heading text-3xl font-bold text-navy">Start with the property, not a predetermined building system</h2>
+            <p className="mt-4 max-w-3xl text-text-secondary">
+              The best route depends on the intended use, footprint, site access, utilities, design priorities,
+              engineering, zoning, permits, and final scope. Seacoast can help organize that comparison early.
             </p>
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {containers.map((container) => <ContainerCard key={container.slug} container={container} />)}
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <Link href="/custom-buildings" className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft transition hover:-translate-y-1">
+                <p className="eyebrow">Decision guide</p>
+                <h3 className="mt-2 font-heading text-2xl font-bold text-navy">Compare building options</h3>
+                <p className="mt-3 leading-7 text-text-secondary">See where SIP, container, metal, carport, and conventional addition routes tend to fit.</p>
+                <span className="mt-5 inline-flex font-bold text-orange">Open the guide →</span>
+              </Link>
+              <Link href="/services/structural-insulated-panel-buildings" className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft transition hover:-translate-y-1">
+                <p className="eyebrow">SIP construction</p>
+                <h3 className="mt-2 font-heading text-2xl font-bold text-navy">Homes and buildings</h3>
+                <p className="mt-3 leading-7 text-text-secondary">Evaluate a panelized new-building route around the project&apos;s design, engineering, and permit path.</p>
+                <span className="mt-5 inline-flex font-bold text-orange">Explore SIP buildings →</span>
+              </Link>
+              <Link href="/containers" className="rounded-2xl border border-navy/10 bg-white p-6 shadow-soft transition hover:-translate-y-1">
+                <p className="eyebrow">Container construction</p>
+                <h3 className="mt-2 font-heading text-2xl font-bold text-navy">Defined steel-shell options</h3>
+                <p className="mt-3 leading-7 text-text-secondary">Explore storage, office, workshop, and guest-space concepts planned around the site.</p>
+                <span className="mt-5 inline-flex font-bold text-orange">Browse container builds →</span>
+              </Link>
             </div>
-            <div className="mt-8">
-              <Link href="/containers" className="font-bold text-copper hover:underline">Browse all container builds →</Link>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
+              <Link href="/services/metal-buildings" className="text-copper hover:underline">Metal buildings →</Link>
+              <Link href="/services/carports" className="text-copper hover:underline">Carports →</Link>
+              <Link href="/services/room-additions" className="text-copper hover:underline">Room additions →</Link>
             </div>
           </div>
         </section>
@@ -185,7 +202,7 @@ export default async function SolutionPillarPage({ params }: Props) {
               <p className="eyebrow">
                 {slug === "protect" && "Plan before and after storms"}
                 {slug === "improve" && "Coordinated exterior work"}
-                {slug === "expand" && "Why containers"}
+                {slug === "expand" && "Choose the right path"}
               </p>
               <h2 className="mt-2 font-heading text-3xl font-bold text-navy">
                 {slug === "protect" && "Prepare before the forecast turns urgent."}
@@ -198,9 +215,9 @@ export default async function SolutionPillarPage({ params }: Props) {
                 {slug === "improve" &&
                   "Roofing, siding, gutters, fascia, windows, and doors meet at shared edges. Reviewing them together can reduce handoffs and make responsibilities, sequencing, allowances, and exclusions clearer in the proposal."}
                 {slug === "expand" &&
-                  "Container-based rooms and offices can be configured with insulation, utilities, siding, and roofing. Site access, zoning, engineering, permits, price, and schedule determine whether they are a fit for your property."}
+                  "A panelized building can support a different footprint and design process than a container shell, while metal structures, carports, and conventional additions solve other needs. The property, intended use, engineering, permits, price, and schedule determine the right fit."}
               </p>
-              <Link href="/contact" className={`mt-6 inline-block rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
+              <Link href={pillar.ctaHref} className={`mt-6 inline-block rounded-full ${accentBg[slug]} px-6 py-3 font-bold text-white hover:opacity-90`}>
                 {pillar.ctaLabel}
               </Link>
             </div>
@@ -216,8 +233,15 @@ export default async function SolutionPillarPage({ params }: Props) {
                 </div>
               )}
               {slug === "expand" && (
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/solutions/expand-secondary.webp" alt="Representative interior layout for a finished container-based guest space" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-navy p-8" aria-hidden="true">
+                  <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
+                  <div className="relative flex h-full items-center justify-center">
+                    <svg viewBox="0 0 420 280" className="h-full w-full" fill="none">
+                      <path d="M40 132 145 66l67 42 69-43 99 62v105H40V132Z" stroke="white" strokeWidth="9" strokeLinejoin="round" />
+                      <path d="M79 232v-70h72v70M186 156h48v43h-48zM297 158h45v74" stroke="#f28c28" strokeWidth="9" strokeLinejoin="round" />
+                      <path d="M145 66v166M281 65v167" stroke="white" strokeWidth="4" strokeDasharray="10 10" opacity=".4" />
+                    </svg>
+                  </div>
                 </div>
               )}
             </div>

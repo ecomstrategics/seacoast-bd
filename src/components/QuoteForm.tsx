@@ -8,6 +8,7 @@ const formspreeUrl = "https://formspree.io/f/xykaaarv";
 const serviceDefaults = new Map<string, string>([
   ...services.map((service) => [service.slug, service.name] as const),
   ...containers.map((container) => [container.slug, container.name] as const),
+  ["custom-buildings", "Custom Building Project"],
   ["containers", "Container Project"],
   ["prebuilt-containers", "Available 20-Foot Mobile Container"],
 ]);
@@ -51,6 +52,14 @@ export function QuoteForm({
   }
 
   const isSubmitting = status === "submitting";
+  const isCustomBuildingInquiry =
+    selectedService === "Custom Building Project" ||
+    selectedService === "SIP Homes & Buildings" ||
+    selectedService === "Metal Buildings & Pole Barns" ||
+    selectedService === "Carports & Metal Roofs" ||
+    selectedService === "Room Additions" ||
+    selectedService === "Container Project" ||
+    containers.some((container) => container.name === selectedService);
 
   const fieldClass =
     "rounded-xl border border-navy/20 bg-white px-4 py-3 text-charcoal placeholder:text-text-secondary transition focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/30";
@@ -129,6 +138,7 @@ export function QuoteForm({
           Service Needed
           <select name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)} className={fieldClass}>
             <option>Not sure yet</option>
+            <option>Custom Building Project</option>
             {services.map((service) => <option key={service.slug}>{service.name}</option>)}
             <option>Container Project</option>
             <option>Available 20-Foot Mobile Container</option>
@@ -142,10 +152,50 @@ export function QuoteForm({
             <option>Condo or HOA community</option>
             <option>Multi-family property</option>
             <option>Commercial property</option>
+            <option>Land or new-build site</option>
             <option>Other</option>
           </select>
         </label>
       </div>
+
+      {isCustomBuildingInquiry && (
+        <fieldset className="grid gap-4 rounded-2xl border border-navy/10 bg-cool-gray/50 p-5">
+          <legend className="px-1 font-heading text-lg font-bold text-navy">Building project details</legend>
+          <p className="text-sm leading-6 text-text-secondary">Share what you know today. These fields are optional and help Seacoast prepare for the first project review.</p>
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Intended Use
+              <input name="buildingIntendedUse" placeholder="Home, office, guest space..." className={fieldClass} />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Approximate Size
+              <input name="buildingApproximateSize" placeholder="Square feet or dimensions" className={fieldClass} />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Project Stage
+              <select name="buildingProjectStage" defaultValue="Exploring options" className={fieldClass}>
+                <option>Exploring options</option>
+                <option>Property identified</option>
+                <option>Concept or floor plan ready</option>
+                <option>Design or engineering underway</option>
+                <option>Preparing for permit review</option>
+              </select>
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Target Timing
+              <input name="buildingTargetTiming" placeholder="When would you like to start?" className={fieldClass} />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Budget Context
+              <input name="buildingBudgetContext" placeholder="Range or financing needs" className={fieldClass} />
+            </label>
+            <label className="grid gap-2 text-sm font-semibold text-navy">
+              Plans or Documents Link
+              <input name="buildingDocumentsUrl" type="url" inputMode="url" placeholder="https://..." className={fieldClass} />
+            </label>
+          </div>
+        </fieldset>
+      )}
 
       <label className="grid gap-2 text-sm font-semibold text-navy">
         Project Details <span className="font-normal text-text-secondary">(required)</span>
@@ -173,7 +223,7 @@ export function QuoteForm({
       </label>
 
       <div aria-live="polite" role="status">
-        {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—we received your request. A Seacoast team member will contact you to discuss the next step.</p>}
+        {status === "success" && <p className="rounded-xl bg-success/10 px-4 py-3 text-sm font-semibold text-success">Thanks—we received your request. A Seacoast team member will review the property and project details, then contact you to discuss the next step.</p>}
         {status === "error" && <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">Something went wrong. Please try again or call (941) 500-5431.</p>}
       </div>
 

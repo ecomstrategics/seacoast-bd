@@ -19,6 +19,13 @@ export const services: Service[] = [
   { slug: "whole-house-battery-systems", name: "Home Battery Backup", shortDescription: "Battery-backup systems sized around the circuits you want to support, with standalone and solar-paired options.", icon: "🔋", pillar: "protect" },
   { slug: "pool-enclosures-lanais", name: "Pool Enclosures & Lanais", shortDescription: "New screen enclosures and lanais, plus repairs and re-screening for existing outdoor structures.", icon: "🌴", pillar: "expand" },
   { slug: "room-additions", name: "Room Additions", shortDescription: "Room additions and enclosed spaces planned around your existing structure, site, and permitting requirements.", icon: "➕", pillar: "expand" },
+  {
+    slug: "structural-insulated-panel-buildings",
+    name: "SIP Homes & Buildings",
+    shortDescription: "Custom homes, detached spaces, and selected commercial buildings evaluated around the site, intended use, engineering, and permit path.",
+    icon: "🏗️",
+    pillar: "expand",
+  },
   { slug: "storm-damage-repair", name: "Storm Damage Repair", shortDescription: "Inspection, documentation, stabilization, and coordinated interior or exterior rehabilitation after wind, rain, or storm-surge damage.", icon: "⛈️", pillar: "protect" },
   {
     slug: "storm-preparedness",
@@ -37,14 +44,14 @@ export const services: Service[] = [
   {
     slug: "metal-buildings",
     name: "Metal Buildings & Pole Barns",
-    shortDescription: "Pole barns, barndominiums, and metal buildings with insulation and metal-panel roofing options for residential or commercial sites.",
+    shortDescription: "Pole barns, barndominiums, and metal buildings with project-specific insulation and metal-panel roofing options for residential or commercial sites.",
     icon: "🏭",
     pillar: "expand",
   },
   {
     slug: "carports",
     name: "Carports & Metal Roofs",
-    shortDescription: "New carport structures and repairs, with insulated-panel and metal-roof options for residential and commercial properties.",
+    shortDescription: "New carport structures and repairs, with metal-roof and project-specific enclosure options for residential and commercial properties.",
     icon: "🚗",
     pillar: "expand",
   },

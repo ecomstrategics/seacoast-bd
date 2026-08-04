@@ -266,10 +266,13 @@ export default function ContainersLandingPage() {
             <p className="eyebrow">Compare the practical details</p>
             <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Is a container the right fit?</h2>
             <p className="mt-4 text-text-secondary">
-              Compare ownership, delivery, site requirements, customization, and permitting with sheds, rented storage, RVs, and traditional additions. A property review is still required before choosing a direction.
+              Compare ownership, delivery, site requirements, customization, and permitting with structural insulated panel buildings, metal structures, sheds, rented storage, RVs, and traditional additions. A property review is still required before choosing a direction.
             </p>
           </div>
-          <Link href="/containers/compare" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Compare the Options</Link>
+          <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
+            <Link href="/custom-buildings" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper">Compare Building Types</Link>
+            <Link href="/containers/compare" className="rounded-full border border-navy/20 px-6 py-3 text-center font-bold text-navy hover:border-orange hover:text-orange">Compare Container Options</Link>
+          </div>
         </div>
       </section>
 

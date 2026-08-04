@@ -1,6 +1,6 @@
 # Seacoast Building & Design
 
-> Seacoast Building & Design is a Florida-certified general and roofing contractor serving homes, businesses, associations, and multi-family properties across six Gulf Coast counties. The company coordinates commercial buildouts, major rehabilitation, roofing, exterior improvements, storm preparation and restoration, additions, and selected container-based projects.
+> Seacoast Building & Design is a Florida-certified general and roofing contractor serving homes, businesses, associations, and multi-family properties across six Gulf Coast counties. The company coordinates commercial buildouts, major rehabilitation, roofing, exterior improvements, storm preparation and restoration, additions, and site-specific custom buildings, including structural insulated panel and container-based projects.
 
 Mission: Seacoast's mission is to protect, improve, and expand Florida properties through coordinated construction, clear communication, and disciplined follow-through—from the first scope conversation through the final walkthrough.
 
@@ -21,7 +21,9 @@ GAF verification: [Seacoast's official GAF contractor profile](https://www.gaf.c
 ## Start Here
 
 - [Our Work](https://seacoastbd.com/our-work): Seacoast project videos, completed-work details, and jobsite photos where available.
-- [Services](https://seacoastbd.com/services): Roofing and thermal inspections, exterior, storm, energy, cleaning, enclosure, and addition services.
+- [Services](https://seacoastbd.com/services): Roofing and thermal inspections, exterior, storm, energy, cleaning, enclosure, addition, and custom building services.
+- [Custom Buildings](https://seacoastbd.com/custom-buildings): A property-first comparison of SIP, container, metal, carport, and conventional-addition paths.
+- [SIP Homes and Buildings](https://seacoastbd.com/services/structural-insulated-panel-buildings): Structural insulated panel building concepts evaluated around the site, intended use, design, engineering, and permit path.
 - [Service Area](https://seacoastbd.com/service-area): Counties and city pages across Southwest Florida.
 - [About Seacoast](https://seacoastbd.com/about): Company leadership, licenses, service area, and project approach.
 - [Customer Reviews](https://seacoastbd.com/customer-reviews): Direct links to Google and Better Business Bureau feedback.
@@ -85,6 +87,20 @@ As of this review date, the Florida Building Commission identifies the Florida B
 - [Solar Panel Cleaning](https://seacoastbd.com/services/solar-panel-cleaning): One-time and recurring cleaning scopes priced for the array, roof, access, and visible condition.
 - [Home Battery Backup](https://seacoastbd.com/services/whole-house-battery-systems): Site-specific battery assessment based on circuit priorities, expected loads, equipment compatibility, permitting, and utility requirements.
 
+## Custom Buildings and SIP Projects
+
+Last reviewed: August 4, 2026.
+
+- [Compare Custom Building Options](https://seacoastbd.com/custom-buildings)
+- [Structural Insulated Panel Homes and Buildings](https://seacoastbd.com/services/structural-insulated-panel-buildings)
+- [Container Planning](https://seacoastbd.com/containers)
+
+Seacoast is the local contractor and project contact for custom building inquiries. Seacoast works with Safe Room Designs, a separate organization, to evaluate steel-frame structural insulated panel building concepts and related system information. The exact roles of Seacoast, Safe Room Designs, the owner, design professionals, suppliers, and the local building department are confirmed in the written project scope.
+
+The appropriate construction path depends on the property, intended use, footprint, access, utilities, design priorities, budget, engineering, zoning, permits, and final scope. Applicable plans, engineering, product or system documentation, approvals, and inspection requirements are confirmed during project development and permitting.
+
+A panel system or company name does not automatically make a building a FEMA safe room or establish a wind, impact, fire, flood, or other performance rating. Any such conclusion must be supported by the complete project-specific design and controlling documentation, including openings, connections, foundation, engineering, installation, and required approvals.
+
 ## Container-Based Projects
 
 - [Container Planning](https://seacoastbd.com/containers): Storage, office, workshop, and guest-space concepts planned around the address, intended use, delivery access, and local requirements.
@@ -139,5 +155,6 @@ As of this review date, H.R. 6644, the 21st Century ROAD to Housing Act, became 
 
 - Project pages are the source for Seacoast-specific project facts, photos, videos, materials, and completion details.
 - Some service and concept images are representative and are not completed Seacoast projects.
+- Partner-supplied concepts and system information must be identified separately from completed Seacoast work. Project-specific plans, engineering, approvals, and written documents control over general website summaries.
 - Prices, schedules, response windows, availability, product performance, financing, and permit requirements are property- and proposal-specific unless a current written Seacoast agreement says otherwise.
 - For insurance claims, Seacoast can explain its construction scope and estimate. Coverage advice, settlement negotiation, and claim representation belong with the insurer, property owner, licensed public adjuster, or attorney as appropriate.

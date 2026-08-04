@@ -105,6 +105,7 @@ export function CapitalPartnerForm() {
             <option>Build-to-rent / single-family rental</option>
             <option>Major rehabilitation / renovate-to-rent</option>
             <option>Commercial / condominium / HOA rehabilitation</option>
+            <option>Panelized / SIP housing or building program</option>
             <option>Addition / property expansion</option>
             <option>Other construction project</option>
             <option>Not sure yet</option>

@@ -6,13 +6,13 @@ import { SchemaScript, faqSchema } from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description: "Answers about Seacoast services, licenses, estimates, completed projects, service areas, storm preparation, financing, and container builds.",
+  description: "Answers about Seacoast services, custom SIP buildings, licenses, estimates, service areas, storm preparation, financing, and container builds.",
 };
 
 const faqs = [
   {
     question: "What services does Seacoast Building & Design provide?",
-    answer: "Seacoast provides roofing, siding, gutters, windows and doors, exterior renovations, storm preparation and repair, pool enclosures, room additions, metal buildings, solar services, and custom container builds for residential, commercial, and multi-family properties.",
+    answer: "Seacoast provides roofing, siding, gutters, windows and doors, exterior renovations, storm preparation and repair, pool enclosures, room additions, metal buildings, structural insulated panel buildings, solar services, and custom container builds for residential, commercial, and multi-family properties.",
   },
   {
     question: "Where does Seacoast work?",
@@ -43,6 +43,22 @@ const faqs = [
     answer: "Requirements depend on the county, municipality, parcel, and intended use. Habitable structures generally require permits, while storage rules vary. Seacoast advises clients to confirm zoning and permitting before purchasing or placing a container.",
   },
   {
+    question: "What is a structural insulated panel building?",
+    answer: "Structural insulated panels, or SIPs, are factory-made building panels with an insulating core bonded between two structural facings. Seacoast works with Safe Room Designs to evaluate steel-frame SIP concepts for homes, detached spaces, and selected commercial projects. The exact assembly and documentation are confirmed for each project.",
+  },
+  {
+    question: "How is a SIP building different from a container build?",
+    answer: "A SIP building starts as a new panelized structure and can suit floor plans that are not tied to a shipping-container shell. A container project starts with a defined steel module and has different access, delivery, modification, and dimensional constraints. The property, intended use, budget, design, engineering, and permit path determine the better fit.",
+  },
+  {
+    question: "Who handles the SIP building design and permitting process?",
+    answer: "Seacoast is the local contractor and project contact, while Safe Room Designs supports the panelized building concept and related system information. The owner, Seacoast, design professionals, suppliers, and local building department each have project-specific responsibilities. The written scope identifies who provides plans, engineering, product documents, applications, and inspections.",
+  },
+  {
+    question: "Is a SIP building automatically a safe room or hurricane-rated structure?",
+    answer: "No. A company or product name does not establish that a building is a FEMA safe room or prove a particular wind, impact, fire, flood, or other performance rating. Those conclusions depend on the complete project-specific design, including panels, openings, connections, foundation, engineering, documentation, installation, and required approvals.",
+  },
+  {
     question: "Does Seacoast offer financing?",
     answer: "Financing options are available for eligible projects. Visit the financing page or ask the team during your quote conversation to review current programs, estimated payments, and the application process.",
   },
@@ -57,7 +73,7 @@ export default function FAQPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ" }]} />
           <p className="eyebrow">Frequently asked questions</p>
           <h1 className="mt-4 max-w-3xl font-heading text-5xl font-bold">Answers about working with Seacoast</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Have a question before you invite us out? Here is what to know about our services, coverage area, estimates, storm work, financing, and container projects.</p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80">Have a question before you invite us out? Here is what to know about our services, coverage area, custom buildings, estimates, storm work, financing, and container projects.</p>
         </div>
       </section>
 
@@ -69,7 +85,7 @@ export default function FAQPage() {
               <p className="mt-3 leading-7 text-text-secondary">{item.answer}</p>
             </article>
           ))}
-          <p className="pt-4 text-text-secondary">Need details for a specific service? <Link href="/services" className="font-semibold text-orange-deep underline">Browse all services</Link> or <Link href="/contact" className="font-semibold text-orange-deep underline">request a quote</Link>.</p>
+          <p className="pt-4 text-text-secondary">Need details for a specific service? <Link href="/services" className="font-semibold text-orange-deep underline">Browse all services</Link>, <Link href="/services/structural-insulated-panel-buildings" className="font-semibold text-orange-deep underline">read the SIP building guide</Link>, or <Link href="/contact" className="font-semibold text-orange-deep underline">request a quote</Link>.</p>
         </div>
       </section>
 
