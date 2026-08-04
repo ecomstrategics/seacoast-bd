@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { serviceArea } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
-import { containers } from "@/data/containers";
 
 const pillarLinks = {
   protect: [
@@ -24,14 +23,20 @@ const pillarLinks = {
     { label: "Solar Services", href: "/services/solar-services" },
   ],
   expand: [
-    { label: "Custom Buildings", href: "/custom-buildings" },
-    { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
+    { label: "All Expansion Services", href: "/solutions/expand" },
     { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
     { label: "Room Additions", href: "/services/room-additions" },
-    { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },
-    { label: "Carports & Metal Roofs", href: "/services/carports" },
   ],
 };
+
+const customBuildingLinks = [
+  { label: "Compare Custom Building Options", href: "/custom-buildings" },
+  { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
+  { label: "Container Buildings", href: "/containers" },
+  { label: "Available Now: 20' Mobile Container", href: "/containers/prebuilt" },
+  { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },
+  { label: "Carports & Metal Roofs", href: "/services/carports" },
+];
 
 const quickLinks = [
   { label: "Our Work", href: "/our-work" },
@@ -55,97 +60,112 @@ const resourceLinks = [
 export function Footer() {
   return (
     <footer className="bg-navy pb-20 text-white md:pb-0">
-      <div className="container grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
-        {/* Company */}
-        <div className="sm:col-span-2 lg:col-span-1">
-          <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
-          <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, additions, and custom buildings for Florida Gulf Coast homes, businesses, and communities.</p>
-          <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
-          <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
-          <p className="mt-2 text-sm text-white/70">
-            <a
-              href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white hover:underline"
-            >
-              GAF GoldElite™ Commercial Contractor <span aria-hidden="true">↗</span>
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-          </p>
-          <p className="mt-1 text-sm text-white/70">
-            <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
-          </p>
-          <div className="mt-4 flex gap-3 text-sm">
-            <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a>
-            <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
-            <a href="https://www.youtube.com/@SeacoastBuildingDesign" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a>
+      <div className="container py-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+          {/* Company */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
+            <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, additions, and custom buildings for Florida Gulf Coast homes, businesses, and communities.</p>
+            <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
+            <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
+            <p className="mt-2 text-sm text-white/70">
+              <a
+                href="https://www.gaf.com/en-us/roofing-contractors/commercial/seacoast-building-and-design-lehigh-acres-fl-1154417"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white hover:underline"
+              >
+                GAF GoldElite™ Commercial Contractor <span aria-hidden="true">↗</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </p>
+            <p className="mt-1 text-sm text-white/70">
+              <a href="tel:+19415005431" className="hover:text-white">(941) 500-5431</a>
+            </p>
+            <div className="mt-4 flex gap-3 text-sm">
+              <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a>
+              <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
+              <a href="https://www.youtube.com/@SeacoastBuildingDesign" target="_blank" rel="noopener noreferrer" className="hover:text-white">YouTube</a>
+            </div>
+          </div>
+
+          {/* Protect */}
+          <div>
+            <h3 className="font-heading font-bold text-orange">Protect</h3>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Storm &amp; Resilience</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/75">
+              {pillarLinks.protect.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Improve */}
+          <div>
+            <h3 className="font-heading font-bold text-white/90">Improve</h3>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Exteriors &amp; Renovations</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/75">
+              {pillarLinks.improve.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Expand */}
+          <div>
+            <h3 className="font-heading font-bold text-white/90">Expand</h3>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Property Solutions</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/75">
+              {pillarLinks.expand.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Custom Buildings */}
+          <div>
+            <h3 className="font-heading font-bold text-white/90">Custom Buildings</h3>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">SIP, Containers &amp; Structures</p>
+            <ul className="mt-4 space-y-2 text-sm text-white/75">
+              {customBuildingLinks.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Protect */}
-        <div>
-          <h3 className="font-heading font-bold text-orange">Protect</h3>
-          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Storm &amp; Resilience</p>
-          <ul className="mt-4 space-y-2 text-sm text-white/75">
-            {pillarLinks.protect.map((link) => (
-              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
-            ))}
-          </ul>
-        </div>
+        <div className="mt-12 grid gap-10 border-t border-white/10 pt-10 sm:grid-cols-2 md:grid-cols-3">
+          {/* Service Area */}
+          <div>
+            <h3 className="font-heading font-bold">Service Area</h3>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">6 Counties</p>
+            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-white/75">
+              {serviceAreaCities.map((city) => (
+                <li key={city.slug}><Link href={`/service-area/${city.slug}`} className="hover:text-white">{city.name}</Link></li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-white/65">Serving: {serviceArea.join(", ")}</p>
+          </div>
 
-        {/* Improve */}
-        <div>
-          <h3 className="font-heading font-bold text-white/90">Improve</h3>
-          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Exteriors &amp; Renovations</p>
-          <ul className="mt-4 space-y-2 text-sm text-white/75">
-            {pillarLinks.improve.map((link) => (
-              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
-            ))}
-          </ul>
-        </div>
+          {/* Resources */}
+          <div>
+            <h3 className="font-heading font-bold">Resources</h3>
+            <ul className="mt-3 space-y-2 text-sm text-white/75">
+              {resourceLinks.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Expand + Containers */}
-        <div>
-          <h3 className="font-heading font-bold text-white/90">Expand</h3>
-          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">Property Solutions</p>
-          <ul className="mt-4 space-y-2 text-sm text-white/75">
-            {pillarLinks.expand.map((link) => (
-              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
-            ))}
-          </ul>
-          <h3 className="mt-6 font-heading font-bold text-white/90">Container Buildings</h3>
-          <ul className="mt-3 space-y-2 text-sm text-white/75">
-            <li><Link href="/containers/prebuilt" className="hover:text-white">Available 20&apos; Mobile Container</Link></li>
-            {containers.map((c) => (
-              <li key={c.slug}><Link href={`/containers/${c.slug}`} className="hover:text-white">{c.name}</Link></li>
-            ))}
-            <li><Link href="/containers/compare" className="hover:text-white">Compare Options</Link></li>
-          </ul>
-        </div>
-
-        {/* Service Area + Quick Links */}
-        <div>
-          <h3 className="font-heading font-bold">Service Area</h3>
-          <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">6 Counties</p>
-          <ul className="mt-4 space-y-1.5 text-sm text-white/75">
-            {serviceAreaCities.map((city) => (
-              <li key={city.slug}><Link href={`/service-area/${city.slug}`} className="hover:text-white">{city.name}</Link></li>
-            ))}
-          </ul>
-          <h3 className="mt-6 font-heading font-bold">Resources</h3>
-          <ul className="mt-3 space-y-2 text-sm text-white/75">
-            {resourceLinks.map((link) => (
-              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
-            ))}
-          </ul>
-          <h3 className="mt-6 font-heading font-bold">Company</h3>
-          <ul className="mt-3 space-y-2 text-sm text-white/75">
-            {quickLinks.map((link) => (
-              <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs text-white/65">Serving: {serviceArea.join(", ")}</p>
+          {/* Company Links */}
+          <div className="sm:col-span-2 md:col-span-1">
+            <h3 className="font-heading font-bold">Company</h3>
+            <ul className="mt-3 space-y-2 text-sm text-white/75">
+              {quickLinks.map((link) => (
+                <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
