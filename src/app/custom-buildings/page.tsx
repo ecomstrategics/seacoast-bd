@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
@@ -556,7 +557,7 @@ export default function CustomBuildingsPage() {
       </section>
 
       <section className="section bg-navy" aria-labelledby="sip-partnership-heading">
-        <div className="container grid max-w-6xl gap-8 lg:grid-cols-[1.12fr_0.88fr]">
+        <div className="container grid max-w-6xl gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
           <div className="rounded-3xl border border-orange/35 bg-orange/10 p-7 md:p-10">
             <p className="eyebrow">A new construction path</p>
             <h2 id="sip-partnership-heading" className="mt-2 max-w-3xl font-heading text-4xl font-bold text-white">
@@ -585,23 +586,40 @@ export default function CustomBuildingsPage() {
               </a>
             </div>
           </div>
-          <aside className="rounded-3xl border border-white/10 bg-navy-surface p-7 md:p-8" aria-labelledby="not-automatic-heading">
-            <p className="eyebrow">Important distinction</p>
-            <h2 id="not-automatic-heading" className="mt-2 font-heading text-2xl font-bold text-white">
-              A system name does not decide the permitted building.
-            </h2>
-            <p className="mt-4 text-sm leading-6 text-white/70">
-              A brand name, panel type, or preliminary concept does not by itself establish the approved use or
-              performance of a complete building. Those decisions depend on the exact assembly, site-specific
-              design, applicable documents, and official review for the project.
-            </p>
-            <Link
-              href="/understanding-floridas-building-codes"
-              className="mt-6 inline-flex font-bold text-orange hover:underline"
-            >
-              Understand Florida code planning →
-            </Link>
-          </aside>
+          <div className="grid gap-5">
+            <figure className="overflow-hidden rounded-3xl border border-white/10 bg-navy-surface">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/images/sip/steel-frame-sip-home-interior.webp"
+                  alt="Finished open-plan living and kitchen area from a Safe Room Designs structural insulated panel project"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 38vw, 100vw"
+                />
+              </div>
+              <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-5 text-white/65">
+                Finished interior from a Safe Room Designs SIP project. Seacoast confirms the project team, system, and scope for each engagement.
+              </figcaption>
+            </figure>
+
+            <aside className="rounded-3xl border border-white/10 bg-navy-surface p-7 md:p-8" aria-labelledby="not-automatic-heading">
+              <p className="eyebrow">Important distinction</p>
+              <h2 id="not-automatic-heading" className="mt-2 font-heading text-2xl font-bold text-white">
+                A system name does not decide the permitted building.
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-white/70">
+                A brand name, panel type, or preliminary concept does not by itself establish the approved use or
+                performance of a complete building. Those decisions depend on the exact assembly, site-specific
+                design, applicable documents, and official review for the project.
+              </p>
+              <Link
+                href="/understanding-floridas-building-codes"
+                className="mt-6 inline-flex font-bold text-orange hover:underline"
+              >
+                Understand Florida code planning →
+              </Link>
+            </aside>
+          </div>
         </div>
       </section>
 

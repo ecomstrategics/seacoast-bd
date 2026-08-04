@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
@@ -13,6 +14,8 @@ import { seoTitle } from "@/lib/seo";
 const pagePath = "/services/structural-insulated-panel-buildings";
 const pageUrl = `https://seacoastbd.com${pagePath}`;
 const partnerUrl = "https://saferoomdesigns.com/";
+const primaryImagePath = "/images/sip/steel-frame-sip-home-exterior.webp";
+const primaryImageUrl = `https://seacoastbd.com${primaryImagePath}`;
 const pageDescription =
   "Explore steel-frame structural insulated panel homes and buildings with Seacoast and Safe Room Designs for site-specific projects in Southwest Florida.";
 
@@ -29,10 +32,10 @@ export const metadata: Metadata = {
     siteName: "Seacoast Building & Design",
     images: [
       {
-        url: "/images/og-default.jpg",
+        url: "/images/sip/steel-frame-sip-homes-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Seacoast Building & Design structural insulated panel building services",
+        alt: "Completed home from a Safe Room Designs structural insulated panel project",
       },
     ],
   },
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Custom SIP Homes and Buildings for Southwest Florida",
     description: pageDescription,
-    images: ["/images/og-default.jpg"],
+    images: ["/images/sip/steel-frame-sip-homes-og.jpg"],
   },
 };
 
@@ -260,6 +263,7 @@ const sipServiceSchema = {
   }),
   "@id": `${pageUrl}#service`,
   provider: { "@id": "https://seacoastbd.com/#organization" },
+  image: { "@id": `${pageUrl}#primaryimage` },
 };
 
 const sipWebPageSchema = {
@@ -273,6 +277,17 @@ const sipWebPageSchema = {
   dateModified: "2026-08-04",
   isPartOf: { "@id": "https://seacoastbd.com/#website" },
   about: { "@id": `${pageUrl}#service` },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    "@id": `${pageUrl}#primaryimage`,
+    url: primaryImageUrl,
+    contentUrl: primaryImageUrl,
+    width: 1200,
+    height: 900,
+    caption: "Completed home from a Safe Room Designs structural insulated panel project.",
+    creditText: "Project imagery supplied by Safe Room Designs",
+    representativeOfPage: true,
+  },
   mentions: {
     "@type": "Organization",
     name: "Safe Room Designs",
@@ -298,7 +313,7 @@ export default function StructuralInsulatedPanelBuildingsPage() {
         />
         <div className="container relative max-w-6xl">
           <Breadcrumbs items={breadcrumbs} />
-          <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_0.42fr] lg:items-end">
+          <div className="mt-8 grid gap-10 lg:grid-cols-[1fr_0.62fr] lg:items-start">
             <div>
               <p className="eyebrow text-orange/80">Steel-frame SIP construction</p>
               <h1 className="mt-3 max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl">
@@ -323,26 +338,44 @@ export default function StructuralInsulatedPanelBuildingsPage() {
               </div>
             </div>
 
-            <aside className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm" aria-label="SIP project starting point">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange">
-                Start with the project
-              </p>
-              <p className="mt-3 font-heading text-2xl font-bold">One coordinated feasibility conversation</p>
-              <dl className="mt-6 space-y-4 text-sm">
-                <div>
-                  <dt className="font-bold text-white">Property</dt>
-                  <dd className="mt-1 text-white/70">Location, use, site conditions, access, and utilities</dd>
+            <div className="grid gap-4">
+              <figure className="overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-soft">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={primaryImagePath}
+                    alt="Completed home from a Safe Room Designs structural insulated panel project"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 38vw, 100vw"
+                  />
                 </div>
-                <div>
-                  <dt className="font-bold text-white">Building</dt>
-                  <dd className="mt-1 text-white/70">Space needs, plans, system, finishes, and building services</dd>
-                </div>
-                <div>
-                  <dt className="font-bold text-white">Project path</dt>
-                  <dd className="mt-1 text-white/70">Design, engineering, permitting, scope, and construction</dd>
-                </div>
-              </dl>
-            </aside>
+                <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-5 text-white/65">
+                  Completed-home example. Project imagery supplied by Safe Room Designs.
+                </figcaption>
+              </figure>
+
+              <aside className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm" aria-label="SIP project starting point">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange">
+                  Start with the project
+                </p>
+                <p className="mt-3 font-heading text-2xl font-bold">One coordinated feasibility conversation</p>
+                <dl className="mt-6 space-y-4 text-sm">
+                  <div>
+                    <dt className="font-bold text-white">Property</dt>
+                    <dd className="mt-1 text-white/70">Location, use, site conditions, access, and utilities</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-white">Building</dt>
+                    <dd className="mt-1 text-white/70">Space needs, plans, system, finishes, and building services</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-white">Project path</dt>
+                    <dd className="mt-1 text-white/70">Design, engineering, permitting, scope, and construction</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
@@ -421,28 +454,18 @@ export default function StructuralInsulatedPanelBuildingsPage() {
                 Panelized construction can move enclosure work into a more planned process. It still depends on a coordinated structure, openings, building services, site work, and project-specific design.
               </p>
 
-              <figure className="mt-8 rounded-2xl border border-white/15 bg-white/5 p-6">
-                <div
-                  className="grid min-h-40 grid-cols-[0.32fr_1fr_0.32fr] gap-2"
-                  role="img"
-                  aria-label="Conceptual cross-section of a generic structural insulated panel with an insulating core between two structural facings"
-                >
-                  <div className="flex items-center justify-center rounded-lg border border-white/25 bg-white/15 p-2">
-                    <span className="-rotate-90 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-white/80">
-                      Facing
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-center rounded-lg border border-orange/40 bg-orange/15 p-4 text-center">
-                    <span className="font-heading text-lg font-bold text-white">Insulating core</span>
-                  </div>
-                  <div className="flex items-center justify-center rounded-lg border border-white/25 bg-white/15 p-2">
-                    <span className="rotate-90 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-white/80">
-                      Facing
-                    </span>
-                  </div>
+              <figure className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-white/5">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/sip/steel-frame-building-assembly.webp"
+                    alt="Two-story light-gauge steel framing assembled indoors"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 32vw, 100vw"
+                  />
                 </div>
-                <figcaption className="mt-4 text-xs leading-5 text-white/60">
-                  Generic SIP anatomy, shown for explanation only. Project documents define the selected system, components, frame, connections, and interfaces.
+                <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-5 text-white/60">
+                  Example steel framing imagery supplied by Safe Room Designs. Project documents define the final frame, panels, fasteners, connections, and interfaces.
                 </figcaption>
               </figure>
             </div>
