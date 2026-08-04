@@ -9,7 +9,7 @@ import { seoTitle } from "@/lib/seo";
 export const metadata: Metadata = {
   title: seoTitle("Florida Build-to-Rent & Major Rehab Project Review"),
   description:
-    "Discuss Florida build-to-rent, major rehabilitation, and select addition projects with Seacoast. Statewide review is available for larger contracts.",
+    "Discuss Florida build-to-rent, major rehabilitation, panelized building, and select addition projects with Seacoast. Statewide review is available for larger contracts.",
   alternates: { canonical: "/capital-partners" },
 };
 
@@ -39,6 +39,18 @@ const projectTypes = [
       "Property-condition, structural, interior, and exterior scope review",
       "Construction planning around occupied or phased work",
       "Storm restoration and multi-trade rehabilitation experience",
+    ],
+  },
+  {
+    eyebrow: "Where applicable",
+    title: "Panelized housing and buildings",
+    body: "Evaluate repeatable structural insulated panel concepts around the site, plans, product mix, engineering, construction value, phasing, and permit path.",
+    href: "/services/structural-insulated-panel-buildings",
+    linkLabel: "Explore SIP buildings",
+    points: [
+      "Single-building and repeatable-program review",
+      "System documentation and design responsibilities confirmed by project",
+      "Construction fit reviewed separately from legal or investment eligibility",
     ],
   },
   {
@@ -345,7 +357,7 @@ export default function CapitalPartnersPage() {
           <p className="mt-4 max-w-3xl text-text-secondary">
             These are construction categories, not legal classifications under H.R. 6644. Seacoast will confirm whether the scope, location, schedule, and current capacity are a fit; the capital partner and its counsel should determine statutory eligibility.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {projectTypes.map((o) => (
               <div key={o.title} className="flex flex-col rounded-2xl bg-white p-7 shadow-soft">
                 <p className="text-xs font-bold uppercase tracking-widest text-orange">{o.eyebrow}</p>

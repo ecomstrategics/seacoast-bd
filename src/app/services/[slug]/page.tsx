@@ -262,6 +262,7 @@ const slugToServiceTypeKeywords: Record<string, string[]> = {
   "storm-damage-repair": ["storm", "hurricane", "damage", "repair"],
   "storm-preparedness": ["storm", "hurricane"],
   "emergency-response": ["storm", "hurricane"],
+  "metal-buildings": [],
 };
 
 const serviceMetadata: Record<string, { title: string; description: string }> = {
@@ -327,11 +328,11 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
   },
   "metal-buildings": {
     title: "Metal Buildings & Pole Barns in Southwest Florida",
-    description: "Pole barns, barndominiums, and metal buildings with insulation and metal-panel roofing options for residential and commercial sites.",
+    description: "Pole barns, barndominiums, and metal buildings with project-specific insulation and metal-panel roofing options for residential and commercial sites.",
   },
   carports: {
     title: "Carports & Metal Roof Structures in Southwest Florida",
-    description: "New carport structures and repairs with insulated-panel and metal-roof options for Florida homes, businesses, and communities.",
+    description: "New carport structures and repairs with metal-roof and project-specific enclosure options for Florida homes, businesses, and communities.",
   },
   "thermal-drone-inspections": {
     title: "Thermal Drone Roof Inspections in Southwest Florida",
@@ -341,7 +342,9 @@ const serviceMetadata: Record<string, { title: string; description: string }> = 
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  return services
+    .filter((service) => service.slug !== "structural-insulated-panel-buildings")
+    .map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -866,9 +869,19 @@ const genericCrossSell: Record<string, CrossSellItem[]> = {
     { title: "Storm Damage Repair", href: "/services/storm-damage-repair", blurb: "Document visible enclosure damage and get a construction repair estimate.", icon: "⛈️" },
   ],
   "room-additions": [
+    { title: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings", blurb: "Compare a connected addition with a detached panelized building planned around a custom floor plan.", icon: "🏗️" },
     { title: "Container Guest Houses", href: "/containers/guest-houses", blurb: "Compare a traditional addition with a site- and permit-dependent container option.", icon: "🏡" },
     { title: "Exterior Renovations", href: "/services/exterior-renovations", blurb: "Match a new addition to the rest of your home's exterior.", icon: "🛠️" },
-    { title: "Roofing", href: "/services/roofing", blurb: "Every addition needs a roof that ties into the existing structure.", icon: "🏠" },
+  ],
+  "metal-buildings": [
+    { title: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings", blurb: "Compare a metal structure with a panelized route when enclosed floor-plan flexibility matters.", icon: "🏗️" },
+    { title: "Custom Buildings", href: "/custom-buildings", blurb: "Compare metal, SIP, container, carport, and conventional building paths around the property and use.", icon: "📐" },
+    { title: "Commercial Roofing", href: "/commercial-roofing", blurb: "Coordinate the building and roof-system conversation around the approved design.", icon: "🏠" },
+  ],
+  carports: [
+    { title: "Custom Buildings", href: "/custom-buildings", blurb: "Compare open coverage with fully enclosed building and addition options.", icon: "📐" },
+    { title: "Metal Buildings", href: "/services/metal-buildings", blurb: "Review a larger metal structure when the project needs enclosed utility or workshop space.", icon: "🏭" },
+    { title: "Room Additions", href: "/services/room-additions", blurb: "Consider an addition when the new space must connect directly with the existing building.", icon: "➕" },
   ],
 };
 
@@ -935,11 +948,11 @@ const serviceTypeLists: Record<string, { heading: string; items: string[] }[]> =
   ],
   "metal-buildings": [
     { heading: "Building types", items: ["Pole barns", "Barndominiums", "Steel and metal structures"] },
-    { heading: "Options", items: ["Insulated panels", "Metal panel roofs", "Residential", "Commercial"] },
+    { heading: "Options", items: ["Project-specific insulation", "Metal panel roofs", "Residential", "Commercial"] },
   ],
   carports: [
     { heading: "What we build", items: ["New carport structures", "Carport repairs"] },
-    { heading: "Options", items: ["Insulated panels", "Metal panel roofs", "Residential", "Commercial"] },
+    { heading: "Options", items: ["Project-specific enclosures", "Metal panel roofs", "Residential", "Commercial"] },
   ],
   "thermal-drone-inspections": [
     { heading: "What we inspect", items: ["Roof temperature patterns", "Areas that may warrant further moisture investigation", "Possible insulation or energy-loss patterns", "Visible storm-related conditions"] },

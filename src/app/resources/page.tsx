@@ -7,7 +7,7 @@ import { SchemaScript } from "@/components/Schema";
 export const metadata: Metadata = {
   title: "Southwest Florida Construction Resources",
   description:
-    "Explore Seacoast commercial roofing, project examples, Florida building-code guidance, build-to-rent, major rehabilitation, commercial buildout, H.R. 6644, and investor resources.",
+    "Explore Seacoast custom building comparisons, commercial roofing, project examples, Florida building-code guidance, development, and investor resources.",
   alternates: { canonical: "/resources" },
   robots: { index: true, follow: true },
 };
@@ -32,6 +32,14 @@ const featuredResources = [
 ];
 
 const projectReviewResources = [
+  {
+    href: "/custom-buildings",
+    eyebrow: "Custom buildings",
+    title: "Compare the building path before locking the plan",
+    description:
+      "Compare SIP, container, metal, carport, and conventional-addition options around the property, intended use, site work, and permit path.",
+    linkLabel: "Compare custom building options",
+  },
   {
     href: "/commercial-roofing",
     eyebrow: "Commercial roofing",
@@ -117,9 +125,9 @@ const resourcesSchema = {
   "@id": "https://seacoastbd.com/resources#page",
   name: "Southwest Florida Construction Resources",
   description:
-    "Commercial roofing, project examples, Florida building-code guidance, commercial project guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
+    "Custom building comparisons, commercial roofing, project examples, Florida building-code guidance, commercial project guides, federal housing information, and capital-partner resources from Seacoast Building & Design.",
   url: "https://seacoastbd.com/resources",
-  dateModified: "2026-07-23",
+  dateModified: "2026-08-04",
   mainEntity: {
     "@type": "ItemList",
     itemListElement: [...featuredResources, ...projectReviewResources, ...planningResources].map((resource, index) => ({
@@ -174,9 +182,9 @@ export default function ResourcesPage() {
               Go deeper on the project type your team is evaluating
             </h2>
             <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
-              Each guide covers a different construction conversation, with verified Seacoast facts, relevant completed work, and a clear list of what to bring for project review.
+              Each guide covers a different construction conversation, with verified Seacoast facts, completed work where available, clear evidence boundaries, and a practical list of what to bring for project review.
             </p>
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {projectReviewResources.map((resource) => (
                 <Link
                   key={resource.href}

@@ -9,7 +9,7 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn Seacoast Building & Design's mission and meet the owners of this Florida-certified general and roofing contractor serving homes, businesses, and communities.",
+  description: "Learn Seacoast Building & Design's mission and meet the owners of this Florida-certified general and roofing contractor coordinating exterior work, restoration, and custom buildings.",
 };
 
 const missionPrinciples = [
@@ -38,7 +38,7 @@ export default function AboutPage() {
           <p className="eyebrow">Our story</p>
           <h1 className="mt-4 font-heading text-5xl font-bold">A family-owned contractor focused on Florida properties</h1>
           <p className="mt-5 max-w-2xl text-lg text-white/80">
-            Clear and Chandra Dayland lead Seacoast Building &amp; Design, coordinating roofing, storm repair, exterior renovations, and additions for residential, commercial, and multi-family properties.
+            Clear and Chandra Dayland lead Seacoast Building &amp; Design, coordinating roofing, storm repair, exterior renovations, additions, and site-specific custom buildings for residential, commercial, and multi-family properties.
           </p>
         </div>
       </section>
@@ -72,8 +72,12 @@ export default function AboutPage() {
             <p className="eyebrow">What we do</p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-navy">One team for a coordinated construction scope.</h2>
             <p className="mt-5 leading-8 text-text-secondary">
-              Depending on the agreed scope, Seacoast can coordinate buildouts, major rehabilitation, additions, roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, storm repairs, permits, materials, and documentation.
+              Depending on the agreed scope, Seacoast can coordinate buildouts, major rehabilitation, additions, structural insulated panel and container-based buildings, roofing, gutters, fascia, soffits, siding, windows, doors, enclosures, carports, storm repairs, permits, materials, and documentation.
             </p>
+            <p className="mt-5 leading-8 text-text-secondary">
+              For panelized projects, Seacoast works with <a href="https://saferoomdesigns.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-orange hover:underline">Safe Room Designs<span className="sr-only"> (opens in a new tab)</span></a> to evaluate the building concept and system information while Seacoast coordinates the local project path. Exact roles, engineering, documents, and permitting responsibilities are confirmed in the project scope.
+            </p>
+            <Link href="/custom-buildings" className="mt-5 inline-flex font-bold text-orange hover:underline">Compare custom building options →</Link>
             <p className="mt-5 leading-8 text-text-secondary">
               Our project library includes videos and photos from completed work across the region. It gives property owners a practical way to review our experience before starting a conversation.
             </p>
@@ -166,7 +170,7 @@ export default function AboutPage() {
                 <p className="font-heading font-bold text-navy">What Clear specializes in</p>
                 <ul className="mt-3 grid gap-2 text-text-secondary sm:grid-cols-2">
                   <li>Storm readiness programs for homeowners and communities</li>
-                  <li>Container build-outs for homes, offices, and storage</li>
+                  <li>Custom-building project coordination and related-trade planning</li>
                   <li>Residential and commercial roofing</li>
                   <li>Commercial buildouts, major rehabilitation, and storm restoration</li>
                   <li>Additions and coordinated exterior renovations</li>

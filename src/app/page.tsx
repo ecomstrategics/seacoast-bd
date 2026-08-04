@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
-import { ContainerCard } from "@/components/ContainerCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { SolutionsPillar } from "@/components/SolutionsPillar";
 import { TrustBar } from "@/components/TrustBar";
 import { TrustProofLinks } from "@/components/TrustProofLinks";
-import { containers } from "@/data/containers";
 import { projects } from "@/data/projects";
 import { getServicesByPillar } from "@/data/services";
 import { solutions } from "@/data/solutions";
@@ -17,13 +15,13 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
   title: { absolute: "Seacoast Building & Design | SW Florida Contractor" },
-  description: "Roofing, storm repair, exterior renovations, and commercial roofing across Florida's Gulf Coast. GAF GoldElite™ Commercial Contractor. (941) 500-5431",
+  description: "Roofing, storm repair, exterior renovations, additions, and custom SIP and container building projects across Florida's Gulf Coast. (941) 500-5431",
 };
 
 const pillarBlurbs: Record<string, string> = {
   protect: "Plan before storm season, get help when damage happens, and document the work clearly. One team coordinates the next step across six counties.",
   improve: "Roofing, siding, windows, gutters, and full exterior renovations. One contractor handles the trades so your project keeps moving.",
-  expand: "Container guest houses, offices, pool enclosures, and room additions planned around your property, intended use, and local permitting requirements.",
+  expand: "SIP homes and buildings, custom containers, metal structures, pool enclosures, and room additions planned around your property, intended use, and permit path.",
 };
 
 const missionProofs = [
@@ -78,7 +76,7 @@ export default function Home() {
               Roofing, storm repair, and exterior projects—handled by one local team.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-              Seacoast coordinates roofing, exterior renovations, storm work, and additions for homes, businesses, and communities across six Florida Gulf Coast counties.
+              Seacoast coordinates roofing, exterior renovations, storm work, additions, and custom building projects for homes, businesses, and communities across six Florida Gulf Coast counties.
             </p>
             <p className="mt-5 font-heading text-xl font-bold tracking-widest text-orange uppercase">
               Protect. Improve. Expand.
@@ -212,46 +210,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Container Section */}
+      {/* Custom Buildings Section */}
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
-              <p className="eyebrow">Container builds</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Custom container spaces, planned for your property</h2>
-              <p className="mt-3 max-w-2xl text-text-secondary">Purpose-built container spaces for storage, guest use, offices, and storm planning, designed around the property and local permitting requirements.</p>
+              <p className="eyebrow">Custom buildings</p>
+              <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Choose the building path that fits the property</h2>
+              <p className="mt-3 max-w-3xl text-text-secondary">Compare structural insulated panel construction with container, metal, and conventional options before committing to a footprint or building system.</p>
             </div>
-            <Link href="/containers" className="hidden font-bold text-orange sm:block whitespace-nowrap">Browse all builds &rarr;</Link>
+            <Link href="/custom-buildings" className="hidden whitespace-nowrap font-bold text-orange sm:block">Compare options &rarr;</Link>
+          </div>
+          <div className="mb-8 grid gap-6 lg:grid-cols-2">
+            <Link
+              href="/services/structural-insulated-panel-buildings"
+              className="group grid overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.9fr_1.1fr]"
+            >
+              <div className="relative min-h-64 overflow-hidden bg-navy p-8" aria-hidden="true">
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+                <svg viewBox="0 0 320 240" className="relative h-full w-full text-white" fill="none">
+                  <path d="M42 112 160 43l118 69v92H42v-92Z" stroke="currentColor" strokeWidth="8" strokeLinejoin="round" />
+                  <path d="M82 204v-68h72v68M190 136h48v42h-48z" stroke="#f28c28" strokeWidth="8" strokeLinejoin="round" />
+                  <path d="M160 43v161" stroke="currentColor" strokeWidth="4" strokeDasharray="10 10" opacity=".45" />
+                </svg>
+              </div>
+              <div className="p-7">
+                <p className="eyebrow">SIP homes &amp; buildings</p>
+                <h3 className="mt-2 font-heading text-3xl font-bold text-navy">A flexible new-building route</h3>
+                <p className="mt-4 leading-7 text-text-secondary">Evaluate homes, detached spaces, and selected commercial buildings around the intended use, site, engineering, utilities, and permitting path.</p>
+                <p className="mt-5 font-bold text-orange transition group-hover:text-copper">Explore SIP construction &rarr;</p>
+              </div>
+            </Link>
+            <Link
+              href="/containers"
+              className="group grid overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.9fr_1.1fr]"
+            >
+              <div className="relative min-h-64">
+                <Image
+                  src="/images/containers/containers-hero.webp"
+                  alt="Representative container-based guest-space design in a Florida setting"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 22vw, (min-width: 768px) 45vw, 100vw"
+                />
+              </div>
+              <div className="p-7">
+                <p className="eyebrow">Container buildings</p>
+                <h3 className="mt-2 font-heading text-3xl font-bold text-navy">Build from a defined steel shell</h3>
+                <p className="mt-4 leading-7 text-text-secondary">Explore storage, office, workshop, and guest-space concepts, with access, delivery, site work, utilities, engineering, and lawful use checked for the property.</p>
+                <p className="mt-5 font-bold text-orange transition group-hover:text-copper">Browse container options &rarr;</p>
+              </div>
+            </Link>
           </div>
           <Link
             href="/containers/prebuilt"
-            className="group mb-8 grid overflow-hidden rounded-2xl border border-orange/25 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.7fr_1.3fr]"
+            className="group grid overflow-hidden rounded-2xl border border-orange/25 bg-white shadow-soft transition hover:-translate-y-1 md:grid-cols-[0.55fr_1.45fr]"
           >
             <div className="relative min-h-56 md:min-h-full">
               <Image
                 src="/images/containers/prebuilt/prebuilt-exterior-side.webp"
-                alt="Actual available 20-foot mobile container mounted on a tandem-axle trailer"
+                alt="Built 20-foot mobile container mounted on a tandem-axle trailer"
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 35vw, 100vw"
               />
             </div>
             <div className="p-6 md:p-8">
-              <p className="eyebrow">Available now</p>
+              <p className="eyebrow">Built unit listing</p>
               <h3 className="mt-2 font-heading text-3xl font-bold text-navy">20-Foot Mobile Container</h3>
               <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
-                Tour the actual unit inside and out. It was last published at $35,000; contact Seacoast to confirm the current price, availability, condition, sale terms, and transport details.
+                Tour the photographed unit inside and out. It was last published at $35,000; contact Seacoast to confirm the current price, availability, condition, sale terms, and transport details.
               </p>
               <p className="mt-5 font-bold text-orange transition group-hover:text-copper">See the listing &rarr;</p>
             </div>
           </Link>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {containers.map((container) => (
-              <ContainerCard key={container.slug} container={container} />
-            ))}
-          </div>
-          <div className="mt-8 text-center sm:hidden">
-            <Link href="/containers" className="font-bold text-orange">Browse all container builds &rarr;</Link>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
+            <Link href="/services/metal-buildings" className="text-orange hover:text-copper">Metal buildings &rarr;</Link>
+            <Link href="/services/room-additions" className="text-orange hover:text-copper">Room additions &rarr;</Link>
+            <Link href="/custom-buildings" className="text-orange hover:text-copper">Compare every option &rarr;</Link>
           </div>
         </div>
       </section>
@@ -295,13 +331,14 @@ export default function Home() {
           <div className="grid gap-7 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
             <div>
               <p className="eyebrow text-orange">For developers and capital partners</p>
-              <h2 className="mt-2 font-heading text-3xl font-bold">Planning build-to-rent, major rehabilitation, or an addition?</h2>
+              <h2 className="mt-2 font-heading text-3xl font-bold">Planning build-to-rent, repeatable custom buildings, major rehabilitation, or an addition?</h2>
               <p className="mt-3 max-w-3xl leading-7 text-white/75">
                 Seacoast is currently reviewing both large and small opportunities, with a regular six-county service area and statewide review for contracts of $100,000 or more. Bring the team in early to discuss scope, construction value, schedule, and project fit.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">
               <Link href="/capital-partners" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-copper">Capital Partners</Link>
+              <Link href="/custom-buildings" className="rounded-full border border-white/25 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-navy">Custom Buildings</Link>
               <Link href="/road-to-housing-act" className="rounded-full border border-white/25 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-navy">H.R. 6644 Guide</Link>
             </div>
           </div>

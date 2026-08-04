@@ -10,7 +10,7 @@ import { solutions } from "@/data/solutions";
 export const metadata: Metadata = {
   title: "Solutions: Protect. Improve. Expand.",
   description:
-    "Protect your property from storms, improve its exterior, or expand with containers and additions. Find the right Seacoast solution for your Florida project.",
+    "Protect your property from storms, improve its exterior, or expand with SIP, container, metal, enclosure, and addition options from Seacoast.",
 };
 
 export default function SolutionsPage() {
@@ -20,7 +20,7 @@ export default function SolutionsPage() {
     improve:
       "Coordinate roofing, siding, gutters, windows, and exterior repairs under one agreed scope.",
     expand:
-      "Explore container-based rooms and offices, pool enclosures, and room additions based on your site and goals.",
+      "Compare SIP, container, metal, enclosure, and addition paths around the property, intended use, engineering, and permit process.",
   };
 
   return (
@@ -43,7 +43,7 @@ export default function SolutionsPage() {
             name: "Expand: Property Solutions",
             description: pillarBlurbs.expand,
             url: "/solutions/expand",
-            serviceType: "Container Builds and Property Expansion",
+            serviceType: "Custom Buildings and Property Expansion",
           }),
         ]}
       />

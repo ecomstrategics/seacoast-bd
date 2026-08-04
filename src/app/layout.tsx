@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Seacoast Building & Design | Southwest Florida Contractor",
     template: "%s | Seacoast Building & Design",
   },
-  description: "Full-service roofing, exterior renovation, storm repair, and building services across Southwest Florida. GAF GoldElite™ Commercial Contractor. (941) 500-5431",
+  description: "Roofing, exterior renovation, storm repair, additions, and site-specific custom building services across Southwest Florida. (941) 500-5431",
   alternates: { canonical: "./" },
   openGraph: {
     type: "website",

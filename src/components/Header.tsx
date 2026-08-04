@@ -7,6 +7,12 @@ import { primaryNav, solutionsMega, type NavItem } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
 const pillarAccents = { protect: "text-navy", improve: "text-navy", expand: "text-navy" } as const;
+const mobileCustomBuildingHrefs = new Set([
+  "/custom-buildings",
+  "/services/structural-insulated-panel-buildings",
+  "/containers",
+]);
+const mobileExpandLinks = solutionsMega.expand.filter((link) => !mobileCustomBuildingHrefs.has(link.href));
 const headerNav: NavItem[] = [
   ...primaryNav,
   {
@@ -24,6 +30,8 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
+  const mobileMenuRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!openDropdown) return;
@@ -40,6 +48,69 @@ export function Header() {
       document.removeEventListener("mousedown", onClickOutside);
     };
   }, [openDropdown]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    const inertStates = Array.from(document.body.children)
+      .filter((element): element is HTMLElement =>
+        element instanceof HTMLElement &&
+        !["HEADER", "SCRIPT", "NOSCRIPT", "STYLE"].includes(element.tagName),
+      )
+      .map((element) => ({ element, inert: element.inert }));
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        requestAnimationFrame(() => mobileToggleRef.current?.focus());
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const menuItems = Array.from(
+        mobileMenuRef.current?.querySelectorAll<HTMLElement>("a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])") ?? [],
+      );
+      const focusable = mobileToggleRef.current ? [mobileToggleRef.current, ...menuItems] : menuItems;
+      if (focusable.length === 0) return;
+
+      const activeIndex = focusable.indexOf(document.activeElement as HTMLElement);
+      if (activeIndex === -1) {
+        event.preventDefault();
+        focusable[0].focus();
+      } else if (event.shiftKey && activeIndex === 0) {
+        event.preventDefault();
+        focusable[focusable.length - 1].focus();
+      } else if (!event.shiftKey && activeIndex === focusable.length - 1) {
+        event.preventDefault();
+        focusable[0].focus();
+      }
+    }
+
+    document.body.style.overflow = "hidden";
+    inertStates.forEach(({ element }) => {
+      element.inert = true;
+    });
+    document.addEventListener("keydown", onKeyDown);
+    requestAnimationFrame(() => mobileMenuRef.current?.querySelector<HTMLElement>("a[href]")?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      inertStates.forEach(({ element, inert }) => {
+        element.inert = inert;
+      });
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 1280px)");
+    function closeOnDesktop(event: MediaQueryListEvent | MediaQueryList) {
+      if (event.matches) setMobileOpen(false);
+    }
+    closeOnDesktop(desktopQuery);
+    desktopQuery.addEventListener("change", closeOnDesktop);
+    return () => desktopQuery.removeEventListener("change", closeOnDesktop);
+  }, []);
 
   function openMenu(key: string) {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -113,7 +184,7 @@ export function Header() {
                   }}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
+                    className="flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === "solutions"}
                     onFocus={() => openMenu("solutions")}
@@ -178,7 +249,7 @@ export function Header() {
                   }}
                 >
                   <button
-                    className="flex items-center gap-1 rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
+                    className="flex items-center gap-1 whitespace-nowrap rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring"
                     aria-haspopup="true"
                     aria-expanded={openDropdown === key}
                     onFocus={() => openMenu(key)}
@@ -217,7 +288,7 @@ export function Header() {
             }
 
             return (
-              <Link key={item.href} href={item.href} className="rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring">
+              <Link key={item.href} href={item.href} className="whitespace-nowrap rounded-lg px-3 py-2 hover:bg-white/10 hover:text-orange focus-ring">
                 {item.label}
               </Link>
             );
@@ -226,11 +297,12 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 xl:flex">
-          <Link href="/contact" className="rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Request a Quote</Link>
+          <Link href="/contact" className="whitespace-nowrap rounded-full bg-orange-deep px-5 py-3 text-center text-sm font-bold text-white shadow-soft transition hover:bg-copper">Request a Quote</Link>
         </div>
 
         {/* Mobile hamburger */}
         <button
+          ref={mobileToggleRef}
           className="rounded-lg border border-white/25 px-3 py-2 text-white xl:hidden focus-ring"
           aria-expanded={mobileOpen}
           aria-controls="mobile-menu"
@@ -243,7 +315,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white xl:hidden" aria-label="Mobile navigation">
+        <nav ref={mobileMenuRef} id="mobile-menu" className="max-h-[calc(100dvh-120px)] overflow-y-auto border-t border-white/10 bg-navy px-4 pb-24 text-white xl:hidden" aria-label="Mobile navigation">
           <div className="container space-y-1 py-3">
             <p className="px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Protect</p>
             {solutionsMega.protect.map((link) => (
@@ -254,11 +326,14 @@ export function Header() {
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
             <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Expand</p>
-            {solutionsMega.expand.map((link) => (
+            {mobileExpandLinks.map((link) => (
               <Link key={link.href} href={link.href} className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>{link.label}</Link>
             ))}
             <div className="my-3 border-t border-white/10" />
-            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Containers</Link>
+            <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Custom Buildings</p>
+            <Link href="/custom-buildings" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Compare Building Options</Link>
+            <Link href="/services/structural-insulated-panel-buildings" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>SIP Homes &amp; Buildings</Link>
+            <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Container Buildings</Link>
             <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Available 20&apos; Mobile Container</Link>
             <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Financing</Link>
             <Link href="/our-work" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Our Work</Link>

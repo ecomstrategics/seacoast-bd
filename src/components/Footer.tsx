@@ -24,12 +24,12 @@ const pillarLinks = {
     { label: "Solar Services", href: "/services/solar-services" },
   ],
   expand: [
+    { label: "Custom Buildings", href: "/custom-buildings" },
+    { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
     { label: "Pool Enclosures & Lanais", href: "/services/pool-enclosures-lanais" },
     { label: "Room Additions", href: "/services/room-additions" },
     { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },
     { label: "Carports & Metal Roofs", href: "/services/carports" },
-    { label: "Container Guest Houses", href: "/containers/guest-houses" },
-    { label: "Container Offices", href: "/containers/offices-workshops" },
   ],
 };
 
@@ -59,7 +59,7 @@ export function Footer() {
         {/* Company */}
         <div className="sm:col-span-2 lg:col-span-1">
           <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
-          <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, and additions for Florida Gulf Coast homes, businesses, and communities.</p>
+          <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, additions, and custom buildings for Florida Gulf Coast homes, businesses, and communities.</p>
           <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
           <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
           <p className="mt-2 text-sm text-white/70">
@@ -114,7 +114,7 @@ export function Footer() {
               <li key={link.href}><Link href={link.href} className="hover:text-white">{link.label}</Link></li>
             ))}
           </ul>
-          <h3 className="mt-6 font-heading font-bold text-white/90">Containers</h3>
+          <h3 className="mt-6 font-heading font-bold text-white/90">Container Buildings</h3>
           <ul className="mt-3 space-y-2 text-sm text-white/75">
             <li><Link href="/containers/prebuilt" className="hover:text-white">Available 20&apos; Mobile Container</Link></li>
             {containers.map((c) => (

@@ -8,7 +8,7 @@ import { serviceArea } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Service Areas",
-  description: "Ask about construction across Seacoast's six-county Gulf Coast service area. Contracts of $100,000 or more may be evaluated throughout Florida.",
+  description: "Ask about roofing, exterior work, storm repair, and custom building projects across Seacoast's six-county Gulf Coast service area.",
 };
 
 export default function ServiceAreaIndexPage() {
@@ -21,10 +21,11 @@ export default function ServiceAreaIndexPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Areas" }]} />
           <p className="eyebrow">Where we work</p>
-          <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Roofing and exterior services across Southwest Florida</h1>
+          <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Construction and custom building services across Southwest Florida</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-            Seacoast serves six counties. Send your property address and project type so we can confirm
-            coverage, scheduling, and the right next step. Contracts of $100,000 or more can also be evaluated elsewhere in Florida.
+            From roofing and exterior work to site-specific custom buildings, Seacoast serves six counties.
+            Send the property address and project type so we can confirm coverage, scheduling, and the right next step.
+            Contracts of $100,000 or more can also be evaluated elsewhere in Florida.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Request a Quote</Link>

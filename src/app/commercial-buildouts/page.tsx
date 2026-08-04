@@ -285,6 +285,9 @@ export default function CommercialBuildoutsPage() {
               <Link href="/commercial-roofing" className="text-orange hover:underline">
                 Explore commercial roofing →
               </Link>
+              <Link href="/custom-buildings" className="text-orange hover:underline">
+                Compare a new custom building →
+              </Link>
               <Link href="/our-work" className="text-orange hover:underline">
                 Browse completed projects →
               </Link>

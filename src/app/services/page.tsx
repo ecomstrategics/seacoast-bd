@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Contractor Services in Southwest Florida",
-  description: "Roofing, siding, gutters, windows, doors, storm repair, cleaning, enclosures, and exterior work. Seacoast is a GAF GoldElite™ Commercial Contractor.",
+  description: "Roofing, siding, storm repair, exterior work, additions, and custom structural insulated panel buildings from Seacoast in Southwest Florida.",
 };
 
 export default function ServicesPage() {
@@ -17,11 +17,11 @@ export default function ServicesPage() {
           <Breadcrumbs tone="light" items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
           <p className="eyebrow">Services</p>
           <h1 className="mt-2 font-heading text-5xl font-bold text-navy">
-            Roofing, storm repair, and exterior services in Southwest Florida
+            Contractor services in Southwest Florida
           </h1>
           <p className="mt-5 max-w-3xl text-lg text-text-secondary">
             Tell us what needs to be repaired, replaced, cleaned, or built. Seacoast works with homes,
-            commercial properties, condominiums, and HOAs across its service area.
+            commercial properties, condominiums, HOAs, and site-specific new-building projects across its service area.
           </p>
           <div className="mt-8 max-w-3xl rounded-2xl border border-navy/10 bg-white p-6 shadow-soft">
             <h2 className="font-heading text-2xl font-bold text-navy">Not sure which service fits?</h2>

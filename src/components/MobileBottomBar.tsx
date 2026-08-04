@@ -3,9 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+function projectSlugForPath(pathname: string) {
+  if (pathname === "/custom-buildings") return "custom-buildings";
+  if (pathname === "/containers") return "containers";
+
+  const containerSlug = pathname.match(/^\/containers\/([^/]+)$/)?.[1];
+  if (containerSlug === "prebuilt") return "prebuilt-containers";
+  if (containerSlug === "compare") return "containers";
+  if (containerSlug) return containerSlug;
+
+  return pathname.match(/^\/services\/([^/]+)$/)?.[1];
+}
+
 export function MobileBottomBar() {
   const pathname = usePathname();
   const onContactPage = pathname === "/contact";
+  const projectSlug = projectSlugForPath(pathname);
+  const quoteHref = projectSlug ? `/contact?service=${encodeURIComponent(projectSlug)}` : "/contact";
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 border-t border-white/20 bg-navy px-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 md:hidden">
@@ -13,7 +27,7 @@ export function MobileBottomBar() {
         Call Now
       </a>
       <Link
-        href={onContactPage ? "#quote-form" : "/contact"}
+        href={onContactPage ? "#quote-form" : quoteHref}
         className="rounded-r-full bg-copper px-4 py-3 text-center text-sm font-bold text-white"
       >
         {onContactPage ? "Go to Form" : "Request a Quote"}
