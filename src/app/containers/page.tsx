@@ -136,13 +136,13 @@ export default function ContainersLandingPage() {
             </div>
             <div className="p-7 md:p-10">
               <div className="inline-flex rounded-full bg-success/10 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-success">
-                Available — July 2026
+                Available now
               </div>
               <p className="eyebrow mt-6">Actual unit for sale</p>
               <h2 className="mt-2 font-heading text-4xl font-bold text-navy">20-Foot Mobile Container</h2>
-              <p className="mt-4 text-2xl font-bold text-orange-deep">Last published at $35,000</p>
+              <p className="mt-4 text-2xl font-bold text-orange-deep">Available for $35,000</p>
               <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
-                See real exterior and interior photos of a built-out 20-foot unit mounted on a tandem-axle trailer, with glass doors and windows, a kitchenette, wet bath, and flexible interior space. Confirm the current price and sale terms with Seacoast.
+                See real exterior and interior photos of a built-out 20-foot unit mounted on a tandem-axle trailer, with glass doors and windows, a kitchenette, wet bath, and flexible interior space. Confirm included equipment, present condition, sale terms, and transport arrangements with Seacoast.
               </p>
               <p className="mt-6 font-bold text-orange transition group-hover:text-copper">View the available unit &rarr;</p>
             </div>

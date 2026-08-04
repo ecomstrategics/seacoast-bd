@@ -282,7 +282,7 @@ export default function Home() {
               <p className="eyebrow">Built unit listing</p>
               <h3 className="mt-2 font-heading text-3xl font-bold text-navy">20-Foot Mobile Container</h3>
               <p className="mt-4 max-w-2xl leading-7 text-text-secondary">
-                Tour the photographed unit inside and out. It was last published at $35,000; contact Seacoast to confirm the current price, availability, condition, sale terms, and transport details.
+                Tour the photographed unit inside and out. It is available and offered at $35,000. Contact Seacoast to confirm included equipment, present condition, sale terms, and transport arrangements.
               </p>
               <p className="mt-5 font-bold text-orange transition group-hover:text-copper">See the listing &rarr;</p>
             </div>

@@ -9,7 +9,7 @@ import { seoDescription, seoTitle } from "@/lib/seo";
 
 const listingPath = "/containers/prebuilt";
 const listingDescription =
-  "See real exterior and interior photos of Seacoast's available 20-foot mobile container in Southwest Florida. Last published at $35,000; confirm current sale details.";
+  "See real exterior and interior photos of Seacoast's available 20-foot mobile container in Southwest Florida, offered at $35,000. Confirm included items and transport details.";
 
 export const metadata: Metadata = {
   title: seoTitle("20-Foot Mobile Container for Sale"),
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
 
 const quickFacts = [
   { label: "Container size", value: "20 feet" },
-  { label: "Last published price", value: "$35,000" },
-  { label: "Current status", value: "Available" },
+  { label: "Price", value: "$35,000" },
+  { label: "Current status", value: "Available now" },
 ];
 
 const interiorGallery = [
@@ -97,7 +97,7 @@ const visibleFeatures = [
 ];
 
 const confirmationItems = [
-  "Current availability, price, payment terms, and everything included in the sale",
+  "That the unit is still available, the $35,000 price, payment terms, and everything included in the sale",
   "Present finish condition, equipment operation, warranties, and any remaining work",
   "Trailer title, registration, brakes, axle and tire condition, roadworthiness, and towing requirements",
   "Delivery distance, route, permits, lifting or placement equipment, and transport cost",
@@ -127,12 +127,12 @@ const faqs: FAQItem[] = [
   {
     question: "Is this exact 20-foot container currently available?",
     answer:
-      "It is listed as available as of July 2026. Inventory can change, so contact Seacoast before traveling or making plans to confirm the unit is still available, the current price, and the sale terms.",
+      "Yes. This unit is currently available and offered for sale at $35,000. Inventory can change, so contact Seacoast before traveling or making plans to confirm it has not sold and to review the sale terms.",
   },
   {
-    question: "What did the $35,000 listing show?",
+    question: "What is included in the $35,000 price?",
     answer:
-      "The last published listing showed the container shell, tandem-axle trailer, glass doors and windows, interior finishes, kitchenette, wet bath, accent details, rooftop frame, and exterior equipment. A current written sale agreement must confirm the current price and identify every included item, its condition, and any remaining work.",
+      "The photos show the container shell, tandem-axle trailer, glass doors and windows, interior finishes, kitchenette, wet bath, accent details, rooftop frame, and exterior equipment. The written sale agreement controls what is included. Confirm every included item, its condition, and any remaining work before purchase.",
   },
   {
     question: "Is the trailer ready to tow on public roads?",
@@ -164,6 +164,11 @@ export default function PrebuiltContainersPage() {
               "/images/containers/prebuilt/prebuilt-exterior-side.webp",
               "/images/containers/prebuilt/20ft-mobile-container-kitchenette.webp",
             ],
+            offers: {
+              price: "35000",
+              priceCurrency: "USD",
+              availability: "https://schema.org/InStock",
+            },
           }),
           faqSchema(faqs),
         ]}
@@ -182,7 +187,7 @@ export default function PrebuiltContainersPage() {
             <div>
               <p className="eyebrow">Available container inventory</p>
               <div className="mt-4 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-bold text-white">
-                Available — last confirmed July 2026
+                Available now
               </div>
               <h1 className="mt-5 max-w-3xl font-heading text-4xl font-bold leading-tight md:text-5xl">
                 20-Foot Mobile Container for Sale
@@ -191,10 +196,10 @@ export default function PrebuiltContainersPage() {
                 This is the actual unit shown in the photos: a built-out 20-foot container mounted on a tandem-axle trailer, with glass doors and windows, a kitchenette, a compact wet bath, and two flexible interior areas.
               </p>
               <div className="mt-6 rounded-2xl border border-white/15 bg-white/5 p-5">
-                <p className="text-sm font-bold uppercase tracking-widest text-white/70">Last published asking price</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-white/70">Price</p>
                 <p className="mt-2 font-heading text-4xl font-bold text-orange">$35,000</p>
                 <p className="mt-2 text-sm leading-6 text-white/70">
-                  Confirm the current price, availability, included equipment, sale terms, and transport arrangements with Seacoast before making plans.
+                  The unit is currently available. Confirm included equipment, present condition, payment terms, and transport arrangements in writing. Delivery, placement, site work, utilities, permits, and destination approvals are separate unless the sale agreement says otherwise.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
@@ -350,7 +355,7 @@ export default function PrebuiltContainersPage() {
       <CTASection
         variant="orange"
         heading="Want to see whether this unit fits your property?"
-        subtext="Send the destination address and intended use. Seacoast can confirm current availability, sale details, transport questions, and the next property checks."
+        subtext="Send the destination address and intended use. Seacoast can confirm the unit is still available, review the $35,000 price and sale details, answer transport questions, and outline the next property checks."
         buttonLabel="Ask About This Unit"
         buttonHref="/contact?service=prebuilt-containers"
       />
