@@ -507,24 +507,28 @@ export default function CustomBuildingsPage() {
             This comparison is a starting point, not a feasibility decision. The parcel, municipality,
             association rules, intended use, design, and selected products can change the project requirements.
           </p>
+          <p id="comparison-scroll-instructions" className="mt-6 text-sm leading-6 text-text-secondary min-[1152px]:hidden">
+            On narrower screens, swipe or scroll horizontally to compare all five building options.
+          </p>
           <div
-            className="mt-8 overflow-x-auto rounded-2xl border border-white/10 bg-white shadow-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-orange/40"
+            className="mt-3 overflow-x-auto overscroll-x-contain rounded-2xl border border-white/10 bg-white shadow-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-orange/40 min-[1152px]:mt-8"
             role="region"
             aria-label="Scrollable comparison of custom building options"
+            aria-describedby="comparison-scroll-instructions"
             tabIndex={0}
           >
-            <table className="w-full min-w-[1240px] border-collapse text-left text-sm">
+            <table className="w-full min-w-[1100px] table-fixed border-collapse text-left text-sm min-[1152px]:min-w-0">
               <caption className="sr-only">
                 Comparison of structural insulated panel buildings, container buildings, metal buildings,
                 carports, and room additions
               </caption>
               <thead className="bg-navy text-white">
                 <tr>
-                  <th scope="col" className="w-48 p-4 font-heading text-base">
+                  <th scope="col" className="sticky left-0 z-20 w-36 border-r border-white/15 bg-navy p-4 font-heading text-base sm:w-40 min-[1152px]:w-44">
                     Planning factor
                   </th>
                   {buildingOptions.map((option) => (
-                    <th key={option.name} scope="col" className="min-w-52 p-4 font-heading text-base">
+                    <th key={option.name} scope="col" className="p-4 font-heading text-base">
                       <Link href={option.href} className="hover:text-orange hover:underline">
                         {option.name}
                       </Link>
@@ -535,7 +539,7 @@ export default function CustomBuildingsPage() {
               <tbody>
                 {comparisonRows.map((row) => (
                   <tr key={row.factor} className="border-b border-navy/10 align-top last:border-0">
-                    <th scope="row" className="sticky left-0 z-10 bg-cool-gray p-4 font-semibold text-navy">
+                    <th scope="row" className="sticky left-0 z-10 border-r border-navy/10 bg-cool-gray p-4 font-semibold text-navy">
                       {row.factor}
                     </th>
                     <td className="p-4 leading-6 text-text-secondary">{row.sip}</td>
@@ -548,9 +552,6 @@ export default function CustomBuildingsPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-sm leading-6 text-text-secondary md:hidden">
-            Swipe or use the arrow keys inside the table to review every option.
-          </p>
         </div>
       </section>
 
