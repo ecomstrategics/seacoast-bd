@@ -59,15 +59,16 @@ export default function Home() {
       <SchemaScript schema={localBusinessSchema()} />
 
       {/* Hero */}
-      <section className="relative isolate overflow-hidden bg-navy py-14 md:py-24 text-white">
+      <section className="home-hero relative isolate overflow-hidden bg-navy py-10 text-white md:py-24">
         <Image
           src="/images/home-hero-waterfront-condo-roof.webp"
           alt="Aerial view of a large waterfront Southwest Florida condo building with a new white reflective roof installed by Seacoast Building & Design"
           fill
           priority
-          className="object-cover"
+          className="home-hero__image object-cover"
           sizes="100vw"
         />
+        <div className="home-hero__light" aria-hidden />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/95" aria-hidden />
         <div className="container relative grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
@@ -75,11 +76,13 @@ export default function Home() {
             <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-6xl">
               Roofing, storm repair, and exterior projects—handled by one local team.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80 md:mt-6">
               Seacoast coordinates roofing, exterior renovations, storm work, additions, and custom building projects for homes, businesses, and communities across six Florida Gulf Coast counties.
             </p>
-            <p className="mt-5 font-heading text-xl font-bold tracking-widest text-orange uppercase">
-              Protect. Improve. Expand.
+            <p className="home-hero__promise mt-4 font-heading text-xl font-bold tracking-widest text-orange uppercase md:mt-5">
+              <span className="home-hero__promise-word">Protect.</span>{" "}
+              <span className="home-hero__promise-word">Improve.</span>{" "}
+              <span className="home-hero__promise-word">Expand.</span>
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact" className="rounded-full bg-orange-deep px-6 py-3 text-center font-bold text-white hover:bg-copper transition">Request a Quote</Link>

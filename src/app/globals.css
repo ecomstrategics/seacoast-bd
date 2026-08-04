@@ -50,6 +50,81 @@ summary:focus-visible {
 }
 
 /*
+  Homepage hero motion is a one-time arrival sequence, not ambient movement.
+  The photo settles by a few percent while a soft coastal-light wash passes
+  behind the contrast overlay. The mission words follow with a small lift.
+  Base styles remain fully readable; motion is added only when requested.
+*/
+.home-hero__image {
+  transform-origin: 50% 42%;
+}
+
+.home-hero__light {
+  position: absolute;
+  inset: -30% -45%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    108deg,
+    transparent 38%,
+    rgba(255, 160, 122, 0.18) 48%,
+    rgba(255, 255, 255, 0.12) 52%,
+    transparent 62%
+  );
+  transform: translate3d(-18%, 0, 0);
+}
+
+.home-hero__promise-word {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__image {
+    animation: home-hero-photo-settle 10s cubic-bezier(0.2, 0.65, 0.2, 1) both;
+  }
+
+  .home-hero__light {
+    animation: home-hero-light-sweep 2.6s cubic-bezier(0.22, 1, 0.36, 1) 0.25s 1 both;
+  }
+
+  .home-hero__promise-word {
+    animation: home-hero-word-arrival 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .home-hero__promise-word:nth-child(1) { animation-delay: 0.18s; }
+  .home-hero__promise-word:nth-child(2) { animation-delay: 0.34s; }
+  .home-hero__promise-word:nth-child(3) { animation-delay: 0.5s; }
+}
+
+@keyframes home-hero-photo-settle {
+  from { transform: scale(1.035); }
+  to { transform: scale(1); }
+}
+
+@keyframes home-hero-light-sweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-18%, 0, 0);
+  }
+  34% { opacity: 0.72; }
+  100% {
+    opacity: 0;
+    transform: translate3d(18%, 0, 0);
+  }
+}
+
+@keyframes home-hero-word-arrival {
+  from {
+    opacity: 0.72;
+    transform: translate3d(0, 0.35rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*
   Dark-band text contrast layer.
   Sections that became dark navy carry the `.dark-band` class. Inside them,
   any heading/body text that was authored as brand-navy or secondary-gray
