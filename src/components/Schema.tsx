@@ -3,6 +3,35 @@
 
 export type SchemaObject = Record<string, unknown>;
 
+const IMAGE_RIGHTS_URL = "https://seacoastbd.com/image-rights";
+
+export function imageLicenseMetadata({
+  creatorName,
+  creatorUrl,
+  creatorDescription,
+  creditText,
+  copyrightNotice,
+}: {
+  creatorName: string;
+  creatorUrl?: string;
+  creatorDescription?: string;
+  creditText: string;
+  copyrightNotice: string;
+}): SchemaObject {
+  return {
+    creator: {
+      "@type": "Organization",
+      name: creatorName,
+      ...(creatorUrl ? { url: creatorUrl } : {}),
+      ...(creatorDescription ? { description: creatorDescription } : {}),
+    },
+    creditText,
+    copyrightNotice,
+    license: `${IMAGE_RIGHTS_URL}#license`,
+    acquireLicensePage: `${IMAGE_RIGHTS_URL}#permissions`,
+  };
+}
+
 export function localBusinessSchema(): SchemaObject {
   return {
     "@context": "https://schema.org",

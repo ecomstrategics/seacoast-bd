@@ -4,7 +4,12 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
-import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
+import {
+  SchemaScript,
+  faqSchema,
+  imageLicenseMetadata,
+  serviceSchema,
+} from "@/components/Schema";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
 const canonicalPath = "/custom-buildings/modular-retail-showrooms";
@@ -202,7 +207,15 @@ const primaryImageSchema = {
   width: 1600,
   height: 900,
   caption: "Partner-supplied concept rendering of a glass-front modular golf-cart showroom.",
-  creditText: "Concept rendering supplied by Safe Room Designs",
+  ...imageLicenseMetadata({
+    creatorName: "Safe Room Designs",
+    creatorUrl: partnerUrl,
+    creatorDescription:
+      "Responsible supplying organization; the individual photographer or rendering artist was not identified in the source materials.",
+    creditText: "Concept rendering supplied by Safe Room Designs",
+    copyrightNotice:
+      "Used by Seacoast Building & Design with permission. Copyright remains with the applicable rights holder.",
+  }),
   representativeOfPage: true,
 };
 
