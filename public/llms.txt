@@ -24,6 +24,7 @@ GAF verification: [Seacoast's official GAF contractor profile](https://www.gaf.c
 - [Services](https://seacoastbd.com/services): Roofing and thermal inspections, exterior, storm, energy, cleaning, enclosure, addition, and custom building services.
 - [Custom Buildings](https://seacoastbd.com/custom-buildings): A property-first comparison of SIP, container, metal, carport, and conventional-addition paths.
 - [SIP Homes and Buildings](https://seacoastbd.com/services/structural-insulated-panel-buildings): Structural insulated panel building concepts evaluated around the site, intended use, design, engineering, and permit path.
+- [Modular Retail Showrooms](https://seacoastbd.com/custom-buildings/modular-retail-showrooms): Purpose-built modular retail and display concepts evaluated around the operation, brand, module, site, transportation, utilities, accessibility, and approval path.
 - [Service Area](https://seacoastbd.com/service-area): Counties and city pages across Southwest Florida.
 - [About Seacoast](https://seacoastbd.com/about): Company leadership, licenses, service area, and project approach.
 - [Customer Reviews](https://seacoastbd.com/customer-reviews): Direct links to Google and Better Business Bureau feedback.
@@ -89,10 +90,11 @@ As of this review date, the Florida Building Commission identifies the Florida B
 
 ## Custom Buildings and SIP Projects
 
-Last reviewed: August 4, 2026.
+Last reviewed: August 6, 2026.
 
 - [Compare Custom Building Options](https://seacoastbd.com/custom-buildings)
 - [Structural Insulated Panel Homes and Buildings](https://seacoastbd.com/services/structural-insulated-panel-buildings)
+- [Modular Retail Showrooms](https://seacoastbd.com/custom-buildings/modular-retail-showrooms)
 - [Container Planning](https://seacoastbd.com/containers)
 
 Seacoast is the local contractor and project contact for custom building inquiries. Seacoast works with Safe Room Designs, a separate organization, to evaluate steel-frame structural insulated panel building concepts and related system information. The exact roles of Seacoast, Safe Room Designs, the owner, design professionals, suppliers, and the local building department are confirmed in the written project scope.
@@ -100,6 +102,10 @@ Seacoast is the local contractor and project contact for custom building inquiri
 The appropriate construction path depends on the property, intended use, footprint, access, utilities, design priorities, budget, engineering, zoning, permits, and final scope. Applicable plans, engineering, product or system documentation, approvals, and inspection requirements are confirmed during project development and permitting.
 
 A panel system or company name does not automatically make a building a FEMA safe room or establish a wind, impact, fire, flood, or other performance rating. Any such conclusion must be supported by the complete project-specific design and controlling documentation, including openings, connections, foundation, engineering, installation, and required approvals.
+
+The South Beach modular retail showroom is a partner-supplied concept, not a completed Seacoast project or a fixed product specification. The study illustrates an approximately 818-square-foot, purpose-built transportable steel showroom with glazed retail frontage, dedicated customer access, separate personnel access, and rear inventory movement. It does not establish that the concept is an ISO shipping-container conversion or a standalone SIP building. Final dimensions, materials, structural and wall systems, glazing, openings, accessibility, building services, site work, transport, foundation, permits, inspections, price, and schedule are project-specific.
+
+For an ISO container-conversion path, partner-supported fabrication can include laser-cut openings. Applicability to a purpose-built module must be confirmed in the written project scope. Every large opening requires the frame, reinforcement, connections, weather detailing, and structural design to be documented. Modular interior-wall options must be evaluated from the exact selected product and assembly documentation. Food, lithium-battery, hazardous-material, or other specialized uses additionally require use-specific fire, ventilation, sanitation, spill-control, electrical, egress, and authority review. A generic board or wall description does not establish that a building is approved for one of those uses.
 
 ## Container-Based Projects
 

@@ -9,7 +9,7 @@ import { seoDescription, seoTitle } from "@/lib/seo";
 const canonicalPath = "/custom-buildings";
 const pageTitle = "Custom Buildings in Southwest Florida";
 const pageDescription = seoDescription(
-  "Compare SIP buildings, custom containers, metal buildings, carports, and room additions, then start a property-specific review with Seacoast.",
+  "Compare SIP buildings, modular retail showrooms, custom containers, metal buildings, carports, and room additions, then start a property-specific review with Seacoast.",
 );
 
 export const metadata: Metadata = {
@@ -219,7 +219,7 @@ const customBuildingsPageSchema = {
   name: `${pageTitle} | Seacoast`,
   description: pageDescription,
   inLanguage: "en-US",
-  dateModified: "2026-08-04",
+  dateModified: "2026-08-06",
   publisher: { "@id": "https://seacoastbd.com/#organization" },
   mainEntity: { "@id": "https://seacoastbd.com/custom-buildings#service" },
   mentions: {
@@ -556,18 +556,71 @@ export default function CustomBuildingsPage() {
         </div>
       </section>
 
+      <section id="modular-retail-showrooms" className="section scroll-mt-24 dark-band bg-navy" aria-labelledby="modular-retail-heading">
+        <div className="container grid max-w-6xl gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
+          <figure className="overflow-hidden rounded-3xl border border-white/10 bg-navy-surface shadow-soft">
+            <div className="relative aspect-video">
+              <Image
+                src="/images/custom-buildings/modular-retail/modular-retail-showroom-exterior.webp"
+                alt="Concept rendering of a black glass-front modular showroom displaying golf carts"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 52vw, 100vw"
+              />
+            </div>
+            <figcaption className="border-t border-white/10 px-5 py-4 text-xs leading-5 text-white/65">
+              South Beach modular retail showroom concept supplied by Safe Room Designs. Concept rendering;
+              final design, systems, site work, and approvals are project-specific.
+            </figcaption>
+          </figure>
+
+          <div>
+            <p className="eyebrow">Featured commercial concept</p>
+            <h2 id="modular-retail-heading" className="mt-2 max-w-3xl font-heading text-4xl font-bold text-navy">
+              A modular showroom can be planned around customers, inventory, and the brand.
+            </h2>
+            <p className="mt-5 max-w-2xl leading-7 text-text-secondary">
+              The new partner concept illustrates a purpose-built transportable retail space with glazed
+              frontage, a dedicated customer entrance, separate personnel access, and rear inventory movement.
+              It can be evaluated for dealerships, product showrooms, demonstration centers, resort or
+              community retail, and repeat-location programs.
+            </p>
+            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                "Brand-ready storefront and finishes",
+                "Storefront and service-opening planning",
+                "Separate customer and service access",
+                "Potential relocation to an approved site",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 rounded-xl border border-white/10 bg-navy-surface p-4 text-sm leading-6 text-white/75">
+                  <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-orange" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/custom-buildings/modular-retail-showrooms"
+              className="mt-7 inline-flex font-bold text-orange hover:underline"
+            >
+              Explore modular retail showrooms →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="section bg-navy" aria-labelledby="sip-partnership-heading">
         <div className="container grid max-w-6xl gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
           <div className="rounded-3xl border border-orange/35 bg-orange/10 p-7 md:p-10">
             <p className="eyebrow">A new construction path</p>
             <h2 id="sip-partnership-heading" className="mt-2 max-w-3xl font-heading text-4xl font-bold text-white">
-              Seacoast is working with Safe Room Designs on SIP building opportunities.
+              Seacoast is working with Safe Room Designs on SIP and selected modular building opportunities.
             </h2>
             <p className="mt-5 max-w-3xl leading-7 text-white/75">
-              The collaboration gives owners and developers a local starting point for evaluating a proposed
-              steel-frame insulated-panel building system. Seacoast begins with the property, intended use, and
-              project requirements. The exact system, design roles, engineering, approvals, contract scope,
-              pricing, and schedule are confirmed for the individual project before construction.
+              The collaboration gives owners and developers a local starting point for evaluating two distinct
+              paths: steel-frame insulated-panel buildings and selected purpose-built modular concepts. Seacoast
+              begins with the property, intended use, and project requirements. The exact system, design roles,
+              engineering, approvals, contract scope, pricing, and schedule are confirmed for the individual
+              project before construction.
             </p>
             <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3">
               <Link
@@ -575,6 +628,12 @@ export default function CustomBuildingsPage() {
                 className="font-bold text-orange hover:underline"
               >
                 Explore SIP buildings →
+              </Link>
+              <Link
+                href="/custom-buildings/modular-retail-showrooms"
+                className="font-bold text-orange hover:underline"
+              >
+                Explore modular showrooms →
               </Link>
               <a
                 href="https://saferoomdesigns.com/"

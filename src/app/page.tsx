@@ -289,6 +289,7 @@ export default function Home() {
             </div>
           </Link>
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
+            <Link href="/custom-buildings/modular-retail-showrooms" className="text-orange hover:text-copper">Modular retail showrooms &rarr;</Link>
             <Link href="/services/metal-buildings" className="text-orange hover:text-copper">Metal buildings &rarr;</Link>
             <Link href="/services/room-additions" className="text-orange hover:text-copper">Room additions &rarr;</Link>
             <Link href="/custom-buildings" className="text-orange hover:text-copper">Compare every option &rarr;</Link>

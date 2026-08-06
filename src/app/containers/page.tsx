@@ -277,6 +277,37 @@ export default function ContainersLandingPage() {
       </section>
 
       <section className="section dark-band bg-navy">
+        <div className="container grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
+          <div>
+            <p className="eyebrow">Commercial modular use case</p>
+            <h2 className="mt-2 max-w-3xl font-heading text-4xl font-bold text-navy">
+              Need a branded retail showroom rather than a standard shipping-container build?
+            </h2>
+            <p className="mt-4 max-w-3xl leading-7 text-text-secondary">
+              Explore a partner-supplied purpose-built steel showroom concept with glazed retail frontage,
+              separate customer and inventory access, and a project-specific site and approval path. If an
+              ISO container conversion is selected instead, partner-supported fabrication may include
+              precision-cut opening options. Each path is evaluated separately from a standalone SIP building.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-navy-surface p-7 md:p-8">
+            <p className="font-heading text-2xl font-bold text-white">Modular Retail Showrooms</p>
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              See the approximately 818-square-foot golf-showroom study, common business reasons for modular
+              retail, fabrication questions, Florida project path, and direct answers about permitting and
+              relocation.
+            </p>
+            <Link
+              href="/custom-buildings/modular-retail-showrooms"
+              className="mt-6 inline-flex font-bold text-orange hover:underline"
+            >
+              Explore the showroom concept →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section dark-band bg-navy">
         <div className="container max-w-3xl">
           <p className="eyebrow">Common questions</p>
           <h2 className="mb-8 mt-2 font-heading text-4xl font-bold text-navy">Container planning FAQ</h2>
