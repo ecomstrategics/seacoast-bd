@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 function projectSlugForPath(pathname: string) {
   if (pathname === "/custom-buildings") return "custom-buildings";
+  if (pathname === "/custom-buildings/modular-retail-showrooms") return "modular-retail-showrooms";
   if (pathname === "/containers") return "containers";
 
   const containerSlug = pathname.match(/^\/containers\/([^/]+)$/)?.[1];

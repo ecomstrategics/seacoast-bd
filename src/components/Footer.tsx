@@ -32,6 +32,7 @@ const pillarLinks = {
 const customBuildingLinks = [
   { label: "Compare Custom Building Options", href: "/custom-buildings" },
   { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
+  { label: "Modular Retail Showrooms", href: "/custom-buildings/modular-retail-showrooms" },
   { label: "Container Buildings", href: "/containers" },
   { label: "Available Now: 20' Mobile Container", href: "/containers/prebuilt" },
   { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },

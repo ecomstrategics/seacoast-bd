@@ -9,6 +9,7 @@ const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" 
 const pillarAccents = { protect: "text-navy", improve: "text-navy", expand: "text-navy" } as const;
 const mobileCustomBuildingHrefs = new Set([
   "/custom-buildings",
+  "/custom-buildings/modular-retail-showrooms",
   "/services/structural-insulated-panel-buildings",
   "/containers",
 ]);
@@ -333,6 +334,7 @@ export function Header() {
             <p className="mt-3 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">Custom Buildings</p>
             <Link href="/custom-buildings" className="block rounded-lg px-3 py-2.5 font-semibold text-white hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Compare Building Options</Link>
             <Link href="/services/structural-insulated-panel-buildings" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>SIP Homes &amp; Buildings</Link>
+            <Link href="/custom-buildings/modular-retail-showrooms" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Modular Retail Showrooms</Link>
             <Link href="/containers" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Container Buildings</Link>
             <Link href="/containers/prebuilt" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Available 20&apos; Mobile Container</Link>
             <Link href="/financing" className="block rounded-lg px-3 py-2.5 font-medium text-white/90 hover:bg-white/10 hover:text-orange" onClick={() => setMobileOpen(false)}>Financing</Link>

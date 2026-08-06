@@ -35,6 +35,7 @@ export const primaryNav: NavItem[] = [
     href: "/custom-buildings",
     dropdown: [
       { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
+      { label: "Modular Retail Showrooms", href: "/custom-buildings/modular-retail-showrooms" },
       { label: "Container Buildings", href: "/containers" },
       { label: "Available 20' Mobile Container", href: "/containers/prebuilt" },
       { label: "Guest Houses", href: "/containers/guest-houses" },
@@ -78,6 +79,7 @@ export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMe
   expand: [
     { label: "Custom Buildings", href: "/custom-buildings" },
     { label: "SIP Homes & Buildings", href: "/services/structural-insulated-panel-buildings" },
+    { label: "Modular Retail Showrooms", href: "/custom-buildings/modular-retail-showrooms" },
     { label: "Container Buildings", href: "/containers" },
     { label: "Metal Buildings & Pole Barns", href: "/services/metal-buildings" },
     { label: "Carports & Metal Roofs", href: "/services/carports" },

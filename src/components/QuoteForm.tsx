@@ -9,6 +9,7 @@ const serviceDefaults = new Map<string, string>([
   ...services.map((service) => [service.slug, service.name] as const),
   ...containers.map((container) => [container.slug, container.name] as const),
   ["custom-buildings", "Custom Building Project"],
+  ["modular-retail-showrooms", "Modular Retail Showroom"],
   ["containers", "Container Project"],
   ["prebuilt-containers", "Available 20-Foot Mobile Container"],
 ]);
@@ -54,6 +55,7 @@ export function QuoteForm({
   const isSubmitting = status === "submitting";
   const isCustomBuildingInquiry =
     selectedService === "Custom Building Project" ||
+    selectedService === "Modular Retail Showroom" ||
     selectedService === "SIP Homes & Buildings" ||
     selectedService === "Metal Buildings & Pole Barns" ||
     selectedService === "Carports & Metal Roofs" ||
@@ -139,6 +141,7 @@ export function QuoteForm({
           <select name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)} className={fieldClass}>
             <option>Not sure yet</option>
             <option>Custom Building Project</option>
+            <option>Modular Retail Showroom</option>
             {services.map((service) => <option key={service.slug}>{service.name}</option>)}
             <option>Container Project</option>
             <option>Available 20-Foot Mobile Container</option>
