@@ -36,7 +36,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/customer-reviews`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/service-area`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/privacy`, lastModified: "2026-06-21" },
-    { url: `${BASE}/terms`, lastModified: "2026-06-21" },
+    { url: `${BASE}/terms`, lastModified: CURRENT_UPDATE },
+    { url: `${BASE}/image-rights`, lastModified: CURRENT_UPDATE },
     { url: `${BASE}/accessibility`, lastModified: "2026-06-16" },
   ];
 

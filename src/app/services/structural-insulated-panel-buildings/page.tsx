@@ -7,6 +7,7 @@ import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import {
   SchemaScript,
   faqSchema,
+  imageLicenseMetadata,
   serviceSchema,
 } from "@/components/Schema";
 import { seoTitle } from "@/lib/seo";
@@ -274,7 +275,7 @@ const sipWebPageSchema = {
   name: "Custom SIP Homes and Buildings for Southwest Florida",
   description: pageDescription,
   inLanguage: "en-US",
-  dateModified: "2026-08-04",
+  dateModified: "2026-08-06",
   isPartOf: { "@id": "https://seacoastbd.com/#website" },
   about: { "@id": `${pageUrl}#service` },
   primaryImageOfPage: {
@@ -285,7 +286,15 @@ const sipWebPageSchema = {
     width: 1200,
     height: 900,
     caption: "Completed home from a Safe Room Designs structural insulated panel project.",
-    creditText: "Project imagery supplied by Safe Room Designs",
+    ...imageLicenseMetadata({
+      creatorName: "Safe Room Designs",
+      creatorUrl: partnerUrl,
+      creatorDescription:
+        "Responsible supplying organization; the individual photographer or rendering artist was not identified in the source materials.",
+      creditText: "Project imagery supplied by Safe Room Designs",
+      copyrightNotice:
+        "Used by Seacoast Building & Design with permission. Copyright remains with the applicable rights holder.",
+    }),
     representativeOfPage: true,
   },
   mentions: {

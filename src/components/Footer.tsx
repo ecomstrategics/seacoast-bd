@@ -175,6 +175,7 @@ export function Footer() {
         <nav aria-label="Legal" className="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1">
           <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+          <Link href="/image-rights" className="hover:text-white">Image Rights</Link>
           <Link href="/accessibility" className="hover:text-white">Accessibility</Link>
         </nav>
       </div>

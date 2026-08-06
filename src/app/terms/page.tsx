@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/terms" },
 };
 
-const LAST_UPDATED = "June 16, 2026";
+const LAST_UPDATED = "August 6, 2026";
 
 export default function TermsPage() {
   return (
@@ -48,6 +48,9 @@ export default function TermsPage() {
             <h2 className="mt-10 font-heading text-2xl font-bold text-navy">Intellectual property</h2>
             <p className="mt-3 text-text-secondary">
               The Site and its content, including text, graphics, logos, images, and design, are owned by or licensed to Seacoast and are protected by intellectual property laws. You may not copy, reproduce, distribute, or create derivative works from any part of the Site without our prior written permission.
+            </p>
+            <p className="mt-3 text-text-secondary">
+              Image-specific credits, license terms, and permission-request information are available on our <Link href="/image-rights" className="font-bold text-navy hover:text-orange">Image Rights and Permissions page</Link>.
             </p>
 
             <h2 className="mt-10 font-heading text-2xl font-bold text-navy">Third-party links</h2>

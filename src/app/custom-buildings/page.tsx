@@ -3,10 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
-import { SchemaScript, serviceSchema } from "@/components/Schema";
+import { SchemaScript, imageLicenseMetadata, serviceSchema } from "@/components/Schema";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
 const canonicalPath = "/custom-buildings";
+const pageUrl = `https://seacoastbd.com${canonicalPath}`;
+const partnerUrl = "https://saferoomdesigns.com/";
+const modularRetailImageUrl =
+  "https://seacoastbd.com/images/custom-buildings/modular-retail/modular-retail-showroom-exterior.webp";
 const pageTitle = "Custom Buildings in Southwest Florida";
 const pageDescription = seoDescription(
   "Compare SIP buildings, modular retail showrooms, custom containers, metal buildings, carports, and room additions, then start a property-specific review with Seacoast.",
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    url: `https://seacoastbd.com${canonicalPath}`,
+    url: pageUrl,
     title: `${pageTitle} | Seacoast`,
     description: pageDescription,
     siteName: "Seacoast Building & Design",
@@ -214,19 +218,40 @@ const reviewInputs = [
 const customBuildingsPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://seacoastbd.com/custom-buildings#webpage",
-  url: "https://seacoastbd.com/custom-buildings",
+  "@id": `${pageUrl}#webpage`,
+  url: pageUrl,
   name: `${pageTitle} | Seacoast`,
   description: pageDescription,
   inLanguage: "en-US",
   dateModified: "2026-08-06",
   publisher: { "@id": "https://seacoastbd.com/#organization" },
-  mainEntity: { "@id": "https://seacoastbd.com/custom-buildings#service" },
+  mainEntity: { "@id": `${pageUrl}#service` },
+  associatedMedia: { "@id": `${pageUrl}#modular-retail-image` },
   mentions: {
     "@type": "Organization",
     name: "Safe Room Designs",
-    url: "https://saferoomdesigns.com/",
+    url: partnerUrl,
   },
+};
+
+const modularRetailImageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "@id": `${pageUrl}#modular-retail-image`,
+  contentUrl: modularRetailImageUrl,
+  url: modularRetailImageUrl,
+  width: 1600,
+  height: 900,
+  caption: "Partner-supplied concept rendering of a glass-front modular golf-cart showroom.",
+  ...imageLicenseMetadata({
+    creatorName: "Safe Room Designs",
+    creatorUrl: partnerUrl,
+    creatorDescription:
+      "Responsible supplying organization; the individual photographer or rendering artist was not identified in the source materials.",
+    creditText: "Concept rendering supplied by Safe Room Designs",
+    copyrightNotice:
+      "Used by Seacoast Building & Design with permission. Copyright remains with the applicable rights holder.",
+  }),
 };
 
 const buildingOptionsSchema = {
@@ -363,10 +388,11 @@ export default function CustomBuildingsPage() {
                 "Collier County, FL",
               ],
             }),
-            "@id": "https://seacoastbd.com/custom-buildings#service",
+            "@id": `${pageUrl}#service`,
             provider: { "@id": "https://seacoastbd.com/#organization" },
           },
           buildingOptionsSchema,
+          modularRetailImageSchema,
         ]}
       />
 
