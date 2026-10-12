@@ -109,7 +109,7 @@ export const serviceAreaRegions: ServiceAreaRegion[] = [
   {
     name: "South Alabama",
     state: "AL",
-    counties: ["Baldwin", "Escambia"],
+    counties: ["Baldwin", "Escambia", "Mobile"],
   },
 ];
 
@@ -120,6 +120,18 @@ function joinWithAnd(items: string[], separator = ", ") {
 
 export function countyLabel(county: string, state: ServiceAreaRegion["state"]) {
   return `${county} County, ${state}`;
+}
+
+export const stateNames: Record<ServiceAreaRegion["state"], string> = {
+  FL: "Florida",
+  AL: "Alabama",
+};
+
+// Finds the region for a "Lee County"-style county name in the given state.
+export function regionForCounty(county: string, state: ServiceAreaRegion["state"]) {
+  return serviceAreaRegions.find(
+    (region) => region.state === state && region.counties.some((name) => `${name} County` === county),
+  );
 }
 
 // Every label carries its state because Escambia County exists in both Florida and Alabama.

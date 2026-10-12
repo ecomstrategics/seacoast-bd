@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { serviceAreaCities } from "@/data/serviceAreas";
-import { countyLabel, serviceAreaRegionNames, serviceAreaRegions } from "@/data/navigation";
+import { countyLabel, regionForCounty, serviceAreaRegionNames, serviceAreaRegions } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Service Areas",
@@ -78,20 +78,29 @@ export default function ServiceAreaIndexPage() {
           <p className="mt-4 max-w-2xl text-text-secondary">
             Each page summarizes common services and gives you a direct way to ask about your property.
           </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {serviceAreaCities.map((city) => (
-              <Link
-                key={city.slug}
-                href={`/service-area/${city.slug}`}
-                className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
-              >
-                <h3 className="font-heading text-xl font-bold text-navy group-hover:text-orange">{city.name}</h3>
-                <p className="mt-1 text-sm text-orange font-semibold">{city.county}</p>
-                <p className="mt-3 text-sm leading-6 text-text-secondary line-clamp-3">{city.intro}</p>
-                <span className="mt-4 inline-flex font-semibold text-orange">View city details &rarr;</span>
-              </Link>
-            ))}
-          </div>
+          {serviceAreaRegions.map((region) => {
+            const regionCities = serviceAreaCities.filter((city) => regionForCounty(city.county, city.state) === region);
+            if (regionCities.length === 0) return null;
+            return (
+              <div key={region.name} className="mt-10">
+                <h3 className="font-heading text-2xl font-bold text-navy">{region.name}</h3>
+                <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {regionCities.map((city) => (
+                    <Link
+                      key={city.slug}
+                      href={`/service-area/${city.slug}`}
+                      className="group rounded-2xl border border-navy/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft"
+                    >
+                      <h4 className="font-heading text-xl font-bold text-navy group-hover:text-orange">{city.name}</h4>
+                      <p className="mt-1 text-sm text-orange font-semibold">{city.county}, {city.state}</p>
+                      <p className="mt-3 text-sm leading-6 text-text-secondary line-clamp-3">{city.intro}</p>
+                      <span className="mt-4 inline-flex font-semibold text-orange">View city details &rarr;</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
