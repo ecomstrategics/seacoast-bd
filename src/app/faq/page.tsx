@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, faqSchema } from "@/components/Schema";
+import { serviceAreaSummary } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -16,7 +17,7 @@ const faqs = [
   },
   {
     question: "Where does Seacoast work?",
-    answer: "Seacoast's regular service area includes Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida, subject to scope, travel, schedule, and current capacity.",
+    answer: `Seacoast's regular service area includes ${serviceAreaSummary}. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida, subject to scope, travel, schedule, and current capacity.`,
   },
   {
     question: "Is Seacoast licensed and insured?",

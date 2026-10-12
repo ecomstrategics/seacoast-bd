@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { primaryNav, solutionsMega, type NavItem } from "@/data/navigation";
+import { primaryNav, serviceAreaRegionNames, solutionsMega, type NavItem } from "@/data/navigation";
 
 const pillarLabels = { protect: "Protect", improve: "Improve", expand: "Expand" } as const;
 const pillarAccents = { protect: "text-navy", improve: "text-navy", expand: "text-navy" } as const;
@@ -131,7 +131,7 @@ export function Header() {
       <div className="bg-navy-900 text-sm text-white">
         <div className="container flex flex-wrap items-center justify-between gap-2 py-2">
           <span>Call: <a className="font-semibold text-white underline-offset-4 hover:underline" href="tel:+19415005431">(941) 500-5431</a></span>
-          <span>Mon to Fri 8am to 6pm &bull; Sat 9am to 3pm &bull; Serving Southwest Florida</span>
+          <span>Mon to Fri 8am to 6pm &bull; Sat 9am to 3pm &bull; Serving {serviceAreaRegionNames}</span>
           <span className="hidden gap-3 sm:flex" aria-label="Social links">
             <a href="https://www.facebook.com/seacoastbuilding/" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
             <a href="https://www.instagram.com/seacoastband/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>

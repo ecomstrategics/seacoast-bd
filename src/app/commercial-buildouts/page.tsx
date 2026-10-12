@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 const pageDescription =
@@ -67,8 +68,8 @@ const fitFacts = [
   },
   {
     title: "Regular service area",
-    value: "6 counties",
-    body: "Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties.",
+    value: `${serviceArea.length} counties`,
+    body: `${serviceAreaSummary}.`,
   },
   {
     title: "Statewide review",
@@ -110,7 +111,7 @@ const faqs = [
   {
     question: "Can Seacoast evaluate a commercial buildout elsewhere in Florida?",
     answer:
-      "Seacoast regularly serves six Gulf Coast counties. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, schedule, scope, logistics, and current availability confirmed for the specific opportunity.",
+      `Seacoast regularly serves ${serviceAreaSummary}. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, schedule, scope, logistics, and current availability confirmed for the specific opportunity.`,
   },
   {
     question: "What should we send for an initial commercial buildout review?",
@@ -129,14 +130,7 @@ export default function CommercialBuildoutsPage() {
             description: pageDescription,
             url: "/commercial-buildouts",
             serviceType: "Commercial Buildout Construction",
-            areaServed: [
-              "Hillsborough County, FL",
-              "Manatee County, FL",
-              "Sarasota County, FL",
-              "Charlotte County, FL",
-              "Lee County, FL",
-              "Collier County, FL",
-            ],
+            areaServed: serviceArea,
           }),
           faqSchema(faqs),
         ]}

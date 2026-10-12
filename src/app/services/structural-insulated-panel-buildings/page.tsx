@@ -10,6 +10,7 @@ import {
   imageLicenseMetadata,
   serviceSchema,
 } from "@/components/Schema";
+import { serviceArea } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 const pagePath = "/services/structural-insulated-panel-buildings";
@@ -253,14 +254,7 @@ const sipServiceSchema = {
     description: pageDescription,
     url: pagePath,
     serviceType: "Site-Specific Structural Insulated Panel Building Project Review and Construction",
-    areaServed: [
-      "Hillsborough County, FL",
-      "Manatee County, FL",
-      "Sarasota County, FL",
-      "Charlotte County, FL",
-      "Lee County, FL",
-      "Collier County, FL",
-    ],
+    areaServed: serviceArea,
   }),
   "@id": `${pageUrl}#service`,
   provider: { "@id": "https://seacoastbd.com/#organization" },

@@ -7,7 +7,7 @@ import { serviceAreaCities } from "@/data/serviceAreas";
 
 const BASE = "https://seacoastbd.com";
 // Update this only when the corresponding page or shared content template changes.
-const CURRENT_UPDATE = "2026-08-06";
+const CURRENT_UPDATE = "2026-10-12";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

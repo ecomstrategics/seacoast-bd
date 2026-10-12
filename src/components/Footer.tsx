@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { serviceArea } from "@/data/navigation";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
 
 const pillarLinks = {
@@ -66,7 +66,7 @@ export function Footer() {
           {/* Company */}
           <div className="sm:col-span-2 lg:col-span-1">
             <p className="font-heading text-xl font-bold">Seacoast Building &amp; Design</p>
-            <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, additions, and custom buildings for Florida Gulf Coast homes, businesses, and communities.</p>
+            <p className="mt-3 text-sm text-white/75 leading-6">Roofing, storm repair, exterior improvements, additions, and custom buildings for homes, businesses, and communities in Florida and South Alabama.</p>
             <p className="mt-3 text-sm text-white/70">FL Certified General Contractor #CGC1509237</p>
             <p className="text-sm text-white/70">FL Certified Roofing Contractor #CCC1332648</p>
             <p className="mt-2 text-sm text-white/70">
@@ -139,13 +139,13 @@ export function Footer() {
           {/* Service Area */}
           <div>
             <h3 className="font-heading font-bold">Service Area</h3>
-            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">6 Counties</p>
+            <p className="mt-0.5 text-xs text-white/70 uppercase tracking-widest">{serviceArea.length} Counties</p>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-white/75">
               {serviceAreaCities.map((city) => (
                 <li key={city.slug}><Link href={`/service-area/${city.slug}`} className="hover:text-white">{city.name}</Link></li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-white/65">Serving: {serviceArea.join(", ")}</p>
+            <p className="mt-4 text-xs text-white/65">Serving {serviceAreaSummary}.</p>
           </div>
 
           {/* Resources */}

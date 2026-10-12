@@ -4,11 +4,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, localBusinessSchema } from "@/components/Schema";
 import { serviceAreaCities } from "@/data/serviceAreas";
-import { serviceArea } from "@/data/navigation";
+import { countyLabel, serviceAreaRegionNames, serviceAreaRegions } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Service Areas",
-  description: "Ask about roofing, exterior work, storm repair, and custom building projects across Seacoast's six-county Gulf Coast service area.",
+  description: `Ask about roofing, exterior work, storm repair, and custom building projects across Seacoast's service area in ${serviceAreaRegionNames}.`,
 };
 
 export default function ServiceAreaIndexPage() {
@@ -21,9 +21,9 @@ export default function ServiceAreaIndexPage() {
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Service Areas" }]} />
           <p className="eyebrow">Where we work</p>
-          <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Construction and custom building services across Southwest Florida</h1>
+          <h1 className="mt-4 font-heading text-5xl font-bold leading-tight md:text-6xl">Construction and custom building services across {serviceAreaRegionNames}</h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-            From roofing and exterior work to site-specific custom buildings, Seacoast serves six counties.
+            From roofing and exterior work to site-specific custom buildings, Seacoast&apos;s regular service area covers {serviceAreaRegionNames}.
             Send the property address and project type so we can confirm coverage, scheduling, and the right next step.
             Contracts of $100,000 or more can also be evaluated elsewhere in Florida.
           </p>
@@ -43,15 +43,23 @@ export default function ServiceAreaIndexPage() {
             Project type, location, weather, and crew availability can affect scheduling. Contact us with
             the address and scope to confirm current service.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {serviceArea.map((county) => (
-              <div key={county} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
-                <div className="text-2xl mb-3" aria-hidden>📍</div>
-                <h3 className="font-heading text-lg font-bold text-navy">{county}</h3>
-                <p className="mt-2 text-sm text-text-secondary">Contact us with the address and scope to confirm availability.</p>
+          {serviceAreaRegions.map((region) => (
+            <div key={region.name} className="mt-10">
+              <h3 className="font-heading text-2xl font-bold text-navy">{region.name}</h3>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {region.counties.map((county) => {
+                  const label = countyLabel(county, region.state);
+                  return (
+                    <div key={label} className="rounded-2xl border border-navy/10 bg-white p-6 shadow-sm">
+                      <div className="text-2xl mb-3" aria-hidden>📍</div>
+                      <h4 className="font-heading text-lg font-bold text-navy">{label}</h4>
+                      <p className="mt-2 text-sm text-text-secondary">Contact us with the address and scope to confirm availability.</p>
+                    </div>
+                  );
+                })}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
           <div className="mt-8 rounded-2xl border border-orange/20 bg-orange/10 p-6 md:flex md:items-center md:justify-between md:gap-8">
             <div>
               <h3 className="font-heading text-xl font-bold text-navy">Planning a larger project elsewhere in Florida?</h3>

@@ -10,7 +10,7 @@ import { TrustProofLinks } from "@/components/TrustProofLinks";
 import { projects } from "@/data/projects";
 import { getServicesByPillar } from "@/data/services";
 import { solutions } from "@/data/solutions";
-import { serviceArea } from "@/data/navigation";
+import { serviceArea, serviceAreaRegionNames } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const pillarBlurbs: Record<string, string> = {
-  protect: "Plan before storm season, get help when damage happens, and document the work clearly. One team coordinates the next step across six counties.",
+  protect: "Plan before storm season, get help when damage happens, and document the work clearly. One team coordinates the next step in every county we serve.",
   improve: "Roofing, siding, windows, gutters, and full exterior renovations. One contractor handles the trades so your project keeps moving.",
   expand: "SIP homes and buildings, custom containers, metal structures, pool enclosures, and room additions planned around your property, intended use, and permit path.",
 };
@@ -77,7 +77,7 @@ export default function Home() {
               Roofing, storm repair, and exterior projects—handled by one local team.
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/80 md:mt-6">
-              Seacoast coordinates roofing, exterior renovations, storm work, additions, and custom building projects for homes, businesses, and communities across six Florida Gulf Coast counties.
+              Seacoast coordinates roofing, exterior renovations, storm work, additions, and custom building projects for homes, businesses, and communities across {serviceAreaRegionNames}.
             </p>
             <p className="home-hero__promise mt-4 font-heading text-xl font-bold tracking-widest text-orange uppercase md:mt-5">
               <span className="home-hero__promise-word">Protect.</span>{" "}
@@ -98,7 +98,7 @@ export default function Home() {
                 <p className="mt-1 text-sm text-white/65">Florida Licenses</p>
               </div>
               <div>
-                <p className="font-heading text-3xl font-bold text-orange">6</p>
+                <p className="font-heading text-3xl font-bold text-orange">{serviceArea.length}</p>
                 <p className="mt-1 text-sm text-white/65">Counties Served</p>
               </div>
               <div>
@@ -301,8 +301,8 @@ export default function Home() {
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Where we work</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Southwest Florida, county by county</h2>
-          <p className="mt-4 max-w-2xl text-text-secondary">Seacoast serves homes, businesses, and communities in six counties along Florida&apos;s Gulf Coast, from Hillsborough to Collier.</p>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Our service area, county by county</h2>
+          <p className="mt-4 max-w-2xl text-text-secondary">Seacoast serves homes, businesses, and communities across {serviceAreaRegionNames}.</p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {serviceArea.map((county) => (
               <div key={county} className="rounded-xl border border-navy/10 bg-white px-5 py-4 text-sm font-semibold text-charcoal shadow-sm">
@@ -338,7 +338,7 @@ export default function Home() {
               <p className="eyebrow text-orange">For developers and capital partners</p>
               <h2 className="mt-2 font-heading text-3xl font-bold">Planning build-to-rent, repeatable custom buildings, major rehabilitation, or an addition?</h2>
               <p className="mt-3 max-w-3xl leading-7 text-white/75">
-                Seacoast is currently reviewing both large and small opportunities, with a regular six-county service area and statewide review for contracts of $100,000 or more. Bring the team in early to discuss scope, construction value, schedule, and project fit.
+                Seacoast is currently reviewing both large and small opportunities, with a regular service area across {serviceAreaRegionNames}, plus statewide Florida review for contracts of $100,000 or more. Bring the team in early to discuss scope, construction value, schedule, and project fit.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">

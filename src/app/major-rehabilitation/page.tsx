@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 const pageDescription =
@@ -102,7 +103,7 @@ const faqs = [
   {
     question: "Can Seacoast review major rehabilitation work elsewhere in Florida?",
     answer:
-      "Seacoast's regular service area includes Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, schedule, and operational fit confirmed for each project.",
+      `Seacoast's regular service area includes ${serviceAreaSummary}. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, schedule, and operational fit confirmed for each project.`,
   },
 ];
 
@@ -116,14 +117,7 @@ export default function MajorRehabilitationPage() {
             description: pageDescription,
             url: "/major-rehabilitation",
             serviceType: "Major Property Rehabilitation",
-            areaServed: [
-              "Hillsborough County, FL",
-              "Manatee County, FL",
-              "Sarasota County, FL",
-              "Charlotte County, FL",
-              "Lee County, FL",
-              "Collier County, FL",
-            ],
+            areaServed: serviceArea,
           }),
           faqSchema(faqs),
         ]}
