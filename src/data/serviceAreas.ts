@@ -2,6 +2,7 @@ export type ServiceAreaCity = {
   slug: string;
   name: string;
   county: string;
+  state: "FL" | "AL";
   intro: string;
   featuredProjectSlugs: string[];
 };
@@ -11,6 +12,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "fort-myers",
     name: "Fort Myers",
     county: "Lee County",
+    state: "FL",
     intro: "Seacoast's Fort Myers portfolio includes roofing, community amenities, exterior structures, and multi-family work at properties such as Cinnamon Cove and Heritage Pointe. We serve residential, commercial, condominium, and HOA properties across Lee County.",
     featuredProjectSlugs: [
       "mels-diner-pvc-roof",
@@ -23,6 +25,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "sarasota",
     name: "Sarasota",
     county: "Sarasota County",
+    state: "FL",
     intro: "Seacoast serves Sarasota and surrounding Sarasota County with roofing, exterior, storm-preparation, and property-improvement work. Send the property address and scope so we can confirm availability.",
     featuredProjectSlugs: [],
   },
@@ -30,6 +33,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "naples",
     name: "Naples",
     county: "Collier County",
+    state: "FL",
     intro: "Seacoast serves Naples and Collier County for roofing and exterior projects. Our Naples portfolio includes the Avion Woods condominium roof replacement.",
     featuredProjectSlugs: ["avion-woods-roof-replacement"],
   },
@@ -37,6 +41,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "cape-coral",
     name: "Cape Coral",
     county: "Lee County",
+    state: "FL",
     intro: "Seacoast serves Cape Coral and surrounding Lee County with roofing, storm-damage repair, gutters, and exterior work. Share your address and project details so the team can recommend the right next step.",
     featuredProjectSlugs: [],
   },
@@ -44,6 +49,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "bonita-springs",
     name: "Bonita Springs",
     county: "Lee County",
+    state: "FL",
     intro: "Seacoast serves homes, planned communities, and multi-family properties in Bonita Springs. Available scopes include roofing, exterior work, and storm preparation.",
     featuredProjectSlugs: [],
   },
@@ -51,6 +57,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "bradenton",
     name: "Bradenton",
     county: "Manatee County",
+    state: "FL",
     intro: "Seacoast serves Bradenton and Manatee County for roofing, siding, enclosures, and other exterior projects. Contact the team to confirm scheduling for your property.",
     featuredProjectSlugs: [],
   },
@@ -58,6 +65,7 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "venice",
     name: "Venice",
     county: "Sarasota County",
+    state: "FL",
     intro: "Seacoast serves Venice and surrounding Sarasota County with roofing, gutters, windows and doors, and storm-preparation work. You get one point of contact for the scope agreed in your proposal.",
     featuredProjectSlugs: [],
   },
@@ -65,7 +73,48 @@ export const serviceAreaCities: ServiceAreaCity[] = [
     slug: "punta-gorda",
     name: "Punta Gorda",
     county: "Charlotte County",
+    state: "FL",
     intro: "Seacoast serves Punta Gorda and Charlotte County with roofing, storm-damage repair, and storm-preparation work for homes and commercial properties.",
+    featuredProjectSlugs: [],
+  },
+  {
+    slug: "pensacola",
+    name: "Pensacola",
+    county: "Escambia County",
+    state: "FL",
+    intro: "Seacoast serves Pensacola and surrounding Escambia County with roofing, storm-damage repair, exterior, and custom building work for homes and commercial properties. Send the property address and scope so we can confirm availability.",
+    featuredProjectSlugs: [],
+  },
+  {
+    slug: "milton",
+    name: "Milton",
+    county: "Santa Rosa County",
+    state: "FL",
+    intro: "Seacoast serves Milton and Santa Rosa County, including Pace, Navarre, and Gulf Breeze, with roofing, storm preparation, and exterior work. Share your address and project details so the team can recommend the right next step.",
+    featuredProjectSlugs: [],
+  },
+  {
+    slug: "mobile",
+    name: "Mobile",
+    county: "Mobile County",
+    state: "AL",
+    intro: "Seacoast serves Mobile and surrounding Mobile County with roofing, storm-damage repair, storm preparation, and exterior work for homes and commercial properties. Send the property address and scope so we can confirm availability.",
+    featuredProjectSlugs: [],
+  },
+  {
+    slug: "daphne",
+    name: "Daphne",
+    county: "Baldwin County",
+    state: "AL",
+    intro: "Seacoast serves Daphne and Baldwin County, including Fairhope, Foley, Gulf Shores, and Orange Beach, with roofing, storm-damage repair, and exterior work. Contact the team to confirm scheduling for your property.",
+    featuredProjectSlugs: [],
+  },
+  {
+    slug: "atmore",
+    name: "Atmore",
+    county: "Escambia County",
+    state: "AL",
+    intro: "Seacoast serves Atmore, Brewton, and the rest of Escambia County, Alabama, with roofing, siding, and other exterior projects. Contact the team to confirm scheduling for your property.",
     featuredProjectSlugs: [],
   },
 ];

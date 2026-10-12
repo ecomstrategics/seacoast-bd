@@ -25,7 +25,7 @@ GAF verification: [Seacoast's official GAF contractor profile](https://www.gaf.c
 - [Custom Buildings](https://seacoastbd.com/custom-buildings): A property-first comparison of SIP, container, metal, carport, and conventional-addition paths.
 - [SIP Homes and Buildings](https://seacoastbd.com/services/structural-insulated-panel-buildings): Structural insulated panel building concepts evaluated around the site, intended use, design, engineering, and permit path.
 - [Modular Retail Showrooms](https://seacoastbd.com/custom-buildings/modular-retail-showrooms): Purpose-built modular retail and display concepts evaluated around the operation, brand, module, site, transportation, utilities, accessibility, and approval path.
-- [Service Area](https://seacoastbd.com/service-area): Counties served in Southwest Florida, Northwest Florida, and South Alabama, plus Southwest Florida city pages.
+- [Service Area](https://seacoastbd.com/service-area): Counties and city pages across Southwest Florida, Northwest Florida, and South Alabama.
 - [About Seacoast](https://seacoastbd.com/about): Company leadership, licenses, service area, and project approach.
 - [Customer Reviews](https://seacoastbd.com/customer-reviews): Direct links to Google and Better Business Bureau feedback.
 - [Capital Partners](https://seacoastbd.com/capital-partners): Build-to-rent, major-rehabilitation, and select-addition project review, including current project-fit, timing, geographic, bonding, and insurance information.
@@ -120,7 +120,7 @@ Container feasibility, price, schedule, wind performance, and legal use depend o
 
 ## Service Area
 
-Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties in Southwest Florida; Escambia and Santa Rosa counties in Northwest Florida; and Baldwin and Escambia counties in South Alabama. City pages include Fort Myers, Cape Coral, Naples, Sarasota, Bradenton, Bonita Springs, Venice, and Punta Gorda. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida. Send the property address, construction value, and scope so the team can confirm service, travel, and scheduling.
+Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties in Southwest Florida; Escambia and Santa Rosa counties in Northwest Florida; and Baldwin, Escambia, and Mobile counties in South Alabama. City pages include Fort Myers, Cape Coral, Naples, Sarasota, Bradenton, Bonita Springs, Venice, Punta Gorda, Pensacola, Milton, Mobile, Daphne, and Atmore. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida. Send the property address, construction value, and scope so the team can confirm service, travel, and scheduling.
 
 ## Financing
 

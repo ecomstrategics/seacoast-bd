@@ -10,6 +10,7 @@ import { SchemaScript, localBusinessSchema, serviceSchema } from "@/components/S
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/data/services";
 import { projects } from "@/data/projects";
+import { regionForCounty, stateNames } from "@/data/navigation";
 import { serviceAreaCities } from "@/data/serviceAreas";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
@@ -24,8 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = serviceAreaCities.find((c) => c.slug === slug);
   if (!city) return {};
   return {
-    title: seoTitle(`Contractor in ${city.name}, ${city.county}`),
-    description: seoDescription(`Ask Seacoast about roofing, siding, storm repair, exterior work, and custom building projects in ${city.name}, ${city.county}. Share the property address to confirm service.`),
+    title: seoTitle(`Contractor in ${city.name}, ${city.county}, ${city.state}`),
+    description: seoDescription(`Ask Seacoast about roofing, siding, storm repair, exterior work, and custom building projects in ${city.name}, ${city.county}, ${city.state}. Share the property address to confirm service.`),
   };
 }
 
@@ -33,6 +34,10 @@ export default async function ServiceAreaCityPage({ params }: Props) {
   const { slug } = await params;
   const city = serviceAreaCities.find((c) => c.slug === slug);
   if (!city) notFound();
+
+  const countyWithState = `${city.county}, ${city.state}`;
+  const stateName = stateNames[city.state];
+  const region = regionForCounty(city.county, city.state);
 
   const featuredProjects = city.featuredProjectSlugs
     .map((slug) => projects.find((p) => p.slug === slug))
@@ -42,9 +47,9 @@ export default async function ServiceAreaCityPage({ params }: Props) {
     localBusinessSchema(),
     serviceSchema({
       name: `Property Services in ${city.name}`,
-      description: `Ask Seacoast about roofing, siding, storm repair, exterior work, and site-specific custom building projects in ${city.name}, ${city.county}. Service is confirmed by address and scope.`,
+      description: `Ask Seacoast about roofing, siding, storm repair, exterior work, and site-specific custom building projects in ${city.name}, ${countyWithState}. Service is confirmed by address and scope.`,
       url: `/service-area/${city.slug}`,
-      areaServed: [city.county],
+      areaServed: [countyWithState],
     }),
   ];
 
@@ -62,9 +67,9 @@ export default async function ServiceAreaCityPage({ params }: Props) {
               { label: city.name },
             ]}
           />
-          <p className="eyebrow mt-2">{city.county}</p>
+          <p className="eyebrow mt-2">{countyWithState}</p>
           <h1 className="mt-3 font-heading text-5xl font-bold leading-tight md:text-6xl">
-            Roofing &amp; Exterior Contractor in {city.name}, Florida
+            Roofing &amp; Exterior Contractor in {city.name}, {stateName}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{city.intro}</p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -140,7 +145,7 @@ export default async function ServiceAreaCityPage({ params }: Props) {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <div>
               <p className="eyebrow text-orange">Custom building options in {city.name}</p>
-              <h2 className="mt-2 font-heading text-4xl font-bold">Compare SIP, container, metal, and addition paths for {city.county}</h2>
+              <h2 className="mt-2 font-heading text-4xl font-bold">Compare SIP, container, metal, and addition paths for {countyWithState}</h2>
               <p className="mt-4 text-white/75 leading-7">
                 Start with the property address and intended use. Site access, utilities, engineering,
                 zoning, permitting, and the final scope determine which building route can move forward.
@@ -182,12 +187,12 @@ export default async function ServiceAreaCityPage({ params }: Props) {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="font-bold text-orange">Service area:</span>
-                  <span className="text-text-secondary">{city.county} and surrounding areas</span>
+                  <span className="text-text-secondary">{countyWithState} and surrounding areas</span>
                 </div>
               </div>
               <div className="mt-8">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image src="/images/service-area/generic-neighborhood.webp" alt="Representative Southwest Florida neighborhood" fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
+                  <Image src="/images/service-area/generic-neighborhood.webp" alt={`Representative ${region?.name ?? stateName} neighborhood`} fill className="object-cover" sizes="(min-width: 1024px) 1200px, 100vw" />
                 </div>
               </div>
             </div>
