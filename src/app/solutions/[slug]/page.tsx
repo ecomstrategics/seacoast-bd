@@ -12,6 +12,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { getSolutionBySlug, solutions } from "@/data/solutions";
 import { getServicesByPillar } from "@/data/services";
 import { projects } from "@/data/projects";
+import { serviceArea } from "@/data/navigation";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -85,7 +86,7 @@ export default async function SolutionPillarPage({ params }: Props) {
           description: pillar.heroSub,
           url: `/solutions/${slug}`,
           serviceType: pillar.tagline,
-          areaServed: ["Southwest Florida"],
+          areaServed: serviceArea,
         })}
       />
 

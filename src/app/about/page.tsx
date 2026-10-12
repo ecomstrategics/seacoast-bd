@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
 import { SchemaScript, personSchema, chandraSchema } from "@/components/Schema";
-import { serviceArea } from "@/data/navigation";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "About",
@@ -89,7 +89,7 @@ export default function AboutPage() {
               Salt air, intense sun, hurricane exposure, and Florida building codes all shape an exterior project. Our team considers those local conditions when recommending materials, planning the work, and explaining the maintenance a property may need.
             </p>
             <p className="mt-5 leading-8 text-text-secondary">
-              We&apos;re licensed and insured in Florida, and we serve six counties across the Southwest coast: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier.
+              We&apos;re licensed and insured in Florida, and we serve {serviceAreaSummary}.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
       <section className="section dark-band bg-navy-deep">
         <div className="container">
           <p className="eyebrow">Service area</p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">We serve six Southwest Florida counties</h2>
+          <h2 className="mt-3 font-heading text-3xl font-bold text-navy">Counties we serve</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {serviceArea.map((area) => (
               <div key={area} className="rounded-2xl border border-navy/10 bg-white px-6 py-5">

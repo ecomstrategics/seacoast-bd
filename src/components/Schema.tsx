@@ -1,6 +1,8 @@
 // Schema.tsx — JSON-LD helper functions and script emitter
 // All helpers return plain objects; SchemaScript renders them as <script> tags.
 
+import { serviceArea, serviceAreaRegionNames } from "@/data/navigation";
+
 export type SchemaObject = Record<string, unknown>;
 
 const IMAGE_RIGHTS_URL = "https://seacoastbd.com/image-rights";
@@ -44,15 +46,8 @@ export function localBusinessSchema(): SchemaObject {
     slogan: "Protect. Improve. Expand.",
     telephone: "+1-941-500-5431",
     description:
-      "Florida-certified contractor serving Southwest Florida with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and site-specific custom buildings, including structural insulated panel and container-based projects.",
-    areaServed: [
-      "Hillsborough County, FL",
-      "Manatee County, FL",
-      "Sarasota County, FL",
-      "Charlotte County, FL",
-      "Lee County, FL",
-      "Collier County, FL",
-    ],
+      `Florida-certified contractor serving ${serviceAreaRegionNames} with buildouts, major rehabilitation, roofing, storm restoration, exterior improvements, additions, and site-specific custom buildings, including structural insulated panel and container-based projects.`,
+    areaServed: serviceArea,
     sameAs: [
       "https://www.facebook.com/seacoastbuilding/",
       "https://www.instagram.com/seacoastband/",
@@ -185,7 +180,7 @@ export function serviceSchema({
     url: `https://seacoastbd.com${url}`,
     serviceType: serviceType ?? name,
     provider: localBusinessSchema(),
-    areaServed: areaServed ?? ["Southwest Florida"],
+    areaServed: areaServed ?? serviceArea,
   };
 }
 

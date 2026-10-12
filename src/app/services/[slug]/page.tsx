@@ -11,6 +11,7 @@ import { SchemaScript, serviceSchema, faqSchema } from "@/components/Schema";
 import Image from "next/image";
 import { getServiceBySlug, services } from "@/data/services";
 import { projects } from "@/data/projects";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
 type SlugParams = { slug: string };
@@ -374,7 +375,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
           description: content.heroSub,
           url: "/services/emergency-response",
           serviceType: "Emergency Storm Response",
-          areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+          areaServed: serviceArea,
         })}
       />
 
@@ -427,7 +428,7 @@ function EmergencyResponseLayout({ content }: { content: StormRichContent }) {
           <p className="eyebrow text-orange/80">Where we can respond</p>
           <h2 className="mt-2 font-heading text-2xl font-bold">Tell us where the property is, and we will confirm whether we can help.</h2>
           <p className="mt-3 max-w-2xl text-white/70">
-            Seacoast serves properties across Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties.
+            Seacoast serves properties in {serviceAreaSummary}.
             Storm-response availability varies with weather, road access, demand, and crew capacity.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -492,7 +493,7 @@ function StormPrepLayout({ content }: { content: StormRichContent }) {
       description: content.heroSub,
       url: "/services/storm-preparedness",
       serviceType: "Hurricane Preparedness Service",
-      areaServed: ["Southwest Florida"],
+      areaServed: serviceArea,
     }),
     faqSchema(content.faqs),
   ];
@@ -665,7 +666,7 @@ function StormDamageRepairLayout({ content }: { content: StormRichContent }) {
       description: content.heroSub,
       url: "/services/storm-damage-repair",
       serviceType: "Storm Damage Repair",
-      areaServed: ["Southwest Florida"],
+      areaServed: serviceArea,
     }),
     faqSchema(content.faqs),
   ];
@@ -1184,7 +1185,7 @@ function ThermalDroneInspectionLayout() {
         "Aerial visible and thermal imaging that documents roof-surface temperature patterns and helps prioritize areas for closer inspection on Southwest Florida properties.",
       url: "/services/thermal-drone-inspections",
       serviceType: "Thermal Drone Roof Inspection",
-      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+      areaServed: serviceArea,
     }),
     faqSchema(faqs),
   ];
@@ -1398,7 +1399,7 @@ function SolarPanelCleaningLayout() {
     {
       question: "What areas do you serve for solar panel cleaning?",
       answer:
-        "Ask about solar panel cleaning in Seacoast's six-county service area: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. Availability depends on the address, array, access, and current schedule.",
+        `Ask about solar panel cleaning anywhere in Seacoast's service area: ${serviceAreaSummary}. Availability depends on the address, array, access, and current schedule.`,
     },
   ];
 
@@ -1409,7 +1410,7 @@ function SolarPanelCleaningLayout() {
         "Solar panel cleaning for residential and commercial properties in Southwest Florida, with one-time and recurring scheduling options quoted for the site.",
       url: "/services/solar-panel-cleaning",
       serviceType: "Solar Panel Cleaning Service",
-      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+      areaServed: serviceArea,
     }),
     faqSchema(faqs),
   ];
@@ -1617,7 +1618,7 @@ function WholeHouseBatteryLayout() {
     {
       question: "What areas do you serve for battery installation?",
       answer:
-        "Ask about battery installation in Seacoast's six-county service area: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier. Availability depends on the address, project scope, and current schedule.",
+        `Ask about battery installation anywhere in Seacoast's service area: ${serviceAreaSummary}. Availability depends on the address, project scope, and current schedule.`,
     },
   ];
 
@@ -1628,7 +1629,7 @@ function WholeHouseBatteryLayout() {
         "Site-specific home battery backup assessment and installation options for selected circuits or broader backup goals in Southwest Florida.",
       url: "/services/whole-house-battery-systems",
       serviceType: "Home Battery Backup Installation",
-      areaServed: ["Hillsborough County, FL", "Manatee County, FL", "Sarasota County, FL", "Charlotte County, FL", "Lee County, FL", "Collier County, FL"],
+      areaServed: serviceArea,
     }),
     faqSchema(faqs),
   ];

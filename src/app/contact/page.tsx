@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteForm } from "@/components/QuoteForm";
 import { TrustProofLinks } from "@/components/TrustProofLinks";
-import { serviceArea } from "@/data/navigation";
+import { serviceArea, serviceAreaRegionNames } from "@/data/navigation";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Request a quote or get in touch with Seacoast Building & Design. Serving Southwest Florida: Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier Counties.",
+  description: `Request a quote or get in touch with Seacoast Building & Design. Serving ${serviceAreaRegionNames}.`,
 };
 
 export default function ContactPage() {

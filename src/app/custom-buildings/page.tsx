@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, imageLicenseMetadata, serviceSchema } from "@/components/Schema";
+import { serviceArea } from "@/data/navigation";
 import { seoDescription, seoTitle } from "@/lib/seo";
 
 const canonicalPath = "/custom-buildings";
@@ -379,14 +380,7 @@ export default function CustomBuildingsPage() {
               description: pageDescription,
               url: canonicalPath,
               serviceType: "Custom Building Planning and Construction",
-              areaServed: [
-                "Hillsborough County, FL",
-                "Manatee County, FL",
-                "Sarasota County, FL",
-                "Charlotte County, FL",
-                "Lee County, FL",
-                "Collier County, FL",
-              ],
+              areaServed: serviceArea,
             }),
             "@id": `${pageUrl}#service`,
             provider: { "@id": "https://seacoastbd.com/#organization" },

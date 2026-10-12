@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
+import { serviceArea, serviceAreaRegionNames, serviceAreaSummary } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 const pageDescription =
@@ -42,7 +43,7 @@ const fitFacts = [
   {
     metric: "$100K+",
     title: "Statewide review threshold",
-    body: "Seacoast's regular work centers on six Gulf Coast counties. Contracts of $100,000 or more can be evaluated elsewhere in Florida.",
+    body: `Seacoast's regular work covers ${serviceAreaRegionNames}. Contracts of $100,000 or more can be evaluated elsewhere in Florida.`,
   },
   {
     metric: "1-3 months",
@@ -121,7 +122,7 @@ const faqs = [
   {
     question: "Can Seacoast evaluate a build-to-rent project anywhere in Florida?",
     answer:
-      "Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, timing, logistics, and availability confirmed before commitment.",
+      `Seacoast regularly serves ${serviceAreaSummary}. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, timing, logistics, and availability confirmed before commitment.`,
   },
   {
     question: "What should we send for an initial build-to-rent review?",
@@ -145,14 +146,7 @@ export default function BuildToRentConstructionPage() {
             description: pageDescription,
             url: "/build-to-rent-construction",
             serviceType: "Build-to-Rent Construction Project Review",
-            areaServed: [
-              "Hillsborough County, FL",
-              "Manatee County, FL",
-              "Sarasota County, FL",
-              "Charlotte County, FL",
-              "Lee County, FL",
-              "Collier County, FL",
-            ],
+            areaServed: serviceArea,
           }),
           faqSchema(faqs),
         ]}

@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { SchemaScript, faqSchema, serviceSchema } from "@/components/Schema";
+import { serviceArea, serviceAreaSummary } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 const pageUrl = "https://seacoastbd.com/commercial-roofing";
@@ -165,7 +166,7 @@ const faqs: FAQItem[] = [
   {
     question: "Can Seacoast review a commercial roofing project elsewhere in Florida?",
     answer:
-      "Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, schedule, logistics, and current availability confirmed for the specific project.",
+      `Seacoast regularly serves ${serviceAreaSummary}. Contracts of $100,000 or more can be evaluated elsewhere in Florida, with travel, scope, schedule, logistics, and current availability confirmed for the specific project.`,
   },
 ];
 
@@ -179,15 +180,7 @@ export default function CommercialRoofingPage() {
             description: pageDescription,
             url: "/commercial-roofing",
             serviceType: "Commercial, Condominium, HOA, and Multifamily Roofing",
-            areaServed: [
-              "Hillsborough County, FL",
-              "Manatee County, FL",
-              "Sarasota County, FL",
-              "Charlotte County, FL",
-              "Lee County, FL",
-              "Collier County, FL",
-              "Florida",
-            ],
+            areaServed: [...serviceArea, "Florida"],
           }),
           faqSchema(faqs),
         ]}

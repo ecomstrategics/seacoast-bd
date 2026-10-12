@@ -88,11 +88,54 @@ export const solutionsMega: { protect: SolutionsMegaItem[]; improve: SolutionsMe
   ],
 };
 
-export const serviceArea = [
-  "Hillsborough County",
-  "Manatee County",
-  "Sarasota County",
-  "Charlotte County",
-  "Lee County",
-  "Collier County",
+export type ServiceAreaRegion = {
+  name: string;
+  state: "FL" | "AL";
+  counties: string[];
+};
+
+// Single source for the regular service area. Copy, lists, and schema areaServed all derive from it.
+export const serviceAreaRegions: ServiceAreaRegion[] = [
+  {
+    name: "Southwest Florida",
+    state: "FL",
+    counties: ["Hillsborough", "Manatee", "Sarasota", "Charlotte", "Lee", "Collier"],
+  },
+  {
+    name: "Northwest Florida",
+    state: "FL",
+    counties: ["Escambia", "Santa Rosa"],
+  },
+  {
+    name: "South Alabama",
+    state: "AL",
+    counties: ["Baldwin", "Escambia"],
+  },
 ];
+
+function joinWithAnd(items: string[], separator = ", ") {
+  if (items.length <= 2) return items.join(" and ");
+  return `${items.slice(0, -1).join(separator)}${separator}and ${items[items.length - 1]}`;
+}
+
+export function countyLabel(county: string, state: ServiceAreaRegion["state"]) {
+  return `${county} County, ${state}`;
+}
+
+// Every label carries its state because Escambia County exists in both Florida and Alabama.
+// The labels double as schema.org areaServed values (e.g. "Lee County, FL").
+export const serviceArea = serviceAreaRegions.flatMap((region) =>
+  region.counties.map((county) => countyLabel(county, region.state)),
+);
+
+// "Southwest Florida, Northwest Florida, and South Alabama"
+export const serviceAreaRegionNames = joinWithAnd(serviceAreaRegions.map((region) => region.name));
+
+// "Hillsborough, ... and Collier counties in Southwest Florida; Escambia and Santa Rosa counties in Northwest Florida; and ..."
+export const serviceAreaSummary = joinWithAnd(
+  serviceAreaRegions.map(
+    (region) =>
+      `${joinWithAnd(region.counties)} ${region.counties.length === 1 ? "County" : "counties"} in ${region.name}`,
+  ),
+  "; ",
+);

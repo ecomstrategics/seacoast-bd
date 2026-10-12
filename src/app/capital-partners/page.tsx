@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CapitalPartnerForm } from "@/components/CapitalPartnerForm";
 import { SchemaScript, serviceSchema, faqSchema, personSchema } from "@/components/Schema";
+import { serviceArea, serviceAreaRegionNames, serviceAreaSummary } from "@/data/navigation";
 import { seoTitle } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -88,7 +89,7 @@ const projectFit = [
   {
     metric: "$100K+",
     title: "Statewide review",
-    body: "The six listed Gulf Coast counties remain the regular service area. Contracts of $100,000 or more can be evaluated throughout Florida.",
+    body: `The regular service area covers ${serviceAreaRegionNames}. Contracts of $100,000 or more can be evaluated throughout Florida.`,
   },
   {
     metric: "1–3 months",
@@ -224,7 +225,7 @@ const faqs = [
   {
     question: "What markets does Seacoast build in?",
     answer:
-      "Seacoast's regular service area covers six counties along Florida's Gulf Coast. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida. Travel, schedule, and operational fit are confirmed for each project.",
+      `Seacoast's regular service area covers ${serviceAreaSummary}. For contracts of $100,000 or more, Seacoast can evaluate opportunities throughout Florida. Travel, schedule, and operational fit are confirmed for each project.`,
   },
   {
     question: "Can Seacoast provide bonding and insurance documentation?",
@@ -249,15 +250,7 @@ export default function CapitalPartnersPage() {
               "Construction project review for build-to-rent, major rehabilitation, and select addition opportunities in Florida.",
             url: "/capital-partners",
             serviceType: "Build-to-Rent, Major Rehabilitation, and Addition Project Review",
-            areaServed: [
-              "Florida",
-              "Hillsborough County, FL",
-              "Manatee County, FL",
-              "Sarasota County, FL",
-              "Charlotte County, FL",
-              "Lee County, FL",
-              "Collier County, FL",
-            ],
+            areaServed: ["Florida", ...serviceArea],
           }),
           faqSchema(faqs),
           personSchema(),
@@ -501,9 +494,9 @@ export default function CapitalPartnersPage() {
       <section className="section dark-band bg-navy">
         <div className="container">
           <p className="eyebrow">Target markets</p>
-          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Six-county service for regular work, statewide review for larger contracts</h2>
+          <h2 className="mt-2 font-heading text-4xl font-bold text-navy">Regional service for regular work, statewide review for larger contracts</h2>
           <p className="mt-4 max-w-2xl text-text-secondary">
-            Seacoast regularly serves Hillsborough, Manatee, Sarasota, Charlotte, Lee, and Collier counties. Contracts of $100,000 or more can be evaluated throughout Florida, with travel, schedule, and capacity confirmed for the specific opportunity.
+            Seacoast regularly serves {serviceAreaSummary}. Contracts of $100,000 or more can be evaluated throughout Florida, with travel, schedule, and capacity confirmed for the specific opportunity.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {submarkets.map((m) => (
